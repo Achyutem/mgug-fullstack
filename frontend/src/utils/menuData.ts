@@ -2,288 +2,15 @@ import type { Title, MegaMenus } from "./types";
 
 export const menuItems: Title[] = [
   { hindi: "होम", english: "Home" },
-  { hindi: "छात्र", english: "Students" },
   { hindi: "प्रशासन", english: "Administration" },
+  { hindi: "प्रवेश", english: "Admissions" },
+  { hindi: "छात्र", english: "Students" },
   { hindi: "अनुसंधान", english: "Research" },
   { hindi: "अधिक", english: "More" },
   { hindi: "संपर्क", english: "Contact" },
 ];
 
 export const megaMenus: MegaMenus = {
-  Students: [
-    {
-      type: "header",
-      label: {
-        hindi: "शैक्षणिक",
-        english: "Academics",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "पाठ्यक्रम और समय सारणी",
-            english: "Syllabus and Timetable",
-          },
-          href: "https://mgug.ac.in/#",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "शैक्षणिक कैलेंडर",
-            english: "Academic Calendar",
-          },
-          href: "/academic-calendar",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "ई-लर्निंग",
-            english: "E-Learning",
-          },
-          href: "https://mgug.ac.in/#",
-        },
-        {
-          type: "header",
-          label: {
-            hindi: "परीक्षा",
-            english: "Examination",
-          },
-          subSections: [
-            {
-              type: "link",
-              label: {
-                hindi: "परीक्षा मैनुअल",
-                english: "Examination Manual",
-              },
-              href: "/examination-manual",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "परिणाम",
-                english: "Result",
-              },
-              href: "https://mgug.ac.in/examination/result.php",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "अनुसूचियां",
-                english: "Schedules",
-              },
-              href: "https://mgug.ac.in/examination/schedule.php",
-            },
-          ],
-        },
-        {
-          type: "header",
-          label: {
-            hindi: "संकाय",
-            english: "Faculties",
-          },
-          subSections: [
-            {
-              type: "link",
-              label: {
-                hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
-                english: "Faculty of Allied Health Science",
-              },
-              href: "https://allied.mgug.ac.in/",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "कृषि संकाय",
-                english: "Faculty of Agriculture",
-              },
-              href: "https://agriculture.mgug.ac.in/",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "फार्मास्युटिकल साइंसेज संकाय",
-                english: "Faculty of Pharmaceutical Sciences",
-              },
-              href: "https://pharmacy.mgug.ac.in/",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "वाणिज्य संकाय",
-                english: "Faculty of Commerce",
-              },
-              href: "https://commerce.mgug.ac.in/",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
-        hindi: "प्रवेश",
-        english: "Admissions",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "कार्यक्रमों की सूची",
-            english: "List of Programs",
-          },
-          href: "https://mgug.ac.in/academics/programmes_list.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रमाणन और डिप्लोमा प्रमाणन",
-            english: "Certification and Diploma Certification",
-          },
-          href: "https://mgug.ac.in/academics/diploma.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "स्नातक कार्यक्रम",
-            english: "Under Graduate Programs",
-          },
-          href: "https://mgug.ac.in/academics/ug.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "स्नातकोत्तर कार्यक्रम",
-            english: "Post Graduate Programs",
-          },
-          href: "https://mgug.ac.in/academics/pg.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "पीएचडी कार्यक्रम",
-            english: "Ph.D. Programs",
-          },
-          href: "https://mgug.ac.in/academics/phd.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "शुल्क संरचना",
-            english: "Fee Structure",
-          },
-          href: "https://mgug.ac.in/academics/fee_structure.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रवेश सूचना",
-            english: "Admission Notice",
-          },
-          href: "https://admission.mgug.ac.in/",
-        },
-        {
-          type: "header",
-          label: {
-            hindi: "महाविद्यालय",
-            english: "Colleges",
-          },
-          subSections: [
-            {
-              type: "link",
-              label: {
-                hindi: "श्री गोरक्षनाथ मेडिकल कॉलेज अस्पताल और अनुसंधान केंद्र",
-                english:
-                  "Shri Gorakshnath Medical College Hospital and Research Centre",
-              },
-              href: "https://sgmchrc.in/",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "गुरु गोरक्षनाथ आयुर्वेद चिकित्सा संस्थान",
-                english:
-                  "Guru Gorakshnath Institute of Medical Sciences(Ayurveda)",
-              },
-              href: "https://ayurveda.mgug.ac.in/",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "गुरु श्री गोरक्षनाथ नर्सिंग कॉलेज",
-                english: "Guru Shri Gorakshnath College of Nursing",
-              },
-              href: "https://nursing.mgug.ac.in/",
-            },
-            {
-              type: "link",
-              label: {
-                hindi: "महंत अवैद्यनाथ पैरामेडिकल कॉलेज",
-                english: "Mahant Avaidhyanath Paramedical College",
-              },
-              href: "https://paramedical.mgug.ac.in/",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
-        hindi: "परिसर जीवन",
-        english: "Campus Life",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "पुस्तकालय",
-            english: "Library",
-          },
-          href: "https://mgug.ac.in/campus_facilities/library.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "छात्रावास",
-            english: "Hostel",
-          },
-          href: "https://mgug.ac.in/campus_facilities/hostel.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "खेल",
-            english: "Sports",
-          },
-          href: "https://mgug.ac.in/campus_facilities/sport.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "आयोजन",
-            english: "Events",
-          },
-          href: "https://mgug.ac.in/announcement/event.php",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "रैगिंग विरोधी",
-            english: "Anti Ragging",
-          },
-          href: "/Committee/Anti-Ragging",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "राष्ट्रीय सेवा योजना",
-            english: "NSS",
-          },
-          href: "https://mgug.ac.in/nss/index.php",
-        },
-      ],
-    },
-  ],
   Administration: [
     {
       type: "header",
@@ -469,6 +196,290 @@ export const megaMenus: MegaMenus = {
             english: "IT Team",
           },
           href: "/Committee/it-team",
+        },
+      ],
+    },
+  ],
+  Admissions: [
+    {
+      type: "header",
+      label: {
+        hindi: "प्रवेश जानकारी",
+        english: "Admission Information",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "प्रवेश सूचना",
+            english: "Admission Notice",
+          },
+          href: "https://admission.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "शुल्क संरचना",
+            english: "Fee Structure",
+          },
+          href: "https://mgug.ac.in/academics/fee_structure.php",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "कार्यक्रम",
+        english: "Programs",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "कार्यक्रमों की सूची",
+            english: "List of Programs",
+          },
+          href: "https://mgug.ac.in/academics/programmes_list.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रमाणन और डिप्लोमा",
+            english: "Certification and Diploma",
+          },
+          href: "https://mgug.ac.in/academics/diploma.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "स्नातक कार्यक्रम",
+            english: "Under Graduate Programs",
+          },
+          href: "https://mgug.ac.in/academics/ug.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "स्नातकोत्तर कार्यक्रम",
+            english: "Post Graduate Programs",
+          },
+          href: "https://mgug.ac.in/academics/pg.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "पीएचडी कार्यक्रम",
+            english: "Ph.D. Programs",
+          },
+          href: "https://mgug.ac.in/academics/phd.php",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "महाविद्यालय",
+        english: "Colleges",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "श्री गोरक्षनाथ मेडिकल कॉलेज अस्पताल और अनुसंधान केंद्र",
+            english:
+              "Shri Gorakshnath Medical College Hospital and Research Centre",
+          },
+          href: "https://sgmchrc.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "गुरु गोरक्षनाथ आयुर्वेद चिकित्सा संस्थान",
+            english: "Guru Gorakshnath Institute of Medical Sciences(Ayurveda)",
+          },
+          href: "https://ayurveda.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "गुरु श्री गोरक्षनाथ नर्सिंग कॉलेज",
+            english: "Guru Shri Gorakshnath College of Nursing",
+          },
+          href: "https://nursing.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "महंत अवैद्यनाथ पैरामेडिकल कॉलेज",
+            english: "Mahant Avaidhyanath Paramedical College",
+          },
+          href: "https://paramedical.mgug.ac.in/",
+        },
+      ],
+    },
+  ],
+  Students: [
+    {
+      type: "header",
+      label: {
+        hindi: "शैक्षणिक संसाधन",
+        english: "Academic Resources",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "पाठ्यक्रम और समय सारणी",
+            english: "Syllabus and Timetable",
+          },
+          href: "https://mgug.ac.in/#",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "शैक्षणिक कैलेंडर",
+            english: "Academic Calendar",
+          },
+          href: "/academic-calendar",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "ई-लर्निंग",
+            english: "E-Learning",
+          },
+          href: "https://mgug.ac.in/#",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "परीक्षा",
+        english: "Examinations",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "परीक्षा मैनुअल",
+            english: "Examination Manual",
+          },
+          href: "/examination-manual",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "परिणाम",
+            english: "Result",
+          },
+          href: "https://mgug.ac.in/examination/result.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "अनुसूचियां",
+            english: "Schedules",
+          },
+          href: "https://mgug.ac.in/examination/schedule.php",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "संकाय",
+        english: "Faculties",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
+            english: "Faculty of Allied Health Science",
+          },
+          href: "https://allied.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "कृषि संकाय",
+            english: "Faculty of Agriculture",
+          },
+          href: "https://agriculture.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "फार्मास्युटिकल साइंसेज संकाय",
+            english: "Faculty of Pharmaceutical Sciences",
+          },
+          href: "https://pharmacy.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "वाणिज्य संकाय",
+            english: "Faculty of Commerce",
+          },
+          href: "https://commerce.mgug.ac.in/",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "परिसर जीवन",
+        english: "Campus Life",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "पुस्तकालय",
+            english: "Library",
+          },
+          href: "https://mgug.ac.in/campus_facilities/library.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "छात्रावास",
+            english: "Hostel",
+          },
+          href: "https://mgug.ac.in/campus_facilities/hostel.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "खेल",
+            english: "Sports",
+          },
+          href: "https://mgug.ac.in/campus_facilities/sport.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "आयोजन",
+            english: "Events",
+          },
+          href: "https://mgug.ac.in/announcement/event.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "रैगिंग विरोधी",
+            english: "Anti Ragging",
+          },
+          href: "/Committee/Anti-Ragging",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "राष्ट्रीय सेवा योजना",
+            english: "NSS",
+          },
+          href: "https://mgug.ac.in/nss/index.php",
         },
       ],
     },
