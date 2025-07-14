@@ -136,8 +136,12 @@ export default function PublicContent() {
                   <h4 className="text-lg font-medium text-purple-800">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Uploaded: {new Date(item.uploaded_at).toLocaleDateString()}
+                  <p className="text-xs text-gray-500 mt-3">
+                    {`Published on: ${new Date(
+                      item.uploaded_at
+                    ).toLocaleDateString()} at ${new Date(
+                      item.uploaded_at
+                    ).toLocaleTimeString()}`}
                   </p>
                 </div>
               </div>
