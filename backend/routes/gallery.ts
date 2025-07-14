@@ -22,10 +22,19 @@ const upload = multer({ storage });
 
 router.get("/", async (_req, res) => {
   try {
-    const [rows] = await db.query(
+    const [rows]: any = await db.query(
       "SELECT * FROM gallery ORDER BY uploaded_at DESC"
     );
-    res.json(rows);
+
+    // Transform the data to include the full image path
+    const galleryWithUrls = rows.map((item: any) => {
+      return {
+        ...item,
+        image_url: `uploads/${item.filename}`,
+      };
+    });
+
+    res.json(galleryWithUrls);
   } catch {
     res.status(500).json({ error: "Failed to fetch gallery" });
   }
