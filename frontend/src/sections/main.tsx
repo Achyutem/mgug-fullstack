@@ -37,13 +37,15 @@ export default function Main() {
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
                 <span className="block">
-                  <span className="bg-orange-400 bg-clip-text text-transparent">
-                    {t.universityName1}
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                    {t.universityName1}&nbsp;
                   </span>
+                  <span className="text-white">{t.universityName2}</span>
                 </span>
                 <span className="block">
-                  <span className="bg-orange-400 bg-clip-text text-transparent">
-                    {t.universityName2}
+                  <span className="text-white">{t.universityName3}&nbsp;</span>
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                    {t.universityName4}
                   </span>
                 </span>
               </h1>
