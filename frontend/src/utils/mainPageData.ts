@@ -101,8 +101,10 @@ export const HomePage: HomeDataType = {
   main: {
     hindi: {
       badge: "2021 से शिक्षा में उत्कृष्टता",
-      universityName1: "महायोगी गोरखनाथ",
-      universityName2: "विश्वविद्यालय गोरखपुर",
+      universityName1: "महायोगी ",
+      universityName2: "गोरखनाथ",
+      universityName3: "विश्वविद्यालय",
+      universityName4: " गोरखपुर",
       animatedText1: "REDEFINING",
       animatedText2: "EDUCATION",
       description:
@@ -112,8 +114,10 @@ export const HomePage: HomeDataType = {
     },
     english: {
       badge: "Excellence in Education Since 2021",
-      universityName1: "Mahayogi Gorakhnath",
-      universityName2: "University Gorakhpur",
+      universityName1: "Mahayogi",
+      universityName2: "Goraknath",
+      universityName3: "University",
+      universityName4: "Gorakhpur",
       animatedText1: "REDEFINING",
       animatedText2: "EDUCATION",
       description:
