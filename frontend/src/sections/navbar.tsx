@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import { IoMdMenu } from "react-icons/io";
-import { MegaMenu } from "@/components/megaMenu";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
 import openSiennaMenu from "@/utils/sienna";
-import { FaUniversalAccess, FaChevronDown } from "react-icons/fa";
+import {
+  FaUniversalAccess,
+  FaChevronDown,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 import LanguageToggle from "@/components/languageSwitcher";
 import { UseLanguage } from "@/context/languageContext";
 import { menuItems, megaMenus, privacy } from "@/utils/menuData";
@@ -33,6 +42,62 @@ export default function Navbar() {
     }));
   };
 
+  // --- Helper Components for MegaMenu Content ---
+  const isExternal = (url: string) => url.startsWith("http");
+
+  const MenuLink = ({ href, label }: { href: string; label: string }) => {
+    const commonClasses =
+      "group flex items-center justify-between text-gray-300 hover:text-orange-400 transition-colors py-1.5 px-2 rounded-md hover:bg-white/5 text-sm";
+    const content = (
+      <>
+        <span>{label}</span>
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 group-hover:text-orange-400" />
+      </>
+    );
+    return isExternal(href) ? (
+      <a
+        href={href}
+        onClick={closeMegaMenu}
+        className={commonClasses}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    ) : (
+      <Link to={href} onClick={closeMegaMenu} className={commonClasses}>
+        {content}
+      </Link>
+    );
+  };
+
+  const NestedMenuLink = ({ href, label }: { href: string; label: string }) => {
+    const commonClasses =
+      "group flex items-center justify-between text-gray-400 hover:text-orange-400 transition-colors py-1 px-2 rounded-md hover:bg-white/5 text-sm";
+    const content = (
+      <>
+        <span>{label}</span>
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-400" />
+      </>
+    );
+    return isExternal(href) ? (
+      <a
+        href={href}
+        onClick={closeMegaMenu}
+        className={commonClasses}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    ) : (
+      <Link to={href} onClick={closeMegaMenu} className={commonClasses}>
+        {content}
+      </Link>
+    );
+  };
+  // --- End of Helper Components ---
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-40 bg-blue-950 border-b border-gray-700/50"
@@ -42,8 +107,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="flex items-center space-x-3"
               aria-label="MGUG Home"
             >
@@ -56,7 +121,7 @@ export default function Navbar() {
               <div className="text-2xl bg-orange-400 bg-clip-text text-transparent font-bold uppercase">
                 MGUG
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Links - Desktop */}
@@ -64,54 +129,137 @@ export default function Navbar() {
             className="hidden lg:flex items-center space-x-8"
             role="navigation"
           >
-            {menuItems.map((item, index) => {
+            {menuItems.map((item) => {
               const hasMegaMenu = item.english in megaMenus;
               const isMegaMenuOpen = activeMegaMenu === item.english;
 
               if (!hasMegaMenu) {
-                return (
+                // Non-megamenu link logic
+                const href =
+                  item.english === "Research"
+                    ? "https://mgug.ac.in/research/re_facility.php"
+                    : item.english === "Contact"
+                    ? "/contact"
+                    : `/${item.english.toLowerCase()}`;
+
+                const linkContent = isExternal(href) ? (
                   <a
-                    key={index}
-                    href={
-                      item.english === "Home"
-                        ? "/"
-                        : item.english === "Research"
-                        ? "https://mgug.ac.in/research/re_facility.php"
-                        : item.english === "Contact"
-                        ? "/contact"
-                        : `#${item.english.toLowerCase()}`
-                    }
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
-                    aria-label={`Navigate to ${item[language]} page`}
                   >
                     {item[language]}
                   </a>
+                ) : (
+                  <Link
+                    to={href}
+                    className="font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
+                  >
+                    {item[language]}
+                  </Link>
                 );
+
+                return <div key={item.english}>{linkContent}</div>;
               }
 
               return (
-                <div key={index} className="relative">
-                  <button
-                    onClick={() => handleMegaMenuToggle(item.english)}
-                    className="flex items-center space-x-1 transition-colors font-medium text-white hover:text-orange-400"
-                    aria-expanded={isMegaMenuOpen}
-                    aria-controls={`mega-menu-${item.english.toLowerCase()}`}
-                    aria-label={`Toggle ${item[language]} mega menu`}
+                <Popover
+                  key={item.english}
+                  open={isMegaMenuOpen}
+                  onOpenChange={(open) => {
+                    if (open) {
+                      handleMegaMenuToggle(item.english);
+                    } else {
+                      closeMegaMenu();
+                    }
+                  }}
+                >
+                  <PopoverTrigger asChild>
+                    <button
+                      onClick={() => handleMegaMenuToggle(item.english)}
+                      className="flex items-center space-x-1 transition-colors font-medium text-white hover:text-orange-400"
+                      aria-expanded={isMegaMenuOpen}
+                    >
+                      <span>{item[language]}</span>
+                      <FaChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          isMegaMenuOpen ? "rotate-180" : ""
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    align="center"
+                    sideOffset={16}
+                    className="w-auto p-0 border-none bg-blue-950/80 backdrop-blur-xl shadow-2xl z-50"
+                    onMouseLeave={closeMegaMenu}
                   >
-                    <span>{item[language]}</span>
-                    <FaChevronDown
-                      className={`w-4 h-4 transition-transform ${
-                        isMegaMenuOpen ? "rotate-180" : ""
-                      }`}
-                      aria-hidden="true"
-                    />
-                  </button>
-                  <MegaMenu
-                    items={megaMenus[item.english as keyof MegaMenus]}
-                    isOpen={isMegaMenuOpen}
-                    onClose={closeMegaMenu}
-                  />
-                </div>
+                    <div className="px-4 sm:px-6 lg:px-8 py-8 max-h-[80vh] overflow-y-auto scrollbar-none">
+                      <div className="flex flex-nowrap gap-6">
+                        {megaMenus[item.english as keyof MegaMenus]?.map(
+                          (section, index) => (
+                            <div
+                              key={index}
+                              className="w-64 space-y-4 flex-shrink-0"
+                            >
+                              <h3 className="text-orange-400 font-semibold text-lg border-b border-orange-500/30 pb-2">
+                                {section.label[language]}
+                              </h3>
+                              {section.subSections && (
+                                <div className="space-y-2">
+                                  {section.subSections.map(
+                                    (subSection, subIndex) => (
+                                      <div key={subIndex}>
+                                        {subSection.type === "link" ? (
+                                          <MenuLink
+                                            href={subSection.href}
+                                            label={subSection.label[language]}
+                                          />
+                                        ) : (
+                                          <div className="mt-4">
+                                            <h4 className="text-orange-400 font-medium text-sm mb-2 pl-2">
+                                              {subSection.label[language]}
+                                            </h4>
+                                            {subSection.subSections && (
+                                              <div className="space-y-1 pl-4 border-l border-gray-700">
+                                                {subSection.subSections.map(
+                                                  (
+                                                    nestedSection,
+                                                    nestedIndex
+                                                  ) =>
+                                                    nestedSection.type ===
+                                                      "link" && (
+                                                      <NestedMenuLink
+                                                        key={nestedIndex}
+                                                        href={
+                                                          nestedSection.href
+                                                        }
+                                                        label={
+                                                          nestedSection.label[
+                                                            language
+                                                          ]
+                                                        }
+                                                      />
+                                                    )
+                                                )}
+                                              </div>
+                                            )}
+                                          </div>
+                                        )}
+                                      </div>
+                                    )
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  </PopoverContent>
+                </Popover>
               );
             })}
           </div>
@@ -121,7 +269,7 @@ export default function Navbar() {
             <LanguageToggle />
             <button
               onClick={openSiennaMenu}
-              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] transition-all duration-200 hover:scale-105 hover:text-orange-500"
+              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] text-white transition-all duration-200 hover:scale-105 hover:text-orange-500"
               aria-label="Open accessibility menu"
             >
               <FaUniversalAccess size={24} />
@@ -148,7 +296,6 @@ export default function Navbar() {
                   <IoMdMenu className="w-6 h-6" aria-hidden="true" />
                 </button>
               </SheetTrigger>
-
               <SheetContent
                 side="right"
                 className="w-64 sm:w-80 bg-blue-950 text-white p-6 border-0"
@@ -160,34 +307,33 @@ export default function Navbar() {
                     className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto"
                     aria-label="Mobile menu links"
                   >
-                    {menuItems.map((item, index) => {
+                    {menuItems.map((item) => {
                       const hasMegaMenu = item.english in megaMenus;
 
                       if (!hasMegaMenu) {
+                        const href =
+                          item.english === "Research"
+                            ? "https://mgug.ac.in/research/re_facility.php"
+                            : item.english === "Contact"
+                            ? "/contact"
+                            : `/${item.english.toLowerCase()}`;
+
                         return (
-                          <a
-                            key={index}
-                            href={
-                              item.english === "Home"
-                                ? "/"
-                                : item.english === "Research"
-                                ? "https://mgug.ac.in/research/re_facility.php"
-                                : item.english === "Contact"
-                                ? "/contact"
-                                : `#${item.english.toLowerCase()}`
-                            }
+                          <Link
+                            key={item.english}
+                            to={href}
                             onClick={() => setMobileMenuOpen(false)}
                             className="block text-white hover:text-orange-400 transition-colors tracking-wide py-2"
-                            aria-label={`Navigate to ${item[language]} page`}
+                            aria-label={`Maps to ${item[language]} page`}
                           >
                             {item[language]}
-                          </a>
+                          </Link>
                         );
                       }
 
                       return (
                         <div
-                          key={index}
+                          key={item.english}
                           className="border-t border-white/20 pt-4 first:border-0 first:pt-0"
                           role="group"
                           aria-label={`${item[language]} menu section`}
@@ -251,7 +397,11 @@ export default function Navbar() {
             </Sheet>
 
             {/* Login (Desktop) */}
-            <a href="https://erp.mgug.ac.in/login.php">
+            <a
+              href="https://erp.mgug.ac.in/login.php"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button
                 className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors transform duration-300 hover:scale-105"
                 aria-label="Login to MGUG ERP"
@@ -262,16 +412,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* Overlay to close mega menu when clicking outside */}
-      {activeMegaMenu && (
-        <div
-          className="fixed inset-0 z-30 bg-black/10"
-          onClick={closeMegaMenu}
-          aria-hidden="true"
-          tabIndex={-1}
-        />
-      )}
     </nav>
   );
 }

@@ -1,7 +1,7 @@
 import type { Title, MegaMenus } from "./types";
 
 export const menuItems: Title[] = [
-  { hindi: "होम", english: "Home" },
+  { hindi: "हमारे बारे में", english: "About" }, // Changed from "About"
   { hindi: "प्रशासन", english: "Administration" },
   { hindi: "प्रवेश", english: "Admissions" },
   { hindi: "छात्र", english: "Students" },
@@ -11,6 +11,89 @@ export const menuItems: Title[] = [
 ];
 
 export const megaMenus: MegaMenus = {
+  About: [
+    {
+      type: "header",
+      label: {
+        hindi: "हमारे बारे में",
+        english: "About Us",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "हमारे बारे में",
+            english: "About Us",
+          },
+          href: "/about",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "दृष्टि और मिशन",
+            english: "Vision & Mission",
+          },
+          href: "/vision",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "स्थान और परिसर",
+            english: "Location & Campus",
+          },
+          href: "https://mgug.ac.in/the_university/contact_us.php",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "विश्वविद्यालय लोगो",
+            english: "University Logo",
+          },
+          href: "/university-logo",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "विश्वविद्यालय का विधान",
+            english: "Statute Of University",
+          },
+          href: "https://mgug.ac.in/PDF/First_Statute_MGUG_Final_02-08-2021.pdf",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "छात्र संघ संविधान",
+            english: "Student's Union Constitution",
+          },
+          href: "https://mgug.ac.in/PDF/StudentUnionConstitution.pdf",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "हमारे आदर्श",
+            english: "Our Ideals",
+          },
+          href: "/our-ideals",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रेरणा का स्रोत",
+            english: "Our Source of Inspiration",
+          },
+          href: "/our-source-of-inspiration",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रेरणादायक नेतृत्व",
+            english: "Inspirational Leadership",
+          },
+          href: "/leadership",
+        },
+      ],
+    },
+  ],
   Administration: [
     {
       type: "header",
