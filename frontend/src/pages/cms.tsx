@@ -1,25 +1,5 @@
+import type { Job, News, GalleryItem } from "@/utils/types";
 import { useEffect, useState } from "react";
-
-interface Job {
-  id: number;
-  title: string;
-  description: string;
-  posted_at: string;
-}
-
-interface News {
-  id: number;
-  title: string;
-  content: string;
-  published_at: string;
-}
-
-interface GalleryItem {
-  id: number;
-  title: string;
-  image_url: string;
-  uploaded_at: string;
-}
 
 type Section = "news" | "jobs" | "gallery";
 
