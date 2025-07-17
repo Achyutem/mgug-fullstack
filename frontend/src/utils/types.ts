@@ -21,6 +21,7 @@ type MegaMenuLink = {
 export type MegaMenuSection = MegaMenuHeader | MegaMenuLink;
 
 export type MegaMenus = {
+  About: MegaMenuSection[];
   Students: MegaMenuSection[];
   Admissions: MegaMenuSection[];
   Administration: MegaMenuSection[];
@@ -279,6 +280,8 @@ export interface HomeDataType {
       badge: string;
       universityName1: string;
       universityName2: string;
+      universityName3: string;
+      universityName4: string;
       animatedText1: string;
       animatedText2: string;
       description: string;
@@ -289,6 +292,8 @@ export interface HomeDataType {
       badge: string;
       universityName1: string;
       universityName2: string;
+      universityName3: string;
+      universityName4: string;
       animatedText1: string;
       animatedText2: string;
       description: string;
@@ -408,4 +413,25 @@ export interface Administration {
   chiefProctor: Person;
   chiefVigilanceOfficer: Person;
   ombudsPerson: Person;
+}
+
+export interface Job {
+  id: number;
+  title: string;
+  description: string;
+  posted_at: string;
+}
+
+export interface News {
+  id: number;
+  title: string;
+  content: string;
+  published_at: string;
+}
+
+export interface GalleryItem {
+  id: number;
+  title: string;
+  image_url: string;
+  uploaded_at: string;
 }
