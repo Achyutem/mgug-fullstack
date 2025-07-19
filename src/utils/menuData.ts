@@ -41,7 +41,7 @@ export const megaMenus: MegaMenus = {
             hindi: "स्थान और परिसर",
             english: "Location & Campus",
           },
-          href: "https://mgug.ac.in/the_university/contact_us.php",
+          href: "/contact",
         },
         {
           type: "link",
@@ -50,6 +50,14 @@ export const megaMenus: MegaMenus = {
             english: "University Logo",
           },
           href: "/university-logo",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "विश्वविद्यालय लोगो",
+            english: "Inspiration Abode",
+          },
+          href: "/inspiration-abode",
         },
         {
           type: "link",
@@ -567,6 +575,14 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
+            hindi: "प्रवेश सूचना",
+            english: "Admission notice",
+          },
+          href: "/admission-notice",
+        },
+        {
+          type: "link",
+          label: {
             hindi: "रैगिंग विरोधी",
             english: "Anti Ragging",
           },
@@ -584,87 +600,6 @@ export const megaMenus: MegaMenus = {
     },
   ],
   More: [
-    {
-      type: "header",
-      label: {
-        hindi: "हमारे बारे में",
-        english: "About Us",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "हमारे बारे में",
-            english: "About Us",
-          },
-          href: "/about",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "दृष्टि और मिशन",
-            english: "Vision & Mission",
-          },
-          href: "/vision",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "स्थान और परिसर",
-            english: "Location & Campus",
-          },
-          href: "/contact",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "विश्वविद्यालय लोगो",
-            english: "University Logo",
-          },
-          href: "/university-logo",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "विश्वविद्यालय का विधान",
-            english: "Statute Of University",
-          },
-          href: "https://mgug.ac.in/PDF/First_Statute_MGUG_Final_02-08-2021.pdf",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "छात्र संघ संविधान",
-            english: "Student's Union Constitution",
-          },
-          href: "https://mgug.ac.in/PDF/StudentUnionConstitution.pdf",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "हमारे आदर्श",
-            english: "Our Ideals",
-          },
-          href: "/our-ideals",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रेरणा का स्रोत",
-            english: "Our Source of Inspiration",
-          },
-          href: "/our-source-of-inspiration",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रेरणादायक नेतृत्व",
-            english: "Inspirational Leadership",
-          },
-          href: "/leadership",
-        },
-      ],
-    },
     {
       type: "header",
       label: {
@@ -695,6 +630,39 @@ export const megaMenus: MegaMenus = {
             english: "Child Welfare",
           },
           href: "https://mgug.ac.in/#",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "पत्रिका",
+        english: "Magazine",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "आरोग्य पथ मासिक पत्रिका",
+            english: "Arogya Path Monthly Magazine",
+          },
+          href: "/arogya-path",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "आरोग्य प्रभा त्रैमासिक पत्रिका",
+            english: "Arogya Prabha Quartely Magazine",
+          },
+          href: "/arogya-prabha",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "सेवा पथ मासिक ई-पत्रिका",
+            english: "Seva Path Monthly E-Magazine",
+          },
+          href: "/seva-path",
         },
       ],
     },
