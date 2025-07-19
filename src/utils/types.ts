@@ -563,3 +563,85 @@ export interface DownloadItem {
   notification_datetime_formatted: string;
   pdf_url: string;
 }
+
+export interface AdmissionNoticeItem {
+  notification_name: string;
+  notification_datetime_formatted: string;
+  pdf_url: string;
+}
+
+export interface MagazineTitles {
+  heading: Title;
+  headers: {
+    title: Title;
+    date: Title;
+    link: Title;
+  };
+}
+
+export interface AboutUsContent {
+  heading: Title;
+  paragraphs: Title[];
+  visionHeading: Title;
+  visionPoints: Title[];
+}
+
+export interface InspirationPerson {
+  name: Title;
+  image: string;
+  paragraphs: Title[];
+}
+
+export interface InspirationPageContent {
+  pageTitle: Title;
+  inspirations: InspirationPerson[];
+}
+
+export interface LeadershipContent {
+  pageTitle: Title;
+  leaderName: Title;
+  image: string;
+  paragraphs: Title[];
+}
+
+export interface IdealFigure {
+  name: Title;
+  image: string;
+  quote?: Title;
+  paragraphs: Title[];
+}
+
+export interface OurIdealsContent {
+  pageTitle: Title;
+  ideals: IdealFigure[];
+}
+
+export interface Paragraph extends Title {
+  isQuote?: boolean;
+}
+
+export interface UniversityLogoContent {
+  pageTitle: Title;
+  image: string;
+  paragraphs: Paragraph[];
+}
+
+export interface ContentSection {
+  heading: Title;
+  paragraphs: Title[];
+  quote?: {
+    sanskrit: string;
+    translation: Title;
+  };
+}
+
+export interface VisionMissionContent {
+  pageTitle: Title;
+  logoImage: string;
+  sections: ContentSection[];
+}
+
+export interface InspirationAbodeContent {
+  pageTitle: Title;
+  paragraphs: Title[];
+}
