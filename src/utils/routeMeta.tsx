@@ -1,6 +1,6 @@
 import UniversityLandingPage from "@/pages/home";
-import AboutUs from "@/pages/More/About/aboutUs";
-import UniversityLogo from "@/pages/More/About/universityLogo";
+import AboutUs from "@/pages/About/aboutUs";
+import UniversityLogo from "@/pages/About/universityLogo";
 import Chancellor from "@/pages/Administration/Leadership/chancellor";
 import ViceChancellor from "@/pages/Administration/Leadership/viceChancellor";
 import ProChancellor from "@/pages/Administration/Leadership/proChancellor";
@@ -20,11 +20,11 @@ import ExaminationCommittee from "@/pages/Administration/Committees/examinationC
 import SGRCAndOmbudsperson from "@/pages/Administration/Committees/sgrcAndOmbuds";
 import AntiRagging from "@/pages/Administration/Committees/antiRagging";
 import Contact from "@/pages/contact";
-import Vision from "@/pages/More/About/vision";
+import Vision from "@/pages/About/vision";
 import AcademicCalendar from "@/pages/Students/Academics/academicCalendar";
-import OurIdeals from "@/pages/More/About/ourIdeals";
-import Inspiration from "@/pages/More/About/inspiration";
-import Leadership from "@/pages/More/About/leadership";
+import OurIdeals from "@/pages/About/ourIdeals";
+import Inspiration from "@/pages/About/inspiration";
+import Leadership from "@/pages/About/leadership";
 import ItTeam from "@/pages/Administration/Committees/itTeam";
 import JobsSection from "@/pages/More/Resources/jobs";
 import NewsSection from "@/pages/More/Resources/news";
@@ -39,6 +39,11 @@ import SchedulePage from "@/pages/Students/Examination/schedule";
 import DownloadsPage from "@/pages/More/Resources/downloads";
 import EventsPage from "@/pages/Students/CampusLife/event";
 import ProspectusPage from "@/pages/Admission/prospectus";
+import AdmissionNoticePage from "@/pages/Students/CampusLife/admissionNotice";
+import ArogyaPathPage from "@/pages/More/Magazine/arogyaPath";
+import ArogyaPrabhaPage from "@/pages/More/Magazine/arogyaPrabha";
+import SevaPathMagazinePage from "@/pages/More/Magazine/sevaPath";
+import InspirationAbode from "@/pages/About/inspirationAbode";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -64,6 +69,11 @@ export const routeMeta = [
     path: "/events",
     element: <EventsPage />,
   },
+  {
+    title: "Admission notice",
+    path: "/admission-notice",
+    element: <AdmissionNoticePage />,
+  },
 
   // More
   { title: "About Us", path: "/about", element: <AboutUs /> },
@@ -83,6 +93,28 @@ export const routeMeta = [
     title: "University Logo",
     path: "/university-logo",
     element: <UniversityLogo />,
+  },
+  {
+    title: "Inspiration Abode",
+    path: "/inspiration-abode",
+    element: <InspirationAbode />,
+  },
+
+  // magazines
+  {
+    title: "Arogya Path",
+    path: "/arogya-path",
+    element: <ArogyaPathPage />,
+  },
+  {
+    title: "Arogya Prabha",
+    path: "/arogya-prabha",
+    element: <ArogyaPrabhaPage />,
+  },
+  {
+    title: "Seva Path",
+    path: "/seva-path",
+    element: <SevaPathMagazinePage />,
   },
 
   {
