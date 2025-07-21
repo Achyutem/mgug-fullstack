@@ -645,3 +645,81 @@ export interface InspirationAbodeContent {
   pageTitle: Title;
   paragraphs: Title[];
 }
+
+export interface SevaPathMagazineItem {
+  notification_name: string;
+  notification_datetime_formatted: string;
+  pdf_url: string;
+}
+
+export interface ArogyaPrabhaItem {
+  notification_name: string;
+  notification_datetime_formatted: string;
+  pdf_url: string;
+}
+
+export interface ArogyaPathItem {
+  notification_name: string;
+  notification_datetime_formatted: string;
+  pdf_url: string;
+}
+
+export interface ProspectusItem {
+  notification_name: string;
+  notification_datetime_formatted: string;
+  pdf_url: string;
+}
+
+export interface ListProgramsStaticText {
+  subheading: Title;
+  tableHeaders: {
+    programme: Title;
+    duration: Title;
+    fees: Title;
+    examFee: Title;
+    seats: Title;
+    supernumerary: Title;
+    qualification: Title;
+  };
+  mobileLabels: {
+    programme: Title;
+    duration: Title;
+    fees: Title;
+    examFee: Title;
+    seats: Title;
+    supernumerary: Title;
+    qualification: Title;
+  };
+}
+
+export interface EventItem {
+  notification_name: string;
+  notification_datetime_formatted: string;
+  pdf_url: string;
+}
+
+export interface RuleSection {
+  heading: Title;
+  points: Title[];
+  intro?: Title;
+}
+
+export interface ExaminationManualContent {
+  pageTitle: Title;
+  sections: RuleSection[];
+}
+
+export interface AcademicCalendarItem {
+  year: string;
+  link: string;
+}
+
+export interface AcademicCalendarContent {
+  pageTitle: Title;
+  tableHeaders: {
+    session: Title;
+    link: Title;
+  };
+  linkText: Title;
+  items: AcademicCalendarItem[];
+}
