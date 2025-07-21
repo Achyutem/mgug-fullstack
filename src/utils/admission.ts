@@ -4,6 +4,7 @@ import type {
   FeeStructureMember,
   UnderGraduateContent,
   ProgramsContent,
+  ListProgramsStaticText,
 } from "./types";
 
 export const feeStructureTitles: FeeStructureTitles = {
@@ -1880,6 +1881,33 @@ export const listProgramsContent: ProgramsContent = {
       ],
     },
   ],
+};
+
+export const listProgramsStaticText: ListProgramsStaticText = {
+  subheading: {
+    hindi:
+      "हमारे सभी संकायों में उपलब्ध विविध शैक्षणिक कार्यक्रमों का अन्वेषण करें।",
+    english:
+      "Explore our diverse range of academic offerings across all faculties.",
+  },
+  tableHeaders: {
+    programme: { hindi: "कार्यक्रम", english: "Programme" },
+    duration: { hindi: "अवधि", english: "Duration" },
+    fees: { hindi: "शुल्क", english: "Fees" },
+    examFee: { hindi: "परीक्षा शुल्क", english: "Exam Fee" },
+    seats: { hindi: "सीटें", english: "Seats" },
+    supernumerary: { hindi: "अधिसंख्य", english: "Supernumerary" },
+    qualification: { hindi: "योग्यता", english: "Qualification" },
+  },
+  mobileLabels: {
+    programme: { hindi: "कार्यक्रम:", english: "Programme:" },
+    duration: { hindi: "अवधि:", english: "Duration:" },
+    fees: { hindi: "शुल्क:", english: "Fees:" },
+    examFee: { hindi: "परीक्षा शुल्क:", english: "Exam Fee:" },
+    seats: { hindi: "सीटें:", english: "Seats:" },
+    supernumerary: { hindi: "अधिसंख्य:", english: "Supernumerary:" },
+    qualification: { hindi: "योग्यता:", english: "Qualification:" },
+  },
 };
 
 export const phdprogramsContent: ProgramsContent = {
