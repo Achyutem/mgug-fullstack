@@ -3,13 +3,7 @@ import { Pagination } from "@/components/pagination";
 import MainLayout from "@/layouts/homeLayout";
 import { UseLanguage } from "@/context/languageContext";
 import { sevaPathTitles } from "@/utils/moreData";
-import type { MagazineTitles } from "@/utils/types";
-
-export interface SevaPathMagazineItem {
-  notification_name: string;
-  notification_datetime_formatted: string;
-  pdf_url: string;
-}
+import type { MagazineTitles, SevaPathMagazineItem } from "@/utils/types";
 
 const ITEMS_PER_PAGE = 10;
 const API_BASE_URL = "https://mgug.ac.in/api";
