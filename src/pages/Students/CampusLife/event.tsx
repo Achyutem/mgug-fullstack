@@ -1,26 +1,29 @@
 import { useEffect, useState } from "react";
 import { Pagination } from "@/components/pagination";
 import MainLayout from "@/layouts/homeLayout";
-
-export interface EventItem {
-  notification_name: string;
-  notification_datetime_formatted: string;
-  pdf_url: string;
-}
+import { UseLanguage } from "@/context/languageContext";
+import { eventsTitles } from "@/utils/student";
+import type { EventItem, MagazineTitles } from "@/utils/types";
 
 const ITEMS_PER_PAGE = 10;
 const API_BASE_URL = "https://mgug.ac.in/api";
 
-const renderEventsTable = (items: EventItem[]) => (
+const renderEventsTable = (
+  items: EventItem[],
+  titles: MagazineTitles["headers"],
+  language: "hindi" | "english"
+) => (
   <div className="p-6 sm:p-8 rounded-xl border border-slate-700 bg-black/20 backdrop-blur-sm">
     <div className="overflow-x-auto">
       <table className="w-full text-left text-gray-200">
         <thead>
           <tr className="bg-orange-500/20 text-orange-400">
-            <th className="p-4 font-semibold rounded-tl-xl">Event Name</th>
-            <th className="p-4 font-semibold">Event Date</th>
+            <th className="p-4 font-semibold rounded-tl-xl">
+              {titles.title[language]}
+            </th>
+            <th className="p-4 font-semibold">{titles.date[language]}</th>
             <th className="p-4 font-semibold rounded-tr-xl text-center">
-              Link
+              {titles.link[language]}
             </th>
           </tr>
         </thead>
@@ -41,7 +44,7 @@ const renderEventsTable = (items: EventItem[]) => (
                   rel="noopener noreferrer"
                   className="inline-block text-sm text-cyan-400 hover:text-cyan-300 underline font-semibold"
                 >
-                  View Details
+                  {language === "hindi" ? "विवरण देखें" : "View Details"}
                 </a>
               </td>
             </tr>
@@ -53,13 +56,23 @@ const renderEventsTable = (items: EventItem[]) => (
 );
 
 export default function EventsPage() {
+  const { language } = UseLanguage();
   const [events, setEvents] = useState<EventItem[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/notificationsApi.php?type=3`)
+    // Assuming 'type=4' is for Events. You may need to verify this.
+    fetch(`${API_BASE_URL}/notificationsApi.php?type=4`)
       .then((res) => res.json())
-      .then(setEvents)
+      .then((data) => {
+        // Safeguard against non-array API responses
+        if (Array.isArray(data)) {
+          setEvents(data);
+        } else {
+          console.error("API did not return an array for Events:", data);
+          setEvents([]);
+        }
+      })
       .catch(console.error);
   }, []);
 
@@ -72,9 +85,9 @@ export default function EventsPage() {
     <MainLayout>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
-          Events
+          {eventsTitles.heading[language]}
         </h1>
-        {renderEventsTable(displayedEvents)}
+        {renderEventsTable(displayedEvents, eventsTitles.headers, language)}
         <Pagination
           currentPage={currentPage}
           totalItems={events.length}

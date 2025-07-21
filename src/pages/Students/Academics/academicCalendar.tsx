@@ -1,24 +1,18 @@
 import MainLayout from "@/layouts/homeLayout";
+import { UseLanguage } from "@/context/languageContext";
+import { academicCalendarData } from "@/utils/student";
 
-const academicData = [
-  {
-    year: "2024-2025",
-    link: "https://mgug.ac.in/academics/Academic_Calendar_24-25.pdf",
-  },
-  {
-    year: "2025-2026",
-    link: "https://mgug.ac.in/academics/Academic_Calendar_25-26.pdf",
-  },
-];
+const AcademicCalendar = () => {
+  const { language } = UseLanguage();
+  const content = academicCalendarData;
 
-export default function AcademicCalendar() {
   return (
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-4xl text-left">
             <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
-              Academic Calendar
+              {content.pageTitle[language]}
             </h1>
 
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
@@ -27,13 +21,15 @@ export default function AcademicCalendar() {
                   <thead>
                     <tr className="bg-orange-500/20 text-orange-400">
                       <th className="p-4 font-semibold rounded-tl-xl">
-                        Academic Session
+                        {content.tableHeaders.session[language]}
                       </th>
-                      <th className="p-4 font-semibold rounded-tr-xl">Link</th>
+                      <th className="p-4 font-semibold rounded-tr-xl">
+                        {content.tableHeaders.link[language]}
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {academicData.map((item, idx) => (
+                    {content.items.map((item, idx) => (
                       <tr
                         key={idx}
                         className="border-b border-slate-700 hover:bg-gray-700/50 transition-colors"
@@ -46,7 +42,7 @@ export default function AcademicCalendar() {
                             rel="noopener noreferrer"
                             className="inline-block text-sm text-cyan-400 hover:text-blue-400 underline"
                           >
-                            View
+                            {content.linkText[language]}
                           </a>
                         </td>
                       </tr>
@@ -60,4 +56,6 @@ export default function AcademicCalendar() {
       </section>
     </MainLayout>
   );
-}
+};
+
+export default AcademicCalendar;
