@@ -28,6 +28,11 @@ export type MegaMenus = {
   More: MegaMenuSection[];
 };
 
+export interface RuleItemProps {
+  label: string;
+  children: React.ReactNode;
+}
+
 export interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
@@ -722,4 +727,51 @@ export interface AcademicCalendarContent {
   };
   linkText: Title;
   items: AcademicCalendarItem[];
+}
+
+export interface FivePledgesContent {
+  pageTitle: Title;
+  pledges: Title[];
+}
+
+export interface MilestonesContent {
+  pageTitle: Title;
+  milestones: Title[];
+}
+
+export interface SpecialtyContent {
+  pageTitle: Title;
+  specialties: Title[];
+}
+
+export interface Principles {
+  pageTitle: Title;
+  concepts: Title[];
+}
+
+export interface InstitutionItem {
+  name: Title;
+  link: string;
+}
+
+export interface InstitutionsContent {
+  pageTitle: Title;
+  institutions: InstitutionItem[];
+}
+
+export interface ShikshaParishadCharterContent {
+  pageTitle: Title;
+  subtitle: Title;
+  charterPoints: Title[];
+}
+
+export interface ProgressPathContent {
+  pageTitle: Title;
+  points: Title[];
+}
+
+export interface ProposedProgramsContent {
+  pageTitle: Title;
+  intro: Title;
+  points: Title[];
 }
