@@ -1,21 +1,7 @@
 import MainLayout from "@/layouts/homeLayout";
 import { UseLanguage } from "@/context/languageContext";
 import { examinationManualData } from "@/utils/student";
-
-const RuleItem = ({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) => (
-  <li className="flex items-start">
-    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-orange-500/20 text-orange-400 font-semibold flex items-center justify-center mr-4 mt-1">
-      {label}
-    </div>
-    <div className="flex-1">{children}</div>
-  </li>
-);
+import RuleItem from "@/components/ruleItem";
 
 const ExaminationManual = () => {
   const { language } = UseLanguage();

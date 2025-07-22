@@ -1,20 +1,7 @@
 import { UseLanguage } from "@/context/languageContext";
 import MainLayout from "@/layouts/homeLayout";
 import { underGraduateContent } from "@/utils/admission";
-
-interface RuleItemProps {
-  label: string;
-  children: React.ReactNode;
-}
-
-const RuleItem = ({ label, children }: RuleItemProps) => (
-  <li className="flex items-start">
-    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-orange-500/20 text-orange-400 font-semibold flex items-center justify-center mr-4 mt-1">
-      {label}
-    </div>
-    <div className="flex-1">{children}</div>
-  </li>
-);
+import RuleItem from "@/components/ruleItem";
 
 const UnderGraduate = () => {
   const { language } = UseLanguage();

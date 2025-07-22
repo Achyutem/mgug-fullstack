@@ -1,6 +1,7 @@
 import MainLayout from "@/layouts/homeLayout";
 import { governingBodyData } from "@/utils/statuoryBodyData";
 import { UseLanguage } from "@/context/languageContext";
+import RuleItem from "@/components/ruleItem";
 
 const UserIcon = () => (
   <svg
@@ -15,16 +16,6 @@ const UserIcon = () => (
       clipRule="evenodd"
     />
   </svg>
-);
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const RuleItem = ({ label, children }: any) => (
-  <li className="flex items-start">
-    <div className="flex-shrink-0 h-8 w-8 rounded-full bg-orange-500/20 text-orange-400 font-semibold flex items-center justify-center mr-4 mt-1">
-      {label}
-    </div>
-    <div className="flex-1">{children}</div>
-  </li>
 );
 
 const GoverningBody = () => {
