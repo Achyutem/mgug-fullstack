@@ -44,6 +44,14 @@ import ArogyaPathPage from "@/pages/More/Magazine/arogyaPath";
 import ArogyaPrabhaPage from "@/pages/More/Magazine/arogyaPrabha";
 import SevaPathMagazinePage from "@/pages/More/Magazine/sevaPath";
 import InspirationAbode from "@/pages/About/inspirationAbode";
+import FivePledges from "@/pages/About/ideology/fiveVows";
+import Principles from "@/pages/About/ideology/principles";
+import Specialty from "@/pages/About/ideology/speciality";
+import CultivationPath from "@/pages/About/ideology/cultivationPath";
+import ProposedProjects from "@/pages/About/proposedProject";
+import ProgressPath from "@/pages/About/progressPath";
+import InstitutionsPage from "@/pages/About/associateInstitutes";
+import ShikshaParishadCharter from "@/pages/About/shikshaParsihad";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -82,6 +90,52 @@ export const routeMeta = [
     title: "Our Source of Inspiration",
     path: "/our-source-of-inspiration",
     element: <Inspiration />,
+  },
+  {
+    title: "Proposed Projects",
+    path: "/proposed-project",
+    element: <ProposedProjects />,
+  },
+  {
+    title: "Progress Path",
+    path: "/progress-path",
+    element: <ProgressPath />,
+  },
+  {
+    title: "Associate Instituion",
+    path: "/associate-instituion",
+    element: <InstitutionsPage />,
+  },
+  {
+    title: "Associate Instituion",
+    path: "/associate-instituion",
+    element: <InstitutionsPage />,
+  },
+  {
+    title: "Shiksha Parishad",
+    path: "/shiksha-parishad",
+    element: <ShikshaParishadCharter />,
+  },
+  //
+  {
+    title: "Cultivation Path",
+    path: "/cultivation-path",
+    element: <CultivationPath />,
+  },
+  {
+    title: "Five Vows",
+    path: "/five-vows",
+    element: <FivePledges />,
+  },
+  {
+    title: "Principles",
+    path: "/principles",
+    element: <Principles />,
+  },
+  {
+    title: "Specialty",
+    path: "/speciality",
+    element: <Specialty />,
   },
   {
     title: "Inspirational Leadership",
