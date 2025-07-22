@@ -1,0 +1,37 @@
+import { UseLanguage } from "@/context/languageContext";
+import MainLayout from "@/layouts/homeLayout";
+import { proposedProgramsData } from "@/utils/aboutData";
+import RuleItem from "@/components/ruleItem";
+
+const ProposedProjects = () => {
+  const { language } = UseLanguage();
+  const content = proposedProgramsData;
+
+  return (
+    <MainLayout>
+      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
+        <div className="flex flex-col items-center">
+          <div className="w-full max-w-4xl text-left">
+            <h1 className="text-4xl font-bold mb-4 text-orange-400 text-center">
+              {content.pageTitle[language]}
+            </h1>
+            <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+              {content.intro[language]}
+            </p>
+            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+              <ul className="space-y-6 text-lg text-gray-200">
+                {content.points.map((point, index) => (
+                  <RuleItem key={index} label={"⮚"}>
+                    <span className="text-base">{point[language]}</span>
+                  </RuleItem>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  );
+};
+
+export default ProposedProjects;
