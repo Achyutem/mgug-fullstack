@@ -101,6 +101,87 @@ export const megaMenus: MegaMenus = {
         },
       ],
     },
+    {
+      type: "header",
+      label: {
+        hindi: "विचारधारा",
+        english: "Ideology",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "मील के पत्थर",
+            english: "Cultivation Path",
+          },
+          href: "/cultivation-path",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "पाँच प्रतिज्ञाएँ",
+            english: "Five vows",
+          },
+          href: "/five-vows",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "सिद्धांत",
+            english: "Principles",
+          },
+          href: "/principles",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "विशेषताएं",
+            english: "Speciality",
+          },
+          href: "/speciality",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रेरणा निवास",
+            english: "Inspiration Abode",
+          },
+          href: "/inspiration-abode",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रस्तावित परियोजना",
+            english: "Proposed Project",
+          },
+          href: "/proposed-project",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रगति पथ",
+            english: "Progress Path",
+          },
+          href: "/progress-path",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "सहयोगी संस्थान",
+            english: "Associate Institutes",
+          },
+          href: "/associate-institutes",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "शिक्षा परिषद",
+            english: "Shiksha Parishad",
+          },
+          href: "/shiksha-parishad",
+        },
+      ],
+    },
   ],
   Administration: [
     {
