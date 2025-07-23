@@ -54,7 +54,7 @@ const ListOfPrograms = () => {
     <MainLayout>
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl/14 pt-2 sm:text-4xl/14 lg:text-5xl/14 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-500">
+          <h1 className="text-3xl/14 pt-2 pb-2 sm:text-4xl/14 lg:text-5xl/14 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-500">
             {dynamicContent.heading[language]}
           </h1>
           <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
