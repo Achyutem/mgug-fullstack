@@ -448,7 +448,7 @@ export const AntiRaggingsquad: AntiRaggingMember[] = [
 
 export const ItCommitteeMembers: ItCommitteeMember[] = [
   {
-    image: "/admin/prashanthMurthy.jpg",
+    image: "/admin/it-team/prashanthMurthy.jpg",
     name: {
       hindi: "डॉ. प्रशांत एस. मूर्ति",
       english: "Dr. Prashanth S. Murthy",
@@ -472,12 +472,12 @@ export const ItCommitteeMembers: ItCommitteeMember[] = [
     },
   },
   {
-    image: "/sample.webp",
+    image: "/admin/it-team/anandMishra.jpg",
     name: { hindi: "आनंद मिश्रा", english: "Anand Mishra" },
     designation: { hindi: "सिस्टम व्यवस्थापक", english: "System Admin" },
   },
   {
-    image: "/sample.webp",
+    image: "/admin/it-team/sharadanandPandey.jpg",
     name: { hindi: "शरदनंद पांडे", english: "Sharadanand Pandey" },
     designation: { hindi: "ग्राफिक डिज़ाइनर", english: "Graphic Designer" },
   },
