@@ -775,3 +775,113 @@ export interface ProposedProgramsContent {
   intro: Title;
   points: Title[];
 }
+
+export interface ResearchContent {
+  pageTitle: Title;
+  introParagraphs: Title[];
+  facilitiesHeading: Title;
+  tableHeaders: {
+    sNo: Title;
+    equipment: Title;
+  };
+  equipmentList: Title[];
+}
+
+export interface HostelTableRow {
+  particulars: Title;
+  rooms: string;
+  capacity: string;
+}
+
+export interface HostelInfo {
+  heading: Title;
+  tableData: HostelTableRow[];
+}
+
+export interface HostelContent {
+  pageTitle: Title;
+  image: string;
+  introParagraphs: Title[];
+  facilitiesHeading: Title;
+  facilitiesList: Title[];
+  tableHeaders: {
+    particulars: Title;
+    rooms: Title;
+    capacity: Title;
+  };
+  girlsHostel: HostelInfo;
+  boysHostel: HostelInfo;
+}
+
+export interface LaboratoryContent {
+  pageTitle: Title;
+  intro: Title;
+  labs: Title[];
+}
+
+export interface LibraryService {
+  heading: Title;
+  description: Title;
+}
+
+export interface LibraryContent {
+  pageTitle: Title;
+  heading: Title;
+  introParagraphs: Title[];
+  servicesHeading: Title;
+  services: LibraryService[];
+}
+
+export interface CafeteriaContent {
+  pageTitle: Title;
+  image: string;
+  paragraphs: Title[];
+}
+
+export interface InfoItem {
+  heading: Title;
+  description: Title;
+}
+
+export interface GuestHouseContent {
+  pageTitle: Title;
+  image: string;
+  introParagraphs: Title[];
+  facilitiesHeading: Title;
+  facilitiesList: InfoItem[];
+  rulesHeading: Title;
+  rulesList: InfoItem[];
+}
+
+export interface InfoItem {
+  heading: Title;
+  description: Title;
+}
+
+export interface HospitalContent {
+  pageTitle: Title;
+  image: string;
+  introParagraphs: Title[];
+  facilitiesHeading: Title;
+  facilitiesList: InfoItem[];
+  timingsHeading: Title;
+  timingsList: InfoItem[];
+}
+
+export interface AmbulanceContent {
+  pageTitle: Title;
+  image: string;
+  paragraphs: Title[];
+}
+
+export interface DifferentlyAbledContent {
+  pageTitle: Title;
+  image: string;
+  paragraphs: Title[];
+}
+
+export interface SportsContent {
+  pageTitle: Title;
+  image: string;
+  paragraphs: Title[];
+}
