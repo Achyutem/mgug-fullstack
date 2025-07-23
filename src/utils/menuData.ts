@@ -317,6 +317,47 @@ export const megaMenus: MegaMenus = {
     {
       type: "header",
       label: {
+        hindi: "संकाय",
+        english: "Faculties",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
+            english: "Faculty of Allied Health Science",
+          },
+          href: "https://allied.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "कृषि संकाय",
+            english: "Faculty of Agriculture",
+          },
+          href: "https://agriculture.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "फार्मास्युटिकल साइंसेज संकाय",
+            english: "Faculty of Pharmaceutical Sciences",
+          },
+          href: "https://pharmacy.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "वाणिज्य संकाय",
+            english: "Faculty of Commerce",
+          },
+          href: "https://commerce.mgug.ac.in/",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
         hindi: "समितियां",
         english: "Committees",
       },
@@ -576,47 +617,6 @@ export const megaMenus: MegaMenus = {
     {
       type: "header",
       label: {
-        hindi: "संकाय",
-        english: "Faculties",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
-            english: "Faculty of Allied Health Science",
-          },
-          href: "https://allied.mgug.ac.in/",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "कृषि संकाय",
-            english: "Faculty of Agriculture",
-          },
-          href: "https://agriculture.mgug.ac.in/",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "फार्मास्युटिकल साइंसेज संकाय",
-            english: "Faculty of Pharmaceutical Sciences",
-          },
-          href: "https://pharmacy.mgug.ac.in/",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "वाणिज्य संकाय",
-            english: "Faculty of Commerce",
-          },
-          href: "https://commerce.mgug.ac.in/",
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
         hindi: "परिसर जीवन",
         english: "Campus Life",
       },
@@ -627,7 +627,7 @@ export const megaMenus: MegaMenus = {
             hindi: "पुस्तकालय",
             english: "Library",
           },
-          href: "https://mgug.ac.in/campus_facilities/library.php",
+          href: "/library",
         },
         {
           type: "link",
@@ -635,7 +635,7 @@ export const megaMenus: MegaMenus = {
             hindi: "छात्रावास",
             english: "Hostel",
           },
-          href: "https://mgug.ac.in/campus_facilities/hostel.php",
+          href: "/hostel",
         },
         {
           type: "link",
@@ -643,7 +643,7 @@ export const megaMenus: MegaMenus = {
             hindi: "खेल",
             english: "Sports",
           },
-          href: "https://mgug.ac.in/campus_facilities/sport.php",
+          href: "/sports",
         },
         {
           type: "link",
@@ -676,6 +676,63 @@ export const megaMenus: MegaMenus = {
             english: "NSS",
           },
           href: "https://mgug.ac.in/nss/index.php",
+        },
+      ],
+    },
+    {
+      type: "header",
+      label: {
+        hindi: "अन्य सुविधाएं",
+        english: "Other facilities",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "एम्बुलेंस",
+            english: "Ambulance",
+          },
+          href: "/ambulance",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "कैंटीन",
+            english: "Canteen",
+          },
+          href: "/canteen",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: " अन्यथा सक्षम ",
+            english: "Differently Abled",
+          },
+          href: "/differently-abled",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "अतिथि गृह",
+            english: "Guest House",
+          },
+          href: "/guest-house",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "अस्पताल",
+            english: "Hospital",
+          },
+          href: "/hospital",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रयोगशालाओं",
+            english: "Laboratories",
+          },
+          href: "/laboratories",
         },
       ],
     },
