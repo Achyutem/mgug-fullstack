@@ -10,6 +10,7 @@ import type {
   Principles,
   ProgressPathContent,
   ProposedProgramsContent,
+  ResearchContent,
   ShikshaParishadCharterContent,
   SpecialtyContent,
   UniversityLogoContent,
@@ -1347,5 +1348,113 @@ export const proposedProgramsData: ProposedProgramsContent = {
       english:
         "At the same time our endeavor will also be to facilitate and make available health and agriculture-related technical know-how to establish local small-scale industries.",
     },
+  ],
+};
+
+export const researchData: ResearchContent = {
+  pageTitle: {
+    hindi: "अनुसंधान की मुख्य विशेषताएं",
+    english: "Research Highlights",
+  },
+  introParagraphs: [
+    {
+      hindi:
+        "महायोगी गोरखनाथ विश्वविद्यालय, गोरखपुर (एमजीयूजी) एक जीवंत अनुसंधान पारिस्थितिकी तंत्र को बढ़ावा देने के लिए प्रतिबद्ध है जो ज्ञान, नवाचार और सामाजिक प्रगति को आगे बढ़ाता है। विश्वविद्यालय विज्ञान, प्रौद्योगिकी, मानविकी, सामाजिक विज्ञान, आयुर्वेद और शिक्षा सहित विविध क्षेत्रों में अंतःविषय और सहयोगात्मक अनुसंधान को सक्रिय रूप से प्रोत्साहित करता है। एमजीयूजी ने संकाय और छात्र अनुसंधान का मार्गदर्शन और समर्थन करने के लिए अनुसंधान और विकास सेल (आरडीसी), अनुसंधान सलाहकार परिषद (आरएसी), और विभागीय अनुसंधान समितियों जैसी समर्पित संरचनाएं स्थापित की हैं।",
+      english:
+        "Mahayogi Gorakhnath University, Gorakhpur (MGUG) is committed to fostering a vibrant research ecosystem that advances knowledge, innovation, and societal progress. The university actively encourages interdisciplinary and collaborative research across diverse fields, including science, technology, humanities, social sciences, Ayurveda, and education. MGUG has established dedicated structures such as the Research and Development Cell (RDC), Research Advisory Council (RAC), and departmental research committees to guide and support faculty and student research.",
+    },
+    {
+      hindi:
+        "विश्वविद्यालय जांच और नवाचार की संस्कृति का पोषण करने के लिए बीज धन अनुदान भी प्रदान करता है, राष्ट्रीय और अंतर्राष्ट्रीय सम्मेलनों में भागीदारी को बढ़ावा देता है, और वित्त पोषण एजेंसियों और उद्योग भागीदारों के साथ संबंधों की सुविधा प्रदान करता है। राष्ट्रीय शिक्षा नीति (एनईपी) 2020 के अनुरूप, एमजीयूजी गुणवत्ता अनुसंधान, नैतिक मानकों और प्रभाव-संचालित परिणामों पर जोर देता है।",
+      english:
+        "The university also provides seed money grants, promotes participation in national and international conferences, and facilitates linkages with funding agencies and industry partners to nurture a culture of inquiry and innovation. In alignment with the National Education Policy (NEP) 2020, MGUG emphasizes quality research, ethical standards, and impact-driven outcomes.",
+    },
+    {
+      hindi:
+        "विश्वविद्यालय अच्छी तरह से परिभाषित अनुसंधान नीतियों, उच्च-प्रभाव वाली पत्रिकाओं में प्रकाशनों के लिए प्रोत्साहन, और परामर्श और पेटेंटिंग के अवसरों के माध्यम से संकाय और विद्वानों का समर्थन करता है। एमजीयूजी में अनुसंधान को स्थानीय, क्षेत्रीय और वैश्विक चुनौतियों का समाधान करने के लिए डिज़ाइन किया गया है, जिसमें आयुर्वेद जैसी पारंपरिक ज्ञान प्रणालियों को आधुनिक वैज्ञानिक दृष्टिकोणों के साथ एकीकृत करने पर विशेष ध्यान दिया गया है। अकादमिक उत्कृष्टता और सतत विकास के प्रति अपनी प्रतिबद्धता के माध्यम से, एमजीयूजी परिवर्तनकारी अनुसंधान का एक केंद्र बनने की कल्पना करता है जो राष्ट्र-निर्माण और वैश्विक छात्रवृत्ति में सार्थक योगदान देता है।",
+      english:
+        "The university supports faculty and scholars through well-defined research policies, incentives for publications in high-impact journals, and opportunities for consultancy and patenting. Research at MGUG is designed to address local, regional, and global challenges, with a special focus on integrating traditional knowledge systems like Ayurveda with modern scientific approaches. Through its commitment to academic excellence and sustainable development, MGUG envisions becoming a hub of transformative research that contributes meaningfully to nation-building and global scholarship.",
+    },
+  ],
+  facilitiesHeading: {
+    hindi: "उपलब्ध अनुसंधान सुविधाएं और उपकरण",
+    english: "Research Facilities and Equipment Available",
+  },
+  tableHeaders: {
+    sNo: { hindi: "क्र.सं.", english: "S.No." },
+    equipment: { hindi: "उपकरण / यंत्र", english: "Equipment / Instrument" },
+  },
+  equipmentList: [
+    { hindi: "पीसीआर मशीन", english: "PCR Machine" },
+    {
+      hindi: "यूवी/विज़ डबल बीम स्पेक्ट्रोफोटोमीटर",
+      english: "UV/Vis Double Beam Spectrophotometer",
+    },
+    {
+      hindi: "संश्लेषण के लिए रासायनिक रिएक्टर",
+      english: "Chemical Reactor for Synthesis",
+    },
+    { hindi: "इलेक्ट्रोफोरेसिस सिस्टम", english: "Electrophoresis System" },
+    { hindi: "एसडीएस पेज", english: "SDS PAGE" },
+    {
+      hindi: "एम्प्यूल भरने और सील करने की मशीन",
+      english: "Ampoule Filling and Sealing Machine",
+    },
+    {
+      hindi: "विघटन दर परीक्षण उपकरण",
+      english: "Dissolution Rate Test Apparatus",
+    },
+    { hindi: "डबल कोन ब्लेंडर", english: "Double Cone Blender" },
+    { hindi: "यूवी ट्रांसिल्यूमिनेटर", english: "UV Transilluminator" },
+    { hindi: "डीप फ्रीजर", english: "Deep Freezer" },
+    { hindi: "लैमिनार एयर फ्लो", english: "Laminar Air Flow" },
+    { hindi: "टैबलेट पंचिंग मशीन", english: "Tablet Punching Machine" },
+    { hindi: "टैबलेट कोटिंग पैन", english: "Tablet Coating Pan" },
+    { hindi: "टैबलेट कठोरता परीक्षक", english: "Tablet Hardness Tester" },
+    { hindi: "बी.ओ.डी. इनक्यूबेटर", english: "B.O.D. Incubator" },
+    { hindi: "इनक्यूबेटर", english: "Incubators" },
+    { hindi: "हॉट एयर ओवन", english: "Hot Air Oven" },
+    { hindi: "वैक्यूम इवेपोरेटर", english: "Vacuum Evaporator" },
+    { hindi: "फ्लेम फोटोमीटर", english: "Flame Photometer" },
+    { hindi: "डबल डिस्टिलेशन यूनिट", english: "Double Distillation Unit" },
+    { hindi: "प्रोजेक्शन माइक्रोस्कोप", english: "Projection Microscope" },
+    { hindi: "द्विनेत्री माइक्रोस्कोप", english: "Binocular Microscope" },
+    {
+      hindi: "नेफेलोमीटर (टर्बिडिटी मीटर) डिजिटल",
+      english: "Nephelometer (Turbidity Meter) Digital",
+    },
+    { hindi: "क्यूबेक कॉलोनी काउंटर", english: "Quebec Colony Counter" },
+    { hindi: "कॉलोनी काउंटर डिजिटल", english: "Colony Counter Digital" },
+    { hindi: "एक्टोफोटोमीटर", english: "Actophotometer" },
+    { hindi: "इलेक्ट्रो-कन्वल्सियोमीटर", english: "Electro-Convulsiometer" },
+    { hindi: "पोटेंशियोमीटर डिजिटल", english: "Potentiometer Digital" },
+    { hindi: "पोलारिमीटर", english: "Polarimeter" },
+    { hindi: "कोलोरिमीटर", english: "Colorimeter" },
+    { hindi: "पीएच मीटर", english: "pH Meter" },
+    { hindi: "डिजिटल कंडक्टिविटी मीटर", english: "Digital Conductivity Meter" },
+    { hindi: "डिजिटल बैलेंस", english: "Digital Balance" },
+    { hindi: "वाटर बाथ", english: "Water Bath" },
+    { hindi: "ऑर्बिटल शेकर", english: "Orbital Shaker" },
+    { hindi: "वोर्टेक्स मिक्सर", english: "Vortex Mixer" },
+    { hindi: "सेंट्रीफ्यूज मशीनें", english: "Centrifuge Machines" },
+    { hindi: "मिनिसेंट्रीफ्यूज", english: "Minicentrifuge" },
+    { hindi: "डेसिकेटर", english: "Desiccator" },
+    { hindi: "आटोक्लेव", english: "Autoclave" },
+    {
+      hindi: "बल्क डेंसिटी टेस्ट उपकरण",
+      english: "Bulk Density Test Apparatus",
+    },
+    { hindi: "विघटन परीक्षण इकाई", english: "Disintegration Test Unit" },
+    { hindi: "फ्रायबिलिटी टेस्ट उपकरण", english: "Friability Test Apparatus" },
+    { hindi: "कैप्सूल भरने की मशीन", english: "Capsule Filling Machine" },
+    { hindi: "स्पष्टता परीक्षण उपकरण", english: "Clarity Test Equipment" },
+    { hindi: "आसवन उपकरण", english: "Distillation Apparatus" },
+    {
+      hindi: "सोक्सलेट / सोक्सालेट उपकरण",
+      english: "Soxhlet / Soxalate Apparatus",
+    },
+    { hindi: "लुकास मॉइस्ट चैंबर", english: "Lucas Moist Chamber" },
+    { hindi: "गलनांक उपकरण", english: "Melting Point Apparatus" },
+    { hindi: "पोल क्लाइंबिंग उपकरण", english: "Pole Climbing Apparatus" },
   ],
 };
