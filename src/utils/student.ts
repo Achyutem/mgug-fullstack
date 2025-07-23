@@ -1,7 +1,16 @@
 import type {
   AcademicCalendarContent,
+  AmbulanceContent,
+  CafeteriaContent,
+  DifferentlyAbledContent,
   ExaminationManualContent,
+  GuestHouseContent,
+  HospitalContent,
+  HostelContent,
+  LaboratoryContent,
+  LibraryContent,
   MagazineTitles,
+  SportsContent,
 } from "./types";
 
 export const admissionNoticeTitles: MagazineTitles = {
@@ -322,6 +331,545 @@ export const academicCalendarData: AcademicCalendarContent = {
     {
       year: "2025-2026",
       link: "https://mgug.ac.in/academics/Academic_Calendar_25-26.pdf",
+    },
+  ],
+};
+
+export const hostelData: HostelContent = {
+  pageTitle: {
+    hindi: "छात्रावास",
+    english: "Hostel",
+  },
+  image: "/hostel_image.webp", // Replace with your actual image path
+  introParagraphs: [
+    {
+      hindi:
+        "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर में लड़के और लड़कियों के लिए दो छात्रावास हैं। लड़कियों के छात्रावास का नाम माँ पाटेश्वरी सेवाश्रम है, जिसमें 169 कमरे और 361 छात्रों की क्षमता है, और लड़कों के छात्रावास का नाम महंत गोपालननाथ सेवाश्रम है, जिसमें 255 कमरे और 510 छात्रों की क्षमता है।",
+      english:
+        "Mahayogi Gorakhnath University Gorakhpur has two hostels, for girls and boys. The girls hostel name is Maa Pateshwari Sevashram, which has 169 rooms and a 361-student capacity with full facilities, and the boys hostel name is Mahaant Gopalanath Sevashram, which has 255 rooms and a 510-student capacity with full facilities.",
+    },
+    {
+      hindi:
+        "दोनों छात्रावास आवश्यक आधुनिक और अद्यतन सुविधाओं और सेवाओं से सुसज्जित हैं। छात्रावास के कमरे पूरी तरह से सुसज्जित हैं और वाई-फाई और अन्य आवश्यक बिजली फिटिंग से सुसज्जित हैं। प्रत्येक छात्रावास में अनुशासन और सुरक्षा सुनिश्चित करने के लिए एक वार्डन और अधीक्षक हैं।",
+      english:
+        "Both the hostels are well equipped with the necessary modern and up-to-date facilities and services. The hostel rooms are fully furnished and are well equipped with Wi-Fi and other necessary electrical fittings. Every hostel has a warden and superintendent to ensure discipline and security in the hostel.",
+    },
+    {
+      hindi:
+        "प्रथम वर्ष के छात्रों को उपलब्धता के आधार पर डबल या ट्रिपल शेयरिंग बेडरूम आवंटित किए जाते हैं। वरिष्ठ छात्रों को उनकी उम्र के आधार पर सिंगल या डबल शेयरिंग रूम आवंटित किए जाते हैं।",
+      english:
+        "First-year students are allotted double or triple sharing bedrooms depending on availability. Senior students are assigned single or double sharing rooms based on their age.",
+    },
+  ],
+  facilitiesHeading: {
+    hindi: "छात्रावासों में उपलब्ध सुविधाएं",
+    english: "Facilities Available in Hostels",
+  },
+  facilitiesList: [
+    {
+      hindi: "24×7 गर्म और ठंडे पानी की आपूर्ति",
+      english: "24×7 hot and cold water supply",
+    },
+    {
+      hindi: "24×7 निर्बाध बिजली की आपूर्ति",
+      english: "24×7 uninterrupted power supply",
+    },
+    {
+      hindi: "वाई-फाई के माध्यम से इंटरनेट कनेक्टिविटी",
+      english: "Internet connectivity through Wi-Fi",
+    },
+    {
+      hindi: "खेल सुविधाएं और व्यायामशाला",
+      english: "Sports facilities and gymnasium",
+    },
+    {
+      hindi: "टेलीविजन रूम, स्टडी रूम, कैफेटेरिया, मनोरंजन कक्ष, आदि।",
+      english:
+        "Television rooms, study rooms, cafeteria, entertainment rooms, etc.",
+    },
+  ],
+  tableHeaders: {
+    particulars: { hindi: "विवरण", english: "Particulars" },
+    rooms: { hindi: "कमरों की संख्या", english: "No. of Rooms" },
+    capacity: {
+      hindi: "छात्रों की बैठने की क्षमता",
+      english: "Students Seating Capacity",
+    },
+  },
+  girlsHostel: {
+    heading: {
+      hindi: "लड़कियों का छात्रावास",
+      english: "Girls Hostel",
+    },
+    tableData: [
+      {
+        particulars: { hindi: "सिंगल सीटर", english: "Single Seater" },
+        rooms: "37",
+        capacity: "37",
+      },
+      {
+        particulars: { hindi: "डबल सीटर", english: "Double Seater" },
+        rooms: "72",
+        capacity: "144",
+      },
+      {
+        particulars: { hindi: "ट्रिपल सीटर", english: "Triple Seater" },
+        rooms: "60",
+        capacity: "180",
+      },
+      {
+        particulars: { hindi: "कुल क्षमता", english: "Total Capacity" },
+        rooms: "169",
+        capacity: "361",
+      },
+    ],
+  },
+  boysHostel: {
+    heading: {
+      hindi: "लड़कों का छात्रावास",
+      english: "Boys Hostel",
+    },
+    tableData: [
+      {
+        particulars: { hindi: "सिंगल सीटर", english: "Single Seater" },
+        rooms: "50",
+        capacity: "50",
+      },
+      {
+        particulars: { hindi: "डबल सीटर", english: "Double Seater" },
+        rooms: "155",
+        capacity: "310",
+      },
+      {
+        particulars: { hindi: "ट्रिपल सीटर", english: "Triple Seater" },
+        rooms: "50",
+        capacity: "150",
+      },
+      {
+        particulars: { hindi: "कुल क्षमता", english: "Total Capacity" },
+        rooms: "255",
+        capacity: "510",
+      },
+    ],
+  },
+};
+
+export const laboratoryData: LaboratoryContent = {
+  pageTitle: {
+    hindi: "प्रयोगशालाएँ और अन्य संबंधित सुविधाएँ",
+    english: "Laboratories and other related facilities",
+  },
+  intro: {
+    hindi: "", // You can add an introductory sentence here if needed
+    english: "", // You can add an introductory sentence here if needed
+  },
+  labs: [
+    {
+      hindi: "बेसिक लैब",
+      english: "Basic Lab",
+    },
+    {
+      hindi: "ऑडियो-विजुअल एड्स से सुसज्जित शिक्षण/प्रशिक्षण लैब",
+      english: "Teaching/training Lab equipped with Audio-Visual Aids",
+    },
+    {
+      hindi: "माँ-बच्चे स्वास्थ्य नर्सिंग देखभाल सुविधा",
+      english: "Mother-Child Health Nursing Care Facility",
+    },
+    {
+      hindi: "पोषण लैब",
+      english: "Nutrition Lab",
+    },
+    {
+      hindi: "प्रीक्लिनिकल लैब",
+      english: "Preclinical Lab",
+    },
+  ],
+};
+
+export const libraryData: LibraryContent = {
+  pageTitle: {
+    hindi: "पुस्तकालय",
+    english: "Library",
+  },
+  heading: {
+    hindi: "केंद्रीय पुस्तकालय",
+    english: "Central Library",
+  },
+  introParagraphs: [
+    {
+      hindi:
+        "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर के केंद्रीय पुस्तकालय में आपका स्वागत है, जो महायोगी शिवावतारी गुरु गोरखनाथ की पवित्र भूमि में स्थित है।",
+      english:
+        "You are welcome to the Central Library of Mahayogi Gorakhnath University Gorakhpur situated in the holy land of Mahayogi Shivavatari Guru Gorakhnath.",
+    },
+    {
+      hindi:
+        "पुस्तकालय वाई-फाई से सुसज्जित है और 24x7 खुला रहता है। केंद्रीय पुस्तकालय में सभी विषयों पर विश्वविद्यालय-स्तरीय पाठ्यक्रम-संबंधित और संदर्भ पुस्तकें उपलब्ध हैं। लगभग सभी विषयों/अनुशासनों पर हिंदी और अंग्रेजी भाषा में राष्ट्रीय और अंतर्राष्ट्रीय शोध पत्रिकाएं और पत्रिकाएं सब्सक्राइब की जाती हैं। हिंदी और अंग्रेजी भाषा के महत्वपूर्ण स्थानीय और राष्ट्रीय दैनिक समाचार पत्र सब्सक्राइब किए जाते हैं। इसके अलावा, विभिन्न विषयों पर सामान्य पुस्तकों का एक समृद्ध संग्रह भी केंद्रीय पुस्तकालय में उपलब्ध है।",
+      english:
+        "The library is equipped with Wi-Fi and remains open 24x7. In the central library university-level course-related and reference books on all the subjects are available. National and international research journals and magazines in Hindi and English language are subscribed on almost all the subjects/disciplines. Hindi and English language important local and national dailies are subscribed. In addition to this, a rich collection of general books on various topics and subjects are also available in the central library.",
+    },
+    {
+      hindi:
+        "पुस्तकालय के सभी उपयोगकर्ताओं के लिए उचित और आरामदायक बैठने और पढ़ने की व्यवस्था है।",
+      english:
+        "Arrangement for proper and comfortable sitting and reading for all the users of the library is in place.",
+    },
+    {
+      hindi:
+        "यहां यह उल्लेखनीय है कि पुस्तकालय का कामकाज पूरी तरह से कम्प्यूटरीकृत है। विश्वविद्यालय दुनिया भर से शोध-संबंधित संदर्भ पुस्तकों, पत्रिकाओं और पत्रिकाओं के संग्रह में लगातार काम कर रहा है और एक विश्व स्तरीय बहु-विषयक समृद्ध आधुनिक पुस्तकालय विकसित और स्थापित करने में लगा हुआ है।",
+      english:
+        "Here it is noteworthy that the functioning of the library is fully computerized. University is continuously working and engaged in the collection of research-related reference books, journals and magazines from around the world to develop and establish a world-class multi-disciplinary rich modern library.",
+    },
+    {
+      hindi:
+        "एक पुस्तकालय बुद्धि और स्वयं के शुद्धिकरण के लिए एक मंदिर है। यहां पूरी दुनिया हमारी आंखों के सामने है। हम एक पुस्तकालय में बैठकर ही अतीत और वर्तमान की पूरी दुनिया और सभ्यताओं का भ्रमण कर सकते हैं। एक प्राचीन, शांतिपूर्ण और शांत वातावरण में अध्ययन करना और ज्ञान प्राप्त करना संभव है।",
+      english:
+        "A library is a temple for the purification of intellect and self. Here the entire world is before our eyes. We can tour the entire world and civilizations of the past and present just sitting in a library. It is possible to study and acquire knowledge in a pristine, peaceful, and serene ambience.",
+    },
+    {
+      hindi:
+        "इसलिए इस परिसर को स्वस्थ, स्वच्छ और सुंदर बनाए रखने के लिए हम सभी का जो ज्ञान सीखने और अर्जित करने में लगे हुए हैं, एक गंभीर, अनिवार्य और नैतिक कर्तव्य है। पुस्तकालय का उपयोग करते समय हमें पुस्तकालय को उत्तरोत्तर समृद्ध बनाने में अपना सहयोग सुनिश्चित करने का प्रयास करना चाहिए। कोई भी पुस्तकालय किसी देश और सभ्यता की एक मजबूत नींव प्रदान करता है। वास्तव में किसी राष्ट्र या सभ्यता के पुस्तकालय उसके विकास और प्रगति का आकलन करने के प्रमुख मापदंडों में से एक हैं।",
+      english:
+        "Therefore to keep this campus salubrious, clean and beautiful it is an earnest, imperative and moral duty of all of us who are engaged in learning and earning knowledge. While using the library we should strive and ascertain our cooperation in making the library progressively rich. Any library provides a firm foundation of a country and civilization. In fact libraries of a nation or civilization is one of the major yardsticks to assess its development and progress.",
+    },
+  ],
+  servicesHeading: {
+    hindi: "मुख्य सेवाएं:",
+    english: "Main Services:",
+  },
+  services: [
+    {
+      heading: {
+        hindi: "फोटोकॉपी/ज़ेरॉक्स:",
+        english: "Photocopy/Xerox:",
+      },
+      description: {
+        hindi:
+          "पुस्तकालय छात्रों, शिक्षकों, शोधार्थियों, कर्मचारियों और अन्य वॉक-इन उपयोगकर्ताओं को फोटोकॉपी/ज़ेरॉक्स सुविधा/सेवा प्रदान करता है।",
+        english:
+          "Library provides photocopy/Xerox facility/service to the students, teachers, research Scholars, staff, and other walk-in users.",
+      },
+    },
+    {
+      heading: {
+        hindi: "पुस्तकालय पुस्तकों का निर्गम:",
+        english: "Issuing of Library Books:",
+      },
+      description: {
+        hindi:
+          "पुस्तकालय के सभी उपयोगकर्ताओं को विभिन्न पाठ्यक्रमों के लिए निर्धारित अवधि के लिए पुस्तकें जारी की जाती हैं। नियत तारीख के बाद पुस्तकें लौटाने पर, निर्धारित विलंब शुल्क लिया जाएगा।",
+        english:
+          "Books are issued to all the users of the library for prescribed durations for different courses. Returning the books after the due date, prescribed late charges will be charged.",
+      },
+    },
+  ],
+};
+
+export const cafeteriaData: CafeteriaContent = {
+  pageTitle: {
+    hindi: "कैफेटेरिया",
+    english: "Cafeteria",
+  },
+  image: "/cafeteria.webp", // Replace with your actual image path
+  paragraphs: [
+    {
+      hindi:
+        "विश्वविद्यालय परिसर में, एक वातानुकूलित कैंटीन की सुविधा उपलब्ध है जिसमें उपयुक्त फिक्स्चर से सुसज्जित एक अति-आधुनिक रसोई है। छात्रों को पौष्टिक, स्वच्छ और स्वास्थ्यप्रद नाश्ता और भोजन परोसा जाता है।",
+      english:
+        "In the university campus, an air-conditioned canteen facility is available which has an ultra-modern kitchen equipped with appropriate fixtures. Students are served nutritious, hygienic, and wholesome snacks and meals.",
+    },
+    {
+      hindi:
+        "कैफेटेरिया सिर्फ भोजन करने की जगह नहीं है, बल्कि यह छात्रों के लिए आराम करने, मेलजोल बढ़ाने और विचारों का आदान-प्रदान करने का एक जीवंत केंद्र भी है। आरामदायक बैठने की व्यवस्था और सुखद माहौल इसे व्याख्यानों के बीच या दिन के अंत में आराम करने के लिए एक आदर्श स्थान बनाता है।",
+      english:
+        "The cafeteria is not just a place to eat, but also a vibrant hub for students to relax, socialize, and exchange ideas. The comfortable seating arrangement and pleasant ambiance make it a perfect spot to unwind between lectures or at the end of the day.",
+    },
+    {
+      hindi:
+        "हमारा मेनू विविध स्वादों को पूरा करने के लिए सावधानीपूर्वक तैयार किया गया है, जिसमें पारंपरिक भारतीय व्यंजनों से लेकर विभिन्न प्रकार के हल्के नाश्ते और ताज़ा पेय पदार्थ शामिल हैं। हम केवल ताज़ी और उच्च-गुणवत्ता वाली सामग्री का उपयोग करने पर जोर देते हैं ताकि यह सुनिश्चित हो सके कि परोसा गया हर भोजन स्वादिष्ट और स्वास्थ्यकर दोनों हो।",
+      english:
+        "Our menu is carefully curated to cater to diverse tastes, offering everything from traditional Indian meals to a variety of light snacks and refreshing beverages. We insist on using only the freshest, high-quality ingredients to ensure that every meal served is both delicious and wholesome.",
+    },
+    {
+      hindi:
+        "स्वच्छता और खाद्य सुरक्षा हमारे लिए सर्वोपरि है। हमारी रसोई और भोजन क्षेत्र को उच्चतम मानकों पर बनाए रखा जाता है, जिससे हमारे छात्रों के लिए एक सुरक्षित और सुखद भोजन अनुभव सुनिश्चित होता है।",
+      english:
+        "Hygiene and food safety are paramount to us. Our kitchen and dining areas are maintained to the highest standards, ensuring a safe and pleasant dining experience for our students.",
+    },
+  ],
+};
+
+export const guestHouseData: GuestHouseContent = {
+  pageTitle: {
+    hindi: "अतिथि गृह",
+    english: "Guest House",
+  },
+  image: "/guest_house.webp", // Replace with your actual image path
+  introParagraphs: [
+    {
+      hindi:
+        "विश्वविद्यालय में देश और विदेश से नियमित रूप से बड़ी संख्या में वैज्ञानिक/विद्वान/अतिथि आते हैं। उनके प्रवास/रहने को आरामदायक और सुखद सुनिश्चित करने के लिए, विश्वविद्यालय के अतिथि गृह में सुसज्जित एसी/गैर-एसी सिंगल/डबल बेडरूम और पारिवारिक अपार्टमेंट हैं। इसके अलावा वीवीआईपी और वीआईपी सुइट्स भी विश्वविद्यालय के अतिथि गृह में उपलब्ध हैं। विश्वविद्यालय परिसर में, अतिथि गृह सबसे महत्वपूर्ण घटकों में से एक है, क्योंकि यह एक विश्वविद्यालय और कॉर्पोरेट जीवन में बहुत महत्वपूर्ण भूमिका निभाता है।",
+      english:
+        "University receives a large number of scientists/scholars/guests regularly from the country and abroad. To ensure their stay/living comfortable and happy, the university has well-furnished AC/non-AC single/double bedrooms and family apartments in the guest house. Moreover VVIP and VIP suits are also available in the university guest house. In the university campus, the guest house is one of the most vital/important components, as it plays a very vital role in a university and corporate life.",
+    },
+  ],
+  facilitiesHeading: {
+    hindi: "सुविधाएं",
+    english: "Facilities",
+  },
+  facilitiesList: [
+    {
+      heading: { hindi: "फर्नीचर:", english: "Furniture:" },
+      description: {
+        hindi: "अतिथि गृह के सभी कमरे और अपार्टमेंट अच्छी तरह से सुसज्जित हैं।",
+        english:
+          "All the rooms and apartments of the guest house are well furnished.",
+      },
+    },
+    {
+      heading: { hindi: "रसोई:", english: "Kitchen:" },
+      description: {
+        hindi:
+          "प्रत्येक अपार्टमेंट की अपनी रसोई है। हालांकि, अतिथि गृह के हर मंजिल पर एक आम रसोई है। सभी रसोई में अपेक्षित बिजली की फिटिंग और बर्तन हैं।",
+        english:
+          "Each apartment has its own kitchen. However, every floor of the guest house has one common kitchen. All the kitchens have requisite electrical fittings and utensils.",
+      },
+    },
+    {
+      heading: { hindi: "पानी की आपूर्ति:", english: "Water Supply:" },
+      description: {
+        hindi:
+          "प्रत्येक कमरे में पीने के साथ-साथ अन्य उद्देश्यों के लिए आवश्यक पानी की सुविधा प्रदान की जाती है।",
+        english:
+          "Each room is provided with necessary water facilities for drinking as well as for other purposes.",
+      },
+    },
+    {
+      heading: { hindi: "सॉकेट:", english: "Socket:" },
+      description: {
+        hindi:
+          "अतिथि गृह में लगे सभी प्लग टाइप F (शुको प्लग) सॉकेट के लिए हैं।",
+        english:
+          "All the plugs fitted in the guest house are for type F (Schuko plug) sockets.",
+      },
+    },
+    {
+      heading: { hindi: "धुलाई और सुखाने:", english: "Washing and Drying:" },
+      description: {
+        hindi:
+          "अतिथि गृह में एक आम वॉशिंग मशीन है और इसमें टम्बल ड्राइंग की सुविधा है।",
+        english:
+          "The guest house has a common washing machine and has a Tumble drying facility.",
+      },
+    },
+    {
+      heading: { hindi: "संचार सेवाएं:", english: "Communication services:" },
+      description: {
+        hindi:
+          "सभी अपार्टमेंट में एक टेलीविजन, एक टेलीफोन और एक इंटरनेट कनेक्शन (LAN) लगा हुआ है। अतिथि गृह में वाई-फाई सेवा भी उपलब्ध है। इसके अलावा, अतिथि गृह में एक सुसज्जित बहुउद्देश्यीय हॉल, एक बैठक/सम्मेलन हॉल, और एक संलग्न रसोई और भोजन कक्ष है।",
+        english:
+          "All the apartments are fitted with a Television, a Telephone and an Internet connection (LAN). Wi-Fi service is also available in the guest house. Moreover, the guest house has a well-furnished multi-purpose hall, a meeting/conference hall, and an attached kitchen and dining hall.",
+      },
+    },
+    {
+      heading: {
+        hindi: "शुल्क और भुगतान के तरीके:",
+        english: "Charges and modes of payment:",
+      },
+      description: {
+        hindi:
+          "भुगतान नकद/क्रेडिट कार्ड का उपयोग करके/ऑनलाइन मोड में किया जा सकता है।",
+        english: "Payments can be made in cash/using credit cards/online mode.",
+      },
+    },
+  ],
+  rulesHeading: {
+    hindi: "नियम और विनियम/नियम और शर्तें:",
+    english: "Rules and Regulations/Terms and conditions:",
+  },
+  rulesList: [
+    {
+      heading: { hindi: "सामान्य नियम:", english: "General Rules:" },
+      description: {
+        hindi:
+          "कृपया अतिथि गृह के नियमों और विनियमों का पालन करें, जिसकी एक मुद्रित प्रति चार्ज समझौते और विश्वविद्यालय के अन्य नियमों और विनियमों के साथ प्रदान की जाएगी। कृपया अतिथि गृह में रहने वाले अन्य मेहमानों के प्रति उचित सम्मान और शिष्टाचार दिखाएं और भवन और उसके सामान पर उचित ध्यान दें।",
+        english:
+          "Please follow the rules and regulations of the guest house, a printed copy of which will be provided along with the charge agreement and other rules & regulations of the university. Please show due respect and courtesy towards other guests staying in the guest house and pay due attention to the building and its outfits.",
+      },
+    },
+    {
+      heading: { hindi: "किरायेदारी:", english: "Tenancy:" },
+      description: {
+        hindi:
+          "हमारे अतिथि गृह में अपार्टमेंट न्यूनतम एक दिन और अधिकतम एक सप्ताह की अवधि के लिए किराए पर लिए जा सकते हैं। यदि आवश्यक हो, तो इस अवधि से परे आगे की व्यवस्था के लिए हमसे संपर्क करने में संकोच न करें।",
+        english:
+          "Apartments in our guest house can be taken on rent for a minimum period of one day and a maximum period of one week. Please don’t hesitate in contacting us for further arrangements beyond this period, if required.",
+      },
+    },
+    {
+      heading: { hindi: "चाबियाँ:", english: "Keys:" },
+      description: {
+        hindi:
+          "कृपया आपको दी गई चाबियों का ध्यान रखें क्योंकि चाबियों के खो जाने से सुरक्षा खतरे में पड़ सकती है और समस्याएं पैदा हो सकती हैं और इसमें वित्तीय लागत भी शामिल हो सकती है। कृपया अतिथि गृह छोड़ने से पहले कार्यालय में चाबियों की वापसी सुनिश्चित करें।",
+        english:
+          "Please take care of keys given to you since the loss of keys may jeopardize security and may create problems and involve financial costs too. Please ensure the return of keys to the office before you leave the guest house.",
+      },
+    },
+  ],
+};
+
+export const hospitalData: HospitalContent = {
+  pageTitle: {
+    hindi: "अस्पताल की सुविधाएं",
+    english: "Hospital Facilities",
+  },
+  image: "/hospital.webp", // Replace with your actual image path
+  introParagraphs: [
+    {
+      hindi:
+        "विश्वविद्यालय परिसर में चिकित्सा सुविधा/सेवा उपलब्ध है। विश्वविद्यालय अस्पताल में विशेषज्ञ डॉक्टरों की टीम उपलब्ध है। अस्पताल में प्राथमिक उपचार से लेकर गंभीर चिकित्सा स्थितियों तक के निदान और उपचार के लिए, डॉक्टरों की एक विशेषज्ञ/विशेषज्ञ टीम चौबीसों घंटे मरीजों की देखभाल के लिए उपलब्ध है। छात्रों को परामर्श सेवाएं निःशुल्क उपलब्ध हैं और उनका इलाज मामूली शुल्क पर किया जाता है।",
+      english:
+        "Medical facility/service is available in the university campus. In the university hospital specialist team of doctors are available. In the hospital for diagnosis and treatment from first aid to serious medical conditions, an expert/specialized team of doctors is available to attend the patients round the clock. Consultancy services to the students are available free of cost and they are treated charging nominal fees.",
+    },
+  ],
+  facilitiesHeading: {
+    hindi: "उपलब्ध चिकित्सा सुविधाएं:",
+    english: "Available medical facilities:",
+  },
+  facilitiesList: [
+    {
+      heading: {
+        hindi: "प्राथमिक स्वास्थ्य देखभाल",
+        english: "Primary Health Care",
+      },
+      description: {
+        hindi: "प्राथमिक निदान और उपचार।",
+        english: "Primary diagnosis & treatment.",
+      },
+    },
+    {
+      heading: {
+        hindi: "चिकित्सा आपातकालीन देखभाल",
+        english: "Medical Emergency care",
+      },
+      description: { hindi: "प्राथमिक उपचार।", english: "First Aid." },
+    },
+    {
+      heading: { hindi: "फार्मेसी", english: "Pharmacy" },
+      description: {
+        hindi:
+          "सभी आवश्यक दवाएं उपलब्ध हैं। कर्मचारियों और छात्रों को निर्धारित दवाएं निःशुल्क दी जाती हैं।",
+        english:
+          "All essential medicines are available. The medicines prescribed to staff and students are given free of cost.",
+      },
+    },
+    {
+      heading: { hindi: "फिजियोथेरेपी", english: "Physiotherapy" },
+      description: {
+        hindi: "सुसज्जित फिजियोथेरेपी केंद्र उपलब्ध है।",
+        english: "Well-equipped physiotherapy center is available.",
+      },
+    },
+    {
+      heading: { hindi: "इन-पेशेंट वार्ड", english: "In-patient ward" },
+      description: {
+        hindi: "ऑक्सीजन सहायता के साथ दस बिस्तरों वाली इनडोर सुविधा उपलब्ध है।",
+        english: "Ten bed indoor facility with oxygen support is available.",
+      },
+    },
+    {
+      heading: {
+        hindi: "ऑक्सीजन सहायता के साथ एम्बुलेंस",
+        english: "Ambulance with Oxygen support",
+      },
+      description: { hindi: "उपलब्ध है।", english: "is available." },
+    },
+  ],
+  timingsHeading: {
+    hindi: "अस्पताल का समय:",
+    english: "Timings of Hospital:",
+  },
+  timingsList: [
+    {
+      heading: { hindi: "ओपीडी:", english: "OPD:" },
+      description: {
+        hindi: "सुबह 08:00 बजे से शाम 04:00 बजे तक।",
+        english: "Morning 08:00 AM to 04:00 PM.",
+      },
+    },
+    {
+      heading: { hindi: "आपातकालीन:", english: "Emergency:" },
+      description: {
+        hindi: "24×7 चौबीसों घंटे।",
+        english: "24×7 round the clock.",
+      },
+    },
+  ],
+};
+
+export const ambulanceData: AmbulanceContent = {
+  pageTitle: {
+    hindi: "एम्बुलेंस सुविधा",
+    english: "Ambulance Facility",
+  },
+  image: "/ambulance.webp",
+  paragraphs: [
+    {
+      hindi:
+        "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर में एम्बुलेंस सुविधा 24×7 चौबीसों घंटे उपलब्ध है। संबंधित विभागाध्यक्ष/छात्रावास वार्डन द्वारा अनुशंसित चिकित्सा आपातकाल के मामले में या मामले की गंभीरता के आधार पर एक छात्र रोगी इस सुविधा का लाभ उठा सकता है।",
+      english:
+        "In Mahayogi Gorakhnath University Gorakhpur Ambulance facility is available 24×7 round the clock. In case of a medical emergency recommended by the concerned Head of Department/Hostel Warden or depending on the seriousness of the case a student patient may avail the benefit of this facility.",
+    },
+  ],
+};
+
+export const differentlyAbledData: DifferentlyAbledContent = {
+  pageTitle: {
+    hindi: "दिव्यांगजनों के लिए सुविधाएं (बाधा रहित वातावरण)",
+    english: "Facilities for differently-abled (barrier-free environment)",
+  },
+  image: "/differently_abled.webp",
+  paragraphs: [
+    {
+      hindi:
+        "महायोगी गोरखनाथ विश्वविद्यालय, गोरखपुर (एमजीयूजी) दिव्यांगजन छात्रों, कर्मचारियों, रोगियों और आगंतुकों के लिए एक समावेशी और सुलभ वातावरण प्रदान करने के लिए प्रतिबद्ध है।",
+      english:
+        "Mahayogi Gorakhnath University, Gorakhpur (MGUG) is committed to providing an inclusive and accessible environment for differently-abled (Divyangjan) students, staff, patients, and visitors.",
+    },
+    {
+      hindi:
+        "विश्वविद्यालय ने आसान गतिशीलता सुनिश्चित करने के लिए रैंप, लिफ्ट और सुलभ शौचालयों के साथ एक बाधा रहित परिसर डिजाइन अपनाया है। व्हीलचेयर और हेल्प डेस्क पर सहायता जैसी सहायक सुविधाएं उपलब्ध हैं।",
+      english:
+        "The university has adopted a barrier-free campus design with ramps, elevators, and accessible restrooms to ensure easy mobility. Assistive facilities such as wheelchairs and support at help desks are available.",
+    },
+  ],
+};
+
+export const sportsData: SportsContent = {
+  pageTitle: {
+    hindi: "खेल और शारीरिक शिक्षा",
+    english: "Sports & Physical Education",
+  },
+  image: "/sports.webp", // Replace with your actual image path
+  paragraphs: [
+    {
+      hindi:
+        "महायोगी गोरखनाथ विश्वविद्यालय, गोरखपुर (एमजीयूजी) छात्रों के समग्र विकास पर विशेष जोर देता है, जिसमें खेल और शारीरिक शिक्षा परिसर जीवन के अभिन्न अंग हैं। विश्वविद्यालय टीम वर्क, अनुशासन, शारीरिक फिटनेस और स्वस्थ प्रतिस्पर्धा की भावना को बढ़ावा देने के लिए विभिन्न प्रकार के खेलों और एथलेटिक गतिविधियों में भागीदारी को सक्रिय रूप से प्रोत्साहित करता है।",
+      english:
+        "Mahayogi Gorakhnath University, Gorakhpur (MGUG) places strong emphasis on the holistic development of students, with sports and physical education being integral components of campus life. The university actively promotes participation in a wide range of sports and athletic activities to foster teamwork, discipline, physical fitness, and a spirit of healthy competition.",
+    },
+    {
+      hindi:
+        "एमजीयूजी वर्तमान में 14,000 की बैठने की क्षमता वाला एक मल्टी-स्पोर्ट स्टेडियम विकसित कर रहा है, जिसमें क्रिकेट, फुटबॉल, वॉलीबॉल, कबड्डी और एथलेटिक्स जैसे ट्रैक एंड फील्ड, लंबी कूद, ऊंची कूद, भाला फेंक, शॉट पुट और रिले दौड़ सहित विभिन्न प्रकार के खेल आयोजन आयोजित किए जाएंगे। यह स्टेडियम अंतर-विश्वविद्यालय टूर्नामेंट और बड़े पैमाने पर खेल आयोजनों के लिए एक प्रमुख केंद्र के रूप में काम करेगा।",
+      english:
+        "MGUG is currently developing a multi-sport stadium with a seating capacity of 14,000, which will accommodate a variety of sporting events including cricket, football, volleyball, kabaddi, and athletics such as track and field, long jump, high jump, javelin throw, shot put, and relay races. This stadium will serve as a major hub for inter-university tournaments and large-scale sporting events.",
+    },
+    {
+      hindi:
+        "आगामी स्टेडियम के अलावा, विश्वविद्यालय वॉलीबॉल, कबड्डी, एथलेटिक्स, बैडमिंटन, टेबल टेनिस, कैरम और शतरंज जैसे इनडोर खेलों के लिए अच्छी तरह से बनाए गए खेल सुविधाओं से सुसज्जित है। एमजीयूजी में एक सुसज्जित फिटनेस सेंटर और व्यायामशाला भी है, जो छात्रों और कर्मचारियों के बीच शक्ति प्रशिक्षण, हृदय स्वास्थ्य और समग्र कल्याण को बढ़ावा देता है। एमजीयूजी छात्रों को सर्वांगीण व्यक्तियों के पोषण के प्रति अपनी प्रतिबद्धता के हिस्से के रूप में नियमित अभ्यास, अंतर-कॉलेजिएट प्रतियोगिताओं और विश्वविद्यालय-स्तरीय चैंपियनशिप में शामिल होने के लिए प्रोत्साहित करता है।",
+      english:
+        "In addition to the upcoming stadium, the university is equipped with well-maintained sports facilities for indoor games such as volleyball, kabaddi, athletics, badminton, table tennis, carrom, and chess. MGUG also houses a well-equipped fitness centre and gymnasium, promoting strength training, cardiovascular health, and overall wellness among students and staff. MGUG encourages students to engage in regular practice, intercollegiate competitions, and university-level championships as part of its commitment to nurturing well-rounded individuals.",
     },
   ],
 };
