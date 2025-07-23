@@ -52,6 +52,16 @@ import ProposedProjects from "@/pages/About/proposedProject";
 import ProgressPath from "@/pages/About/progressPath";
 import InstitutionsPage from "@/pages/About/associateInstitutes";
 import ShikshaParishadCharter from "@/pages/About/shikshaParsihad";
+import ResearchPage from "@/pages/research";
+import AmbulancePage from "@/pages/Students/CampusLife/ambulance";
+import CafeteriaPage from "@/pages/Students/CampusLife/cafetaria";
+import DifferentlyAbledPage from "@/pages/Students/CampusLife/differentlyAbled";
+import GuestHousePage from "@/pages/Students/CampusLife/guestHouse";
+import HospitalPage from "@/pages/Students/CampusLife/hospital";
+import HostelPage from "@/pages/Students/CampusLife/hostel";
+import LaboratoriesPage from "@/pages/Students/CampusLife/laborataries";
+import LibraryPage from "@/pages/Students/CampusLife/library";
+import SportsPage from "@/pages/Students/CampusLife/sports";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -83,7 +93,7 @@ export const routeMeta = [
     element: <AdmissionNoticePage />,
   },
 
-  // More
+  // about
   { title: "About Us", path: "/about", element: <AboutUs /> },
   { title: "Our Ideals", path: "/our-ideals", element: <OurIdeals /> },
   {
@@ -116,7 +126,57 @@ export const routeMeta = [
     path: "/shiksha-parishad",
     element: <ShikshaParishadCharter />,
   },
-  //
+  {
+    title: "Ambulance",
+    path: "/ambulance",
+    element: <AmbulancePage />,
+  },
+  {
+    title: "Canteen",
+    path: "/canteen",
+    element: <CafeteriaPage />,
+  },
+  {
+    title: "Canteen",
+    path: "/canteen",
+    element: <CafeteriaPage />,
+  },
+  {
+    title: "Differently Abled",
+    path: "/differently-abled",
+    element: <DifferentlyAbledPage />,
+  },
+  {
+    title: "Guest House",
+    path: "/guest-house",
+    element: <GuestHousePage />,
+  },
+  {
+    title: "Hospital",
+    path: "/hospital",
+    element: <HospitalPage />,
+  },
+  {
+    title: "Hostel",
+    path: "/hostel",
+    element: <HostelPage />,
+  },
+  {
+    title: "Laboratories",
+    path: "/laboratories",
+    element: <LaboratoriesPage />,
+  },
+  {
+    title: "Library",
+    path: "/library",
+    element: <LibraryPage />,
+  },
+  {
+    title: "Sports",
+    path: "/sports",
+    element: <SportsPage />,
+  },
+  //ideology
   {
     title: "Cultivation Path",
     path: "/cultivation-path",
@@ -323,5 +383,11 @@ export const routeMeta = [
     title: "Prospectus",
     path: "/admission/prospectus",
     element: <ProspectusPage />,
+  },
+  //Research
+  {
+    title: "Research",
+    path: "/research",
+    element: <ResearchPage />,
   },
 ];
