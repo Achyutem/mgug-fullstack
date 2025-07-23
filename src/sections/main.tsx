@@ -87,10 +87,7 @@ export default function Main() {
               </p>
 
               <div className="flex flex-row flex-wrap sm:flex-nowrap gap-2 sm:gap-3 justify-center lg:justify-start overflow-x-auto pl-1">
-                <a
-                  href="https://mgug.ac.in/academics/programmes_list.php"
-                  className="shrink-0"
-                >
+                <a href="admission/list-of-program" className="shrink-0">
                   <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 hover:scale-105 transition-all duration-300">
                     {t.exploreButton}
                   </button>
