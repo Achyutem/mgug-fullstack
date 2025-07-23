@@ -137,7 +137,7 @@ export default function Navbar() {
                 // Non-megamenu link logic
                 const href =
                   item.english === "Research"
-                    ? "https://mgug.ac.in/research/re_facility.php"
+                    ? "/research"
                     : item.english === "Contact"
                     ? "/contact"
                     : `/${item.english.toLowerCase()}`;
