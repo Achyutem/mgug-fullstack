@@ -11,7 +11,8 @@ export default function ImageCarousel() {
     },
     { src: "/studentsInALab.webp", alt: "Students in a Lab" },
     { src: "/VCGivingSpeech.webp", alt: "Vice Chancellor giving speech" },
-    { src: "/event.webp", alt: "Cultural event at MGUG" },
+    { src: "/inaugration.webp", alt: "President visit at MGUG" },
+    { src: "/nursing.webp", alt: "Event at MGUG" },
   ];
 
   useEffect(() => {
