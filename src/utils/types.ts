@@ -414,6 +414,9 @@ export interface Administration {
   viceChancellor: Person;
   registrar: Person;
   financeOfficer: Person;
+  deanAcademics: Person;
+  deanIQAC: Person;
+  deanIFTSP: Person;
   controllerOfExamination: Person;
   chiefProctor: Person;
   chiefVigilanceOfficer: Person;
