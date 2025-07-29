@@ -111,6 +111,53 @@ export const administrationData: Administration = {
     image: "/admin/Dr_Shashi_Kant_Singh.jpg",
     email: "chief.proctor@mgug.ac.in",
   },
+  deanAcademics: {
+    hindi: {
+      name: "डॉ. प्रशांत एस.",
+      designation: "डीन एकेडमिक्स",
+      university: "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर",
+    },
+    english: {
+      name: "Dr. Prashanth S.",
+      designation: "Dean Academics",
+      university: "Mahayogi Gorakhnath University Gorakhpur",
+    },
+    image: "/admin/it-team/prashanthMurthy.jpg",
+    email: "dean.academics@mgug.ac.in",
+    profilePdf: "https://mgug.ac.in/PDF/prashanthS.pdf",
+  },
+  deanIQAC: {
+    hindi: {
+      name: "डॉ. रघु राम अचार",
+      designation: "डीन आईक्यूएसी",
+      university: "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर",
+    },
+    english: {
+      name: "Dr. Raghu Ram Achar",
+      designation: "Dean IQAC",
+      university: "Mahayogi Gorakhnath University Gorakhpur",
+    },
+    image: "/admin/raghuramAchar.jpg",
+    email: "deaniqac@mgug.ac.in",
+    profilePdf: "https://mgug.ac.in/PDF/raghuramAchar.pdf",
+  },
+  //
+  deanIFTSP: {
+    hindi: {
+      name: "डॉ. हरि ओम शरण",
+      designation: "डीन आईएफटीएसपी",
+      university: "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर",
+    },
+    english: {
+      name: "Dr. Hari Om Sharan",
+      designation: "Dean IFTSP",
+      university: "Mahayogi Gorakhnath University Gorakhpur",
+    },
+    image: "/admin/hariOmSharan.jpg",
+    email: "deaniftsp@mgug.ac.in",
+    profilePdf: "https://mgug.ac.in/PDF/hariOmSharan.pdf",
+  },
+  //
   chiefVigilanceOfficer: {
     hindi: {
       name: "डॉ. शशि कांत सिंह",
