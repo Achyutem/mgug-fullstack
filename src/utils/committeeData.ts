@@ -450,12 +450,12 @@ export const ItCommitteeMembers: ItCommitteeMember[] = [
   {
     image: "/admin/it-team/prashanthMurthy.jpg",
     name: {
-      hindi: "डॉ. प्रशांत एस. मूर्ति",
-      english: "Dr. Prashanth S. Murthy",
+      hindi: "डॉ. प्रशांत एस.",
+      english: "Dr. Prashanth S.",
     },
     designation: {
-      hindi: "आईटी प्रमुख, डीन एकेडमिक्स",
-      english: "IT Chief, Dean Academics",
+      hindi: "डीन एकेडमिक्स",
+      english: "Dean Academics",
     },
   },
   {
