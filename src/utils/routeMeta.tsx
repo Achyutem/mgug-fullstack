@@ -62,6 +62,9 @@ import HostelPage from "@/pages/Students/CampusLife/hostel";
 import LaboratoriesPage from "@/pages/Students/CampusLife/laborataries";
 import LibraryPage from "@/pages/Students/CampusLife/library";
 import SportsPage from "@/pages/Students/CampusLife/sports";
+import DeanAcademics from "@/pages/Administration/Officers/deanAcademics";
+import DeanIQAC from "@/pages/Administration/Officers/deanIQAC";
+import DeanIFTSP from "@/pages/Administration/Officers/deanIFTSP";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -272,6 +275,22 @@ export const routeMeta = [
     title: "Finance Officer",
     path: "/administration/finance-officer",
     element: <FinanceOfficer />,
+  },
+  // officers
+  {
+    title: "Dean Academics",
+    path: "/administration/Dean-Academics",
+    element: <DeanAcademics />,
+  },
+  {
+    title: "Dean IQAC",
+    path: "/administration/Dean-IQAC",
+    element: <DeanIQAC />,
+  },
+  {
+    title: "Dean IFTSP",
+    path: "/administration/Dean-IFTSP",
+    element: <DeanIFTSP />,
   },
   {
     title: "Controller of Examination",
