@@ -231,6 +231,24 @@ export const megaMenus: MegaMenus = {
           },
           href: "/administration/Finance-officer",
         },
+      ],
+    },
+    // executive officers
+    {
+      type: "header",
+      label: {
+        hindi: "कार्यकारी अधिकारी",
+        english: "Executive Officers",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "डीन एकेडमिक्स",
+            english: "Dean Academics",
+          },
+          href: "/administration/Dean-Academics",
+        },
         {
           type: "link",
           label: {
@@ -238,6 +256,22 @@ export const megaMenus: MegaMenus = {
             english: "Controller of Examination",
           },
           href: "/administration/Controller-of-examination",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "डीन आईक्यूएसी",
+            english: "Dean IQAC",
+          },
+          href: "/administration/Dean-IQAC",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "डीन आईएफटीएसपी",
+            english: "Dean IFTSP",
+          },
+          href: "/administration/Dean-IFTSP",
         },
         {
           type: "link",
@@ -265,6 +299,7 @@ export const megaMenus: MegaMenus = {
         },
       ],
     },
+    //
     {
       type: "header",
       label: {
