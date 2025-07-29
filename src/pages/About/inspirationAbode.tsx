@@ -18,7 +18,7 @@ const InspirationAbode = () => {
           {/* Image Section */}
           <div className="w-full max-w-4xl h-64 sm:h-80 md:h-96 rounded-xl shadow-lg overflow-hidden">
             <img
-              src="/gorakhnathTemple.jpg"
+              src="/gorakhnathTemple.webp"
               alt="Inspiration Abode"
               className="w-full h-full object-cover"
             />
