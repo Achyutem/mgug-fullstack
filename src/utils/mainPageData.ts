@@ -174,6 +174,26 @@ export const HomePage: HomeDataType = {
         "Cutting-edge e-learning platforms and digital resources for enhanced educational experience.",
     },
   },
+  notifications: {
+    hindi: {
+      heading: "अपडेट और घोषणाएँ",
+      description:
+        "विश्वविद्यालय से नवीनतम समाचार, सूचनाओं और परीक्षा अपडेट से सूचित रहें।",
+      examTitle: "परीक्षा सूचनाएं",
+      noticeTitle: "सूचनाएं और घोषणाएँ",
+      newsTitle: "समाचार",
+      loadingText: "अपडेट लोड हो रहे हैं...",
+    },
+    english: {
+      heading: "Updates & Announcements",
+      description:
+        "Stay informed with the latest news, notices, and examination updates from the university.",
+      examTitle: "Exam Notifications",
+      noticeTitle: "Notices & Announcements",
+      newsTitle: "News",
+      loadingText: "Loading updates...",
+    },
+  },
 };
 
 export const footerTranslations = {
