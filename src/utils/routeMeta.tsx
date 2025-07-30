@@ -65,11 +65,17 @@ import SportsPage from "@/pages/Students/CampusLife/sports";
 import DeanAcademics from "@/pages/Administration/Officers/deanAcademics";
 import DeanIQAC from "@/pages/Administration/Officers/deanIQAC";
 import DeanIFTSP from "@/pages/Administration/Officers/deanIFTSP";
+import ExaminationManual from "@/pages/Students/Academics/examinationManual";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
   { title: "Contact", path: "/contact", element: <Contact /> },
   // Students
+  {
+    title: "Examination Manual",
+    path: "/examination-manual",
+    element: <ExaminationManual />,
+  },
   {
     title: "Academic Calendar",
     path: "/academic-calendar",
