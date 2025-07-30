@@ -340,6 +340,24 @@ export interface HomeDataType {
       digitalLearningDescription: string;
     };
   };
+  notifications: {
+    hindi: {
+      heading: string;
+      description: string;
+      examTitle: string;
+      noticeTitle: string;
+      newsTitle: string;
+      loadingText: string;
+    };
+    english: {
+      heading: string;
+      description: string;
+      examTitle: string;
+      noticeTitle: string;
+      newsTitle: string;
+      loadingText: string;
+    };
+  };
 }
 
 export interface AntiRaggingMember {
@@ -887,4 +905,11 @@ export interface SportsContent {
   pageTitle: Title;
   image: string;
   paragraphs: Title[];
+}
+
+export interface NotificationItem {
+  notification_name: string;
+  pdf_path: string;
+  pdf_url: string;
+  notification_datetime_formatted: string;
 }
