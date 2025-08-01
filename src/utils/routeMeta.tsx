@@ -66,6 +66,9 @@ import DeanAcademics from "@/pages/Administration/Officers/deanAcademics";
 import DeanIQAC from "@/pages/Administration/Officers/deanIQAC";
 import DeanIFTSP from "@/pages/Administration/Officers/deanIFTSP";
 import ExaminationManual from "@/pages/Students/Academics/examinationManual";
+import GalleryPage from "@/pages/More/Resources/photoGallery";
+import VideoGalleryPage from "@/pages/More/Resources/videoGallery";
+import MediaCoveragePage from "@/pages/More/Resources/mediaCoverage";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -244,6 +247,21 @@ export const routeMeta = [
     title: "Downloads",
     path: "/downloads",
     element: <DownloadsPage />,
+  },
+  {
+    title: "Photo Gallery",
+    path: "/photo-gallery",
+    element: <GalleryPage />,
+  },
+  {
+    title: "Video Gallery",
+    path: "/video-gallery",
+    element: <VideoGalleryPage />,
+  },
+  {
+    title: "Media Coverage",
+    path: "/media-coverage",
+    element: <MediaCoveragePage />,
   },
   {
     title: "Jobs",
