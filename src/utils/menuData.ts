@@ -852,7 +852,7 @@ export const megaMenus: MegaMenus = {
             hindi: "फोटो गैलरी",
             english: "Photo Gallery",
           },
-          href: "https://mgug.ac.in/gallery/photo_gallery.php",
+          href: "/photo-gallery",
         },
         {
           type: "link",
@@ -860,7 +860,7 @@ export const megaMenus: MegaMenus = {
             hindi: "वीडियो गैलरी",
             english: "Video Gallery",
           },
-          href: "https://mgug.ac.in/gallery/video_gallery.php",
+          href: "/video-gallery",
         },
         {
           type: "link",
@@ -868,7 +868,7 @@ export const megaMenus: MegaMenus = {
             hindi: "मीडिया कवरेज",
             english: "Media Coverage",
           },
-          href: "https://mgug.ac.in/gallery/media_coverage.php",
+          href: "/media-coverage",
         },
         {
           type: "link",
