@@ -124,7 +124,7 @@ export const administrationData: Administration = {
     },
     image: "/admin/it-team/prashanthMurthy.jpg",
     email: "dean.academics@mgug.ac.in",
-    profilePdf: "https://mgug.ac.in/PDF/prashanthS.pdf",
+    profilePdf: "https://mgug.ac.in/PDF/PrashanthS.pdf",
   },
   deanIQAC: {
     hindi: {
@@ -139,7 +139,7 @@ export const administrationData: Administration = {
     },
     image: "/admin/raghuramAchar.jpg",
     email: "deaniqac@mgug.ac.in",
-    profilePdf: "https://mgug.ac.in/PDF/raghuramAchar.pdf",
+    profilePdf: "https://mgug.ac.in/PDF/RaghuRamAchar.pdf",
   },
   //
   deanIFTSP: {
@@ -153,9 +153,9 @@ export const administrationData: Administration = {
       designation: "Dean IFTSP",
       university: "Mahayogi Gorakhnath University Gorakhpur",
     },
-    image: "/admin/hariOmSharan.jpg",
-    email: "deaniftsp@mgug.ac.in",
-    profilePdf: "https://mgug.ac.in/PDF/hariOmSharan.pdf",
+    image: "/admin/dr_hari_om_sharan.jpg",
+    email: "dean.planning@mgug.ac.in",
+    profilePdf: "https://mgug.ac.in/PDF/HariOmSharan.pdf",
   },
   //
   chiefVigilanceOfficer: {
