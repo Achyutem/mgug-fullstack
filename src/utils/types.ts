@@ -913,3 +913,57 @@ export interface NotificationItem {
   pdf_url: string;
   notification_datetime_formatted: string;
 }
+
+export interface GalleryContent {
+  title: Title;
+  subtitle: Title;
+  noAlbums: (year: number) => Title;
+}
+
+export interface Album {
+  album_id: string;
+  album_name: string;
+  album_thumb_url: string;
+}
+
+export interface GalleryImage {
+  image_id: string;
+  image_name: string;
+  image_url: string;
+}
+
+export interface CoverFlowLightboxProps {
+  albumId: string | null;
+  onClose: () => void;
+}
+
+export interface AlbumCardProps {
+  album: Album;
+  onSelectAlbum: (albumId: string) => void;
+  className?: string;
+}
+
+export interface Video {
+  video_title: string;
+  video_description: string;
+  video_share_code: string;
+}
+
+export interface VideoGalleryContent {
+  title: Title;
+  subtitle: Title;
+  noVideos: Title;
+  readMore: Title;
+  readLess: Title;
+}
+
+export interface MediaCutting {
+  paper_newspaper_name: string;
+  image_url: string;
+}
+
+export interface MediaCoverageContent {
+  title: Title;
+  subtitle: Title;
+  noCuttings: Title;
+}
