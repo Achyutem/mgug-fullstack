@@ -141,7 +141,6 @@ export const administrationData: Administration = {
     email: "deaniqac@mgug.ac.in",
     profilePdf: "https://mgug.ac.in/PDF/RaghuRamAchar.pdf",
   },
-  //
   deanIFTSP: {
     hindi: {
       name: "डॉ. हरि ओम शरण",
@@ -157,7 +156,6 @@ export const administrationData: Administration = {
     email: "dean.planning@mgug.ac.in",
     profilePdf: "https://mgug.ac.in/PDF/HariOmSharan.pdf",
   },
-  //
   chiefVigilanceOfficer: {
     hindi: {
       name: "डॉ. शशि कांत सिंह",
