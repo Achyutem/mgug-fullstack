@@ -10,10 +10,10 @@ const EmpoweredBody = () => {
         <div className="flex flex-col items-center">
           {/* Content Section */}
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-6 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-6 text-orange-500 text-center">
               {empoweredBodyData.title[language]}
             </h1>
-            <div className="text-lg leading-relaxed text-gray-100">
+            <div className="text-lg leading-relaxed text-black">
               <p className="mb-6">{empoweredBodyData.description[language]}</p>
 
               <ul className="list-disc list-inside space-y-4">

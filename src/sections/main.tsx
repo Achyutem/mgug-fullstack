@@ -27,24 +27,27 @@ export default function Main() {
               style={{ transform: `translateY(${scrollY * 0.06}px)` }}
             >
               <div className="w-full flex justify-center lg:justify-start mb-6 lg:mb-8">
-                <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 backdrop-blur-md rounded-full bg-blue-950/30 border border-gray-700">
-                  <FaRegStar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-500" />
-                  <span className="text-sm sm:text-lg text-gray-300">
+                <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 backdrop-blur-md rounded-full bg-white/40 border border-gray-300">
+                  <FaRegStar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-orange-500" />
+                  <span className="text-sm sm:text-lg text-gray-700 font-medium">
                     {t.badge}
                   </span>
                 </div>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
+              {/* CHANGED: Main heading text to be dark */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-slate-800">
                 <span className="block">
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
+                  <span className="bg-orange-500 bg-clip-text text-transparent">
                     {t.universityName1}&nbsp;
                   </span>
-                  <span className="text-white">{t.universityName2}</span>
+                  <span className="text-slate-800">{t.universityName2}</span>
                 </span>
                 <span className="block">
-                  <span className="text-white">{t.universityName3}&nbsp;</span>
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
+                  <span className="text-slate-800">
+                    {t.universityName3}&nbsp;
+                  </span>
+                  <span className="bg-orange-500 bg-clip-text text-transparent">
                     {t.universityName4}
                   </span>
                 </span>
@@ -53,7 +56,7 @@ export default function Main() {
               {/* Animated Text Section */}
               <div className="mb-6 lg:mb-8 relative">
                 <div className="text-center lg:text-left">
-                  <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black text-white">
+                  <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black text-slate-900">
                     <span className="relative inline-block">
                       <AnimatedText
                         text={t.animatedText1}
@@ -82,24 +85,24 @@ export default function Main() {
                 </div>
               </div>
 
-              <p className="text-base sm:text-lg lg:text-lg xl:text-xl text-gray-400 mb-6 lg:mb-10 max-w-md lg:max-w-xl xl:max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-lg xl:text-xl text-gray-600 mb-6 lg:mb-10 max-w-md lg:max-w-xl xl:max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 {t.description}
               </p>
 
               <div className="flex flex-row flex-wrap sm:flex-nowrap gap-2 sm:gap-3 justify-center lg:justify-start overflow-x-auto pl-1">
                 <a href="admission/list-of-program" className="shrink-0">
-                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 hover:scale-105 transition-all duration-300">
+                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 text-white hover:scale-105 transition-all duration-300">
                     {t.exploreButton}
                   </button>
                 </a>
 
-                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-gray-900/50 border border-gray-700 hover:border-orange-500/50 hover:bg-gray-900/70 hover:text-orange-400 transition-all duration-300 shrink-0">
+                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-white/60 text-gray-700 border border-gray-300 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shrink-0">
                   {t.virtualTourButton}
                 </button>
               </div>
             </div>
 
-            {/* Right Content - Image Carousel */}
+            {/* Right Content - Image Carousel (No changes needed here) */}
             <div
               className="order-2 lg:order-2 flex justify-center items-center mt-8 lg:mt-0"
               style={{ transform: `translateY(${scrollY * -0.03}px)` }}
@@ -112,7 +115,7 @@ export default function Main() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <FaChevronDown className="w-6 h-6 lg:w-8 lg:h-8 text-gray-500" />
+          <FaChevronDown className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
         </div>
       </section>
     </div>

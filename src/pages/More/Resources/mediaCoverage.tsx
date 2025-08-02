@@ -56,7 +56,7 @@ export default function MediaCoveragePage() {
       <section id="media-coverage" className="relative z-20 py-16 px-4 w-full">
         <AnimatedCard className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+            <span className="bg-orange-500 bg-clip-text text-transparent">
               {mediaCoverageContent.title[language]}
             </span>
           </h2>
@@ -69,7 +69,7 @@ export default function MediaCoveragePage() {
         <div className="max-w-7xl mx-auto px-4">
           {isLoading ? (
             <div className="flex h-64 w-full items-center justify-center">
-              <Loader2 className="h-12 w-12 animate-spin text-orange-400" />
+              <Loader2 className="h-12 w-12 animate-spin text-orange-500" />
             </div>
           ) : cuttings.length > 0 ? (
             <>

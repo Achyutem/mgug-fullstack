@@ -15,9 +15,9 @@ const renderMagazineTable = (
 ) => (
   <div className="p-6 sm:p-8 rounded-xl border border-slate-700 bg-black/20 backdrop-blur-sm">
     <div className="overflow-x-auto">
-      <table className="w-full text-left text-gray-200">
+      <table className="w-full text-left text-black">
         <thead>
-          <tr className="bg-orange-500/20 text-orange-400">
+          <tr className="bg-orange-500/20 text-orange-500">
             <th className="p-4 font-semibold rounded-tl-xl">
               {titles.title[language]}
             </th>
@@ -82,7 +82,7 @@ export default function ArogyaPathPage() {
   return (
     <MainLayout>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+        <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
           {arogyaPathTitles.heading[language]}
         </h1>
         {renderMagazineTable(

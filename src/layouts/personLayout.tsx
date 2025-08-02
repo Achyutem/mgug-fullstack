@@ -37,26 +37,29 @@ const PersonCard = ({
   return (
     <div className="flex flex-col md:flex-row items-center gap-10 py-10">
       {/* Profile Image */}
-      <div className="flex-shrink-0 w-44 h-44 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-lg border-4 border-orange-400">
+      <div className="flex-shrink-0 w-44 h-44 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-lg border-4 border-orange-500">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
       {/* Profile Info */}
-      <div className="flex-1 text-center md:text-left text-white">
-        <h1 className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">
+      {/* CHANGED: Main text color for readability */}
+      <div className="flex-1 text-center md:text-left text-slate-800">
+        <h1 className="text-3xl md:text-4xl font-bold text-orange-500 mb-2">
           {name}
         </h1>
-        <h2 className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-4">
+        {/* CHANGED: Designation text color */}
+        <h2 className="text-lg sm:text-xl md:text-2xl text-slate-700 mb-4">
           {designation}
           <br />
           {university}
         </h2>
 
         {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-300 text-sm mb-4 justify-center md:justify-start">
+        {/* CHANGED: Contact info text color */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-600 text-sm mb-4 justify-center md:justify-start">
           {email && (
             <div className="flex items-center gap-2 justify-center">
-              <IoMailOpenOutline size={18} className="text-orange-400" />
+              <IoMailOpenOutline size={18} className="text-orange-500" />
               <a href={`mailto:${email}`} className="hover:underline">
                 {email}
               </a>
@@ -64,7 +67,7 @@ const PersonCard = ({
           )}
           {website && (
             <div className="flex items-center gap-2 justify-center">
-              <FiGlobe size={18} className="text-orange-400" />
+              <FiGlobe size={18} className="text-orange-500" />
               <a
                 href={website}
                 target="_blank"
@@ -93,13 +96,14 @@ const PersonCard = ({
 
         {/* Socials */}
         {socials && (
-          <div className="flex gap-4 justify-center md:justify-start mt-4">
+          // CHANGED: Default social icon color
+          <div className="flex gap-4 justify-center md:justify-start mt-4 text-gray-600">
             {socials.instagram && (
               <a
                 href={socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-400 transition"
+                className="hover:text-orange-500 transition"
               >
                 <FiInstagram size={22} />
               </a>
@@ -109,7 +113,7 @@ const PersonCard = ({
                 href={socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-400 transition"
+                className="hover:text-orange-500 transition"
               >
                 <FiFacebook size={22} />
               </a>
@@ -119,7 +123,7 @@ const PersonCard = ({
                 href={socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-400 transition"
+                className="hover:text-orange-500 transition"
               >
                 <FiTwitter size={22} />
               </a>
@@ -129,7 +133,7 @@ const PersonCard = ({
                 href={socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-400 transition"
+                className="hover:text-orange-500 transition"
               >
                 <FiYoutube size={22} />
               </a>

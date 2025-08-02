@@ -68,7 +68,7 @@ export default function Contact() {
           {/* Heading */}
           <AnimatedCard className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+              <span className="bg-orange-500 bg-clip-text text-transparent">
                 Get in Touch
               </span>
             </h2>
@@ -90,7 +90,7 @@ export default function Contact() {
                 >
                   <div className="text-center p-6 border border-white/10 rounded-lg bg-white/5 h-full">
                     <div className="mb-4 flex justify-center">
-                      <div className="p-3 rounded-full bg-orange-600/20 text-orange-400">
+                      <div className="p-3 rounded-full bg-orange-600/20 text-orange-500">
                         <Icon className="w-6 h-6" />
                       </div>
                     </div>

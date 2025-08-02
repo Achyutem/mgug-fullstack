@@ -48,7 +48,6 @@ export default function FloatingButtonsCustom() {
     },
   ];
 
-  // Split buttons into two arrays for search in middle
   const firstHalfButtons = buttons.slice(0, Math.ceil(buttons.length / 2));
   const secondHalfButtons = buttons.slice(Math.ceil(buttons.length / 2));
 
@@ -56,8 +55,7 @@ export default function FloatingButtonsCustom() {
     <>
       <SearchDialog open={searchOpen} setOpen={setSearchOpen} />
       <div className="fixed bottom-4 z-50 w-full flex justify-center md:bottom-6 md:right-4 md:w-auto lg:bottom-6 lg:right-6">
-        <div className="flex md:flex-col items-center gap-2 bg-blue-950/30 backdrop-blur-md rounded-full px-2 py-2 lg:px-3 lg:py-3 border border-white/10 shadow-md shadow-black/20">
-          {/* Mobile: All buttons in a row with search in middle */}
+        <div className="flex md:flex-col items-center gap-2 bg-orange-100/50 backdrop-blur-md rounded-full px-2 py-2 lg:px-3 lg:py-3 border border-orange-500 shadow-lg shadow-gray-400/20">
           <div className="flex md:hidden items-center gap-3">
             {firstHalfButtons.map(({ href, icon: Icon, title }, i) => (
               <a
@@ -65,19 +63,18 @@ export default function FloatingButtonsCustom() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-500 p-1.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-1.5 rounded-full shadow-md shadow-gray-400/30 hover:bg-orange-200 transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[22px] h-[22px]" />
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-slate-800/90 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
                   {title}
                 </span>
               </a>
             ))}
 
-            {/* Search Button for Mobile - In Middle */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="group relative bg-orange-500 text-white p-2 rounded-full shadow shadow-black/30 hover:bg-orange-500 transition-all duration-200 hover:scale-110 scale-110"
+              className="group relative bg-orange-500 text-white p-2 rounded-full shadow-md shadow-gray-400/30 hover:bg-orange-500 transition-all duration-200 scale-120"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +90,7 @@ export default function FloatingButtonsCustom() {
                   d="M21 21l-4.35-4.35m1.9-5.15A7 7 0 1110 3a7 7 0 018.55 8.55z"
                 />
               </svg>
-              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
+              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-slate-800/90 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
                 Search
               </span>
             </button>
@@ -104,38 +101,35 @@ export default function FloatingButtonsCustom() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-500 p-1.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-1.5 rounded-full shadow-md shadow-gray-400/30 hover:bg-orange-200 transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[22px] h-[22px]" />
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-slate-800/90 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
                   {title}
                 </span>
               </a>
             ))}
           </div>
 
-          {/* Desktop/Tablet: Vertical layout with search in middle */}
           <div className="hidden md:flex md:flex-col items-center gap-3">
-            {/* First half of buttons */}
             {firstHalfButtons.map(({ href, icon: Icon, title }, i) => (
               <a
                 key={i}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-500 p-3 lg:p-3.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-3 lg:p-3.5 rounded-full shadow-md shadow-gray-400/30 hover:bg-orange-200 transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[18px] h-[18px] lg:w-[22px] lg:h-[22px]" />
-                <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
+                <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-slate-800/90 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
                   {title}
                 </span>
               </a>
             ))}
 
-            {/* Search Button in Middle */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="group relative bg-orange-500 text-white p-3.5 lg:p-4 rounded-full shadow shadow-black/30 hover:bg-orange-500 transition-all duration-200 hover:scale-110 scale-110"
+              className="group relative bg-orange-500 text-white p-3.5 lg:p-4 rounded-full shadow-md shadow-gray-400/30 hover:bg-orange-500 transition-all duration-200 hover:scale-120 scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -151,22 +145,21 @@ export default function FloatingButtonsCustom() {
                   d="M21 21l-4.35-4.35m1.9-5.15A7 7 0 1110 3a7 7 0 018.55 8.55z"
                 />
               </svg>
-              <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
+              <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-slate-800/90 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
                 Search
               </span>
             </button>
 
-            {/* Second half of buttons */}
             {secondHalfButtons.map(({ href, icon: Icon, title }, i) => (
               <a
                 key={i + firstHalfButtons.length}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-500 p-3 lg:p-3.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-3 lg:p-3.5 rounded-full shadow-md shadow-gray-400/30 hover:bg-orange-200 transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[18px] h-[18px] lg:w-[22px] lg:h-[22px]" />
-                <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
+                <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-slate-800/90 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
                   {title}
                 </span>
               </a>

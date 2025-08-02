@@ -14,12 +14,12 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
 
   const MenuLink = ({ href, label }: { href: string; label: string }) => {
     const commonClasses =
-      "group flex items-center justify-between text-gray-300 hover:text-orange-400 transition-colors py-1.5 px-2 rounded-md hover:bg-white/5 text-sm";
+      "group flex items-center justify-between text-black hover:text-orange-500 transition-colors py-1.5 px-2 rounded-md hover:bg-white/5 text-sm";
 
     const content = (
       <>
         <span>{label}</span>
-        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 group-hover:text-orange-400" />
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 group-hover:text-orange-500" />
       </>
     );
 
@@ -42,12 +42,12 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
 
   const NestedMenuLink = ({ href, label }: { href: string; label: string }) => {
     const commonClasses =
-      "group flex items-center justify-between text-gray-400 hover:text-orange-400 transition-colors py-1 px-2 rounded-md hover:bg-white/5 text-sm";
+      "group flex items-center justify-between text-gray-400 hover:text-orange-500 transition-colors py-1 px-2 rounded-md hover:bg-white/5 text-sm";
 
     const content = (
       <>
         <span>{label}</span>
-        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-400" />
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
       </>
     );
 
@@ -83,7 +83,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map((section, index) => (
               <div key={index} className="space-y-4">
-                <h3 className="text-orange-400 font-semibold text-lg border-b border-orange-500/30 pb-2">
+                <h3 className="text-orange-500 font-semibold text-lg border-b border-orange-500/30 pb-2">
                   {section.label[language]}
                 </h3>
                 {section.subSections && (
@@ -97,7 +97,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
                           />
                         ) : (
                           <div className="mt-4">
-                            <h4 className="text-orange-400 font-medium text-sm mb-2 pl-2">
+                            <h4 className="text-orange-500 font-medium text-sm mb-2 pl-2">
                               {subSection.label[language]}
                             </h4>
                             {subSection.subSections && (

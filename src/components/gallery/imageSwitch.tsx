@@ -120,7 +120,7 @@ const CoverFlowLightbox: React.FC<CoverFlowLightboxProps> = ({
               style={{ perspective: "1200px" }}
             >
               {isLoading ? (
-                <Loader2 className="h-12 w-12 animate-spin text-orange-400" />
+                <Loader2 className="h-12 w-12 animate-spin text-orange-500" />
               ) : (
                 <AnimatePresence initial={false}>
                   {images.map((image, index) => {

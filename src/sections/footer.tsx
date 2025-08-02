@@ -11,23 +11,16 @@ import {
   FiYoutube,
 } from "react-icons/fi";
 
-interface LinkItem {
-  label: {
-    hindi: string;
-    english: string;
-  };
-  href: string;
-}
-
 export default function Footer() {
   const { language } = UseLanguage();
 
   return (
     <div>
-      <footer className="relative z-20 py-16 px-4 border-t border-gray-800 bg-blue-950">
+      {/* CHANGED: Footer background, border, and text colors */}
+      <footer className="relative z-20 py-16 px-4 border-t border-gray-200 bg-stone-100/80 backdrop-blur-sm text-gray-700">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row lg:gap-16 gap-12">
-            {/* Left Section: Logo, Name, and Social Links */}
+            {/* Left Section */}
             <div className="flex-1 min-w-[300px] max-w-[400px]">
               <div className="flex items-center space-x-3 mb-4">
                 <img
@@ -36,46 +29,45 @@ export default function Footer() {
                   className="w-12 h-12 rounded-xl"
                 />
                 <div>
-                  <div className="text-lg font-bold text-orange-400">
+                  <div className="text-lg font-bold text-orange-500">
                     {footerTranslations[language].universityName}
                   </div>
-                  <div className="text-sm text-white">
+                  <div className="text-sm text-slate-800">
                     {footerTranslations[language].tagline}
                   </div>
                 </div>
               </div>
               <div className="mt-4">
-                <h3 className="text-lg font-semibold text-orange-400 mb-2">
+                <h3 className="text-lg font-semibold text-orange-500 mb-2">
                   {footerTranslations[language].followUs}
                 </h3>
-                <div className="flex items-center gap-4 text-2xl">
+                {/* CHANGED: Added text-gray-700 for default icon color */}
+                <div className="flex items-center gap-4 text-2xl text-gray-700">
                   <a
-                    href="https://twitter.com/MGUGOfficial"
-                    aria-label={language === "hindi" ? "ट्विटर" : "Twitter"}
-                    className="hover:text-orange-400 transition-transform transform hover:scale-110"
+                    href="..."
+                    aria-label="..."
+                    className="hover:text-orange-500 transition-transform transform hover:scale-110"
                   >
                     <FiTwitter />
                   </a>
                   <a
-                    href="https://www.facebook.com/mgugfacebookpage/"
-                    aria-label={language === "hindi" ? "फेसबुक" : "Facebook"}
-                    className="hover:text-orange-400 transition-transform transform hover:scale-110"
+                    href="..."
+                    aria-label="..."
+                    className="hover:text-orange-500 transition-transform transform hover:scale-110"
                   >
                     <FiFacebook />
                   </a>
                   <a
-                    href="https://www.instagram.com/mgugofficial/"
-                    aria-label={
-                      language === "hindi" ? "इंस्टाग्राम" : "Instagram"
-                    }
-                    className="hover:text-orange-400 transition-transform transform hover:scale-110"
+                    href="..."
+                    aria-label="..."
+                    className="hover:text-orange-500 transition-transform transform hover:scale-110"
                   >
                     <FiInstagram />
                   </a>
                   <a
-                    href="https://www.youtube.com/channel/UC_RiXHng3aH9Qr20ob-lkDQ"
-                    aria-label={language === "hindi" ? "यूट्यूब" : "YouTube"}
-                    className="hover:text-orange-400 transition-transform transform hover:scale-110"
+                    href="..."
+                    aria-label="..."
+                    className="hover:text-orange-500 transition-transform transform hover:scale-110"
                   >
                     <FiYoutube />
                   </a>
@@ -83,19 +75,20 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Right Section: Contact, Important Links, Policy & Reports */}
+            {/* Right Section */}
             <div className="flex flex-col md:flex-row lg:gap-16 gap-12 flex-1">
               {/* Contact */}
               <div className="min-w-[250px] max-w-[300px]">
-                <h3 className="text-lg font-semibold text-orange-400 mb-2">
+                <h3 className="text-lg font-semibold text-orange-500 mb-2">
                   {footerTranslations[language].contact}
                 </h3>
-                <ul className="space-y-2 text-sm text-gray-400">
+                {/* CHANGED: Text and hover colors */}
+                <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
                     <FiPhone className="w-4 h-4" />
                     <a
-                      href="tel:+919415266014"
-                      className="hover:text-white hover:underline"
+                      href="tel:..."
+                      className="hover:text-orange-500 hover:underline"
                     >
                       +91-9415266014
                     </a>
@@ -103,8 +96,8 @@ export default function Footer() {
                   <li className="flex items-center gap-2">
                     <FiPhone className="w-4 h-4" />
                     <a
-                      href="tel:+919935904499"
-                      className="hover:text-white hover:underline"
+                      href="tel:..."
+                      className="hover:text-orange-500 hover:underline"
                     >
                       +91-9935904499
                     </a>
@@ -112,10 +105,8 @@ export default function Footer() {
                   <li className="flex items-center gap-2">
                     <FaWhatsapp className="w-4 h-4" />
                     <a
-                      href="https://wa.me/919794299451"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white hover:underline"
+                      href="https://wa.me/..."
+                      className="hover:text-orange-500 hover:underline"
                     >
                       +91-9794299451
                     </a>
@@ -123,29 +114,29 @@ export default function Footer() {
                   <li className="flex items-center gap-2">
                     <FiGlobe className="w-4 h-4" />
                     <a
-                      href="mailto:info@mgug.ac.in"
-                      className="hover:text-white hover:underline"
+                      href="mailto:..."
+                      className="hover:text-orange-500 hover:underline"
                     >
                       info@mgug.ac.in
                     </a>
                   </li>
                 </ul>
-                <p className="text-sm text-gray-400 mt-4">
+                <p className="text-sm text-gray-600 mt-4">
                   {footerTranslations[language].address}
                 </p>
               </div>
 
               {/* Important Links */}
               <div className="min-w-[200px] max-w-[300px]">
-                <h3 className="text-lg font-semibold text-orange-400 mb-2">
+                <h3 className="text-lg font-semibold text-orange-500 mb-2">
                   {footerTranslations[language].importantLinks}
                 </h3>
-                <ul className="space-y-1 text-sm text-gray-400">
-                  {impLinks.map((item: LinkItem, index: number) => (
+                <ul className="space-y-1 text-sm text-gray-600">
+                  {impLinks.map((item, index) => (
                     <li key={index}>
                       <a
                         href={item.href}
-                        className="hover:text-white hover:underline"
+                        className="hover:text-orange-500 hover:underline"
                       >
                         {item.label[language]}
                       </a>
@@ -156,15 +147,15 @@ export default function Footer() {
 
               {/* Policy & Reports */}
               <div className="min-w-[100px] max-w-[250px]">
-                <h3 className="text-lg font-semibold text-orange-400 mb-2">
+                <h3 className="text-lg font-semibold text-orange-500 mb-2">
                   {footerTranslations[language].policyAndReports}
                 </h3>
-                <ul className="space-y-1 text-sm text-gray-400">
-                  {privacy.map((item: LinkItem, index: number) => (
+                <ul className="space-y-1 text-sm text-gray-600">
+                  {privacy.map((item, index) => (
                     <li key={index}>
                       <a
                         href={item.href}
-                        className="hover:text-white hover:underline"
+                        className="hover:text-orange-500 hover:underline"
                       >
                         {item.label[language]}
                       </a>
@@ -175,10 +166,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <p className="text-gray-400 mb-2">
+            <p className="text-gray-600 mb-2">
               {footerTranslations[language].copyright}
             </p>
-            <p className="text-orange-400 text-sm">स्वस्ति पन्थामनुचरेम</p>
+            <p className="text-orange-500 text-sm">स्वस्ति पन्थामनुचरेम</p>
           </div>
         </div>
       </footer>

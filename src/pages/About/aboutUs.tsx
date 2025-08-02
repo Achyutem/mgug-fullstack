@@ -20,21 +20,21 @@ const AboutUs = () => {
 
           {/* Content Section */}
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-6 text-orange-400">
+            <h1 className="text-4xl font-bold mb-6 text-orange-500">
               {aboutUsData.heading[language]}
             </h1>
-            <div className="text-lg leading-relaxed text-gray-100">
+            <div className="text-lg leading-relaxed text-black">
               {aboutUsData.paragraphs.map((p, index) => (
                 <p key={index} className="mb-4">
                   {p[language]}
                 </p>
               ))}
 
-              <h2 className="text-2xl font-semibold mb-4 mt-8 text-orange-400">
+              <h2 className="text-2xl font-semibold mb-4 mt-8 text-orange-500">
                 {aboutUsData.visionHeading[language]}
               </h2>
 
-              <ul className="list-disc list-inside space-y-3 text-gray-100">
+              <ul className="list-disc list-inside space-y-3 text-black">
                 {aboutUsData.visionPoints.map((point, index) => (
                   <li key={index}>{point[language]}</li>
                 ))}

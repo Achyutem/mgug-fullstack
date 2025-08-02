@@ -51,21 +51,24 @@ const AlbumCard: React.FC<AlbumCardProps> = ({
         style={{ rotateX, rotateY }}
         className="relative w-full h-full object-cover transition-transform duration-300 group cursor-pointer"
       >
+        {/* The dynamic glow effect is theme-agnostic and looks great here. */}
         <div
           className="absolute inset-[-10px] rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl"
           style={{
             backgroundColor:
-              !colorLoading && dominantColor ? dominantColor : "#F97316",
+              !colorLoading && dominantColor ? dominantColor : "#F97316", // Fallback is theme orange
           }}
         />
-        <div className="relative overflow-hidden rounded-xl shadow-lg border border-white/10 w-full h-full">
+        {/* CHANGED: Border color to a subtle light theme variant. */}
+        <div className="relative overflow-hidden rounded-xl shadow-lg border border-gray-300/50 w-full h-full">
           <img
             src={album.album_thumb_url}
             alt={album.album_name}
             loading="lazy"
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          {/* CHANGED: Softened the text overlay gradient slightly. */}
+          <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <h3 className="text-white font-semibold text-base leading-tight drop-shadow-md">
               {album.album_name}
             </h3>

@@ -18,10 +18,10 @@ export const MobileMenuSection = ({
   const isExternal = (url: string) => url.startsWith("http");
 
   const linkBaseClasses =
-    "group flex items-center justify-between transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400";
+    "group flex items-center justify-between transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500";
 
   const MenuLink = ({ href, label }: { href: string; label: string }) => {
-    const classes = `${linkBaseClasses} text-gray-400 hover:text-orange-400 active:text-orange-400 active:underline py-1.5 text-sm`;
+    const classes = `${linkBaseClasses} text-gray-400 hover:text-orange-500 active:text-orange-500 active:underline py-1.5 text-sm`;
 
     if (isExternal(href)) {
       return (
@@ -45,7 +45,7 @@ export const MobileMenuSection = ({
   };
 
   const NestedMenuLink = ({ href, label }: { href: string; label: string }) => {
-    const classes = `${linkBaseClasses} text-gray-500 hover:text-orange-400 active:text-orange-400 active:underline py-1 text-xs`;
+    const classes = `${linkBaseClasses} text-gray-500 hover:text-orange-500 active:text-orange-500 active:underline py-1 text-xs`;
 
     if (isExternal(href)) {
       return (
@@ -72,7 +72,7 @@ export const MobileMenuSection = ({
     <div className="border-b border-white/10 last:border-0 py-2">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-2 text-left text-gray-300 hover:text-orange-400 transition-colors"
+        className="w-full flex items-center justify-between py-2 text-left text-black hover:text-orange-500 transition-colors"
         aria-expanded={isOpen}
         aria-label={`Toggle ${section.label[language]} section`}
       >
@@ -95,7 +95,7 @@ export const MobileMenuSection = ({
                 />
               ) : (
                 <div className="mt-3">
-                  <h4 className="text-orange-400 font-medium text-sm mb-2">
+                  <h4 className="text-orange-500 font-medium text-sm mb-2">
                     {subSection.label[language]}
                   </h4>
                   {subSection.subSections && (

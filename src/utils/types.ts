@@ -42,7 +42,6 @@ export interface AnimatedCardProps {
 export interface ModernCardProps {
   children: React.ReactNode;
   className?: string;
-  hover?: boolean;
 }
 
 export interface StatsCardProps {

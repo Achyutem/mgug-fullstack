@@ -42,16 +42,15 @@ export default function Navbar() {
     }));
   };
 
-  // --- Helper Components for MegaMenu Content ---
   const isExternal = (url: string) => url.startsWith("http");
 
   const MenuLink = ({ href, label }: { href: string; label: string }) => {
     const commonClasses =
-      "group flex items-center justify-between text-gray-300 hover:text-orange-400 transition-colors py-1.5 px-2 rounded-md hover:bg-white/5 text-sm";
+      "group flex items-center justify-between text-gray-700 hover:text-orange-500 transition-colors py-1.5 px-2 rounded-md hover:bg-orange-100 text-sm";
     const content = (
       <>
         <span>{label}</span>
-        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 group-hover:text-orange-400" />
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
       </>
     );
     return isExternal(href) ? (
@@ -73,11 +72,11 @@ export default function Navbar() {
 
   const NestedMenuLink = ({ href, label }: { href: string; label: string }) => {
     const commonClasses =
-      "group flex items-center justify-between text-gray-400 hover:text-orange-400 transition-colors py-1 px-2 rounded-md hover:bg-white/5 text-sm";
+      "group flex items-center justify-between text-gray-600 hover:text-orange-500 transition-colors py-1 px-2 rounded-md hover:bg-orange-100 text-sm";
     const content = (
       <>
         <span>{label}</span>
-        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-400" />
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
       </>
     );
     return isExternal(href) ? (
@@ -100,7 +99,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-40 bg-blue-950 border-b border-gray-700/50"
+      className="fixed top-0 left-0 right-0 z-40 bg-white/70 backdrop-blur-lg border-b border-gray-200/80"
       aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-2">
@@ -118,7 +117,7 @@ export default function Navbar() {
                 alt="Mahayogi Gorakhnath University Gorakhpur Logo"
                 className="w-10 h-10 rounded-xl"
               />
-              <div className="text-2xl bg-orange-400 bg-clip-text text-transparent font-bold uppercase">
+              <div className="text-2xl bg-orange-500 bg-clip-text text-transparent font-bold uppercase">
                 MGUG
               </div>
             </Link>
@@ -134,28 +133,26 @@ export default function Navbar() {
               const isMegaMenuOpen = activeMegaMenu === item.english;
 
               if (!hasMegaMenu) {
-                // Non-megamenu link logic
                 const href =
                   item.english === "Research"
                     ? "/research"
                     : item.english === "Contact"
                     ? "/contact"
                     : `/${item.english.toLowerCase()}`;
+                const commonLinkClasses =
+                  "font-medium text-slate-700 hover:text-orange-500 transition-all duration-200 hover:scale-105";
 
                 const linkContent = isExternal(href) ? (
                   <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
+                    className={commonLinkClasses}
                   >
                     {item[language]}
                   </a>
                 ) : (
-                  <Link
-                    to={href}
-                    className="font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
-                  >
+                  <Link to={href} className={commonLinkClasses}>
                     {item[language]}
                   </Link>
                 );
@@ -178,7 +175,7 @@ export default function Navbar() {
                   <PopoverTrigger asChild>
                     <button
                       onClick={() => handleMegaMenuToggle(item.english)}
-                      className="flex items-center space-x-1 transition-colors font-medium text-white hover:text-orange-400"
+                      className="flex items-center space-x-1 transition-colors font-medium text-slate-700 hover:text-orange-500"
                       aria-expanded={isMegaMenuOpen}
                     >
                       <span>{item[language]}</span>
@@ -193,7 +190,7 @@ export default function Navbar() {
                   <PopoverContent
                     align="center"
                     sideOffset={16}
-                    className="w-auto p-0 border-none bg-blue-950/80 backdrop-blur-xl shadow-2xl z-50"
+                    className="w-auto p-0 border border-gray-200/80 bg-white/80 backdrop-blur-xl shadow-2xl shadow-black/10 z-50"
                     onMouseLeave={closeMegaMenu}
                   >
                     <div className="px-4 sm:px-6 lg:px-8 py-8 max-h-[80vh] overflow-y-auto scrollbar-none">
@@ -204,7 +201,7 @@ export default function Navbar() {
                               key={index}
                               className="w-64 space-y-4 flex-shrink-0"
                             >
-                              <h3 className="text-orange-400 font-semibold text-lg border-b border-orange-500/30 pb-2">
+                              <h3 className="text-orange-500 font-semibold text-lg border-b border-orange-400/50 pb-2">
                                 {section.label[language]}
                               </h3>
                               {section.subSections && (
@@ -219,11 +216,11 @@ export default function Navbar() {
                                           />
                                         ) : (
                                           <div className="mt-4">
-                                            <h4 className="text-orange-400 font-medium text-sm mb-2 pl-2">
+                                            <h4 className="text-orange-500 font-medium text-sm mb-2 pl-2">
                                               {subSection.label[language]}
                                             </h4>
                                             {subSection.subSections && (
-                                              <div className="space-y-1 pl-4 border-l border-gray-700">
+                                              <div className="space-y-1 pl-4 border-l border-gray-300">
                                                 {subSection.subSections.map(
                                                   (
                                                     nestedSection,
@@ -269,7 +266,7 @@ export default function Navbar() {
             <LanguageToggle />
             <button
               onClick={openSiennaMenu}
-              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] text-white transition-all duration-200 hover:scale-105 hover:text-orange-500"
+              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] text-gray-700 transition-all duration-200 hover:scale-105 hover:text-orange-500"
               aria-label="Open accessibility menu"
             >
               <FaUniversalAccess size={24} />
@@ -277,7 +274,7 @@ export default function Navbar() {
             {/* Login (Mobile) */}
             <a href="https://erp.mgug.ac.in/login.php">
               <button
-                className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-700 text-white font-medium rounded-md transition-colors lg:hidden transform duration-200 hover:scale-105]"
+                className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors lg:hidden transform duration-200 hover:scale-105"
                 aria-label="Login to MGUG ERP"
               >
                 {language === "hindi" ? "लॉगिन" : "Login"}
@@ -288,7 +285,7 @@ export default function Navbar() {
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <button
-                  className="lg:hidden text-white hover:text-orange-400 transition-colors"
+                  className="lg:hidden text-gray-700 hover:text-orange-500 transition-colors"
                   aria-label="Toggle mobile menu"
                   aria-expanded={mobileMenuOpen}
                   aria-controls="mobile-menu"
@@ -298,7 +295,7 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-64 sm:w-80 bg-blue-950 text-white p-6 border-0"
+                className="w-64 sm:w-80 bg-white text-slate-800 p-6 border-l border-gray-200"
                 id="mobile-menu"
                 aria-label="Mobile navigation menu"
               >
@@ -323,7 +320,7 @@ export default function Navbar() {
                             key={item.english}
                             to={href}
                             onClick={() => setMobileMenuOpen(false)}
-                            className="block text-white hover:text-orange-400 transition-colors tracking-wide py-2"
+                            className="block text-slate-700 hover:text-orange-500 transition-colors tracking-wide py-2"
                             aria-label={`Maps to ${item[language]} page`}
                           >
                             {item[language]}
@@ -334,11 +331,11 @@ export default function Navbar() {
                       return (
                         <div
                           key={item.english}
-                          className="border-t border-white/20 pt-4 first:border-0 first:pt-0"
+                          className="border-t border-gray-200 pt-4 first:border-0 first:pt-0"
                           role="group"
                           aria-label={`${item[language]} menu section`}
                         >
-                          <h3 className="text-orange-400 font-semibold text-lg mb-3">
+                          <h3 className="text-orange-500 font-semibold text-lg mb-3">
                             {item[language]}
                           </h3>
                           <div className="space-y-1">
@@ -367,8 +364,8 @@ export default function Navbar() {
                   </nav>
 
                   {/* Footer */}
-                  <div className="mt-16 border-t border-white/20 pt-6 text-sm text-gray-400 space-y-2">
-                    <p className="font-medium text-white/80">
+                  <div className="mt-16 border-t border-gray-200 pt-6 text-sm text-gray-600 space-y-2">
+                    <p className="font-medium text-slate-800">
                       {language === "hindi"
                         ? "MGUG को गहराई से जानें"
                         : "Explore MGUG deeply"}
@@ -384,7 +381,7 @@ export default function Navbar() {
                           <a
                             key={index}
                             href={item.href}
-                            className="hover:text-orange-400 transition-colors"
+                            className="hover:text-orange-500 transition-colors"
                             aria-label={`View ${item.label[language]}`}
                           >
                             {item.label[language]}
@@ -403,7 +400,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
             >
               <button
-                className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors transform duration-300 hover:scale-105"
+                className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg transition-colors transform duration-300 hover:scale-105"
                 aria-label="Login to MGUG ERP"
               >
                 {language === "hindi" ? "लॉगिन" : "Login"}

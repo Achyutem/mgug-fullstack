@@ -21,8 +21,8 @@ const Vision = () => {
           </div>
 
           {/* Text Content */}
-          <div className="w-full lg:w-2/3 text-left text-lg leading-relaxed text-gray-100">
-            <h1 className="text-4xl font-bold mb-6 text-orange-400">
+          <div className="w-full lg:w-2/3 text-left text-lg leading-relaxed text-black">
+            <h1 className="text-4xl font-bold mb-6 text-orange-500">
               {visionMissionData.pageTitle[language]}
             </h1>
 
@@ -32,18 +32,18 @@ const Vision = () => {
                   {section.heading[language]}
                 </h2>
                 {section.paragraphs.map((para, pIndex) => (
-                  <p key={pIndex} className="mb-6 text-gray-300">
+                  <p key={pIndex} className="mb-6 text-black">
                     {para[language]}
                   </p>
                 ))}
                 {section.quote && (
                   <div>
-                    <p className="mb-6 text-gray-300">
+                    <p className="mb-6 text-black">
                       <span className="block mt-4 italic text-orange-300 text-lg whitespace-pre-line">
                         {section.quote.sanskrit}
                       </span>
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-black">
                       <strong>
                         {language === "hindi" ? "अनुवाद:" : "Translation:"}
                       </strong>{" "}

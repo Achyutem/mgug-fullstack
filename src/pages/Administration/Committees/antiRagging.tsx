@@ -19,7 +19,7 @@ const AntiRagging = () => {
 
   return (
     <MainLayout>
-      <section className="py-12 px-4 md:px-16 max-w-7xl mx-auto text-slate-200">
+      <section className="py-12 px-4 md:px-16 max-w-7xl mx-auto text-black">
         {/* Top Image */}
         <div className="mb-8 rounded-lg overflow-hidden">
           <img
@@ -36,7 +36,7 @@ const AntiRagging = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl font-bold text-orange-400 mb-4 text-center uppercase">
+        <h1 className="text-4xl font-bold text-orange-500 mb-4 text-center uppercase">
           {t.heading}
         </h1>
 
@@ -130,7 +130,7 @@ const TableList = ({
   return (
     <div className="overflow-x-auto rounded-lg border border-slate-700 mb-8">
       <table className="min-w-full text-left">
-        <thead className="bg-orange-500/20 text-orange-400">
+        <thead className="bg-orange-500/20 text-orange-500">
           <tr>
             <th className="p-4">
               {language === "hindi" ? "क्रमांक" : "S. No."}

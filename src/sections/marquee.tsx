@@ -43,7 +43,7 @@ export default function Marquee() {
               href={item.pdf_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white hover:underline whitespace-nowrap px-8 text-sm"
+              className="text-black hover:text-white hover:underline whitespace-nowrap px-8 text-sm"
             >
               {item.notification_name}
             </a>

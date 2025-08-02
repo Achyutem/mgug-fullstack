@@ -124,13 +124,8 @@ export const routeMeta = [
     element: <ProgressPath />,
   },
   {
-    title: "Associate Instituion",
-    path: "/associate-instituion",
-    element: <InstitutionsPage />,
-  },
-  {
-    title: "Associate Instituion",
-    path: "/associate-instituion",
+    title: "Associate Institutes",
+    path: "/associate-institutes",
     element: <InstitutionsPage />,
   },
   {

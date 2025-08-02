@@ -7,9 +7,9 @@ const Leadership = () => {
 
   return (
     <MainLayout>
-      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto text-gray-100">
+      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto text-black">
         {/* Page Title */}
-        <h1 className="text-5xl font-bold text-center text-orange-400 mb-16">
+        <h1 className="text-5xl font-bold text-center text-orange-500 mb-16">
           {leadershipData.pageTitle[language]}
         </h1>
 
@@ -25,7 +25,7 @@ const Leadership = () => {
 
           {/* Text Content */}
           <div className="w-full lg:w-1/2 text-lg leading-relaxed">
-            <h2 className="text-3xl font-bold mb-4 text-orange-400">
+            <h2 className="text-3xl font-bold mb-4 text-orange-500">
               {leadershipData.leaderName[language]}
             </h2>
             {/* First two paragraphs go here */}

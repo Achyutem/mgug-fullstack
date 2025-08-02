@@ -13,11 +13,11 @@ const renderProspectusTable = (
   titles: MagazineTitles["headers"],
   language: "hindi" | "english"
 ) => (
-  <div className="p-6 sm:p-8 rounded-xl border border-slate-700 bg-black/20 backdrop-blur-sm">
+  <div className="p-6 sm:p-8 rounded-2xl border-2 border-orange-500/50 bg-white/60 backdrop-blur-md">
     <div className="overflow-x-auto">
-      <table className="w-full text-left text-gray-200">
+      <table className="w-full text-left text-slate-800">
         <thead>
-          <tr className="bg-orange-500/20 text-orange-400">
+          <tr className="bg-orange-100/70 text-orange-600">
             <th className="p-4 font-semibold rounded-tl-xl">
               {titles.title[language]}
             </th>
@@ -31,10 +31,10 @@ const renderProspectusTable = (
           {items.map((item) => (
             <tr
               key={item.pdf_url}
-              className="border-b border-slate-700 last:border-b-0 hover:bg-gray-700/50 transition-colors"
+              className="border-b border-gray-200 last:border-b-0 hover:bg-orange-100/50 transition-colors"
             >
-              <td className="p-4">{item.notification_name}</td>
-              <td className="p-4 text-sm text-slate-400">
+              <td className="p-4 font-medium">{item.notification_name}</td>
+              <td className="p-4 text-sm text-gray-600">
                 {item.notification_datetime_formatted}
               </td>
               <td className="p-4 text-center">
@@ -42,7 +42,7 @@ const renderProspectusTable = (
                   href={item.pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm text-cyan-400 hover:text-cyan-300 underline font-semibold"
+                  className="inline-block text-sm text-orange-500 hover:text-orange-600 underline font-semibold"
                 >
                   Download
                 </a>
@@ -81,21 +81,31 @@ export default function ProspectusPage() {
 
   return (
     <MainLayout>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
-          {prospectusTitles.heading[language]}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
+            {prospectusTitles.heading[language]}
+          </span>
         </h1>
-        {renderProspectusTable(
-          displayedProspectus,
-          prospectusTitles.headers,
-          language
+        {prospectus.length > 0 ? (
+          <>
+            {renderProspectusTable(
+              displayedProspectus,
+              prospectusTitles.headers,
+              language
+            )}
+            <Pagination
+              currentPage={currentPage}
+              totalItems={prospectus.length}
+              itemsPerPage={ITEMS_PER_PAGE}
+              onPageChange={setCurrentPage}
+            />
+          </>
+        ) : (
+          <div className="text-center text-gray-600 py-16">
+            Loading prospectus...
+          </div>
         )}
-        <Pagination
-          currentPage={currentPage}
-          totalItems={prospectus.length}
-          itemsPerPage={ITEMS_PER_PAGE}
-          onPageChange={setCurrentPage}
-        />
       </section>
     </MainLayout>
   );

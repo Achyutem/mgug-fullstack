@@ -1,6 +1,5 @@
 import type { StatsCardProps } from "../utils/types";
 import AnimatedCard from "./animatedCard";
-import ModernCard from "./modernCards";
 
 export default function StatsCard({
   number,
@@ -10,17 +9,17 @@ export default function StatsCard({
 }: StatsCardProps) {
   return (
     <AnimatedCard delay={delay}>
-      <ModernCard className="text-center group">
+      <div className="bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 text-center group transition-all duration-300 hover:border-orange-500">
         <div className="mb-4 flex justify-center">
-          <div className="p-3 rounded-full bg-orange-600/20 text-orange-400 group-hover:bg-orange-600/30 group-hover:text-orange-300 transition-all duration-300">
+          <div className="p-3 rounded-full bg-orange-200 text-orange-500 group-hover:bg-orange-300 transition-colors duration-300">
             {icon}
           </div>
         </div>
-        <div className="text-3xl font-bold text-white mb-2">{number}</div>
-        <div className="text-gray-400 text-sm uppercase tracking-wide">
+        <div className="text-3xl font-bold text-slate-800 mb-2">{number}</div>
+        <div className="text-gray-500 text-sm uppercase tracking-wide">
           {label}
         </div>
-      </ModernCard>
+      </div>
     </AnimatedCard>
   );
 }

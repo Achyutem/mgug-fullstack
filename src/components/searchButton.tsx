@@ -109,7 +109,7 @@ export default function SearchDialog({
       part.toLowerCase() === keyword.toLowerCase() ? (
         <mark
           key={i}
-          className="bg-orange-400/30 text-orange-300 px-1 rounded-sm"
+          className="bg-orange-500/30 text-orange-300 px-1 rounded-sm"
         >
           {part}
         </mark>
@@ -143,34 +143,38 @@ export default function SearchDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent
-        className="max-w-xl p-0 overflow-hidden bg-blue-950 text-white border border-white/10 shadow-lg shadow-black/40"
+        // CHANGED: Dialog styles for light "glass" theme
+        className="max-w-xl p-0 overflow-hidden bg-white/80 backdrop-blur-lg text-slate-800 border border-gray-200/80 shadow-2xl shadow-black/10"
         showCloseButton={false}
       >
-        <div className="border-b border-white/10 p-4 bg-blue-950/90">
+        {/* CHANGED: Input container styles */}
+        <div className="border-b border-gray-200 p-4">
           <Input
             autoFocus
             placeholder="Search the university website..."
-            className="text-sm bg-blue-950 text-white placeholder:text-gray-400 border-orange-400 focus-visible:ring-orange-400 focus-visible:ring-[1.5px] focus-visible:border-orange-400"
+            // CHANGED: Input styles for light theme
+            className="text-sm bg-white text-slate-900 placeholder:text-gray-500 border-orange-500 focus-visible:ring-orange-500 focus-visible:ring-[1.5px] focus-visible:border-orange-500"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
         <div
-          className="max-h-[400px] overflow-y-auto p-4 space-y-2 bg-blue-950/90"
+          className="max-h-[400px] overflow-y-auto p-4 space-y-2"
           id="search-results-container"
         >
           {isLoading ? (
-            <p className="text-gray-400 text-sm text-center pt-4">
+            // CHANGED: Text colors for status messages
+            <p className="text-gray-500 text-sm text-center pt-4">
               Loading search index...
             </p>
           ) : error ? (
-            <p className="text-red-400 text-sm text-center pt-4">{error}</p>
+            <p className="text-red-600 text-sm text-center pt-4">{error}</p>
           ) : !query.trim() ? (
-            <p className="text-gray-400 text-sm text-center pt-4">
+            <p className="text-gray-500 text-sm text-center pt-4">
               Start typing to search...
             </p>
           ) : results.length === 0 ? (
-            <p className="text-gray-400 text-sm text-center pt-4">
+            <p className="text-gray-600 text-sm text-center pt-4">
               No results found for "{query}".
             </p>
           ) : (
@@ -182,13 +186,14 @@ export default function SearchDialog({
                 ref={(el) => {
                   itemRefs.current[index] = el;
                 }}
+                // CHANGED: Search result item styles
                 className={`block p-3 rounded-lg transition-all ${
                   index === highlightedIndex
-                    ? "bg-blue-900/60 ring-2 ring-orange-400"
-                    : "bg-blue-950 hover:bg-blue-900/60"
+                    ? "bg-orange-100/70 ring-2 ring-orange-500"
+                    : "hover:bg-gray-100/70"
                 }`}
               >
-                <div className="font-semibold text-orange-400">
+                <div className="font-semibold text-orange-500">
                   {highlight(item.title, query)}
                 </div>
                 {getSnippet(item.content, query)}

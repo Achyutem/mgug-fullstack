@@ -11,7 +11,7 @@ const AmbulancePage = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
 
@@ -24,7 +24,7 @@ const AmbulancePage = () => {
               />
             </div>
 
-            <div className="text-lg leading-relaxed text-gray-200">
+            <div className="text-lg leading-relaxed text-black">
               {content.paragraphs.map((para, index) => (
                 <p key={index} className="mb-4">
                   {para[language]}

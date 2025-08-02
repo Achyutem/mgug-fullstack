@@ -13,14 +13,14 @@ const HostelTable = ({
   language: "hindi" | "english";
 }) => (
   <div>
-    <h2 className="text-3xl font-bold mb-6 text-orange-400 text-center">
+    <h2 className="text-3xl font-bold mb-6 text-orange-500 text-center">
       {hostelInfo.heading[language]}
     </h2>
     <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-gray-200">
+        <table className="w-full text-left text-black">
           <thead>
-            <tr className="bg-orange-500/20 text-orange-400">
+            <tr className="bg-orange-500/20 text-orange-500">
               <th className="p-4 font-semibold rounded-tl-xl">
                 {headers.particulars[language]}
               </th>
@@ -58,7 +58,7 @@ const HostelPage = () => {
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-400 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-orange-500 text-center">
             {content.pageTitle[language]}
           </h1>
 
@@ -72,17 +72,17 @@ const HostelPage = () => {
           </div> */}
 
           {/* Content Section */}
-          <div className="w-full max-w-4xl text-left text-lg leading-relaxed text-gray-100">
+          <div className="w-full max-w-4xl text-left text-lg leading-relaxed text-black">
             {content.introParagraphs.map((para, index) => (
               <p key={index} className="mb-4">
                 {para[language]}
               </p>
             ))}
 
-            <h2 className="text-3xl font-bold my-8 text-orange-400">
+            <h2 className="text-3xl font-bold my-8 text-orange-500">
               {content.facilitiesHeading[language]}
             </h2>
-            <ul className="list-disc list-inside space-y-3 text-gray-200 mb-12">
+            <ul className="list-disc list-inside space-y-3 text-black mb-12">
               {content.facilitiesList.map((facility, index) => (
                 <li key={index}>{facility[language]}</li>
               ))}

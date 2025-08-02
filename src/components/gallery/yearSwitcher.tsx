@@ -1,3 +1,5 @@
+import React from "react";
+
 interface YearSwitcherProps {
   years: number[];
   selectedYear: number;
@@ -10,7 +12,7 @@ const YearSwitcher: React.FC<YearSwitcherProps> = ({
   onSelectYear,
 }) => {
   return (
-    <div className="flex items-center rounded-full bg-white/5 p-1 border border-white/10">
+    <div className="flex items-center rounded-full bg-gray-100/80 backdrop-blur-sm p-1 border border-gray-200/80">
       {years.map((year) => (
         <button
           key={year}
@@ -19,7 +21,7 @@ const YearSwitcher: React.FC<YearSwitcherProps> = ({
             ${
               selectedYear === year
                 ? "text-white"
-                : "text-gray-400 hover:text-white"
+                : "text-gray-600 hover:text-slate-900"
             }
           `}
         >

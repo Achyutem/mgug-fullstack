@@ -6,7 +6,7 @@ const LanguageToggle = () => {
   return (
     <span
       onClick={toggleLanguage}
-      className="cursor-pointer underline text-sm text-white hover:text-orange-400 transition-colors"
+      className="cursor-pointer underline text-sm text-black hover:text-orange-500 transition-colors"
       aria-label="Toggle language"
     >
       {language === "english" ? "हिन्दी" : "English"}

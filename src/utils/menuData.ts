@@ -500,14 +500,6 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
-            hindi: "कार्यक्रमों की सूची",
-            english: "List of Programs",
-          },
-          href: "/admission/list-of-program",
-        },
-        {
-          type: "link",
-          label: {
             hindi: "प्रमाणन और डिप्लोमा",
             english: "Certification and Diploma",
           },

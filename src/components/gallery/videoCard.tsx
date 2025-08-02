@@ -23,7 +23,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   const isLongDescription = description.length > 150;
 
   return (
-    <div className="relative w-full bg-slate-800/50 border border-slate-700 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-orange-500/20 hover:border-orange-500/50">
+    <div className="relative w-full bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-orange-500/20 hover:border-orange-500">
       <div className="aspect-w-16 aspect-h-9">
         <iframe
           src={video.video_share_code}
@@ -36,7 +36,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         ></iframe>
       </div>
       <div className="p-5">
-        <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+        <h3 className="text-lg font-bold text-slate-800 mb-2 leading-tight">
           {video.video_title}
         </h3>
 
@@ -56,7 +56,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
             className="relative overflow-hidden"
           >
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed">
               {description}
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         {isLongDescription && (
           <button
             onClick={toggleExpanded}
-            className="text-orange-400 font-semibold text-sm mt-3 hover:text-orange-300 transition-colors"
+            className="text-orange-500 font-semibold text-sm mt-3 hover:text-orange-600 transition-colors"
           >
             {isExpanded
               ? videoGalleryContent.readLess[language]

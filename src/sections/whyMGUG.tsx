@@ -17,12 +17,14 @@ export default function WhyMGUG() {
       <section className="relative z-20 py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <AnimatedCard className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              <span className="bg-orange-400  bg-clip-text text-transparent">
+            {/* CHANGED: Text color */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
+              <span className="bg-orange-500 bg-clip-text text-transparent">
                 {t.heading}
               </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            {/* CHANGED: Text color */}
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t.description}
             </p>
           </AnimatedCard>

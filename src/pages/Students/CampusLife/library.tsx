@@ -11,13 +11,13 @@ const LibraryPage = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
             <h2 className="text-3xl font-semibold mb-6 text-orange-300">
               {content.heading[language]}
             </h2>
-            <div className="text-lg leading-relaxed text-gray-200 mb-12">
+            <div className="text-lg leading-relaxed text-black mb-12">
               {content.introParagraphs.map((para, index) => (
                 <p key={index} className="mb-4">
                   {para[language]}
@@ -25,16 +25,16 @@ const LibraryPage = () => {
               ))}
             </div>
 
-            <h2 className="text-3xl font-bold mb-6 text-orange-400">
+            <h2 className="text-3xl font-bold mb-6 text-orange-500">
               {content.servicesHeading[language]}
             </h2>
-            <div className="space-y-6 text-lg text-gray-200">
+            <div className="space-y-6 text-lg text-black">
               {content.services.map((service, index) => (
                 <div key={index}>
                   <h3 className="font-semibold text-orange-300">
                     {service.heading[language]}
                   </h3>
-                  <p className="text-gray-300 mt-1">
+                  <p className="text-black mt-1">
                     {service.description[language]}
                   </p>
                 </div>

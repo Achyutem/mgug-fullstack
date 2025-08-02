@@ -21,8 +21,8 @@ const UniversityLogo = () => {
           </div>
 
           {/* Scrollable Text Content */}
-          <div className="w-full lg:w-2/3 text-left text-lg leading-relaxed text-gray-100">
-            <h1 className="text-4xl font-bold mb-6 text-orange-400">
+          <div className="w-full lg:w-2/3 text-left text-lg leading-relaxed text-black">
+            <h1 className="text-4xl font-bold mb-6 text-orange-500">
               {universityLogoData.pageTitle[language]}
             </h1>
 

@@ -8,10 +8,10 @@ const InspirationAbode = () => {
 
   return (
     <MainLayout>
-      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto text-gray-100">
+      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto text-black">
         <div className="flex flex-col items-center gap-10">
           {/* Page Title - Now used for the main heading */}
-          <h1 className="text-4xl font-bold text-orange-400 text-center">
+          <h1 className="text-4xl font-bold text-orange-500 text-center">
             {content.pageTitle[language]}
           </h1>
 

@@ -11,15 +11,15 @@ const AcademicCalendar = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
 
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-gray-200">
+                <table className="w-full text-left text-black">
                   <thead>
-                    <tr className="bg-orange-500/20 text-orange-400">
+                    <tr className="bg-orange-500/20 text-orange-500">
                       <th className="p-4 font-semibold rounded-tl-xl">
                         {content.tableHeaders.session[language]}
                       </th>

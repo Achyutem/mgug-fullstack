@@ -16,7 +16,8 @@ const MediaCard: React.FC<MediaCardProps> = ({ cutting }) => {
   return (
     <>
       <div
-        className="group relative w-full cursor-pointer overflow-hidden rounded-2xl border border-slate-700 bg-slate-800/50 p-4 transition-all duration-300 ease-in-out hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10"
+        // CHANGED: Card styles to match the new light theme.
+        className="group relative w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-orange-500/50 bg-white/60 backdrop-blur-md p-4 transition-all duration-300 ease-in-out hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20"
         onClick={openModal}
       >
         <div className="relative overflow-hidden rounded-lg">
@@ -26,10 +27,9 @@ const MediaCard: React.FC<MediaCardProps> = ({ cutting }) => {
             className="h-auto w-full transform object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-0" />
         </div>
         <div className="mt-4 text-center">
-          <h3 className="font-semibold text-orange-400">
+          <h3 className="font-bold sm:text-2xl text-orange-500">
             {cutting.paper_newspaper_name}
           </h3>
         </div>
@@ -50,7 +50,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ cutting }) => {
               exit={{ scale: 0.9, y: -20 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="relative max-h-[90vh] max-w-[90vw]"
-              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+              onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={cutting.image_url}
@@ -59,7 +59,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ cutting }) => {
               />
               <button
                 onClick={closeModal}
-                className="absolute -top-4 -right-4 rounded-full bg-red-600 p-2 text-white shadow-lg transition-transform hover:scale-110"
+                className="absolute -top-4 -right-4 rounded-full bg-orange-500 p-2 text-white shadow-lg transition-transform hover:scale-110 hover:bg-orange-600"
                 aria-label="Close image view"
               >
                 <X size={20} />

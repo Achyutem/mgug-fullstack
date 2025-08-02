@@ -6,7 +6,7 @@ import RuleItem from "@/components/ruleItem";
 const UserIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-3 text-orange-400 flex-shrink-0"
+    className="h-5 w-5 mr-3 text-orange-500 flex-shrink-0"
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -27,11 +27,11 @@ const ExaminationCommittee = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center uppercase">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center uppercase">
               {t.heading}
             </h1>
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
-              <ul className="space-y-6 text-lg text-gray-200">
+              <ul className="space-y-6 text-lg text-black">
                 <RuleItem label="a">
                   {t.rules.a.description}
                   <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-base">

@@ -7,9 +7,9 @@ const OurIdeals = () => {
 
   return (
     <MainLayout>
-      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto text-gray-100">
+      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto text-black">
         {/* Page Title */}
-        <h1 className="text-5xl font-bold text-center text-orange-400 mb-16">
+        <h1 className="text-5xl font-bold text-center text-orange-500 mb-16">
           {ourIdealsData.pageTitle[language]}
         </h1>
 
@@ -31,7 +31,7 @@ const OurIdeals = () => {
 
             {/* Text */}
             <div className="w-full lg:w-1/2 text-lg leading-relaxed">
-              <h2 className="text-3xl font-bold mb-4 text-orange-400">
+              <h2 className="text-3xl font-bold mb-4 text-orange-500">
                 {ideal.name[language]}
               </h2>
 
@@ -39,7 +39,7 @@ const OurIdeals = () => {
                 <div key={pIndex}>
                   {/* Render the quote after the first paragraph */}
                   {pIndex === 1 && ideal.quote && (
-                    <p className="mb-4 italic text-orange-400 text-xl">
+                    <p className="mb-4 italic text-orange-500 text-xl">
                       {ideal.quote[language]}
                     </p>
                   )}

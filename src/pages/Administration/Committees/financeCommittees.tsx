@@ -13,14 +13,14 @@ const FinanceCommittee = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-5xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {financeCommitteeTitles.heading[language]}
             </h1>
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-gray-200">
+                <table className="w-full text-left text-black">
                   <thead>
-                    <tr className="bg-orange-500/20 text-orange-400">
+                    <tr className="bg-orange-500/20 text-orange-500">
                       <th className="p-4 font-semibold rounded-tl-xl">
                         {financeCommitteeTitles.headers.srNo[language]}
                       </th>
@@ -59,13 +59,13 @@ const FinanceCommittee = () => {
                           {member.srNo}
                         </td>
                         <td className="p-4">
-                          <span className="font-bold text-orange-400">
+                          <span className="font-bold text-orange-500">
                             {member.name[language]}
                           </span>
                           {member.designation[language] && (
                             <>
                               <br />
-                              <span className="font-light text-sm text-white">
+                              <span className="font-medium text-sm text-gray-800">
                                 {member.designation[language]}
                               </span>
                             </>

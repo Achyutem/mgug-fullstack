@@ -16,16 +16,16 @@ const SGRCAndOmbudsperson = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-5xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {sgrcCommitteeTitles.heading[language]}
             </h1>
 
             {/* Table */}
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-gray-200">
+                <table className="w-full text-left text-black">
                   <thead>
-                    <tr className="bg-orange-500/20 text-orange-400">
+                    <tr className="bg-orange-500/20 text-orange-500">
                       <th className="p-4 font-semibold rounded-tl-xl">
                         {sgrcCommitteeTitles.headers.srNo[language]}
                       </th>
@@ -61,7 +61,7 @@ const SGRCAndOmbudsperson = () => {
 
             {/* Ombudsperson Section */}
             <div className="mt-10 bg-sky-900/50 border-l-4 border-sky-400 p-6 rounded-lg text-base text-sky-200">
-              <h2 className="text-xl font-semibold text-orange-400 mb-2">
+              <h2 className="text-xl font-semibold text-orange-500 mb-2">
                 {ombudspersonData.name[language]}
               </h2>
               <p className="mb-1">

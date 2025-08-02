@@ -11,10 +11,10 @@ const ResearchPage = () => {
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-4xl text-left">
-            <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
+            <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
-            <div className="text-lg leading-relaxed text-gray-200 mb-12">
+            <div className="text-lg leading-relaxed text-black mb-12">
               {content.introParagraphs.map((para, index) => (
                 <p key={index} className="mb-4">
                   {para[language]}
@@ -22,15 +22,15 @@ const ResearchPage = () => {
               ))}
             </div>
 
-            <h2 className="text-3xl font-bold mb-8 text-orange-400 text-center">
+            <h2 className="text-3xl font-bold mb-8 text-orange-500 text-center">
               {content.facilitiesHeading[language]}
             </h2>
 
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-gray-200">
+                <table className="w-full text-left text-black">
                   <thead>
-                    <tr className="bg-orange-500/20 text-orange-400">
+                    <tr className="bg-orange-500/20 text-orange-500">
                       <th className="p-4 w-20 font-semibold rounded-tl-xl">
                         {content.tableHeaders.sNo[language]}
                       </th>

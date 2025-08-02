@@ -1,4 +1,5 @@
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { usePagination, DOTS } from "../utils/usePagination";
 
 interface PaginationProps {
   currentPage: number;
@@ -15,38 +16,73 @@ export const Pagination = ({
 }: PaginationProps) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  if (totalPages <= 1) {
+  const paginationRange = usePagination({
+    currentPage,
+    totalCount: totalItems,
+    pageSize: itemsPerPage,
+  });
+
+  if (currentPage === 0 || (paginationRange && paginationRange.length < 2)) {
     return null;
   }
 
-  const handlePrevious = () => {
-    onPageChange(Math.max(currentPage - 1, 1));
-  };
-
-  const handleNext = () => {
+  const onNext = () => {
     onPageChange(Math.min(currentPage + 1, totalPages));
   };
 
+  const onPrevious = () => {
+    onPageChange(Math.max(currentPage - 1, 1));
+  };
+
   return (
-    <div className="flex justify-center items-center gap-4 mt-8 text-sm">
+    <div className="flex justify-center items-center gap-2 mt-8 text-sm">
+      {/* Previous Button */}
       <button
-        onClick={handlePrevious}
+        onClick={onPrevious}
         disabled={currentPage === 1}
-        className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/70 text-slate-300 border border-slate-700 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-700/90 transition-colors"
+        className="flex items-center justify-center w-9 h-9 rounded-full bg-white/70 text-gray-700 border border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200/70 transition-colors"
         aria-label="Previous Page"
       >
-        <FaArrowLeft />
+        <ChevronLeft className="w-4 h-4" />
       </button>
-      <span className="text-slate-400 font-medium tabular-nums">
-        Page {currentPage} of {totalPages}
-      </span>
+
+      {/* Page Number Buttons */}
+      <div className="flex items-center gap-2">
+        {paginationRange?.map((pageNumber, index) => {
+          if (pageNumber === DOTS) {
+            return (
+              <span key={index} className="px-2 text-gray-500">
+                &#8230;
+              </span>
+            );
+          }
+
+          const isActive = currentPage === pageNumber;
+          return (
+            <button
+              key={index}
+              onClick={() => onPageChange(pageNumber as number)}
+              className={`flex items-center justify-center w-9 h-9 rounded-full border transition-colors duration-200
+                ${
+                  isActive
+                    ? "bg-orange-500 text-white border-orange-500 shadow-md shadow-orange-500/20"
+                    : "bg-white/70 text-gray-700 border-gray-300 hover:bg-gray-200/70"
+                }`}
+            >
+              {pageNumber}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Next Button */}
       <button
-        onClick={handleNext}
+        onClick={onNext}
         disabled={currentPage === totalPages}
-        className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/70 text-slate-300 border border-slate-700 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-700/90 transition-colors"
+        className="flex items-center justify-center w-9 h-9 rounded-full bg-white/70 text-gray-700 border border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200/70 transition-colors"
         aria-label="Next Page"
       >
-        <FaArrowRight />
+        <ChevronRight className="w-4 h-4" />
       </button>
     </div>
   );

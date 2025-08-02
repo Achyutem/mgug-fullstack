@@ -24,7 +24,7 @@ export default function ImageCarousel() {
 
   return (
     <div
-      className="relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl h-64 sm:h-72 md:h-96 lg:h-[28rem] rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/30 backdrop-blur-sm shadow-2xl"
+      className="relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl h-64 sm:h-72 md:h-96 lg:h-[28rem] rounded-2xl overflow-hidden border-2 border-amber-600 bg-gray-900/30 backdrop-blur-sm shadow-2xl"
       role="region"
       aria-label="Campus image carousel"
     >
@@ -50,7 +50,7 @@ export default function ImageCarousel() {
             onClick={() => setCurrentImage(index)}
             aria-label={`Go to image ${index + 1}`}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentImage ? "bg-orange-400 w-6" : "bg-gray-600"
+              index === currentImage ? "bg-orange-500 w-6" : "bg-gray-600"
             }`}
           />
         ))}

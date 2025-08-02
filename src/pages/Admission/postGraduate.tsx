@@ -25,7 +25,7 @@ const PostgraduatePrograms = () => {
   return (
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto  min-h-screen">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-10 text-orange-400 text-center uppercase tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-10 text-orange-500 text-center uppercase tracking-tight">
           {t.heading[language]}
         </h1>
         <div className="flex flex-col gap-3">
@@ -33,7 +33,7 @@ const PostgraduatePrograms = () => {
             <div key={index} className="flex flex-col">
               <Button
                 variant="outline"
-                className="w-full h-14 bg-transparent text-orange-400 hover:bg-gray-700/30 hover:text-orange-500 transition-all duration-300 border-2 border-orange-400 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
+                className="w-full h-14 bg-transparent text-orange-500 hover:bg-gray-700/30 hover:text-orange-500 transition-all duration-300 border-2 border-orange-500 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
                 onClick={() => toggleFaculty(index)}
               >
                 <span>{faculty.name[language]}</span>
@@ -53,7 +53,7 @@ const PostgraduatePrograms = () => {
                 <div className="mt-4 bg-gray-800 rounded-lg shadow-md overflow-x-auto scrollbar-none">
                   <Table>
                     <TableHeader>
-                      <TableRow className="bg-gradient-to-r from-orange-400 to-orange-600 border-b border-gray-700/50">
+                      <TableRow className="bg-gradient-to-r from-orange-500 to-orange-600 border-b border-gray-700/50">
                         <TableHead className="text-white font-bold text-sm py-4">
                           Programme Name
                         </TableHead>
@@ -82,7 +82,7 @@ const PostgraduatePrograms = () => {
                             progIndex % 2 === 0 ? "bg-gray-800" : "bg-gray-850"
                           }`}
                         >
-                          <TableCell className="font-medium text-gray-200 text-sm py-3">
+                          <TableCell className="font-medium text-black text-sm py-3">
                             <div>
                               <div>{program.name[language]}</div>
                               {program.note?.[language] && (
@@ -92,19 +92,19 @@ const PostgraduatePrograms = () => {
                               )}
                             </div>
                           </TableCell>
-                          <TableCell className="text-gray-200 text-sm py-3">
+                          <TableCell className="text-black text-sm py-3">
                             {program.duration[language]}
                           </TableCell>
-                          <TableCell className="text-gray-200 text-sm py-3">
+                          <TableCell className="text-black text-sm py-3">
                             {program.fees[language]}
                           </TableCell>
-                          <TableCell className="text-gray-200 text-sm py-3">
+                          <TableCell className="text-black text-sm py-3">
                             {program.examinationFee[language]}
                           </TableCell>
-                          <TableCell className="text-gray-200 text-sm py-3">
+                          <TableCell className="text-black text-sm py-3">
                             {program.seats[language]}
                           </TableCell>
-                          <TableCell className="text-gray-200 text-sm py-3">
+                          <TableCell className="text-black text-sm py-3">
                             <ul className="list-disc pl-5 space-y-2 leading-6">
                               {program.qualification.map((qual, qIndex) => (
                                 <li key={qIndex} className="text-sm">
