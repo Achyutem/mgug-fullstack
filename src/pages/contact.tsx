@@ -1,8 +1,8 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { FiFacebook, FiTwitter, FiInstagram, FiYoutube } from "react-icons/fi";
 import { IoMailOpenOutline } from "react-icons/io5";
-
 import AnimatedCard from "@/components/animatedCard";
+import ModernCard from "@/components/modernCards";
 import MainLayout from "@/layouts/homeLayout";
 
 const whatsAppMessage =
@@ -72,37 +72,38 @@ export default function Contact() {
                 Get in Touch
               </span>
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-xl text-gray-700">
               We're here to help you take the next step in your educational
               journey.
             </p>
           </AnimatedCard>
 
           {/* Cards */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {cards.map(({ href, icon: Icon, title, description }, i) => (
               <AnimatedCard delay={i * 100} key={title}>
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block cursor-pointer hover:scale-105 transition-transform duration-200"
+                  className="block cursor-pointer hover:scale-105 transition-transform duration-200 h-full"
                 >
-                  <div className="text-center p-6 border border-white/10 rounded-lg bg-white/5 h-full">
+                  {/* The generic div is now replaced with ModernCard */}
+                  <ModernCard className="text-center p-6 rounded-lg bg-white/5 h-full">
                     <div className="mb-4 flex justify-center">
                       <div className="p-3 rounded-full bg-orange-600/20 text-orange-500">
                         <Icon className="w-6 h-6" />
                       </div>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="text-lg font-semibold text-black mb-2">
                       {title}
                     </h3>
                     {description && (
-                      <p className="text-gray-400 text-sm whitespace-pre-line leading-relaxed">
+                      <p className="text-gray-700 text-sm whitespace-pre-line leading-relaxed">
                         {description}
                       </p>
                     )}
-                  </div>
+                  </ModernCard>
                 </a>
               </AnimatedCard>
             ))}
