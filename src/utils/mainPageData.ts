@@ -63,7 +63,7 @@ export const HomePage: HomeDataType = {
       description:
         "महायोगी गोरखनाथ विश्वविद्यालय में भविष्य को आकार देने वाले हजारों छात्रों के साथ शामिल हों।",
       applyButton: "प्रवेश के लिए आवेदन करें",
-      brochureButton: "ब्रोशर डाउनलोड करें",
+      brochureButton: "विवरणिका डाउनलोड करें",
     },
     english: {
       heading: "Ready to Begin Your Journey?",
@@ -105,11 +105,11 @@ export const HomePage: HomeDataType = {
       universityName2: "गोरखनाथ",
       universityName3: "विश्वविद्यालय",
       universityName4: " गोरखपुर",
-      animatedText1: "REDEFINING",
-      animatedText2: "EDUCATION",
+      animatedText1: "शिक्षा",
+      animatedText2: "पुनर्परिभाषा",
       description:
         "विश्व-स्तरीय शिक्षा और अत्याधुनिक अनुसंधान के माध्यम से दिमागों को सशक्त बनाना, नवाचार को बढ़ावा देना और कल के नेताओं का निर्माण करना।",
-      exploreButton: "कार्यक्रमों का अन्वेषण करें",
+      exploreButton: "कार्यक्रम अन्वेषण",
       virtualTourButton: "वर्चुअल टूर",
     },
     english: {
@@ -137,7 +137,7 @@ export const HomePage: HomeDataType = {
       researchExcellenceTitle: "अनुसंधान उत्कृष्टता",
       researchExcellenceDescription:
         "अत्याधुनिक अनुसंधान सुविधाएँ और विभिन्न विषयों में अभूतपूर्व खोजों के अवसर।",
-      modernInfrastructureTitle: "आधुनिक बुनियादी ढांचा",
+      modernInfrastructureTitle: "आधुनिक अवसंरचना",
       modernInfrastructureDescription:
         "स्मार्ट कक्षाओं, उन्नत प्रयोगशालाओं और विश्व-स्तरीय सुविधाओं के साथ समकालीन परिसर।",
       globalPartnershipsTitle: "वैश्विक साझेदारी",
