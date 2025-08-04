@@ -71,6 +71,7 @@ export interface AnimatedTextProp {
   delay?: number;
   loopInterval?: number;
   className?: string;
+  language?: string;
 }
 
 export interface CommitteeMember {
