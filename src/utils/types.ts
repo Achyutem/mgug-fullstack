@@ -967,3 +967,9 @@ export interface MediaCoverageContent {
   subtitle: Title;
   noCuttings: Title;
 }
+
+export interface SearchablePage {
+  title: string;
+  path: string;
+  content: string;
+}

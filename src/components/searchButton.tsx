@@ -1,12 +1,7 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import type { SearchablePage } from "@/utils/types";
 import React, { useEffect, useState, useRef } from "react";
-
-interface SearchablePage {
-  title: string;
-  path: string;
-  content: string;
-}
 
 export default function SearchDialog({
   open,
