@@ -10,41 +10,147 @@ import {
 } from "@/components/ui/dialog";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import { RingLoader } from "react-spinners";
+
+type ApiImage = {
+  popup_image_path: string;
+};
 
 export const InfoPopup: FC = () => {
   const [open, setOpen] = useState<boolean>(true);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [hovering, setHovering] = useState<boolean>(false);
 
-  const images: string[] = [
-    "/uploads/commerce.jpg",
-    "/uploads/jobs.jpg",
-    "/uploads/anesthesia.jpg",
-  ];
+  const [images, setImages] = useState<string[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    if (!open || hovering) return;
+    const fetchImages = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("https://mgug.ac.in/api/popupApi.php");
+        if (!response.ok) {
+          throw new Error(
+            `Network response was not ok: ${response.statusText}`
+          );
+        }
+        const data: ApiImage[] = await response.json();
+        const imageUrls = data.map((item) => item.popup_image_path);
+        setImages(imageUrls);
+      } catch (error) {
+        console.error("Failed to fetch popup images:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchImages();
+  }, []);
+  useEffect(() => {
+    if (!open || hovering || images.length === 0) return;
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
     }, 3000);
+
     return () => clearInterval(interval);
   }, [open, hovering, images.length]);
 
   const goToSlide = (index: number) => setCurrentSlide(index);
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % images.length);
+  const nextSlide = () =>
+    images.length > 0 && setCurrentSlide((prev) => (prev + 1) % images.length);
   const prevSlide = () =>
+    images.length > 0 &&
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
 
-  // CHANGED: Text colors for light mode
   const InfoContent: FC = () => (
     <div className="space-y-3 text-sm text-gray-600">
       <p className="text-base font-semibold text-slate-800">
         🏫 Tour our facilities and housing
       </p>
-      <p>📅 July 12, 2025 • 🕘 10:00 AM – 4:00 PM</p>
-      <p>📍 Main Campus, 123 University Ave</p>
+      <p>📅 August 12, 2025 • 🕘 10:00 AM – 4:00 PM</p>
+      <p>📍 Main Campus, Balapar, Gorakhpur</p>
       <p className="text-base font-semibold text-slate-800">🌟 Why Visit Us?</p>
     </div>
+  );
+
+  const ImageSlider = ({ isMobile = false }) => (
+    <>
+      <div
+        className="relative w-full h-full"
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+      >
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+              currentSlide === index
+                ? "opacity-100 translate-x-0"
+                : index < currentSlide
+                ? "opacity-0 -translate-x-full"
+                : "opacity-0 translate-x-full"
+            }`}
+          >
+            <img
+              src={src}
+              alt={`University photo ${index + 1}`}
+              className="w-full h-full object-contain"
+            />
+          </div>
+        ))}
+      </div>
+      <button
+        onClick={prevSlide}
+        aria-label="Previous image"
+        className={
+          isMobile
+            ? "absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
+            : "absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+        }
+      >
+        <FaArrowLeft className={isMobile ? "h-4 w-4" : "h-5 w-5"} />
+      </button>
+      <button
+        onClick={nextSlide}
+        aria-label="Next image"
+        className={
+          isMobile
+            ? "absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
+            : "absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+        }
+      >
+        <FaArrowRight className={isMobile ? "h-4 w-4" : "h-5 w-5"} />
+      </button>
+      <div
+        className={
+          isMobile
+            ? "absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+            : "absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2"
+        }
+      >
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            className={
+              isMobile
+                ? `h-2 w-2 rounded-full transition-all duration-300 ${
+                    currentSlide === index
+                      ? "bg-orange-500 w-4"
+                      : "bg-gray-400/70"
+                  }`
+                : `h-3 w-3 rounded-full transition-all duration-300 hover:scale-110 ${
+                    currentSlide === index
+                      ? "bg-orange-500 w-6"
+                      : "bg-gray-400/70 hover:bg-gray-500/80"
+                  }`
+            }
+          />
+        ))}
+      </div>
+    </>
   );
 
   const MobileView = () => (
@@ -54,7 +160,6 @@ export const InfoPopup: FC = () => {
           <DialogTitle className="text-xl font-bold text-orange-500 tracking-tight">
             🎓 Explore University Life
           </DialogTitle>
-          {/* CHANGED: Description text color */}
           <DialogDescription className="mt-2 text-sm text-gray-600">
             Discover our vibrant campus through visuals and events.
           </DialogDescription>
@@ -71,128 +176,34 @@ export const InfoPopup: FC = () => {
           </a>
         </div>
       </div>
-      <div className="relative w-full h-[80vw] sm:h-[60vw] max-h-[500px] flex-shrink-0 overflow-hidden bg-slate-100/70">
-        <div
-          className="relative w-full h-full"
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
-        >
-          {images.map((src, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                currentSlide === index
-                  ? "opacity-100 translate-x-0"
-                  : index < currentSlide
-                  ? "opacity-0 -translate-x-full"
-                  : "opacity-0 translate-x-full"
-              }`}
-            >
-              <img
-                src={src}
-                alt={`University photo ${index + 1}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
-        {/* CHANGED: Arrow button styles for light mode */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
-          aria-label="Previous image"
-        >
-          <FaArrowLeft className="h-4 w-4" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
-          aria-label="Next image"
-        >
-          <FaArrowRight className="h-4 w-4" />
-        </button>
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              // CHANGED: Inactive dot color for better contrast
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                currentSlide === index ? "bg-orange-500 w-4" : "bg-gray-400/70"
-              }`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+      <div className="relative w-full h-[80vw] sm:h-[60vw] max-h-[500px] flex-shrink-0 overflow-hidden bg-slate-100/70 flex items-center justify-center">
+        {loading ? (
+          <RingLoader color="#f97316" size={50} />
+        ) : images.length > 0 ? (
+          <ImageSlider isMobile={true} />
+        ) : (
+          <p className="text-gray-500">No images available.</p>
+        )}
       </div>
     </div>
   );
 
   const DesktopView = () => (
     <div className="grid grid-cols-2 h-full max-h-[80vh] overflow-hidden">
-      {/* CHANGED: Added subtle background to image container */}
       <div className="relative flex items-center justify-center overflow-hidden bg-slate-100/70">
-        <div
-          className="relative w-full h-full"
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
-        >
-          {images.map((src, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                currentSlide === index
-                  ? "opacity-100 translate-x-0"
-                  : index < currentSlide
-                  ? "opacity-0 -translate-x-full"
-                  : "opacity-0 translate-x-full"
-              }`}
-            >
-              <img
-                src={src}
-                alt={`University photo ${index + 1}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
-        {/* CHANGED: Arrow button styles for light mode */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
-          aria-label="Previous image"
-        >
-          <FaArrowLeft className="h-5 w-5" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
-          aria-label="Next image"
-        >
-          <FaArrowRight className="h-5 w-5" />
-        </button>
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              // CHANGED: Inactive dot color for better contrast
-              className={`h-3 w-3 rounded-full transition-all duration-300 hover:scale-110 ${
-                currentSlide === index
-                  ? "bg-orange-500 w-6"
-                  : "bg-gray-400/70 hover:bg-gray-500/80"
-              }`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        {loading ? (
+          <RingLoader color="#f97316" size={60} />
+        ) : images.length > 0 ? (
+          <ImageSlider isMobile={false} />
+        ) : (
+          <p className="text-gray-500">No images available.</p>
+        )}
       </div>
       <div className="flex flex-col p-6 lg:p-8 overflow-y-auto">
         <DialogHeader className="text-left">
           <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-500 tracking-tight">
             🎓 Explore University Life
           </DialogTitle>
-          {/* CHANGED: Description text color */}
           <DialogDescription className="mt-3 text-base lg:text-lg text-gray-600 leading-relaxed">
             Discover our vibrant campus through stunning visuals and upcoming
             events.
@@ -216,12 +227,10 @@ export const InfoPopup: FC = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        {/* CHANGED: Trigger button color to match theme */}
         <button className="fixed top-4 right-4 z-50 rounded-lg bg-orange-500 px-3 py-2 text-sm sm:text-base sm:px-4 sm:py-2 text-white shadow-lg hover:bg-orange-600 hover:scale-105 active:scale-95 transition-all duration-200">
           Open Info
         </button>
       </DialogTrigger>
-      {/* CHANGED: Main dialog styles for "glass card" effect */}
       <DialogContent className="w-[95vw] max-w-[95vw] sm:w-[90vw] sm:max-w-[90vw] md:max-w-4xl lg:max-w-6xl max-h-[95vh] overflow-hidden rounded-xl bg-white/90 backdrop-blur-lg p-0 text-slate-800 shadow-2xl border border-orange-600">
         <div className="md:hidden">
           <MobileView />
@@ -229,7 +238,6 @@ export const InfoPopup: FC = () => {
         <div className="hidden md:block h-full">
           <DesktopView />
         </div>
-        {/* CHANGED: Close button color to match theme */}
         <button
           className="absolute right-3 top-3 z-20 rounded-full bg-orange-500/80 p-2 text-white transition-all duration-200 hover:bg-orange-500 hover:scale-110 active:scale-95 shadow-lg"
           onClick={() => setOpen(false)}
