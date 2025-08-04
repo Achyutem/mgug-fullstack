@@ -21,7 +21,6 @@ export default function AboutMain() {
                 {t.heading}
               </span>
             </h2>
-            {/* CHANGED: Text color for light mode */}
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t.description}
             </p>
