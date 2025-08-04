@@ -107,10 +107,7 @@ export default function SearchDialog({
     const parts = text.split(regex);
     return parts.map((part, i) =>
       part.toLowerCase() === keyword.toLowerCase() ? (
-        <mark
-          key={i}
-          className="bg-orange-500/30 text-orange-300 px-1 rounded-sm"
-        >
+        <mark key={i} className="bg-orange-400 text-black px-1 rounded-sm">
           {part}
         </mark>
       ) : (
@@ -134,7 +131,7 @@ export default function SearchDialog({
       index + keyword.length + contextWindow
     );
     return (
-      <p className="text-sm text-gray-400 mt-2 leading-tight">
+      <p className="text-sm text-gray-700 mt-2 leading-tight">
         ...{highlight(content.substring(start, end), keyword)}...
       </p>
     );
@@ -143,7 +140,6 @@ export default function SearchDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent
-        // CHANGED: Dialog styles for light "glass" theme
         className="max-w-xl p-0 overflow-hidden bg-white/80 backdrop-blur-lg text-slate-800 border border-gray-200/80 shadow-2xl shadow-black/10"
         showCloseButton={false}
       >
@@ -152,7 +148,6 @@ export default function SearchDialog({
           <Input
             autoFocus
             placeholder="Search the university website..."
-            // CHANGED: Input styles for light theme
             className="text-sm bg-white text-slate-900 placeholder:text-gray-500 border-orange-500 focus-visible:ring-orange-500 focus-visible:ring-[1.5px] focus-visible:border-orange-500"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -163,7 +158,6 @@ export default function SearchDialog({
           id="search-results-container"
         >
           {isLoading ? (
-            // CHANGED: Text colors for status messages
             <p className="text-gray-500 text-sm text-center pt-4">
               Loading search index...
             </p>
