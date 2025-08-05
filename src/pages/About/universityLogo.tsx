@@ -29,7 +29,7 @@ const UniversityLogo = () => {
             {universityLogoData.paragraphs.map((para, index) => (
               <p key={index} className="mb-4">
                 {para.isQuote ? (
-                  <span className="block mt-2 italic text-orange-300 whitespace-pre-line">
+                  <span className="block mt-2 italic text-orange-500 whitespace-pre-line">
                     {para[language]}
                   </span>
                 ) : (

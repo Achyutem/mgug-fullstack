@@ -40,7 +40,7 @@ const HospitalPage = () => {
               <div className="space-y-6 text-lg text-black">
                 {content.facilitiesList.map((item, index) => (
                   <div key={index}>
-                    <h3 className="font-semibold text-orange-300">
+                    <h3 className="font-semibold text-orange-500">
                       {item.heading[language]}
                     </h3>
                     <p className="text-black mt-1">
@@ -59,7 +59,7 @@ const HospitalPage = () => {
               <div className="space-y-6 text-lg text-black">
                 {content.timingsList.map((item, index) => (
                   <div key={index}>
-                    <h3 className="font-semibold text-orange-300">
+                    <h3 className="font-semibold text-orange-500">
                       {item.heading[language]}
                     </h3>
                     <p className="text-black mt-1">

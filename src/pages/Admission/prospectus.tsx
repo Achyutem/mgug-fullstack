@@ -83,7 +83,7 @@ export default function ProspectusPage() {
     <MainLayout>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold mb-8 text-center">
-          <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-orange-500 bg-clip-text text-transparent">
             {prospectusTitles.heading[language]}
           </span>
         </h1>

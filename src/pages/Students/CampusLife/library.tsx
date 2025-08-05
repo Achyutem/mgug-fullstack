@@ -14,7 +14,7 @@ const LibraryPage = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
-            <h2 className="text-3xl font-semibold mb-6 text-orange-300">
+            <h2 className="text-3xl font-semibold mb-6 text-orange-500">
               {content.heading[language]}
             </h2>
             <div className="text-lg leading-relaxed text-black mb-12">
@@ -31,7 +31,7 @@ const LibraryPage = () => {
             <div className="space-y-6 text-lg text-black">
               {content.services.map((service, index) => (
                 <div key={index}>
-                  <h3 className="font-semibold text-orange-300">
+                  <h3 className="font-semibold text-orange-500">
                     {service.heading[language]}
                   </h3>
                   <p className="text-black mt-1">

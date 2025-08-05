@@ -42,7 +42,7 @@ const AntiRagging = () => {
 
         {/* Definition Section */}
         <div className="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-lg mb-6">
-          <h2 className="text-2xl font-semibold mb-3 text-orange-300 flex items-center gap-2">
+          <h2 className="text-2xl font-semibold mb-3 text-orange-500 flex items-center gap-2">
             <IoAlertCircleOutline className="text-red-400" /> {t.whatIsRagging}
           </h2>
           <p>{t.raggingDefinition}</p>
@@ -102,13 +102,13 @@ const AntiRagging = () => {
         </div>
 
         {/* Anti-Ragging Committee Table */}
-        <h2 className="text-2xl font-semibold mb-2 text-orange-300">
+        <h2 className="text-2xl font-semibold mb-2 text-orange-500">
           {t.committeeHeading}
         </h2>
         <TableList data={AntiRaggingcommittee} />
 
         {/* Anti-Ragging Squad Table */}
-        <h2 className="text-2xl font-semibold mt-10 mb-2 text-orange-300">
+        <h2 className="text-2xl font-semibold mt-10 mb-2 text-orange-500">
           {t.squadHeading}
         </h2>
         <TableList data={AntiRaggingsquad} />

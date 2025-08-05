@@ -39,7 +39,7 @@ const Vision = () => {
                 {section.quote && (
                   <div>
                     <p className="mb-6 text-black">
-                      <span className="block mt-4 italic text-orange-300 text-lg whitespace-pre-line">
+                      <span className="block mt-4 italic text-orange-500 text-lg whitespace-pre-line">
                         {section.quote.sanskrit}
                       </span>
                     </p>
