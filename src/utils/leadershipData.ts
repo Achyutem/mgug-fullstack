@@ -108,7 +108,7 @@ export const administrationData: Administration = {
       designation: "Chief Proctor",
       university: "Mahayogi Gorakhnath University Gorakhpur",
     },
-    image: "/admin/Dr_Shashi_Kant_Singh.jpg",
+    image: "/admin/proctor.png",
     email: "chief.proctor@mgug.ac.in",
   },
   deanAcademics: {
