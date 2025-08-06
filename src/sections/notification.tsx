@@ -15,12 +15,12 @@ const NotificationColumn = ({
   items: NotificationItem[];
 }) => {
   return (
-    <div className="bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
+    <div className="bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-4 sm:p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
       <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500">
         {icon}
         {title}
       </h3>
-      <div className="flex-grow overflow-y-auto max-h-96 pr-2">
+      <div className="flex-grow overflow-y-auto max-h-80 sm:max-h-96 pr-1 sm:pr-2">
         {items.length > 0 ? (
           <ul className="space-y-3">
             {items.map((item) => {
@@ -83,7 +83,10 @@ export default function Notifications() {
   }, []);
 
   return (
-    <section id="notifications" className="relative z-20 py-24 px-4">
+    <section
+      id="notifications"
+      className="relative z-20 py-16 px-4 sm:py-24 sm:px-6"
+    >
       <div className="max-w-7xl mx-auto">
         <AnimatedCard className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
@@ -101,7 +104,7 @@ export default function Notifications() {
             {t.loadingText}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <NotificationColumn
               title={t.examTitle}
               icon={<FaFileAlt />}
@@ -141,8 +144,7 @@ export default function Notifications() {
 //   items: NotificationItem[];
 // }) => {
 //   return (
-//     // CHANGED: Card background, border, and text colors for light mode
-//     <div className="bg-white/50 backdrop-blur-sm border border-gray-200 rounded-lg p-5 flex flex-col h-full">
+//     <div className="bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
 //       <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500">
 //         {icon}
 //         {title}
@@ -159,7 +161,6 @@ export default function Notifications() {
 //                     href={item.pdf_url}
 //                     target="_blank"
 //                     rel="noopener noreferrer"
-//                     // CHANGED: Link item styles for light mode
 //                     className="block text-gray-700 hover:text-slate-900 hover:bg-orange-100/50 p-3 rounded-md transition-colors duration-300 border-b border-gray-200"
 //                   >
 //                     {`${displayDate} - ${item.notification_name}`}
@@ -169,7 +170,6 @@ export default function Notifications() {
 //             })}
 //           </ul>
 //         ) : (
-//           // CHANGED: Text color
 //           <p className="text-gray-500 text-center pt-10">No new updates.</p>
 //         )}
 //       </div>
@@ -215,20 +215,17 @@ export default function Notifications() {
 //     <section id="notifications" className="relative z-20 py-24 px-4">
 //       <div className="max-w-7xl mx-auto">
 //         <AnimatedCard className="text-center mb-16">
-//           {/* CHANGED: Text color */}
 //           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
 //             <span className="bg-orange-500 bg-clip-text text-transparent">
 //               {t.heading}
 //             </span>
 //           </h2>
-//           {/* CHANGED: Text color */}
 //           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 //             {t.description}
 //           </p>
 //         </AnimatedCard>
 
 //         {loading ? (
-//           // CHANGED: Text color
 //           <div className="text-center text-xl text-gray-600">
 //             {t.loadingText}
 //           </div>
