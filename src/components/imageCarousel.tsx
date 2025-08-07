@@ -50,7 +50,12 @@ export default function ImageCarousel() {
       aria-label="Campus image carousel"
     >
       {isLoading ? (
-        <RingLoader color={"#f97316"} loading={isLoading} size={80} />
+        <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+          <RingLoader color={"#f97316"} size={100} />
+          <p className="text-xl font-semibold text-orange-500">
+            image is loading...
+          </p>
+        </div>
       ) : (
         <>
           {images.map((image, index) => (

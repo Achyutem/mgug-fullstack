@@ -178,7 +178,12 @@ export const InfoPopup: FC = () => {
       </div>
       <div className="relative w-full h-[80vw] sm:h-[60vw] max-h-[500px] flex-shrink-0 overflow-hidden bg-slate-100/70 flex items-center justify-center">
         {loading ? (
-          <RingLoader color="#f97316" size={50} />
+          <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+            <RingLoader color={"#f97316"} size={50} />
+            <p className="text-xl font-semibold text-orange-500">
+              image is loading...
+            </p>
+          </div>
         ) : images.length > 0 ? (
           <ImageSlider isMobile={true} />
         ) : (
@@ -192,7 +197,12 @@ export const InfoPopup: FC = () => {
     <div className="grid grid-cols-2 h-full max-h-[80vh] overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden bg-slate-100/70">
         {loading ? (
-          <RingLoader color="#f97316" size={60} />
+          <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+            <RingLoader color={"#f97316"} size={100} />
+            <p className="text-xl font-semibold text-orange-500">
+              image is loading...
+            </p>
+          </div>
         ) : images.length > 0 ? (
           <ImageSlider isMobile={false} />
         ) : (
