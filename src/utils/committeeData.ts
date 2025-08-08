@@ -464,11 +464,11 @@ export const ItCommitteeMembers: ItCommitteeMember[] = [
     designation: { hindi: "ई.आर.पी डेवलपर", english: "ERP Developer" },
   },
   {
-    image: "/sample.webp",
+    image: "/admin/it-team/kamalNayan.jpg",
     name: { hindi: "कमल नयन श्रीवास्तव", english: "Kamal Nayan Srivastava" },
     designation: {
-      hindi: "सोशल मीडिया मैनेजर",
-      english: "Social Media Manager",
+      hindi: "आईटी अधिकारी",
+      english: "IT Officer",
     },
   },
   {
