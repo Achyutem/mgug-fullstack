@@ -21,7 +21,7 @@ export const MobileMenuSection = ({
     "group flex items-center justify-between transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500";
 
   const MenuLink = ({ href, label }: { href: string; label: string }) => {
-    const classes = `${linkBaseClasses} text-gray-400 hover:text-orange-500 active:text-orange-500 active:underline py-1.5 text-sm`;
+    const classes = `${linkBaseClasses} text-gray-600 hover:text-orange-500 active:text-orange-500 active:underline py-1.5 text-sm`;
 
     if (isExternal(href)) {
       return (
@@ -99,7 +99,7 @@ export const MobileMenuSection = ({
                     {subSection.label[language]}
                   </h4>
                   {subSection.subSections && (
-                    <div className="space-y-1 pl-3 border-l border-gray-700">
+                    <div className="space-y-1 pl-3 border-l border-slate-300">
                       {subSection.subSections.map(
                         (nestedSection, nestedIndex) =>
                           nestedSection.type === "link" && (

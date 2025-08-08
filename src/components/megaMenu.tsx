@@ -101,7 +101,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
                               {subSection.label[language]}
                             </h4>
                             {subSection.subSections && (
-                              <div className="space-y-1 pl-4 border-l border-gray-700">
+                              <div className="space-y-1 pl-4 border-l border-slate-300">
                                 {subSection.subSections.map(
                                   (nestedSection, nestedIndex) =>
                                     nestedSection.type === "link" && (
