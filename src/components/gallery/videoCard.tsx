@@ -23,7 +23,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   const isLongDescription = description.length > 150;
 
   return (
-    <div className="relative w-full bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-orange-500/20 hover:border-orange-500">
+    <div className="relative w-full bg-transparent backdrop-blur-md border-2 border-orange-400 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-orange-500/20 hover:border-orange-500">
       <div className="aspect-w-16 aspect-h-9">
         <iframe
           src={video.video_share_code}

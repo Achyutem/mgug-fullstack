@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { listProgramsContent, listProgramsStaticText } from "@/utils/admission";
 
 const AnimateHeight = ({
@@ -26,9 +26,11 @@ const AnimateHeight = ({
 
   useEffect(() => {
     if (contentRef.current) {
+      // Set the height to the scrollHeight if visible, otherwise 0.
+      // This is what creates the smooth animated effect.
       setHeight(isVisible ? contentRef.current.scrollHeight : 0);
     }
-  }, [isVisible, children]);
+  }, [isVisible, children]); // Re-calculate height when visibility or content changes
 
   return (
     <div
@@ -41,155 +43,158 @@ const AnimateHeight = ({
 };
 
 const ListOfPrograms = () => {
+  // Assuming these hooks and utility functions are correctly implemented
   const { language } = UseLanguage();
   const dynamicContent = listProgramsContent;
   const staticText = listProgramsStaticText;
+
+  // Set the initial state to have the first faculty expanded
   const [selectedFaculty, setSelectedFaculty] = useState<number | null>(0);
 
+  // Function to toggle the selected faculty
   const toggleFaculty = (index: number) => {
     setSelectedFaculty(selectedFaculty === index ? null : index);
   };
 
   return (
     <MainLayout>
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen">
-        <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl/14 pt-2 pb-2 sm:text-4xl/14 lg:text-5xl/14 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-500">
-            {dynamicContent.heading[language]}
-          </h1>
-          <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
-            {staticText.subheading[language]}
-          </p>
-          <div className="mt-6 h-1 max-w-xs mx-auto bg-gradient-to-r from-orange-500 to-orange-500 rounded-full" />
-        </div>
-
-        <div className="flex flex-col gap-4">
+      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto min-h-screen">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-10 text-orange-500 text-center uppercase tracking-tight">
+          {dynamicContent.heading[language]}
+        </h1>
+        <div className="flex flex-col gap-3">
           {dynamicContent.faculties.map((faculty, index) => (
-            <div
-              key={index}
-              className="flex flex-col bg-gray-800/50 rounded-lg shadow-lg border border-gray-700/50"
-            >
+            <div key={index} className="flex flex-col">
+              {/* Button for each faculty that toggles the collapsible table */}
               <Button
-                variant="ghost"
-                className="w-full h-auto py-4 px-6 text-left text-orange-500 hover:text-orange-500 transition-all duration-300 rounded-t-lg rounded-b-none data-[state=open]:rounded-b-none text-lg md:text-xl font-semibold flex justify-between items-center"
+                variant="outline"
+                className="w-full h-14 bg-transparent text-orange-500 hover:bg-orange-300/40 hover:text-orange-500 transition-all duration-300 border-2 border-orange-500 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
                 onClick={() => toggleFaculty(index)}
-                data-state={selectedFaculty === index ? "open" : "closed"}
               >
                 <span>{faculty.name[language]}</span>
-                <ChevronDown
-                  className={`h-6 w-6 transition-transform duration-500 ease-in-out ${
-                    selectedFaculty === index ? "rotate-180" : ""
-                  }`}
-                />
+                {/* Dynamically display the appropriate icon */}
+                {selectedFaculty === index ? (
+                  <ChevronUp className="h-5 w-5" />
+                ) : (
+                  <ChevronDown className="h-5 w-5" />
+                )}
               </Button>
 
+              {/* The collapsible content with animated height */}
               <AnimateHeight isVisible={selectedFaculty === index}>
-                <div className="p-2 sm:p-4 bg-gray-800 rounded-b-lg">
+                <div className="mt-4 bg-orange-200 rounded-lg shadow-md overflow-x-auto scrollbar-none">
                   <Table>
+                    {/* Table headers for desktop view */}
                     <TableHeader className="hidden md:table-header-group">
-                      <TableRow className="border-b-2 border-orange-500/30">
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                      <TableRow className="bg-orange-200 border-b border-slate-300/50">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.programme[language]}
                         </TableHead>
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.duration[language]}
                         </TableHead>
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.fees[language]}
                         </TableHead>
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.examFee[language]}
                         </TableHead>
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.seats[language]}
                         </TableHead>
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.supernumerary[language]}
                         </TableHead>
-                        <TableHead className="px-6 py-3 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           {staticText.tableHeaders.qualification[language]}
                         </TableHead>
                       </TableRow>
                     </TableHeader>
 
+                    {/* Table body with program data */}
                     <TableBody>
                       {faculty.programs.map((program, progIndex) => (
                         <TableRow
                           key={progIndex}
-                          className="block md:table-row mb-4 md:mb-0 border border-gray-700 rounded-lg md:border-none md:border-b md:border-gray-700/50"
+                          className={`block md:table-row mb-4 md:mb-0 border border-slate-300 rounded-lg md:border-none md:border-b md:border-slate-300/50 hover:bg-orange-500/10 transition-colors duration-200 ${
+                            progIndex % 2 === 0
+                              ? "bg-orange-200"
+                              : "bg-orange-300"
+                          }`}
                         >
-                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-gray-700 md:border-none">
+                          {/* Table cells, with mobile labels */}
+                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-slate-300 md:border-none">
                             <div className="flex justify-between items-start md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2 shrink-0">
+                              <span className="font-semibold text-black md:hidden mr-2 shrink-0">
                                 {staticText.mobileLabels.programme[language]}
                               </span>
                               <div className="text-right md:text-left">
-                                <span className="font-semibold text-white">
+                                <span className="font-medium text-black text-sm py-3">
                                   {program.name[language]}
                                 </span>
                                 {program.note?.[language] && (
-                                  <p className="mt-2 text-xs italic text-red-400">
-                                    {program.note[language]}
+                                  <p className="text-red-600 text-xs font-bold mt-2 italic">
+                                    Note: {program.note[language]}
                                   </p>
                                 )}
                               </div>
                             </div>
                           </TableCell>
 
-                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-gray-700 md:border-none">
+                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-slate-300 md:border-none">
                             <div className="flex justify-between items-center md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2">
+                              <span className="font-semibold text-black md:hidden mr-2">
                                 {staticText.mobileLabels.duration[language]}
                               </span>
-                              <span className="text-right md:text-left text-black">
+                              <span className="text-right md:text-left text-black text-sm py-3">
                                 {program.duration[language]}
                               </span>
                             </div>
                           </TableCell>
 
-                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-gray-700 md:border-none">
+                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-slate-300 md:border-none">
                             <div className="flex justify-between items-center md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2">
+                              <span className="font-semibold text-black md:hidden mr-2">
                                 {staticText.mobileLabels.fees[language]}
                               </span>
-                              <span className="text-right md:text-left text-black">
+                              <span className="text-right md:text-left text-black text-sm py-3">
                                 {program.fees[language]}
                               </span>
                             </div>
                           </TableCell>
 
-                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-gray-700 md:border-none">
+                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-slate-300 md:border-none">
                             <div className="flex justify-between items-center md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2">
+                              <span className="font-semibold text-black md:hidden mr-2">
                                 {staticText.mobileLabels.examFee[language]}
                               </span>
-                              <span className="text-right md:text-left text-black">
+                              <span className="text-right md:text-left text-black text-sm py-3">
                                 {program.examinationFee[language]}
                               </span>
                             </div>
                           </TableCell>
 
-                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-gray-700 md:border-none">
+                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-slate-300 md:border-none">
                             <div className="flex justify-between items-center md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2">
+                              <span className="font-semibold text-black md:hidden mr-2">
                                 {staticText.mobileLabels.seats[language]}
                               </span>
-                              <span className="text-right md:text-left text-black">
+                              <span className="text-right md:text-left text-black text-sm py-3">
                                 {program.seats[language]}
                               </span>
                             </div>
                           </TableCell>
 
-                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-gray-700 md:border-none">
+                          <TableCell className="block md:table-cell p-3 md:px-6 md:py-4 border-b border-slate-300 md:border-none">
                             <div className="flex justify-between items-center md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2">
+                              <span className="font-semibold text-black md:hidden mr-2">
                                 {
                                   staticText.mobileLabels.supernumerary[
                                     language
                                   ]
                                 }
                               </span>
-                              <span className="text-right md:text-left text-black">
+                              <span className="text-right md:text-left text-black text-sm py-3">
                                 {program.supernumerarySeats?.[language] ||
                                   "N/A"}
                               </span>
@@ -198,14 +203,14 @@ const ListOfPrograms = () => {
 
                           <TableCell className="block md:table-cell p-3 md:px-6 md:py-4">
                             <div className="flex justify-between items-start md:block">
-                              <span className="font-semibold text-orange-500 md:hidden mr-2 shrink-0">
+                              <span className="font-semibold text-black md:hidden mr-2 shrink-0">
                                 {
                                   staticText.mobileLabels.qualification[
                                     language
                                   ]
                                 }
                               </span>
-                              <ul className="list-none md:list-disc pl-0 md:pl-5 space-y-1 text-right md:text-left text-black">
+                              <ul className="list-disc pl-5 space-y-2 leading-6 text-right md:text-left text-black">
                                 {program.qualification.map((qual, qIndex) => (
                                   <li key={qIndex} className="text-sm">
                                     {qual[language]}

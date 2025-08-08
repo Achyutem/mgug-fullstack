@@ -14,7 +14,7 @@ const LibraryPage = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
-            <h2 className="text-3xl font-semibold mb-6 text-orange-500">
+            <h2 className="text-3xl font-bold mb-6 text-orange-500">
               {content.heading[language]}
             </h2>
             <div className="text-lg leading-relaxed text-black mb-12">

@@ -41,14 +41,14 @@ export default function GalleryPage() {
 
   return (
     <MainLayout>
-      <section id="gallery" className="relative z-20 py-16 px-4 w-full">
+      <section className="relative z-20 py-16 px-4 w-full">
         <AnimatedCard className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             <span className="bg-orange-500 bg-clip-text text-transparent">
               {galleryContent.title[language]}
             </span>
           </h2>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-700">
             {galleryContent.subtitle[language]}
           </p>
         </AnimatedCard>
@@ -87,7 +87,7 @@ export default function GalleryPage() {
             </div>
           ) : (
             <div className="flex h-64 w-full items-center justify-center">
-              <p className="text-gray-400">
+              <p className="text-gray-700">
                 {galleryContent.noAlbums(selectedYear)[language]}
               </p>
             </div>

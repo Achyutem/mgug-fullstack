@@ -83,11 +83,11 @@ export default function Footer() {
                   {footerTranslations[language].contact}
                 </h3>
                 {/* CHANGED: Text and hover colors */}
-                <ul className="space-y-2 text-sm text-gray-600">
+                <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-center gap-2">
                     <FiPhone className="w-4 h-4" />
                     <a
-                      href="tel:..."
+                      href="tel:+91-9415266014"
                       className="hover:text-orange-500 hover:underline"
                     >
                       +91-9415266014
@@ -96,7 +96,7 @@ export default function Footer() {
                   <li className="flex items-center gap-2">
                     <FiPhone className="w-4 h-4" />
                     <a
-                      href="tel:..."
+                      href="tel:+91-9935904499"
                       className="hover:text-orange-500 hover:underline"
                     >
                       +91-9935904499
@@ -105,7 +105,7 @@ export default function Footer() {
                   <li className="flex items-center gap-2">
                     <FaWhatsapp className="w-4 h-4" />
                     <a
-                      href="https://wa.me/..."
+                      href="https://wa.me/+91-9794299451"
                       className="hover:text-orange-500 hover:underline"
                     >
                       +91-9794299451
@@ -114,14 +114,14 @@ export default function Footer() {
                   <li className="flex items-center gap-2">
                     <FiGlobe className="w-4 h-4" />
                     <a
-                      href="mailto:..."
+                      href="mailto:info@mgug.ac.in"
                       className="hover:text-orange-500 hover:underline"
                     >
                       info@mgug.ac.in
                     </a>
                   </li>
                 </ul>
-                <p className="text-sm text-gray-600 mt-4">
+                <p className="text-sm text-gray-700 mt-4">
                   {footerTranslations[language].address}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function Footer() {
                 <h3 className="text-lg font-semibold text-orange-500 mb-2">
                   {footerTranslations[language].importantLinks}
                 </h3>
-                <ul className="space-y-1 text-sm text-gray-600">
+                <ul className="space-y-1 text-sm text-gray-700">
                   {impLinks.map((item, index) => (
                     <li key={index}>
                       <a
@@ -150,7 +150,7 @@ export default function Footer() {
                 <h3 className="text-lg font-semibold text-orange-500 mb-2">
                   {footerTranslations[language].policyAndReports}
                 </h3>
-                <ul className="space-y-1 text-sm text-gray-600">
+                <ul className="space-y-1 text-sm text-gray-700">
                   {privacy.map((item, index) => (
                     <li key={index}>
                       <a
@@ -166,7 +166,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-2">
+            <p className="text-gray-700 mb-2">
               {footerTranslations[language].copyright}
             </p>
             <p className="text-orange-500 text-sm">स्वस्ति पन्थामनुचरेम</p>

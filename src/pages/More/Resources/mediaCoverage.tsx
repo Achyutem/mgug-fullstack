@@ -61,7 +61,7 @@ export default function MediaCoveragePage() {
             </span>
           </h2>
 
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-700">
             {mediaCoverageContent.subtitle[language]}
           </p>
         </AnimatedCard>
@@ -88,7 +88,7 @@ export default function MediaCoveragePage() {
             </>
           ) : (
             <div className="flex h-64 w-full items-center justify-center">
-              <p className="text-gray-400">
+              <p className="text-gray-700">
                 {mediaCoverageContent.noCuttings[language]}
               </p>
             </div>

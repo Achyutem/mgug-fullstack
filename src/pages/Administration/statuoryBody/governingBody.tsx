@@ -28,7 +28,7 @@ const GoverningBody = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {governingBodyData.title[language]}
             </h1>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
               <ul className="space-y-6 text-lg text-black">
                 <RuleItem label="a">
                   {governingBodyData.composition[language].description}
@@ -42,7 +42,7 @@ const GoverningBody = () => {
                       )
                     )}
                   </div>
-                  <div className="mt-4 p-3 rounded-md bg-sky-900/50 border-l-4 border-sky-400 text-sky-200 text-base italic">
+                  <div className="mt-4 p-3 rounded-md bg-sky-200 border-l-4 border-sky-400 text-sky-600 text-base italic">
                     {governingBodyData.composition[language].note}
                   </div>
                 </RuleItem>
@@ -50,7 +50,7 @@ const GoverningBody = () => {
                   <RuleItem key={index} label={rule.label}>
                     {rule.text}
                     {rule.note && (
-                      <div className="mt-4 p-3 rounded-md bg-sky-900/50 border-l-4 border-sky-400 text-sky-200 text-base italic">
+                      <div className="mt-4 p-3 rounded-md bg-sky-200 border-l-4 border-sky-400 text-sky-600 text-base italic">
                         {rule.note}
                       </div>
                     )}

@@ -1,6 +1,6 @@
 import MainLayout from "@/layouts/homeLayout";
 import { IoMailOpenOutline } from "react-icons/io5";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 import {
   sgrcCommitteeTitles,
   sgrcCommitteeData,
@@ -21,7 +21,7 @@ const SGRCAndOmbudsperson = () => {
             </h1>
 
             {/* Table */}
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-black">
                   <thead>
@@ -45,7 +45,7 @@ const SGRCAndOmbudsperson = () => {
                       ({ srNo, name, designation, role }) => (
                         <tr
                           key={srNo}
-                          className="border-b border-slate-700 hover:bg-gray-700/50 transition-colors"
+                          className="border-b border-slate-300 hover:bg-orange-200 transition-colors"
                         >
                           <td className="p-4">{srNo}</td>
                           <td className="p-4">{name[language]}</td>
@@ -60,23 +60,24 @@ const SGRCAndOmbudsperson = () => {
             </div>
 
             {/* Ombudsperson Section */}
-            <div className="mt-10 bg-sky-900/50 border-l-4 border-sky-400 p-6 rounded-lg text-base text-sky-200">
-              <h2 className="text-xl font-semibold text-orange-500 mb-2">
+            <div className="mt-10 bg-sky-200 border-l-4 border-sky-400 p-6 rounded-lg text-base text-sky-200">
+              <h2 className="text-xl font-semibold text-sky-500 mb-2">
                 {ombudspersonData.name[language]}
               </h2>
-              <p className="mb-1">
-                <strong>{ombudspersonData.name[language]}</strong>
+              <p className="mb-1 text-sky-400">
+                {ombudspersonData.designation[language]}
               </p>
-              <p className="mb-1">{ombudspersonData.designation[language]}</p>
               <p className="mb-1 flex items-center gap-2">
-                <FaPhoneAlt size={18} className="text-sky-300" />
-                <strong>{ombudspersonData.contact.phone}</strong>
+                <FiPhone size={18} className="text-sky-400" />
+                <strong className="text-sky-400">
+                  {ombudspersonData.contact.phone}
+                </strong>
               </p>
               <p className="flex items-center gap-2">
-                <IoMailOpenOutline size={18} className="text-sky-300" />
+                <IoMailOpenOutline size={18} className="text-sky-400" />
                 <a
                   href={`mailto:${ombudspersonData.contact.email}`}
-                  className="underline text-sky-300"
+                  className="underline text-sky-400"
                 >
                   {ombudspersonData.contact.email}
                 </a>

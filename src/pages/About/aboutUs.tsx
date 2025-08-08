@@ -25,7 +25,7 @@ const AboutUs = () => {
             </h1>
             <div className="text-lg leading-relaxed text-black">
               {aboutUsData.paragraphs.map((p, index) => (
-                <p key={index} className="mb-4">
+                <p key={index} className="mb-4 text-justify">
                   {p[language]}
                 </p>
               ))}

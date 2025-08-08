@@ -8,11 +8,7 @@ import {
 import { IoMdMenu } from "react-icons/io";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
 import openSiennaMenu from "@/utils/sienna";
-import {
-  FaUniversalAccess,
-  FaChevronDown,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import { FaUniversalAccess, FaChevronDown, FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LanguageToggle from "@/components/languageSwitcher";
 import { UseLanguage } from "@/context/languageContext";
@@ -50,7 +46,7 @@ export default function Navbar() {
     const content = (
       <>
         <span>{label}</span>
-        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
+        <FaLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
       </>
     );
     return isExternal(href) ? (
@@ -76,7 +72,7 @@ export default function Navbar() {
     const content = (
       <>
         <span>{label}</span>
-        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
+        <FaLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-500" />
       </>
     );
     return isExternal(href) ? (
@@ -295,13 +291,13 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-64 sm:w-80 bg-white text-slate-800 p-6 border-l border-gray-200"
+                className="w-64 sm:w-80 bg-orange-100 text-slate-800 p-6 border-l border-gray-200"
                 id="mobile-menu"
                 aria-label="Mobile navigation menu"
               >
                 <div className="flex flex-col h-full justify-between pb-safe">
                   <nav
-                    className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto"
+                    className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto scrollbar-none"
                     aria-label="Mobile menu links"
                   >
                     {menuItems.map((item) => {
@@ -365,7 +361,7 @@ export default function Navbar() {
 
                   {/* Footer */}
                   <div className="mt-16 border-t border-gray-200 pt-6 text-sm text-gray-600 space-y-2">
-                    <p className="font-medium text-slate-800">
+                    <p className="font-medium text-orange-500">
                       {language === "hindi"
                         ? "MGUG को गहराई से जानें"
                         : "Explore MGUG deeply"}

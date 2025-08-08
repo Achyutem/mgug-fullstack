@@ -105,8 +105,8 @@ export const InfoPopup: FC = () => {
         aria-label="Previous image"
         className={
           isMobile
-            ? "absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
-            : "absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+            ? "absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
+            : "absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
         }
       >
         <FaArrowLeft className={isMobile ? "h-4 w-4" : "h-5 w-5"} />
@@ -116,8 +116,8 @@ export const InfoPopup: FC = () => {
         aria-label="Next image"
         className={
           isMobile
-            ? "absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
-            : "absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/60 backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+            ? "absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
+            : "absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
         }
       >
         <FaArrowRight className={isMobile ? "h-4 w-4" : "h-5 w-5"} />

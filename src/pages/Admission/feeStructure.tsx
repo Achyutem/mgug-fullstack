@@ -13,7 +13,7 @@ const FeeStructure = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {feeStructureTitles.heading[language]}
             </h1>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-black">
                   <thead>
@@ -36,7 +36,7 @@ const FeeStructure = () => {
                     {feeStructureData.map((program: FeeStructureMember) => (
                       <tr
                         key={program.srNo}
-                        className={`border-b border-slate-700 hover:bg-gray-700/50 transition-colors ${
+                        className={`border-b border-slate-300 hover:bg-orange-300/50 transition-colors ${
                           program.srNo === feeStructureData.length
                             ? "last:border-b-0"
                             : ""

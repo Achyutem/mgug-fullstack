@@ -16,7 +16,7 @@ const HostelTable = ({
     <h2 className="text-3xl font-bold mb-6 text-orange-500 text-center">
       {hostelInfo.heading[language]}
     </h2>
-    <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+    <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
       <div className="overflow-x-auto">
         <table className="w-full text-left text-black">
           <thead>
@@ -34,7 +34,7 @@ const HostelTable = ({
             {hostelInfo.tableData.map((row, idx) => (
               <tr
                 key={idx}
-                className="border-b border-slate-700 hover:bg-gray-700/50 transition-colors last:border-b-0"
+                className="border-b border-slate-300 hover:bg-orange-200 transition-colors last:border-b-0"
               >
                 <td className="p-4 font-semibold">
                   {row.particulars[language]}

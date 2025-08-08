@@ -15,7 +15,7 @@ const ExecutiveCouncil = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {executiveCouncilTitles.heading[language]}
             </h1>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-black">
                   <thead>
@@ -38,7 +38,7 @@ const ExecutiveCouncil = () => {
                     {executiveCouncilData.map(({ srNo, name, type, role }) => (
                       <tr
                         key={srNo}
-                        className="border-b border-slate-700 hover:bg-gray-700/50 transition-colors"
+                        className="border-b border-slate-300 hover:bg-orange-200 transition-colors"
                       >
                         <td className="p-4">{srNo}</td>
                         <td className="p-4 text-orange-500">

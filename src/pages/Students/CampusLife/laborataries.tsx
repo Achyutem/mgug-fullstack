@@ -26,7 +26,7 @@ const LaboratoriesPage = () => {
 
           {/* Content Section */}
           <div className="w-full max-w-4xl text-left">
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <ul className="space-y-6 text-lg text-black">
                 {content.labs.map((lab, index) => (
                   <RuleItem key={index} label={(index + 1).toString()}>
@@ -61,7 +61,7 @@ export default LaboratoriesPage;
 //             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
 //               {content.pageTitle[language]}
 //             </h1>
-//             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+//             <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
 //               <ul className="space-y-6 text-lg text-black">
 //                 {content.labs.map((lab, index) => (
 //                   <RuleItem key={index} label={(index + 1).toString()}>

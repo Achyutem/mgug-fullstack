@@ -28,7 +28,7 @@ export default function Admission() {
                   </button>
                 </a>
                 <a href="https://admission.mgug.ac.in/doc/Prospectus_2025_Final_21-03-2025_Final.pdf">
-                  <button className="px-6 sm:px-12 py-4 bg-white/60 text-gray-700 border border-gray-300 rounded-xl font-semibold text-lg hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 w-auto">
+                  <button className="px-6 sm:px-12 py-4 bg-transparent text-gray-700 border border-gray-300 rounded-xl font-semibold text-lg hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 w-auto">
                     {t.brochureButton}
                   </button>
                 </a>

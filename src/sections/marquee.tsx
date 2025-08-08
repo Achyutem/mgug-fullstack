@@ -30,7 +30,7 @@ export default function Marquee() {
   }
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700 text-white flex items-center overflow-hidden h-12">
+    <div className="bg-gray-900/50 backdrop-blur-sm border-b border-slate-300 text-white flex items-center overflow-hidden h-12">
       <div className="bg-orange-500 text-black px-4 h-full flex items-center font-bold text-lg z-10">
         <FaBullhorn className="mr-2" />
         <span>LATEST</span>

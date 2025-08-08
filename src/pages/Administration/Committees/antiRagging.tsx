@@ -1,5 +1,5 @@
 import MainLayout from "@/layouts/homeLayout";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 import {
   IoAlertCircleOutline,
   IoGlobeOutline,
@@ -42,8 +42,8 @@ const AntiRagging = () => {
 
         {/* Definition Section */}
         <div className="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-lg mb-6">
-          <h2 className="text-2xl font-semibold mb-3 text-orange-500 flex items-center gap-2">
-            <IoAlertCircleOutline className="text-red-400" /> {t.whatIsRagging}
+          <h2 className="text-2xl font-semibold mb-3 text-red-600 flex items-center gap-2">
+            <IoAlertCircleOutline className="text-red-600" /> {t.whatIsRagging}
           </h2>
           <p>{t.raggingDefinition}</p>
         </div>
@@ -61,31 +61,31 @@ const AntiRagging = () => {
 
         {/* National Helpline */}
         <div className="bg-sky-800/40 p-4 rounded-lg border border-sky-600 mb-6">
-          <h2 className="text-lg font-semibold mb-2 text-sky-300">
+          <h2 className="text-lg font-semibold mb-2 text-sky-500">
             {t.helpline.title}
           </h2>
           <p>
-            <FaPhoneAlt className="inline w-4 h-4 mr-2 text-sky-300" />{" "}
+            <FiPhone className="inline w-4 h-4 mr-2 text-sky-500" />{" "}
             {t.helpline.tollFree}
           </p>
           <p>
-            <IoMailOpenOutline className="inline w-4 h-4 mr-2 text-sky-300" />{" "}
+            <IoMailOpenOutline className="inline w-4 h-4 mr-2 text-sky-500" />{" "}
             Email:{" "}
             <a
               href="mailto:helpline@antiragging.in"
-              className="underline text-sky-200"
+              className="underline text-sky-500"
             >
               {t.helpline.email}
             </a>
           </p>
           <p>
-            <IoGlobeOutline className="inline w-4 h-4 mr-2 text-sky-300" />
+            <IoGlobeOutline className="inline w-4 h-4 mr-2 text-sky-500" />
             Website:{" "}
             <a
               href="https://www.antiragging.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-sky-200"
+              className="underline text-sky-500"
             >
               {t.helpline.website}
             </a>
@@ -128,7 +128,7 @@ const TableList = ({
   const { language } = UseLanguage();
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-700 mb-8">
+    <div className="overflow-x-auto rounded-lg border border-orange-500 mb-8">
       <table className="min-w-full text-left">
         <thead className="bg-orange-500/20 text-orange-500">
           <tr>
@@ -148,13 +148,13 @@ const TableList = ({
           {data.map(({ no, name, designation, phone }) => (
             <tr
               key={no}
-              className="border-b border-slate-700 hover:bg-slate-800 transition"
+              className="border-b border-slate-300 hover:bg-orange-200 transition"
             >
               <td className="p-4">{no}</td>
               <td className="p-4">{name[language]}</td>
               <td className="p-4">{designation[language]}</td>
               <td className="p-4 flex items-center gap-2">
-                <FaPhoneAlt className="w-4 h-4 text-sky-300" />
+                <FiPhone className="w-4 h-4 text-sky-500" />
                 <span>{phone}</span>
               </td>
             </tr>

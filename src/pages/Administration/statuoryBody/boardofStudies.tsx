@@ -23,7 +23,7 @@ const BoardOfStudies = () => {
             {sections.map((section, index) => (
               <div
                 key={index}
-                className="p-6 sm:p-8 rounded-xl border border-slate-700 mb-8"
+                className="p-6 sm:p-8 rounded-xl border border-orange-500 mb-8"
               >
                 <h2 className="text-2xl font-semibold mb-4 text-orange-500">
                   {section.heading[language]}
@@ -50,7 +50,7 @@ const BoardOfStudies = () => {
                       {section.members.map((member, idx) => (
                         <tr
                           key={member.srNo}
-                          className={`border-b border-slate-700 hover:bg-gray-700/50 transition-colors ${
+                          className={`border-b border-slate-300 hover:bg-orange-200 transition-colors ${
                             idx === section.members.length - 1
                               ? "border-b-0"
                               : ""

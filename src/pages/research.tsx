@@ -26,7 +26,7 @@ const ResearchPage = () => {
               {content.facilitiesHeading[language]}
             </h2>
 
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-black">
                   <thead>
@@ -43,7 +43,7 @@ const ResearchPage = () => {
                     {content.equipmentList.map((item, idx) => (
                       <tr
                         key={idx}
-                        className="border-b border-slate-700 hover:bg-gray-700/50 transition-colors"
+                        className="border-b border-slate-300 hover:bg-orange-200 transition-colors"
                       >
                         <td className="p-4">{idx + 1}</td>
                         <td className="p-4">{item[language]}</td>

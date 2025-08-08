@@ -30,7 +30,7 @@ const ExaminationCommittee = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center uppercase">
               {t.heading}
             </h1>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <ul className="space-y-6 text-lg text-black">
                 <RuleItem label="a">
                   {t.rules.a.description}
@@ -43,7 +43,7 @@ const ExaminationCommittee = () => {
                           {member.designation[language] && (
                             <>
                               <br />
-                              <span className="font-light text-sm">
+                              <span className="font-normal text-sm">
                                 {member.designation[language]}
                               </span>
                             </>

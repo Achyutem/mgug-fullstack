@@ -16,8 +16,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ cutting }) => {
   return (
     <>
       <div
-        // CHANGED: Card styles to match the new light theme.
-        className="group relative w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-orange-500/50 bg-white/60 backdrop-blur-md p-4 transition-all duration-300 ease-in-out hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20"
+        className="group relative w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-orange-400 bg-transparent backdrop-blur-md p-4 transition-all duration-300 ease-in-out hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20"
         onClick={openModal}
       >
         <div className="relative overflow-hidden rounded-lg">

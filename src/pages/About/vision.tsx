@@ -28,7 +28,7 @@ const Vision = () => {
 
             {visionMissionData.sections.map((section, index) => (
               <div key={index} className={index > 0 ? "mt-10" : ""}>
-                <h2 className="text-2xl font-semibold text-white mb-3">
+                <h2 className="text-2xl font-semibold text-black mb-3">
                   {section.heading[language]}
                 </h2>
                 {section.paragraphs.map((para, pIndex) => (

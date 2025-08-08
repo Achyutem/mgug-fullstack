@@ -6,7 +6,7 @@ export default function ModernCard({
 }: ModernCardProps) {
   return (
     <div
-      className={`bg-white/60 backdrop-blur-md border-2 hover:border-orange-500 border-orange-500/50 rounded-2xl p-8 transition-all duration-300 ${className}`}
+      className={`bg-transparent backdrop-blur-md border-2 hover:border-orange-500 border-orange-400 hover:bg-orange-100 rounded-2xl p-8 transition-all duration-300 ${className}`}
     >
       {children}
     </div>

@@ -8,7 +8,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   delay = 0,
 }) => (
   <AnimatedCard delay={delay} className="h-full">
-    <div className="h-full bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 md:p-8 text-center group transition-all duration-300 hover:border-orange-500">
+    <div className="h-full bg-transparent backdrop-blur-md border-2 border-orange-400 rounded-2xl p-6 md:p-8 text-center group transition-all duration-300 hover:border-orange-500 hover:bg-orange-100">
       <div className="mb-6 flex justify-center">
         <div className="p-4 rounded-2xl bg-orange-200 text-orange-500 group-hover:bg-orange-300 transition-colors duration-300">
           {icon}

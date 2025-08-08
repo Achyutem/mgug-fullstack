@@ -9,7 +9,7 @@ export default function StatsCard({
 }: StatsCardProps) {
   return (
     <AnimatedCard delay={delay}>
-      <div className="bg-white/60 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 text-center group transition-all duration-300 hover:border-orange-500">
+      <div className="bg-transparent backdrop-blur-md border-2 border-orange-400 rounded-2xl p-6 text-center group transition-all duration-300 hover:border-orange-500 hover:bg-orange-100">
         <div className="mb-4 flex justify-center">
           <div className="p-3 rounded-full bg-orange-200 text-orange-500 group-hover:bg-orange-300 transition-colors duration-300">
             {icon}

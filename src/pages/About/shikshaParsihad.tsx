@@ -18,7 +18,7 @@ const ShikshaParishadCharter = () => {
             <p className="text-center text-black mb-8 max-w-3xl mx-auto">
               {content.subtitle[language]}
             </p>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
               <ul className="space-y-6 text-lg text-black">
                 {content.charterPoints.map((point, index) => (
                   <RuleItem key={index} label={(index + 1).toString()}>

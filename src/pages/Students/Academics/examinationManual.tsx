@@ -15,7 +15,7 @@ const ExaminationManual = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {content.pageTitle[language]}
             </h1>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <ul className="space-y-6 text-lg text-black">
                 {content.sections.map((section, index) => (
                   <RuleItem key={index} label={String.fromCharCode(65 + index)}>

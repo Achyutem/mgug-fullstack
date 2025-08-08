@@ -22,7 +22,7 @@ const ItTeam = () => {
           {ItCommitteeMembers.map((member, idx) => (
             <div
               key={idx}
-              className="flex items-center bg-white/60 backdrop-blur-md rounded-2xl p-6 transition-all duration-300 border-2 border-orange-500/50 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10"
+              className="flex items-center bg-transparent backdrop-blur-md rounded-2xl p-6 transition-all duration-300 border-2 border-orange-500 hover:border-orange-500 hover:bg-orange-200/50"
             >
               <div className="min-w-[72px] min-h-[72px] w-18 h-18 mr-6 flex-shrink-0">
                 <div className="w-full h-full rounded-full overflow-hidden border-2 border-orange-500 shadow-md transform rotate-3 hover:rotate-0 transition-transform duration-300">
@@ -42,7 +42,7 @@ const ItTeam = () => {
                   </h3>
                 </div>
                 {/* CHANGED: Text color for designation. */}
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm font-semibold text-gray-600 mt-1">
                   {member.designation[language]}
                 </p>
               </div>

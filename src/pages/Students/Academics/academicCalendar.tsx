@@ -15,7 +15,7 @@ const AcademicCalendar = () => {
               {content.pageTitle[language]}
             </h1>
 
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-black">
                   <thead>
@@ -32,7 +32,7 @@ const AcademicCalendar = () => {
                     {content.items.map((item, idx) => (
                       <tr
                         key={idx}
-                        className="border-b border-slate-700 hover:bg-gray-700/50 transition-colors"
+                        className="border-b border-slate-300 hover:bg-orange-200 transition-colors"
                       >
                         <td className="p-4">{item.year}</td>
                         <td className="p-4">
@@ -40,7 +40,7 @@ const AcademicCalendar = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block text-sm text-cyan-400 hover:text-blue-400 underline"
+                            className="inline-block text-sm text-orange-600 hover:text-orange-700 underline"
                           >
                             {content.linkText[language]}
                           </a>

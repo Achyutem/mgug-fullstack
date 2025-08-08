@@ -7,11 +7,11 @@ const ITEMS_PER_PAGE = 10;
 const API_BASE_URL = "https://mgug.ac.in/api";
 
 const renderResultsTable = (items: ResultItem[]) => (
-  <div className="p-6 sm:p-8 rounded-2xl border-2 border-orange-500/50 bg-white/60 backdrop-blur-md">
+  <div className="p-6 sm:p-8 rounded-2xl border-2 border-orange-500 bg-transparent backdrop-blur-md">
     <div className="overflow-x-auto">
       <table className="w-full text-left text-slate-800">
         <thead>
-          <tr className="bg-orange-100/70 text-orange-600">
+          <tr className="bg-orange-500/20 text-orange-600">
             <th className="p-4 font-semibold rounded-tl-xl">
               Result Declaration
             </th>
@@ -25,7 +25,7 @@ const renderResultsTable = (items: ResultItem[]) => (
           {items.map((item) => (
             <tr
               key={item.pdf_url}
-              className="border-b border-gray-200 last:border-b-0 hover:bg-orange-100/50 transition-colors"
+              className="border-b border-gray-200 last:border-b-0 hover:bg-orange-200 transition-colors"
             >
               <td className="p-4 font-medium">{item.notification_name}</td>
               <td className="p-4 text-sm text-gray-600">
@@ -69,7 +69,7 @@ export default function ResultsPage() {
     <MainLayout>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold mb-8 text-center">
-          <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-orange-500 bg-clip-text text-transparent">
             Results
           </span>
         </h1>

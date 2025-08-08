@@ -13,7 +13,7 @@ const renderEventsTable = (
   titles: MagazineTitles["headers"],
   language: "hindi" | "english"
 ) => (
-  <div className="p-6 sm:p-8 rounded-xl border border-slate-700 bg-black/20 backdrop-blur-sm">
+  <div className="p-6 sm:p-8 rounded-xl border border-orange-500 bg-transparent backdrop-blur-sm">
     <div className="overflow-x-auto">
       <table className="w-full text-left text-black">
         <thead>
@@ -31,10 +31,10 @@ const renderEventsTable = (
           {items.map((item) => (
             <tr
               key={item.pdf_url}
-              className="border-b border-slate-700 last:border-b-0 hover:bg-gray-700/50 transition-colors"
+              className="border-b border-slate-300 last:border-b-0 hover:bg-orange-200 transition-colors"
             >
               <td className="p-4">{item.notification_name}</td>
-              <td className="p-4 text-sm text-slate-400">
+              <td className="p-4 text-sm text-gray-700">
                 {item.notification_datetime_formatted}
               </td>
               <td className="p-4 text-center">
@@ -42,7 +42,7 @@ const renderEventsTable = (
                   href={item.pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm text-cyan-400 hover:text-cyan-300 underline font-semibold"
+                  className="inline-block text-sm text-orange-600 hover:text-orange-700 underline font-semibold"
                 >
                   {language === "hindi" ? "विवरण देखें" : "View Details"}
                 </a>

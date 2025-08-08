@@ -12,7 +12,7 @@ const YearSwitcher: React.FC<YearSwitcherProps> = ({
   onSelectYear,
 }) => {
   return (
-    <div className="flex items-center rounded-full bg-gray-100/80 backdrop-blur-sm p-1 border border-gray-200/80">
+    <div className="flex items-center rounded-full bg-gray-100/80 backdrop-blur-sm p-1 border border-orange-500">
       {years.map((year) => (
         <button
           key={year}
@@ -21,7 +21,7 @@ const YearSwitcher: React.FC<YearSwitcherProps> = ({
             ${
               selectedYear === year
                 ? "text-white"
-                : "text-gray-600 hover:text-slate-900"
+                : "text-gray-600 hover:text-orange-500"
             }
           `}
         >

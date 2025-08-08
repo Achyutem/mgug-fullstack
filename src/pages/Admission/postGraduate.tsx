@@ -33,7 +33,7 @@ const PostgraduatePrograms = () => {
             <div key={index} className="flex flex-col">
               <Button
                 variant="outline"
-                className="w-full h-14 bg-transparent text-orange-500 hover:bg-gray-700/30 hover:text-orange-500 transition-all duration-300 border-2 border-orange-500 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
+                className="w-full h-14 bg-transparent text-orange-500 hover:bg-orange-300/40 hover:text-orange-500 transition-all duration-300 border-2 border-orange-500 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
                 onClick={() => toggleFaculty(index)}
               >
                 <span>{faculty.name[language]}</span>
@@ -50,26 +50,26 @@ const PostgraduatePrograms = () => {
                 </span>
               </Button>
               {selectedFaculty === index && (
-                <div className="mt-4 bg-gray-800 rounded-lg shadow-md overflow-x-auto scrollbar-none">
+                <div className="mt-4 bg-orange-200 rounded-lg shadow-md overflow-x-auto scrollbar-none">
                   <Table>
                     <TableHeader>
-                      <TableRow className="bg-gradient-to-r from-orange-500 to-orange-600 border-b border-gray-700/50">
-                        <TableHead className="text-white font-bold text-sm py-4">
+                      <TableRow className="bg-orange-200 border-b border-slate-300/50">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           Programme Name
                         </TableHead>
-                        <TableHead className="text-white font-bold text-sm py-4">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           Duration
                         </TableHead>
-                        <TableHead className="text-white font-bold text-sm py-4">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           Fees
                         </TableHead>
-                        <TableHead className="text-white font-bold text-sm py-4">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           Examination Fee
                         </TableHead>
-                        <TableHead className="text-white font-bold text-sm py-4">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           Seats
                         </TableHead>
-                        <TableHead className="text-white font-bold text-sm py-4">
+                        <TableHead className="text-black font-bold text-sm py-4">
                           Qualification
                         </TableHead>
                       </TableRow>
@@ -78,8 +78,10 @@ const PostgraduatePrograms = () => {
                       {faculty.programs.map((program, progIndex) => (
                         <TableRow
                           key={progIndex}
-                          className={`border-b border-gray-700/50 hover:bg-orange-500/10 transition-colors duration-200 ${
-                            progIndex % 2 === 0 ? "bg-gray-800" : "bg-gray-850"
+                          className={`border-b border-slate-300/50 hover:bg-orange-500/10 transition-colors duration-200 ${
+                            progIndex % 2 === 0
+                              ? "bg-orange-200"
+                              : "bg-orange-300"
                           }`}
                         >
                           <TableCell className="font-medium text-black text-sm py-3">
