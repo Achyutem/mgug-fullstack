@@ -65,7 +65,9 @@ const BoardOfStudies = () => {
                           >
                             {member.srNo}
                           </td>
-                          <td className="p-4">{member.name[language]}</td>
+                          <td className="p-4 text-orange-500 font-semibold">
+                            {member.name[language]}
+                          </td>
                           <td className="p-4">
                             {member.designation[language]}
                           </td>

@@ -41,7 +41,7 @@ const ExecutiveCouncil = () => {
                         className="border-b border-slate-300 hover:bg-orange-200 transition-colors"
                       >
                         <td className="p-4">{srNo}</td>
-                        <td className="p-4 text-orange-500">
+                        <td className="p-4 font-semibold text-orange-500">
                           {name[language]}
                         </td>
                         <td className="p-4">{type[language]}</td>

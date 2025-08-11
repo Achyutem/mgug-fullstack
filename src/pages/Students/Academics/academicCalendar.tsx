@@ -1,6 +1,8 @@
 import MainLayout from "@/layouts/homeLayout";
 import { UseLanguage } from "@/context/languageContext";
 import { academicCalendarData } from "@/utils/student";
+import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react";
 
 const AcademicCalendar = () => {
   const { language } = UseLanguage();
@@ -40,9 +42,15 @@ const AcademicCalendar = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block text-sm text-orange-600 hover:text-orange-700 underline"
+                            className="inline-block"
                           >
-                            {content.linkText[language]}
+                            <Button
+                              variant="outline"
+                              className="flex items-center gap-2 text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                            >
+                              <FileText className="h-4 w-4" />
+                              <span>{content.linkText[language]}</span>
+                            </Button>
                           </a>
                         </td>
                       </tr>

@@ -43,7 +43,7 @@ const AcademicCouncil = () => {
                         className="border-b border-slate-300 hover:bg-orange-200 transition-colors"
                       >
                         <td className="p-4">{srNo}</td>
-                        <td className="p-4 text-orange-500">
+                        <td className="p-4 text-orange-500 font-semibold">
                           {name[language]}
                         </td>{" "}
                         {/* colored */}
