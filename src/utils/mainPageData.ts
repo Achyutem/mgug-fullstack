@@ -128,7 +128,7 @@ export const HomePage: HomeDataType = {
   },
   whyMGUG: {
     hindi: {
-      heading: "एमजीयूजी क्यों चुनें?",
+      heading: "एमजीयूजी ही क्यों चुनें?",
       description:
         "जानें कि महायोगी गोरखनाथ विश्वविद्यालय उच्च शिक्षा के लिए एक प्रमुख गंतव्य क्यों है।",
       academicExcellenceTitle: "शैक्षिक उत्कृष्टता",
