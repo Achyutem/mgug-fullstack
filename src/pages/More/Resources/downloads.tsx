@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { Pagination } from "@/components/pagination"; // Ensure this path is correct
+import { Pagination } from "@/components/pagination";
 import MainLayout from "@/layouts/homeLayout";
 import type { DownloadItem } from "@/utils/types";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const ITEMS_PER_PAGE = 10;
 const API_BASE_URL = "https://mgug.ac.in/api";
@@ -30,13 +32,20 @@ const renderDownloadsTable = (items: DownloadItem[]) => (
                 {item.notification_datetime_formatted}
               </td>
               <td className="p-4 text-center">
+                {/* The download link is now a button wrapped in an <a> tag */}
                 <a
                   href={item.pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm text-orange-500 hover:text-orange-600 underline font-semibold"
+                  className="inline-block" // Ensure the link behaves as a block to contain the button
                 >
-                  Download
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2 text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                  >
+                    <Download className="h-4 w-4" />
+                    <span>Download</span>
+                  </Button>
                 </a>
               </td>
             </tr>

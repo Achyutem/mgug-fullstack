@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Pagination } from "@/components/pagination";
 import type { Job } from "@/utils/types";
 import MainLayout from "@/layouts/homeLayout";
+import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react";
 
 const ITEMS_PER_PAGE = 10;
 const API_BASE_URL = "https://mgug.ac.in/api";
@@ -34,9 +36,15 @@ const renderNotificationTable = (items: Job[]) => (
                   href={item.pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm text-orange-500 hover:text-orange-600 underline font-semibold"
+                  className="inline-block"
                 >
-                  View
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2 text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                  >
+                    <FileText className="h-4 w-4" />
+                    <span>View</span>
+                  </Button>
                 </a>
               </td>
             </tr>

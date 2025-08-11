@@ -4,6 +4,8 @@ import MainLayout from "@/layouts/homeLayout";
 import { UseLanguage } from "@/context/languageContext";
 import { arogyaPathTitles } from "@/utils/moreData";
 import type { ArogyaPathItem, MagazineTitles } from "@/utils/types";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const ITEMS_PER_PAGE = 10;
 const API_BASE_URL = "https://mgug.ac.in/api";
@@ -13,11 +15,11 @@ const renderMagazineTable = (
   titles: MagazineTitles["headers"],
   language: "hindi" | "english"
 ) => (
-  <div className="p-6 sm:p-8 rounded-xl border border-orange-500 bg-transparent backdrop-blur-sm">
+  <div className="p-6 sm:p-8 rounded-2xl border-2 border-orange-500 bg-transparent backdrop-blur-md">
     <div className="overflow-x-auto">
       <table className="w-full text-left text-black">
         <thead>
-          <tr className="bg-orange-500/20 text-orange-500">
+          <tr className="bg-orange-500/20 text-orange-600">
             <th className="p-4 font-semibold rounded-tl-xl">
               {titles.title[language]}
             </th>
@@ -31,10 +33,12 @@ const renderMagazineTable = (
           {items.map((item) => (
             <tr
               key={item.pdf_url}
-              className="border-b border-slate-300 last:border-b-0 hover:bg-orange-200 transition-colors"
+              className={
+                "border-b border-slate-300 last:border-b-0 transition-colors hover:bg-orange-500/10"
+              }
             >
               <td className="p-4">{item.notification_name}</td>
-              <td className="p-4 text-sm text-slate-700">
+              <td className="p-4 text-sm text-black">
                 {item.notification_datetime_formatted}
               </td>
               <td className="p-4 text-center">
@@ -42,9 +46,15 @@ const renderMagazineTable = (
                   href={item.pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm text-orange-500 hover:text-orange-600 underline font-semibold"
+                  className="inline-block"
                 >
-                  Download
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2 text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                  >
+                    <Download className="h-4 w-4" />
+                    <span>Download</span>
+                  </Button>
                 </a>
               </td>
             </tr>
@@ -81,21 +91,29 @@ export default function ArogyaPathPage() {
 
   return (
     <MainLayout>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
           {arogyaPathTitles.heading[language]}
         </h1>
-        {renderMagazineTable(
-          displayedMagazines,
-          arogyaPathTitles.headers,
-          language
+        {magazines.length > 0 ? (
+          <>
+            {renderMagazineTable(
+              displayedMagazines,
+              arogyaPathTitles.headers,
+              language
+            )}
+            <Pagination
+              currentPage={currentPage}
+              totalItems={magazines.length}
+              itemsPerPage={ITEMS_PER_PAGE}
+              onPageChange={setCurrentPage}
+            />
+          </>
+        ) : (
+          <div className="text-center text-gray-600 py-16">
+            Loading magazines...
+          </div>
         )}
-        <Pagination
-          currentPage={currentPage}
-          totalItems={magazines.length}
-          itemsPerPage={ITEMS_PER_PAGE}
-          onPageChange={setCurrentPage}
-        />
       </section>
     </MainLayout>
   );
