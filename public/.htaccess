@@ -7,13 +7,14 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Rewrite everything else to index.html
+  # --- MODIFIED ---
+  # Rewrite everything else to index.html, UNLESS it's a static file extension.
+  RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$
   RewriteRule ^ index.html [L]
 </IfModule>
 
-# Optional: Set cache control headers for static files
 <IfModule mod_headers.c>
-  <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$">
+  <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$">
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
 </IfModule>
