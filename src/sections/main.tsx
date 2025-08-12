@@ -16,8 +16,25 @@ export default function Main() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // The animation keyframes remain the same
+  const reflectionStyle = `
+    @keyframes reflection-anim {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    .animate-reflection {
+      animation: reflection-anim 3s ease-in-out infinite;
+    }
+  `;
+
   return (
     <div className="w-full">
+      <style>{reflectionStyle}</style>
+
       <section className="relative z-20 w-full pt-8 pb-20">
         <div className="max-w-7xl mx-auto w-full px-2 sm:px-2 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 items-center min-h-[60vh] lg:min-h-[70vh]">
@@ -35,7 +52,6 @@ export default function Main() {
                 </div>
               </div>
 
-              {/* CHANGED: Main heading text to be dark */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-slate-800">
                 <span className="block">
                   <span className="bg-orange-500 bg-clip-text text-transparent">
@@ -53,12 +69,10 @@ export default function Main() {
                 </span>
               </h1>
 
-              {/* Animated Text Section */}
               <div className="mb-6 lg:mb-8 relative">
                 <div className="text-center lg:text-left">
                   <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black text-slate-900">
                     {language === "hindi" ? (
-                      // Renders a single line for Hindi
                       <span className="relative inline-block">
                         <AnimatedText
                           text={`${t.animatedText1} ${t.animatedText2}`}
@@ -95,8 +109,18 @@ export default function Main() {
                       </>
                     )}
                   </h2>
-                  <div className="mt-2 lg:mt-3 h-0.5 lg:h-1 w-20 sm:w-24 lg:w-32 mx-auto lg:ml-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full">
-                    <div className="h-full w-full bg-orange-500 rounded-full animate-pulse" />
+                  {/* --- NEON GLOW EFFECT --- */}
+                  <div className="relative mt-2 lg:mt-3 h-0.5 lg:h-1 w-48 md:w-72 mx-auto lg:ml-0 bg-orange-500 rounded-full overflow-hidden">
+                    <div
+                      className="absolute top-0 left-0 h-full w-full animate-reflection"
+                      style={{
+                        // The background is a solid bright color for the "tube"
+                        background: "rgb(246, 138, 59)",
+                        // The box-shadow creates the "glow" around the tube
+                        boxShadow:
+                          "0 0 5px rgba(246, 138, 59, 0.8), 0 0 10px rgba(246, 138, 59, 0.6)",
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -111,14 +135,13 @@ export default function Main() {
                     {t.exploreButton}
                   </button>
                 </a>
-
-                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-transparent text-gray-700 border border-gray-300 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shrink-0">
+                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-transparent text-gray-700 border border-orange-500 hover:text-orange-500 transition-all duration-300 shrink-0">
                   {t.virtualTourButton}
                 </button>
               </div>
             </div>
 
-            {/* Right Content - Image Carousel (No changes needed here) */}
+            {/* Right Content - Image Carousel */}
             <div
               className="order-2 lg:order-2 flex justify-center items-center mt-8 lg:mt-0"
               style={{ transform: `translateY(${scrollY * -0.03}px)` }}
