@@ -46,6 +46,7 @@ export const InfoPopup: FC = () => {
 
     fetchImages();
   }, []);
+
   useEffect(() => {
     if (!open || hovering || images.length === 0) return;
 
@@ -82,9 +83,15 @@ export const InfoPopup: FC = () => {
         onMouseLeave={() => setHovering(false)}
       >
         {images.map((src, index) => (
-          <div
+          // --- CHANGE START ---
+          // The div is now an anchor (<a>) tag to make the image clickable
+          <a
             key={index}
-            className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+            href={src}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View image ${index + 1} in a new tab`}
+            className={`absolute inset-0 transition-all duration-500 ease-in-out cursor-pointer ${
               currentSlide === index
                 ? "opacity-100 translate-x-0"
                 : index < currentSlide
@@ -97,11 +104,15 @@ export const InfoPopup: FC = () => {
               alt={`University photo ${index + 1}`}
               className="w-full h-full object-contain"
             />
-          </div>
+          </a>
+          // --- CHANGE END ---
         ))}
       </div>
       <button
-        onClick={prevSlide}
+        onClick={(e) => {
+          e.stopPropagation();
+          prevSlide();
+        }}
         aria-label="Previous image"
         className={
           isMobile
@@ -112,7 +123,10 @@ export const InfoPopup: FC = () => {
         <FaArrowLeft className={isMobile ? "h-4 w-4" : "h-5 w-5"} />
       </button>
       <button
-        onClick={nextSlide}
+        onClick={(e) => {
+          e.stopPropagation();
+          nextSlide();
+        }}
         aria-label="Next image"
         className={
           isMobile
@@ -132,7 +146,10 @@ export const InfoPopup: FC = () => {
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
+            onClick={(e) => {
+              e.stopPropagation();
+              goToSlide(index);
+            }}
             aria-label={`Go to slide ${index + 1}`}
             className={
               isMobile
@@ -178,10 +195,10 @@ export const InfoPopup: FC = () => {
       </div>
       <div className="relative w-full h-[80vw] sm:h-[60vw] max-h-[500px] flex-shrink-0 overflow-hidden bg-slate-100/70 flex items-center justify-center">
         {loading ? (
-          <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+          <div className="flex h-full w-full flex-col items-center justify-center space-y-4">
             <RingLoader color={"#f97316"} size={50} />
-            <p className="text-xl font-semibold text-orange-500">
-              image is loading...
+            <p className="text-lg font-semibold text-orange-500">
+              Loading Images...
             </p>
           </div>
         ) : images.length > 0 ? (
@@ -197,10 +214,10 @@ export const InfoPopup: FC = () => {
     <div className="grid grid-cols-2 h-full max-h-[80vh] overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden bg-slate-100/70">
         {loading ? (
-          <div className="flex h-screen w-full flex-col items-center justify-center space-y-4">
+          <div className="flex h-full w-full flex-col items-center justify-center space-y-4">
             <RingLoader color={"#f97316"} size={100} />
             <p className="text-xl font-semibold text-orange-500">
-              image is loading...
+              Loading Images...
             </p>
           </div>
         ) : images.length > 0 ? (
