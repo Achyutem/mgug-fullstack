@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaBullhorn, FaFileAlt, FaNewspaper } from "react-icons/fa";
 import AnimatedCard from "@/components/animatedCard";
 import type { NotificationItem } from "@/utils/types";
@@ -9,25 +9,61 @@ const NotificationColumn = ({
   title,
   icon,
   items,
+  autoScroll = false,
 }: {
   title: string;
   icon: React.ReactNode;
   items: NotificationItem[];
+  autoScroll?: boolean;
 }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    if (!autoScroll || isHovering || !scrollRef.current || items.length === 0) {
+      return;
+    }
+
+    const scrollElement = scrollRef.current;
+    let scrollInterval: NodeJS.Timeout;
+
+    const startScrolling = () => {
+      // Duplicate content for seamless looping if not already duplicated
+      if (scrollElement.scrollHeight <= scrollElement.clientHeight) return;
+
+      scrollInterval = setInterval(() => {
+        if (scrollElement.scrollTop >= scrollElement.scrollHeight / 2) {
+          scrollElement.scrollTop = 0; // Reset to top for seamless loop
+        } else {
+          scrollElement.scrollTop += 1; // Scroll down by 1 pixel
+        }
+      }, 50); // Adjust speed here (lower is faster)
+    };
+
+    startScrolling();
+
+    return () => clearInterval(scrollInterval);
+  }, [autoScroll, isHovering, items]);
+
   return (
     <div className="bg-transparent backdrop-blur-md border-2 border-orange-500 rounded-2xl p-4 sm:p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
       <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500">
         {icon}
         {title}
       </h3>
-      <div className="flex-grow overflow-y-auto max-h-80 sm:max-h-96 pr-1 sm:pr-2 scrollbar-none">
+      <div
+        ref={scrollRef}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        className="flex-grow overflow-y-auto max-h-80 sm:max-h-96 pr-1 sm:pr-2 scrollbar-none"
+      >
         {items.length > 0 ? (
           <ul className="space-y-3">
-            {items.map((item) => {
+            {items.map((item, index) => {
               const displayDate =
                 item.notification_datetime_formatted.split(" ")[0];
               return (
-                <li key={item.pdf_path}>
+                <li key={`${item.pdf_path}-${index}`}>
                   <a
                     href={item.pdf_url}
                     target="_blank"
@@ -70,10 +106,17 @@ export default function Notifications() {
         const examData = await examRes.json();
         const noticeData = await noticeRes.json();
         const newsData = await newsRes.json();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const duplicateForScrolling = (data: any) => {
+          if (Array.isArray(data) && data.length > 0) {
+            return [...data, ...data];
+          }
+          return [];
+        };
 
-        setExamNotifs(Array.isArray(examData) ? examData : []);
-        setNotices(Array.isArray(noticeData) ? noticeData : []);
-        setNews(Array.isArray(newsData) ? newsData : []);
+        setExamNotifs(duplicateForScrolling(examData));
+        setNotices(duplicateForScrolling(noticeData));
+        setNews(duplicateForScrolling(newsData));
       } catch (error) {
         console.error("Failed to fetch notifications:", error);
       } finally {
@@ -110,16 +153,19 @@ export default function Notifications() {
               title={t.examTitle}
               icon={<FaFileAlt />}
               items={examNotifs}
+              autoScroll={true}
             />
             <NotificationColumn
               title={t.noticeTitle}
               icon={<FaBullhorn />}
               items={notices}
+              autoScroll={true}
             />
             <NotificationColumn
               title={t.newsTitle}
               icon={<FaNewspaper />}
               items={news}
+              autoScroll={true}
             />
           </div>
         )}
