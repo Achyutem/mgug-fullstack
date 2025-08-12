@@ -5,15 +5,18 @@ import type { NotificationItem } from "@/utils/types";
 import { UseLanguage } from "@/context/languageContext";
 import { HomePage } from "@/utils/mainPageData";
 
+// Helper component defined in the same file
 const NotificationColumn = ({
   title,
   icon,
   items,
+  basePath,
   autoScroll = false,
 }: {
   title: string;
   icon: React.ReactNode;
   items: NotificationItem[];
+  basePath: string; // The base path for the links
   autoScroll?: boolean;
 }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -28,16 +31,15 @@ const NotificationColumn = ({
     let scrollInterval: NodeJS.Timeout;
 
     const startScrolling = () => {
-      // Duplicate content for seamless looping if not already duplicated
       if (scrollElement.scrollHeight <= scrollElement.clientHeight) return;
 
       scrollInterval = setInterval(() => {
         if (scrollElement.scrollTop >= scrollElement.scrollHeight / 2) {
-          scrollElement.scrollTop = 0; // Reset to top for seamless loop
+          scrollElement.scrollTop = 0;
         } else {
-          scrollElement.scrollTop += 1; // Scroll down by 1 pixel
+          scrollElement.scrollTop += 1;
         }
-      }, 50); // Adjust speed here (lower is faster)
+      }, 50);
     };
 
     startScrolling();
@@ -47,10 +49,13 @@ const NotificationColumn = ({
 
   return (
     <div className="bg-transparent backdrop-blur-md border-2 border-orange-500 rounded-2xl p-4 sm:p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
-      <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500">
-        {icon}
-        {title}
-      </h3>
+      {/* The title is now wrapped in a link */}
+      <a href={basePath}>
+        <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500 transition-colors hover:text-orange-600">
+          {icon}
+          {title}
+        </h3>
+      </a>
       <div
         ref={scrollRef}
         onMouseEnter={() => setIsHovering(true)}
@@ -62,12 +67,12 @@ const NotificationColumn = ({
             {items.map((item, index) => {
               const displayDate =
                 item.notification_datetime_formatted.split(" ")[0];
+              const itemSlug = item.pdf_path;
+
               return (
                 <li key={`${item.pdf_path}-${index}`}>
                   <a
-                    href={item.pdf_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`${basePath}/${itemSlug}`}
                     className="block text-gray-700 hover:text-slate-900 hover:bg-orange-200 p-3 rounded-md transition-colors duration-300 border-b border-gray-300"
                   >
                     <span className="font-bold">{displayDate}</span> -{" "}
@@ -85,6 +90,7 @@ const NotificationColumn = ({
   );
 };
 
+// Main export component
 export default function Notifications() {
   const { language } = UseLanguage();
   const t = HomePage.notifications[language];
@@ -106,17 +112,19 @@ export default function Notifications() {
         const examData = await examRes.json();
         const noticeData = await noticeRes.json();
         const newsData = await newsRes.json();
+
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const duplicateForScrolling = (data: any) => {
+        const processAndDuplicate = (data: any) => {
           if (Array.isArray(data) && data.length > 0) {
-            return [...data, ...data];
+            const topItems = data.slice(0, 10);
+            return [...topItems, ...topItems];
           }
           return [];
         };
 
-        setExamNotifs(duplicateForScrolling(examData));
-        setNotices(duplicateForScrolling(noticeData));
-        setNews(duplicateForScrolling(newsData));
+        setExamNotifs(processAndDuplicate(examData));
+        setNotices(processAndDuplicate(noticeData));
+        setNews(processAndDuplicate(newsData));
       } catch (error) {
         console.error("Failed to fetch notifications:", error);
       } finally {
@@ -154,18 +162,21 @@ export default function Notifications() {
               icon={<FaFileAlt />}
               items={examNotifs}
               autoScroll={true}
+              basePath="/schedule"
             />
             <NotificationColumn
               title={t.noticeTitle}
               icon={<FaBullhorn />}
               items={notices}
               autoScroll={true}
+              basePath="/result"
             />
             <NotificationColumn
               title={t.newsTitle}
               icon={<FaNewspaper />}
               items={news}
               autoScroll={true}
+              basePath="/news"
             />
           </div>
         )}
