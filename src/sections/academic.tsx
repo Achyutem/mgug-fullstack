@@ -12,7 +12,7 @@ export default function Academic() {
 
   return (
     <div>
-      <section id="programs" className="relative z-20 py-24 px-4">
+      <section id="programs" className="relative z-20 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <AnimatedCard className="text-center mb-16">
             {/* CHANGED: Text color for main heading */}

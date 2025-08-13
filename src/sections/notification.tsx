@@ -48,7 +48,7 @@ const NotificationColumn = ({
   }, [autoScroll, isHovering, items]);
 
   return (
-    <div className="bg-transparent backdrop-blur-md border-2 border-orange-500 rounded-2xl p-4 sm:p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
+    <div className="bg-transparent backdrop-blur-md border-2 border-orange-500 rounded-2xl p-8 sm:p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
       {/* The title is now wrapped in a link */}
       <a href={basePath}>
         <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500 transition-colors hover:text-orange-600">
@@ -137,10 +137,10 @@ export default function Notifications() {
   return (
     <section
       id="notifications"
-      className="relative z-20 py-16 px-4 sm:py-24 sm:px-6"
+      className="relative z-20 py-8 px-4 sm:py-8 sm:px-6"
     >
       <div className="max-w-7xl mx-auto">
-        <AnimatedCard className="text-center mb-16">
+        <AnimatedCard className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
             <span className="bg-orange-500 bg-clip-text text-transparent">
               {t.heading}

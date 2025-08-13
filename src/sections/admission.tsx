@@ -10,7 +10,7 @@ export default function Admission() {
 
   return (
     <div>
-      <section id="admissions" className="relative z-20 py-24 px-4">
+      <section id="admissions" className="relative z-20 py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <AnimatedCard>
             <ModernCard className="text-center">

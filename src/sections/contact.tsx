@@ -11,9 +11,9 @@ export default function Contact() {
 
   return (
     <div>
-      <section id="contact" className="relative z-20 py-24 px-4">
+      <section id="contact" className="relative z-20 py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <AnimatedCard className="text-center mb-16">
+          <AnimatedCard className="text-center mb-6">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
               <span className="bg-orange-500 bg-clip-text text-transparent">
                 {t.heading}

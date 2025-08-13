@@ -13,7 +13,7 @@ export default function AboutMain() {
 
   return (
     <div>
-      <section id="about" className="relative z-20 py-24 px-4">
+      <section id="about" className="relative z-20 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <AnimatedCard className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
