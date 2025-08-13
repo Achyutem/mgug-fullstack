@@ -35,7 +35,7 @@ export default function Main() {
     <div className="w-full">
       <style>{reflectionStyle}</style>
 
-      <section className="relative z-20 w-full pt-8 pb-20">
+      <section className="relative z-20 w-full pt-8 pb-15">
         <div className="max-w-7xl mx-auto w-full px-2 sm:px-2 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 items-center min-h-[60vh] lg:min-h-[70vh]">
             {/* Left Content */}
