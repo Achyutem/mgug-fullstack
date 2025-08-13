@@ -7,6 +7,7 @@ import Academic from "@/sections/academic";
 import Admission from "@/sections/admission";
 import { InfoPopup } from "@/components/popup";
 import Notifications from "@/sections/notification";
+import ImageSpotlight from "@/sections/imageSpotlight";
 // import Marquee from "@/sections/marquee";
 
 const UniversityLandingPage: React.FC = () => {
@@ -20,6 +21,7 @@ const UniversityLandingPage: React.FC = () => {
         <WhyMGUG />
         <Academic />
         <Admission />
+        <ImageSpotlight />
         <Notifications />
         <Contact />
       </MainLayout>
