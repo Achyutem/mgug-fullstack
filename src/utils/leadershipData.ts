@@ -25,7 +25,7 @@ export const administrationData: Administration = {
   proChancellor: {
     hindi: {
       name: "प्रो. उदय प्रताप सिंह",
-      designation: "प्रो कुलाधिपति",
+      designation: "प्रति कुलाधिपति",
       university: "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर",
     },
     english: {
