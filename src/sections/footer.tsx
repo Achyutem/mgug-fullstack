@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <div>
-      <footer className="relative z-20 py-16 px-4 border-t border-gray-200 bg-transparent backdrop-blur-sm text-gray-700">
+      <footer className="relative z-20 py-16 px-4 border-t border-gray-200 bg-transparent backdrop-blur-2xl text-gray-700">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row lg:gap-16 gap-12">
             {/* Left Section */}
