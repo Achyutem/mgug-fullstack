@@ -32,12 +32,11 @@ const renderDownloadsTable = (items: DownloadItem[]) => (
                 {item.notification_datetime_formatted}
               </td>
               <td className="p-4 text-center">
-                {/* The download link is now a button wrapped in an <a> tag */}
                 <a
                   href={item.pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block" // Ensure the link behaves as a block to contain the button
+                  className="inline-block"
                 >
                   <Button
                     variant="outline"
