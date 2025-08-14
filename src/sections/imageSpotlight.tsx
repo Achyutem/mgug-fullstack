@@ -10,12 +10,24 @@ interface ImageData {
 }
 
 const imageData: ImageData[] = [
-  { id: 1, src: "/gorakhnathTemple.webp", title: "Gorakhnath Temple" },
-  { id: 2, src: "/inaugration.webp", title: "Inauguration Ceremony" },
-  { id: 3, src: "/anti-ragging.jpg", title: "Our Commitment" },
-  { id: 4, src: "/VCGivingSpeech.webp", title: "Leadership Vision" },
-  { id: 5, src: "/university.webp", title: "University Campus" },
-  { id: 6, src: "/yogiJi.webp", title: "Distinguished Guests" },
+  { id: 1, src: "/spotlight/president&cm.webp", title: "president with cm" },
+  {
+    id: 2,
+    src: "/spotlight/president&gov.webp",
+    title: "president with governor",
+  },
+  {
+    id: 3,
+    src: "/spotlight/presidentVisit.webp",
+    title: "president visit at mgug",
+  },
+  {
+    id: 4,
+    src: "/spotlight/vc&gov.webp",
+    title: "vice chancellor at mgug and governor",
+  },
+  { id: 5, src: "/spotlight/president.webp", title: "president at MGUG" },
+  { id: 6, src: "/spotlight/cm.webp", title: "Chief Minister at MGUG" },
 ];
 
 const variants = {
@@ -65,8 +77,8 @@ export default function SectionCarousel() {
   }, [isHovered, page]);
 
   return (
-    <section className="w-full bg-transparent py-8 px-4">
-      <div className="mx-auto max-w-7xl">
+    <section className="w-full bg-transparent py-8 px-1 md:px-4">
+      <div className="mx-auto max-w-8xl">
         <h2 className="mb-12 text-center text-4xl font-bold text-orange-500 md:text-5xl">
           {title}
         </h2>
