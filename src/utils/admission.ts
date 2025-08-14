@@ -790,10 +790,9 @@ export const underGraduateContent: UnderGraduateContent = {
 
 export const listProgramsContent: ProgramsContent = {
   heading: {
-    hindi:
-      "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर, विभिन्न विषयों में विविध प्रकार के कार्यक्रम प्रदान करता है।",
+    hindi: "हम विभिन्न विषयों में विविध प्रकार के कार्यक्रम प्रदान करते हैं।",
     english:
-      "Mahayogi Gorakhnath University Gorakhpur, offers a diverse range of programs across various disciplines.",
+      "We offers a diverse range of programs across various disciplines.",
   },
   faculties: [
     {
