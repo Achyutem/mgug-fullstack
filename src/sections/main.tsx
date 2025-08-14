@@ -135,7 +135,7 @@ export default function Main() {
                     {t.exploreButton}
                   </button>
                 </a>
-                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-transparent text-gray-700 border border-orange-500 hover:text-orange-500 transition-all duration-300 shrink-0">
+                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-transparent text-gray-700 border-2 border-orange-500 hover:bg-orange-500/10 transition-all duration-300 shrink-0">
                   {t.virtualTourButton}
                 </button>
               </div>
