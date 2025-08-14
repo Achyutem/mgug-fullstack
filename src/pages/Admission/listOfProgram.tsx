@@ -32,8 +32,15 @@ import {
   DialogTrigger,
   DialogDescription,
 } from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { listProgramsContent, listProgramsStaticText } from "@/utils/admission";
-import { cn } from "@/lib/utils"; // Assuming you have a utility for merging class names
+import { cn } from "@/lib/utils";
 
 const facultyIcons = [Palette, Atom, Briefcase, Microscope];
 
@@ -73,13 +80,13 @@ const ListOfPrograms = () => {
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto min-h-screen">
         <div className="relative max-w-8xl mx-auto z-10">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-12 text-center text-transparent bg-clip-text bg-orange-500 uppercase tracking-wider">
+          <h1 className="text-2xl md:text-3xl font-extrabold mb-12 text-center text-transparent bg-clip-text bg-orange-500 uppercase tracking-wider">
             {dynamicContent.heading[language]}
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* === Left Panel: Faculty Navigation === */}
-            <aside className="md:col-span-3 lg:col-span-3">
+            {/* === Left Panel: Faculty Navigation (Desktop) === */}
+            <aside className="hidden md:block md:col-span-3 lg:col-span-3">
               <h2 className="text-lg font-semibold text-black mb-4 px-3 flex items-center">
                 <Landmark className="w-5 h-5 mr-2 text-orange-600" />
                 {"Faculties"}
@@ -94,7 +101,7 @@ const ListOfPrograms = () => {
                       className={cn(
                         "group flex items-center w-full px-4 py-3 text-left text-sm font-medium rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500",
                         selectedFacultyIndex === index
-                          ? "bg-orange-500/10 text-orange-600"
+                          ? "bg-orange-200 text-orange-600"
                           : "text-black hover:bg-orange-200 hov hover:text-black"
                       )}
                     >
@@ -128,6 +135,35 @@ const ListOfPrograms = () => {
 
             {/* === Right Panel: Program Grid === */}
             <main className="md:col-span-9 lg:col-span-9">
+              {/* Mobile Faculty Selector */}
+              <div className="md:hidden mb-6">
+                <h2 className="text-lg font-semibold text-black mb-3 px-1 flex items-center">
+                  <Landmark className="w-5 h-5 mr-2 text-orange-600" />
+                  Select a Faculty
+                </h2>
+                <Select
+                  value={String(selectedFacultyIndex)}
+                  onValueChange={(value: any) =>
+                    setSelectedFacultyIndex(Number(value))
+                  }
+                >
+                  <SelectTrigger className="w-full font-bold text-orange-500 bg-orange-500/10 border-orange-500 focus:ring-orange-500">
+                    <SelectValue placeholder="Select a faculty" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-orange-100 border-gray-700">
+                    {dynamicContent.faculties.map((faculty, index) => (
+                      <SelectItem
+                        key={index}
+                        value={String(index)}
+                        className="focus:bg-orange-200"
+                      >
+                        {faculty.name[language]}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedFacultyIndex}
@@ -160,7 +196,7 @@ const ListOfPrograms = () => {
 const ProgramCard = ({ program, language, staticText }: any) => {
   return (
     <Dialog>
-      <div className="h-full flex flex-col justify-between p-6 rounded-xl bg-transparent backdrop-blur-sm border border-gray-700/80 hover:bg-orange-500/10 hov shadow-lg hover:border-orange-600 transition-colors duration-300">
+      <div className="h-full flex flex-col justify-between p-6 rounded-xl bg-orange-500/10 backdrop-blur-sm border hover:border-2 border-orange-500 hover:bg-transparent shadow-lg hover:border-orange-600 transition-colors duration-300">
         <div>
           <h3 className="text-lg font-bold text-black">
             {program.name[language]}
@@ -186,7 +222,7 @@ const ProgramCard = ({ program, language, staticText }: any) => {
         <DialogTrigger asChild>
           <Button
             variant="outline"
-            className="w-full mt-6 bg-transparent border-gray-600 hover:bg-orange-500/10 hover:border-orange-600 hover:text-orange-600 transition-all text-black"
+            className="w-full mt-6 bg-transparent border-orange-500 hover:bg-orange-500/10 hover:border-orange-600 hover:text-orange-600 transition-all text-black"
           >
             {"View Details"}
             <ChevronRight className="w-4 h-4 ml-2" />
@@ -194,7 +230,7 @@ const ProgramCard = ({ program, language, staticText }: any) => {
         </DialogTrigger>
       </div>
 
-      <DialogContent className="bg-orange-100 backdrop-blur-md border-gray-700 text-gray-700 max-w-2xl">
+      <DialogContent className="bg-orange-100 backdrop-blur-md border-gray-700 text-gray-700 max-w-2xl max-h-[85dvh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl text-orange-500">
             {program.name[language]}
