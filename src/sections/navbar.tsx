@@ -98,10 +98,10 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-40 bg-[#ffead1] backdrop-blur-lg border-b border-gray-200/80"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-2">
+      <div className="max-w-full mx-auto px-2">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 px-2">
             <Link
               to="/"
               className="flex items-center space-x-3"
@@ -156,32 +156,28 @@ export default function Navbar() {
                 return <div key={item.english}>{linkContent}</div>;
               }
 
+              // ✨ MODIFIED BLOCK FOR HOVER EFFECT ✨
               return (
-                <Popover
-                  key={item.english}
-                  open={isMegaMenuOpen}
-                  onOpenChange={(open) => {
-                    if (open) {
-                      handleMegaMenuToggle(item.english);
-                    } else {
-                      closeMegaMenu();
-                    }
-                  }}
-                >
+                <Popover key={item.english} open={isMegaMenuOpen}>
                   <PopoverTrigger asChild>
-                    <button
-                      onClick={() => handleMegaMenuToggle(item.english)}
-                      className="flex items-center space-x-1 transition-colors font-medium text-slate-700 hover:text-orange-500"
-                      aria-expanded={isMegaMenuOpen}
+                    <div
+                      onMouseEnter={() => handleMegaMenuToggle(item.english)}
+                      className="flex items-center"
                     >
-                      <span>{item[language]}</span>
-                      <FaChevronDown
-                        className={`w-4 h-4 transition-transform ${
-                          isMegaMenuOpen ? "rotate-180" : ""
-                        }`}
-                        aria-hidden="true"
-                      />
-                    </button>
+                      <button
+                        className="flex items-center space-x-1 transition-colors font-medium text-slate-700 hover:text-orange-500 cursor-pointer"
+                        aria-expanded={isMegaMenuOpen}
+                        tabIndex={0}
+                      >
+                        <span>{item[language]}</span>
+                        <FaChevronDown
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            isMegaMenuOpen ? "rotate-180" : ""
+                          }`}
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
                   </PopoverTrigger>
                   <PopoverContent
                     align="center"
