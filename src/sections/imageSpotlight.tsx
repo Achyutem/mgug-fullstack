@@ -78,7 +78,7 @@ export default function SectionCarousel() {
 
   return (
     <section className="w-full bg-transparent py-8 px-1 md:px-4">
-      <div className="mx-auto max-w-8xl">
+      <div className="mx-auto max-w-full">
         <h2 className="mb-12 text-center text-4xl font-bold text-orange-500 md:text-5xl">
           {title}
         </h2>
