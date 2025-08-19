@@ -175,19 +175,32 @@ export const InfoPopup: FC = () => {
       <div className="flex flex-col p-4 flex-1">
         <DialogHeader className="text-left">
           <DialogTitle className="text-xl font-bold text-orange-500 tracking-tight">
-            🎓 Explore University Life
+            <a
+              href="https://mgug.ac.in/PDF/Instruction_for_MBBS_Admission_2025_26_Shri_Gorakshnath_Medical_College_Hospital_and_Research_Center.pdf"
+              className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+            >
+              MBBS Admission session 2025-26
+            </a>
           </DialogTitle>
           <DialogDescription className="mt-2 text-sm text-gray-600">
-            Discover our vibrant campus through visuals and events.
+            <span className="text-black bg-red-500">सूचना:</span> महायोगी
+            गोरखनाथ विश्वविद्यालय गोरखपुर में पीएचडी पाठ्यक्रम में प्रवेश के लिए
+            प्रवेश परीक्षा 19 अगस्त 2025 को आयोजित की जाएगी।
           </DialogDescription>
         </DialogHeader>
-        <div className="my-4">
+        {/* <div className="my-4">
           <InfoContent />
-        </div>
-        <div className="mt-4 pt-4 flex justify-end">
+        </div> */}
+        <div className="mt-4 pt-4 gap-2 flex justify-end">
+          <a
+            href="/student-help"
+            className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+          >
+            Student Corner
+          </a>
           <a
             href="/register"
-            className="rounded-md bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600 active:scale-95"
+            className="rounded-md flex items-center bg-orange-500 px-4 py-2 text-base font-semibold text-white transition-colors duration-200 hover:bg-orange-600 active:scale-95"
           >
             Register Now
           </a>
@@ -229,19 +242,31 @@ export const InfoPopup: FC = () => {
       <div className="flex flex-col p-6 lg:p-8 overflow-y-auto">
         <DialogHeader className="text-left">
           <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-500 tracking-tight">
-            🎓 Explore University Life
+            <a
+              href="https://mgug.ac.in/PDF/Instruction_for_MBBS_Admission_2025_26_Shri_Gorakshnath_Medical_College_Hospital_and_Research_Center.pdf"
+              className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+            >
+              MBBS Admission Now Live for session 2025-26
+            </a>
           </DialogTitle>
           <DialogDescription className="mt-3 text-base lg:text-lg text-gray-600 leading-relaxed">
-            Discover our vibrant campus through stunning visuals and upcoming
-            events.
+            <span className="text-black bg-red-500">सूचना:</span> महायोगी
+            गोरखनाथ विश्वविद्यालय गोरखपुर में पीएचडी पाठ्यक्रम में प्रवेश के लिए
+            प्रवेश परीक्षा 19 अगस्त 2025 को आयोजित की जाएगी।
           </DialogDescription>
         </DialogHeader>
         <div className="my-6 lg:my-8">
           <InfoContent />
         </div>
-        <div className="mt-auto pt-6 flex justify-end">
+        <div className="mt-auto pt-6 gap-2 flex justify-end">
           <a
-            href="https://mgug.ac.in/academics/programmes_list.php"
+            href="/student-help"
+            className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+          >
+            Student Corner
+          </a>
+          <a
+            href="/list-of-program"
             className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
           >
             Register Now
