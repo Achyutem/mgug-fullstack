@@ -932,13 +932,6 @@ export const impLinks = [
   },
   {
     label: {
-      hindi: "भारतीय दंत चिकित्सा परिषद",
-      english: "Dental Council of India",
-    },
-    href: "https://dciindia.gov.in/",
-  },
-  {
-    label: {
       hindi: "सूचना का अधिकार अधिनियम",
       english: "Right to Information Act",
     },
