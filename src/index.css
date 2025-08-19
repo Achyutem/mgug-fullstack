@@ -54,7 +54,6 @@
   }
 
   .animate-marquee-left {
-    /* Uses a CSS variable for flexible duration, defaulting to 80s */
     animation: marquee-left var(--marquee-duration, 80s) linear infinite;
   }
 
