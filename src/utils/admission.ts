@@ -46,8 +46,8 @@ export const feeStructureData: FeeStructureMember[] = [
     },
     seats: 100,
     fees: {
-      hindi: "13,05,825 प्रति वर्ष",
-      english: "13,05,825 per year",
+      hindi: "14,14,159 प्रति वर्ष",
+      english: "14,14,159 per year",
     },
   },
   {
@@ -795,6 +795,84 @@ export const listProgramsContent: ProgramsContent = {
       "We offers a diverse range of programs across various disciplines.",
   },
   faculties: [
+    {
+      name: {
+        hindi: "श्री गोरक्षनाथ मेडिकल कॉलेज हॉस्पिटल और रिसर्च सेंटर",
+        english:
+          "Shri Gorakshnath Medical College Hospital and Research Centre",
+      },
+      programs: [
+        {
+          name: { hindi: "एमबीबीएस", english: "MBBS" },
+          duration: { hindi: "5.5 वर्ष", english: "5.5 years" },
+          fees: { hindi: "₹14,14,159", english: "₹14,14,159" },
+          examinationFee: { hindi: "-", english: "-" },
+          seats: { hindi: "कुल: 100", english: "Total: 100" },
+          qualification: [
+            { hindi: "10+2 में जीव विज्ञान।", english: "10+2 in Biology." },
+            { hindi: "नीट यूजी।", english: "NEET UG." },
+          ],
+          note: {
+            hindi:
+              "एमबीबीएस पाठ्यक्रम में प्रवेश केवल नीट काउंसलिंग के माध्यम से होता है।",
+            english:
+              "Admission to MBBS course is conducted through NEET counselling only.",
+          },
+        },
+      ],
+    },
+    {
+      name: {
+        hindi: "गुरु गोरक्षनाथ आयुर्वेद चिकित्सा विज्ञान संस्थान",
+        english:
+          "Guru Gorakshnath Institute of Medical Sciences (Ayurveda College)",
+      },
+      programs: [
+        {
+          name: { hindi: "पीएचडी आयुर्वेद", english: "PhD Ayurveda" },
+          duration: { hindi: "-", english: "-" },
+          fees: {
+            hindi:
+              "₹125000/- प्रथम वर्ष, ₹100000/- द्वितीय वर्ष, ₹150000/- अंतिम वर्ष",
+            english:
+              "₹125000/- First year, ₹100000/- Second year, ₹150000/- Last year",
+          },
+          examinationFee: { hindi: "शामिल", english: "Included" },
+          seats: { hindi: "कुल: 32", english: "Total: 32" },
+          qualification: [
+            {
+              hindi:
+                "राष्ट्रीय भारतीय चिकित्सा आयोग (पहले केंद्रीय भारतीय चिकित्सा परिषद (सीसीआईएम)) द्वारा मान्यता प्राप्त संबंधित या संबद्ध विषयों में एम.डी.(आयु.)/एम.एस.(आयु.) या किसी भी संबद्ध विषयों में मास्टर डिग्री जैसे एम.डी./एम.एस., एम.फार्मा (आयुर्वेद), एम.फार्मा, एम.एससी., एम.वी.एससी, एम.ई., या एम.टेक डिग्री, सरकार द्वारा मान्यता प्राप्त संस्थान से न्यूनतम 55% अंक या समकक्ष ग्रेड (एससी/एसटी और पीएच श्रेणी के उम्मीदवार के लिए 50%)।",
+              english:
+                "M.D.(Ay.)/M.S.(Ay.) in the concerned or allied subjects recognized by National Commission for Indian System of Medicine (earlier Central Council of Indian Medicine (CCIM)) OR Master's degree in any one of the allied subjects viz. M.D./M.S., M.Pharma (Ayurveda), M.Pharma, M.Sc., M.V.Sc, M.E., or M.Tech degree in any branch of the Biological Sciences from an institution recognized by the government with a minimum of 55% marks or an equivalent grade (50% SC/ST and PH category candidate).",
+            },
+          ],
+        },
+        {
+          name: { hindi: "बीएएमएस", english: "BAMS" },
+          duration: { hindi: "5.5 वर्ष", english: "5.5 years" },
+          fees: {
+            hindi: "₹265800/- प्रति प्रोफेशनल वर्ष",
+            english: "₹265800/- per professional year",
+          },
+          examinationFee: {
+            hindi: "₹15000/- प्रति प्रोफेशनल वर्ष",
+            english: "₹15000/- per professional year",
+          },
+          seats: { hindi: "कुल: 100", english: "Total: 100" },
+          qualification: [
+            { hindi: "10+2 में जीव विज्ञान।", english: "10+2 in Biology." },
+            { hindi: "नीट यूजी।", english: "NEET UG." },
+          ],
+          note: {
+            hindi:
+              "बीएएमएस पाठ्यक्रम में प्रवेश केवल नीट काउंसलिंग के माध्यम से होता है।",
+            english:
+              "Admission to BAMS course is conducted through NEET counselling only.",
+          },
+        },
+      ],
+    },
     {
       name: {
         hindi: "नर्सिंग और पैरामेडिकल संकाय",
@@ -1798,84 +1876,6 @@ export const listProgramsContent: ProgramsContent = {
               english: "10+2 in any discipline.",
             },
           ],
-        },
-      ],
-    },
-    {
-      name: {
-        hindi: "गुरु गोरक्षनाथ आयुर्वेद चिकित्सा विज्ञान संस्थान",
-        english:
-          "Guru Gorakshnath Institute of Medical Sciences (Ayurveda College)",
-      },
-      programs: [
-        {
-          name: { hindi: "पीएचडी आयुर्वेद", english: "PhD Ayurveda" },
-          duration: { hindi: "-", english: "-" },
-          fees: {
-            hindi:
-              "₹125000/- प्रथम वर्ष, ₹100000/- द्वितीय वर्ष, ₹150000/- अंतिम वर्ष",
-            english:
-              "₹125000/- First year, ₹100000/- Second year, ₹150000/- Last year",
-          },
-          examinationFee: { hindi: "शामिल", english: "Included" },
-          seats: { hindi: "कुल: 32", english: "Total: 32" },
-          qualification: [
-            {
-              hindi:
-                "राष्ट्रीय भारतीय चिकित्सा आयोग (पहले केंद्रीय भारतीय चिकित्सा परिषद (सीसीआईएम)) द्वारा मान्यता प्राप्त संबंधित या संबद्ध विषयों में एम.डी.(आयु.)/एम.एस.(आयु.) या किसी भी संबद्ध विषयों में मास्टर डिग्री जैसे एम.डी./एम.एस., एम.फार्मा (आयुर्वेद), एम.फार्मा, एम.एससी., एम.वी.एससी, एम.ई., या एम.टेक डिग्री, सरकार द्वारा मान्यता प्राप्त संस्थान से न्यूनतम 55% अंक या समकक्ष ग्रेड (एससी/एसटी और पीएच श्रेणी के उम्मीदवार के लिए 50%)।",
-              english:
-                "M.D.(Ay.)/M.S.(Ay.) in the concerned or allied subjects recognized by National Commission for Indian System of Medicine (earlier Central Council of Indian Medicine (CCIM)) OR Master's degree in any one of the allied subjects viz. M.D./M.S., M.Pharma (Ayurveda), M.Pharma, M.Sc., M.V.Sc, M.E., or M.Tech degree in any branch of the Biological Sciences from an institution recognized by the government with a minimum of 55% marks or an equivalent grade (50% SC/ST and PH category candidate).",
-            },
-          ],
-        },
-        {
-          name: { hindi: "बीएएमएस", english: "BAMS" },
-          duration: { hindi: "5.5 वर्ष", english: "5.5 years" },
-          fees: {
-            hindi: "₹265800/- प्रति प्रोफेशनल वर्ष",
-            english: "₹265800/- per professional year",
-          },
-          examinationFee: {
-            hindi: "₹15000/- प्रति प्रोफेशनल वर्ष",
-            english: "₹15000/- per professional year",
-          },
-          seats: { hindi: "कुल: 100", english: "Total: 100" },
-          qualification: [
-            { hindi: "10+2 में जीव विज्ञान।", english: "10+2 in Biology." },
-            { hindi: "नीट यूजी।", english: "NEET UG." },
-          ],
-          note: {
-            hindi:
-              "बीएएमएस पाठ्यक्रम में प्रवेश केवल नीट काउंसलिंग के माध्यम से होता है।",
-            english:
-              "Admission to BAMS course is conducted through NEET counselling only.",
-          },
-        },
-      ],
-    },
-    {
-      name: {
-        hindi: "श्री गोरक्षनाथ मेडिकल कॉलेज हॉस्पिटल और रिसर्च सेंटर",
-        english:
-          "Shri Gorakshnath Medical College Hospital and Research Centre",
-      },
-      programs: [
-        {
-          name: { hindi: "एमबीबीएस", english: "MBBS" },
-          duration: { hindi: "5.5 वर्ष", english: "5.5 years" },
-          fees: { hindi: "-", english: "-" },
-          examinationFee: { hindi: "-", english: "-" },
-          seats: { hindi: "कुल: 100", english: "Total: 100" },
-          qualification: [
-            { hindi: "10+2 में जीव विज्ञान।", english: "10+2 in Biology." },
-            { hindi: "नीट यूजी।", english: "NEET UG." },
-          ],
-          note: {
-            hindi:
-              "एमबीबीएस पाठ्यक्रम में प्रवेश केवल नीट काउंसलिंग के माध्यम से होता है।",
-            english:
-              "Admission to MBBS course is conducted through NEET counselling only.",
-          },
         },
       ],
     },
