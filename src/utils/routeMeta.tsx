@@ -140,6 +140,7 @@ const CafeteriaPage = lazy(
 const DifferentlyAbledPage = lazy(
   () => import("@/pages/Students/CampusLife/differentlyAbled")
 );
+const StudentHelpPage = lazy(() => import("@/pages/studentPage"));
 const GuestHousePage = lazy(
   () => import("@/pages/Students/CampusLife/guestHouse")
 );
@@ -254,6 +255,11 @@ export const routeMeta = [
     title: "Differently Abled",
     path: "/differently-abled",
     element: <DifferentlyAbledPage />,
+  },
+  {
+    title: "Student Help",
+    path: "/student-help",
+    element: <StudentHelpPage />,
   },
   { title: "Guest House", path: "/guest-house", element: <GuestHousePage /> },
   { title: "Hospital", path: "/hospital", element: <HospitalPage /> },
