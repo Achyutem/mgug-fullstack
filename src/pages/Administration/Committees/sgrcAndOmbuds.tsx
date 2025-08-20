@@ -61,23 +61,30 @@ const SGRCAndOmbudsperson = () => {
 
             {/* Ombudsperson Section */}
             <div className="mt-10 bg-sky-200 border-l-4 border-sky-400 p-6 rounded-lg text-base text-sky-200">
-              <h2 className="text-xl font-semibold text-sky-500 mb-2">
+              <h2 className="text-xl font-semibold text-red-500 mb-2">
+                {ombudspersonData.post[language]}
+              </h2>
+              <h2 className="text-xl font-semibold text-sky-600 mb-2">
                 {ombudspersonData.name[language]}
               </h2>
-              <p className="mb-1 text-sky-400">
+              <p className="mb-1 text-sky-600">
                 {ombudspersonData.designation[language]}
               </p>
               <p className="mb-1 flex items-center gap-2">
-                <FiPhone size={18} className="text-sky-400" />
-                <strong className="text-sky-400">
+                <FiPhone size={18} className="text-sky-600" />
+                <a
+                  href={`tel:${ombudspersonData.contact.phone}`}
+                  className="text-sky-600 font-bold hover:underline"
+                >
                   {ombudspersonData.contact.phone}
-                </strong>
+                </a>
               </p>
+
               <p className="flex items-center gap-2">
-                <IoMailOpenOutline size={18} className="text-sky-400" />
+                <IoMailOpenOutline size={18} className="text-sky-600" />
                 <a
                   href={`mailto:${ombudspersonData.contact.email}`}
-                  className="underline text-sky-400"
+                  className="underline text-sky-600"
                 >
                   {ombudspersonData.contact.email}
                 </a>
