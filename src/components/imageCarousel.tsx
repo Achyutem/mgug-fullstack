@@ -9,7 +9,7 @@ export default function ImageCarousel() {
   const images = [
     { src: "/university.webp", alt: "Aerial view of the university campus" },
     { src: "/yogiJi.webp", alt: "Yogi Adityanath giving a speech" },
-    { src: "/sansthapak.webp", alt: "Sansthapaks of MGUG" },
+    { src: "/guruji.jpg", alt: "Sansthapaks of MGUG" },
     { src: "/studentsInALab.webp", alt: "Students in a Lab" },
     { src: "/VCGivingSpeech.webp", alt: "Vice Chancellor giving a speech" },
     { src: "/inaugration.webp", alt: "Presidential visit at MGUG" },
