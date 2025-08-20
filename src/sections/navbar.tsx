@@ -134,6 +134,8 @@ export default function Navbar() {
                     ? "/research"
                     : item.english === "Contact"
                     ? "/contact"
+                    : item.english === "Students"
+                    ? "/student-zone"
                     : `/${item.english.toLowerCase()}`;
                 const commonLinkClasses =
                   "font-medium text-slate-700 hover:text-orange-500 transition-all duration-200 hover:scale-105";
