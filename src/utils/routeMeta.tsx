@@ -88,6 +88,18 @@ const BoardOfStudies = lazy(
 const FinanceCommittee = lazy(
   () => import("@/pages/Administration/Committees/financeCommittees")
 );
+const ResearchCommittee = lazy(
+  () => import("@/pages/Administration/Committees/researchCommitte")
+);
+// ResearchCommittee
+const InternalComplaintsCommittee = lazy(
+  () => import("@/pages/Administration/Committees/internalComplaintComittee")
+);
+
+const EqualOpportunityCell = lazy(
+  () => import("@/pages/Administration/Committees/equalOpportunityCell")
+);
+
 const ExaminationCommittee = lazy(
   () => import("@/pages/Administration/Committees/examinationCommittee")
 );
@@ -127,6 +139,7 @@ const SchedulePage = lazy(
 );
 
 // Students > Campus Life
+const Examination = lazy(() => import("@/pages/Students/examination"));
 const EventsPage = lazy(() => import("@/pages/Students/CampusLife/event"));
 const AdmissionNoticePage = lazy(
   () => import("@/pages/Students/CampusLife/admissionNotice")
@@ -182,6 +195,11 @@ export const routeMeta = [
     title: "Examination Manual",
     path: "/examination-manual",
     element: <ExaminationManual />,
+  },
+  {
+    title: "Examination",
+    path: "/examination",
+    element: <Examination />,
   },
   {
     title: "Academic Calendar",
@@ -257,8 +275,8 @@ export const routeMeta = [
     element: <DifferentlyAbledPage />,
   },
   {
-    title: "Student Help",
-    path: "/student-help",
+    title: "Student Zone",
+    path: "/student-zone",
     element: <StudentHelpPage />,
   },
   { title: "Guest House", path: "/guest-house", element: <GuestHousePage /> },
@@ -393,6 +411,21 @@ export const routeMeta = [
     title: "Finance Committee",
     path: "/committee/finance-committee",
     element: <FinanceCommittee />,
+  },
+  {
+    title: "Internal Comittee",
+    path: "/committee/icc",
+    element: <InternalComplaintsCommittee />,
+  },
+  {
+    title: "Equal Opportunity Cell",
+    path: "/committee/eoc",
+    element: <EqualOpportunityCell />,
+  },
+  {
+    title: "Research Committee",
+    path: "/committees/research-committee",
+    element: <ResearchCommittee />,
   },
   {
     title: "Examination Committee",
