@@ -22,7 +22,7 @@ export type MegaMenuSection = MegaMenuHeader | MegaMenuLink;
 
 export type MegaMenus = {
   About: MegaMenuSection[];
-  Students: MegaMenuSection[];
+  // Students: MegaMenuSection[];
   Admissions: MegaMenuSection[];
   Administration: MegaMenuSection[];
   More: MegaMenuSection[];
@@ -72,6 +72,31 @@ export interface AnimatedTextProp {
   loopInterval?: number;
   className?: string;
   language?: string;
+}
+
+export interface InternalCommitteeMember {
+  srNo: number;
+  name: {
+    hindi: string;
+    english: string;
+  };
+  role: {
+    hindi: string;
+    english: string;
+  };
+  contactNo: string;
+  emailId: string;
+}
+
+export interface InternalCommitteeTitles {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    name: Title;
+    role: Title;
+    contactNo: Title;
+    emailId: Title;
+  };
 }
 
 export interface CommitteeMember {
@@ -127,6 +152,7 @@ export interface SGRCCommitteeMember {
 }
 
 export interface Ombudsperson {
+  post: Title;
   name: Title;
   designation: Title;
   contact: {
@@ -604,6 +630,21 @@ export interface MagazineTitles {
     link: Title;
   };
 }
+export interface EOCPageTitles {
+  heading: Title;
+  headers: {
+    title: Title;
+    link: Title;
+  };
+}
+
+export interface PdfItem {
+  title: {
+    hindi: string;
+    english: string;
+  };
+  pdf_url: string;
+}
 
 export interface AboutUsContent {
   heading: Title;
@@ -972,4 +1013,22 @@ export interface SearchablePage {
   title: string;
   path: string;
   content: string;
+}
+
+export interface ResearchCommitteeMember {
+  srNo: number;
+  name: Title;
+  designation: Title;
+  role: Title;
+}
+
+export interface ResearchCommitteeSection {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    name: Title;
+    designation: Title;
+    role: Title;
+  };
+  members: ResearchCommitteeMember[];
 }
