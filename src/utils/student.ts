@@ -568,8 +568,8 @@ export const libraryData: LibraryContent = {
 
 export const cafeteriaData: CafeteriaContent = {
   pageTitle: {
-    hindi: "कैफेटेरिया",
-    english: "Cafeteria",
+    hindi: "कैंटीन",
+    english: "Canteen",
   },
   image: "/cafeteria.webp", // Replace with your actual image path
   paragraphs: [
