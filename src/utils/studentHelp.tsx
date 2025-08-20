@@ -10,11 +10,9 @@ import {
   FaGavel,
   FaUserShield,
   FaBrain,
-  FaBed,
   FaPlaceOfWorship,
   FaHospital,
   FaUtensils,
-  FaMicrophone,
   FaPuzzlePiece,
   FaCalendarCheck,
   FaUserGraduate,
@@ -26,15 +24,20 @@ import {
   FaQuestionCircle,
   FaPhone,
   FaSitemap,
+  FaHandsHelping,
+  FaRegBuilding,
+  FaGlobe,
+  FaAmbulance,
 } from "react-icons/fa";
 import {
   FaFileLines,
   FaIndianRupeeSign,
   FaPenToSquare,
   FaBookOpenReader,
+  FaGoogleScholar,
+  FaBuildingColumns,
 } from "react-icons/fa6";
 import { IoLibrary } from "react-icons/io5";
-import { LuNotepadText } from "react-icons/lu";
 import { MdPermMedia } from "react-icons/md";
 
 // Define a type for a single link item
@@ -62,11 +65,6 @@ export const studentLinksData: StudentLinksData = {
       href: "/academic-calendar",
     },
     {
-      title: "Result",
-      icon: <LuNotepadText />,
-      href: "/result",
-    },
-    {
       title: "Programmes List",
       icon: <FaClipboardList />,
       href: "/admission/list-of-program",
@@ -81,7 +79,7 @@ export const studentLinksData: StudentLinksData = {
     {
       title: "Examination",
       icon: <FaPenToSquare />,
-      href: "/examination-manual",
+      href: "/examination",
     },
   ],
   "Student Support": [
@@ -99,15 +97,25 @@ export const studentLinksData: StudentLinksData = {
       icon: <FaUserShield />,
       href: "/Committee/Anti-Ragging",
     },
-    { title: "Counselling", icon: <FaBrain />, href: "#" },
+    { title: "Counselling and Wellness", icon: <FaBrain />, href: "#" },
   ],
   "Campus Life": [
-    { title: "Hostel", icon: <FaBed />, href: "/hostel" },
+    { title: "Hostel", icon: <FaRegBuilding />, href: "/hostel" },
     { title: "Temple", icon: <FaPlaceOfWorship />, href: "#" },
     { title: "Hospital", icon: <FaHospital />, href: "/hospital" },
-    { title: "Cafeteria", icon: <FaUtensils />, href: "/canteen" },
+    { title: "Canteen", icon: <FaUtensils />, href: "/canteen" },
     { title: "Library", icon: <IoLibrary />, href: "/library" },
-    { title: "Auditorium", icon: <FaMicrophone />, href: "#" },
+    { title: "Auditorium", icon: <FaBuildingColumns />, href: "#" },
+    {
+      title: "Differently Abled",
+      icon: <FaHandsHelping />,
+      href: "/differently-abled",
+    },
+    {
+      title: "Ambulance",
+      icon: <FaAmbulance />,
+      href: "/ambulance",
+    },
   ],
   "Student Engagement": [
     { title: "Clubs & Societies", icon: <FaPuzzlePiece />, href: "#" },
@@ -118,6 +126,12 @@ export const studentLinksData: StudentLinksData = {
       href: "/arogya-path",
     },
     { title: "Alumni", icon: <FaUserGraduate />, href: "#" },
+    {
+      title: "NSS",
+      icon: <FaHandsHelping />,
+      href: "https://mgug.ac.in/nss/index.php",
+    },
+    { title: "Opportunity", icon: <FaGlobe />, href: "#" },
   ],
   Compliance: [
     { title: "Mandatory Disclosures", icon: <FaClipboardList />, href: "#" },
@@ -139,5 +153,35 @@ export const studentLinksData: StudentLinksData = {
     { title: "FAQs", icon: <FaQuestionCircle />, href: "#" },
     { title: "Contact Us", icon: <FaPhone />, href: "/contact" },
     { title: "ERP", icon: <FaSitemap />, href: "erp.mgug.ac.in" },
+    {
+      title: "E-Samadhan",
+      icon: <FaHandsHelping />,
+      href: "https://samadhaan.ugc.ac.in/",
+    },
+    {
+      title: "VidyaLakshmi Scheme",
+      icon: <FaGoogleScholar />,
+      href: "https://pmvidyalaxmi.co.in/StudentLogin.aspx",
+    },
+    {
+      title: "UP Scholarship",
+      icon: <FaGoogleScholar />,
+      href: "https://scholarship.up.gov.in/",
+    },
+    {
+      title: "Digi Shakti",
+      icon: <FaGoogleScholar />,
+      href: "https://digishakti.up.gov.in/index.html",
+    },
+    {
+      title: "UGC Moocs",
+      icon: <FaGoogleScholar />,
+      href: "https://ugcmoocs.inflibnet.ac.in/",
+    },
+    {
+      title: "Apaar",
+      icon: <FaGoogleScholar />,
+      href: "https://apaar.education.gov.in/",
+    },
   ],
 };
