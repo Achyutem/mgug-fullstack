@@ -66,7 +66,7 @@ export default function StudentHelpPage() {
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
             <span className="bg-orange-500 bg-clip-text text-transparent">
-              Student Corner
+              Student Zone
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -128,7 +128,7 @@ export default function StudentHelpPage() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+              className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"
             >
               {studentLinksData[activeTab].map((link: LinkItem) => (
                 <motion.div key={link.title} variants={cardVariants}>
