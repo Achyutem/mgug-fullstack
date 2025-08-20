@@ -2,6 +2,8 @@ import type {
   AntiRaggingMember,
   CommitteeMember,
   CommitteeTitles,
+  InternalCommitteeMember,
+  InternalCommitteeTitles,
   ItCommitteeMember,
   Ombudsperson,
   SGRCCommitteeMember,
@@ -151,12 +153,12 @@ export const financeCommitteeData: CommitteeMember[] = [
   {
     srNo: 7,
     name: {
-      hindi: "वित्त अधिकारी",
-      english: "Finance Officer",
+      hindi: "डॉ. प्रदीप कुमार राव",
+      english: "Dr. Pradeep Kumar Rao",
     },
     designation: {
-      hindi: "",
-      english: "",
+      hindi: "वित्त अधिकारी",
+      english: "Finance Officer",
     },
     role: {
       hindi: "सचिव",
@@ -288,6 +290,10 @@ export const sgrcCommitteeData: SGRCCommitteeMember[] = [
 ];
 
 export const ombudspersonData: Ombudsperson = {
+  post: {
+    hindi: "लोकपाल",
+    english: "Ombuds Person",
+  },
   name: {
     hindi: "प्रो. वी. के. सिंह",
     english: "Prof. V. K. Singh",
@@ -834,5 +840,363 @@ export const examinationCommitteeContent = {
       j: "The University may frame Ordinances from time to time for the constitution, roles, and powers of the Council, Boards, Committees, and Cells.",
       k: "All other matters shall be governed as per the University Act or as prescribed.",
     },
+  },
+};
+
+export const internalComplaintsCommitteeData: InternalCommitteeMember[] = [
+  {
+    srNo: 1,
+    name: {
+      hindi: "डॉ. डी. एस. अजीथा, अधिष्ठाता, नर्सिंग एवं पैरामेडिकल संकाय",
+      english: "Dr. D. S. Ajitha, Dean, Faculty of Nursing & Paramedical",
+    },
+    role: {
+      hindi: "पीठासीन अधिकारी",
+      english: "Presiding Officer",
+    },
+    contactNo: "8840477265",
+    emailId: "ds.ajitha@mgug.ac.in",
+  },
+  {
+    srNo: 2,
+    name: {
+      hindi: "डॉ. मिनी के वी, आचार्य, जी. जी. आई. एम. एस. (आयुर्वेद)",
+      english: "Dr. Mini K V, Professor, GGIMS (Ayurveda College)",
+    },
+    role: {
+      hindi: "सदस्य",
+      english: "Member",
+    },
+    contactNo: "9557580429",
+    emailId: "mini.kv@mgug.ac.in",
+  },
+  {
+    srNo: 3,
+    name: {
+      hindi: "डॉ. शशिकान्त सिंह, प्राचार्य, फैकल्टी ऑफ फार्मास्युटिकल साइंसेस",
+      english:
+        "Dr. Shashikant Singh, Principal, Faculty of Pharmaceutical Sciences",
+    },
+    role: {
+      hindi: "सदस्य",
+      english: "Member",
+    },
+    contactNo: "9873095300",
+    emailId: "shashikant.singh@mgug.ac.in",
+  },
+  {
+    srNo: 4,
+    name: {
+      hindi: "श्रीमती शीलम बाजपेई, डाइरेक्टर, समाधान अभियान, गोरखपुर",
+      english: "Mrs. Sheelam Bajpai, Director, Samadhan Abhiyan, Gorakhpur",
+    },
+    role: {
+      hindi: "सदस्य",
+      english: "Member",
+    },
+    contactNo: "9868127766",
+    emailId: "sheelam.bajpai27@gmail.com",
+  },
+  {
+    srNo: 5,
+    name: {
+      hindi: "डॉ. विमल कुमार दूबे, सह आचार्य, कृषि संकाय",
+      english:
+        "Dr. Vimal Kumar Dubey, Associate Professor, Faculty of Agriculture",
+    },
+    role: {
+      hindi: "सदस्य",
+      english: "Member",
+    },
+    contactNo: "9999764424",
+    emailId: "vimal.dubey@mgug.ac.in",
+  },
+  {
+    srNo: 6,
+    name: {
+      hindi:
+        "डॉ. अनुपमा ओझा, सहायक आचार्य, बायोकेमेस्ट्री विभाग, सम्बद्ध स्वास्थ्य विज्ञान संकाय",
+      english:
+        "Dr. Anupama Ojha, Assistant Professor, Dept. of Biochemistry, Allied Health Sciences",
+    },
+    role: {
+      hindi: "सदस्य",
+      english: "Member",
+    },
+    contactNo: "9718320226",
+    emailId: "anupama.ojha@mgug.ac.in",
+  },
+  {
+    srNo: 7,
+    name: {
+      hindi:
+        "सुश्री सुप्रिया गुप्ता, प्रवक्ता, महंत अवेद्यनाथ पैरामेडिकल कॉलेज",
+      english:
+        "Ms. Supriya Gupta, Lecturer, Mahant Avedyanath Paramedical College",
+    },
+    role: {
+      hindi: "सदस्य",
+      english: "Member",
+    },
+    contactNo: "8400739619",
+    emailId: "supriya.gupta@mgug.ac.in",
+  },
+  {
+    srNo: 8,
+    name: {
+      hindi: "श्री श्रीकान्त, उप कुलसचिव (प्रशासन)",
+      english: "Shri Shrikant, Deputy Registrar (Administration)",
+    },
+    role: {
+      hindi: "सदस्य-सचिव",
+      english: "Member-Secretary",
+    },
+    contactNo: "9415266014",
+    emailId: "shrikant@mgug.ac.in",
+  },
+];
+
+export const internalComplaintsCommitteeTitles: InternalCommitteeTitles = {
+  heading: {
+    hindi: "आंतरिक शिकायत समिति",
+    english: "Internal Complaints Committee",
+  },
+  headers: {
+    srNo: { hindi: "क्रम संख्या", english: "Sl. No." },
+    name: { hindi: "नाम", english: "Name" },
+    role: { hindi: "दायित्व", english: "Role" },
+    contactNo: { hindi: "सम्पर्क नं०", english: "Contact No." },
+    emailId: { hindi: "ईमेल आईडी", english: "Email ID" },
+  },
+};
+
+export const ResearchCommitteeData = {
+  title: {
+    hindi: "अनुसंधान समिति",
+    english: "Research Committee",
+  },
+  ayurveda: {
+    heading: { hindi: "आयुर्वेद", english: "Ayurveda" },
+    headers: {
+      srNo: { hindi: "क्रम सं.", english: "S. No." },
+      name: { hindi: "नाम", english: "Name" },
+      designation: {
+        hindi: "पदनाम और संबद्धता",
+        english: "Designation & Affiliation",
+      },
+      role: { hindi: "दायित्व", english: "Role" },
+    },
+    members: [
+      {
+        srNo: 1,
+        name: { hindi: "डॉ. मिनी के. वी.", english: "Dr. Mini K. V." },
+        designation: {
+          hindi: "प्रोफेसर और प्रमुख, रचना शरीर",
+          english: "Professor & HoD, Rachana Sharir",
+        },
+        role: { hindi: "अध्यक्ष", english: "Chairperson" },
+      },
+      {
+        srNo: 2,
+        name: { hindi: "डॉ. गोपी कृष्ण एस", english: "Dr. Gopi Krishna S." },
+        designation: {
+          hindi: "प्रोफेसर, रोग निदान",
+          english: "Professor, Roga Nidana",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 3,
+        name: { hindi: "डॉ. रेशमी पुष्पन", english: "Dr. Reshmi Pushpan" },
+        designation: {
+          hindi: "प्रोफेसर, अगदतंत्र",
+          english: "Professor, Agada Tantra",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 4,
+        name: { hindi: "डॉ. नवीन कोडलाडी", english: "Dr. Naveena Kodladie" },
+        designation: {
+          hindi: "प्रोफेसर, रसशास्त्र एवं भैषज्य कल्पना",
+          english: "Professor, RSBK",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 5,
+        name: { hindi: "डॉ. विनम्र शर्मा", english: "Dr. Vinamra Sharma" },
+        designation: {
+          hindi: "एसोसिएट प्रोफेसर, रसशास्त्र एवं भैषज्य कल्पना",
+          english: "Associate Professor, RSBK",
+        },
+        role: { hindi: "सदस्य एवं समन्वयक", english: "Member & Coordinator" },
+      },
+    ],
+  },
+  alliedHealth: {
+    heading: {
+      hindi: "सम्बद्ध स्वास्थ्य विज्ञान संकाय समिति",
+      english: "Faculty of Allied Health Sciences Committee",
+    },
+    headers: {
+      srNo: { hindi: "क्रम सं.", english: "S. No." },
+      name: { hindi: "नाम", english: "Name" },
+      designation: {
+        hindi: "पदनाम और संबद्धता",
+        english: "Designation & Affiliation",
+      },
+      role: { hindi: "दायित्व", english: "Role" },
+    },
+    members: [
+      {
+        srNo: 1,
+        name: { hindi: "डॉ. सुनील कुमार", english: "Dr. Sunil Kumar" },
+        designation: {
+          hindi: "प्रोफेसर एवं डीन, सम्बद्ध स्वास्थ्य विज्ञान संकाय",
+          english: "Professor & Dean, Allied Health Sciences",
+        },
+        role: { hindi: "अध्यक्ष", english: "Chairperson" },
+      },
+      {
+        srNo: 2,
+        name: { hindi: "डॉ. राजीव सिंह", english: "Dr. Rajeev Singh" },
+        designation: {
+          hindi: "वैज्ञानिक डी, RMRC-ICMR, बीआरडी मेडिकल कॉलेज, गोरखपुर",
+          english: "Scientist-D, RMRC-ICMR, BRD Medical College, Gorakhpur",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 3,
+        name: { hindi: "डॉ. राज कुमार", english: "Dr. Raj Kumar" },
+        designation: {
+          hindi: "प्रोफेसर, बायोकेमिस्ट्री विभाग, बीआरडी मेडिकल कॉलेज, गोरखपुर",
+          english:
+            "Professor, Biochemistry Dept., BRD Medical College, Gorakhpur",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 4,
+        name: { hindi: "डॉ. अमरेश कुमार", english: "Dr. Amresh Kumar" },
+        designation: {
+          hindi:
+            "एसोसिएट प्रोफेसर, माइक्रोबायोलॉजी, बीआरडी मेडिकल कॉलेज, गोरखपुर",
+          english:
+            "Associate Professor, Microbiology, BRD Medical College, Gorakhpur",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 5,
+        name: { hindi: "डॉ. शैलेंद्र कुमार", english: "Dr. Shailendra Kumar" },
+        designation: {
+          hindi:
+            "प्रोफेसर, माइक्रोबायोलॉजी, डॉ. आरएमएल अवध विश्वविद्यालय, अयोध्या",
+          english: "Professor, Microbiology, Dr. RML Avadh University, Ayodhya",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 6,
+        name: {
+          hindi: "डॉ. पवन कुमार कन्नौजिया",
+          english: "Dr. Pawan Kumar Kannaujia",
+        },
+        designation: {
+          hindi: "सहायक प्रोफेसर, बायोटेक्नोलॉजी",
+          english: "Assistant Professor, Biotechnology",
+        },
+        role: { hindi: "समन्वयक", english: "Coordinator" },
+      },
+    ],
+  },
+  pharma: {
+    heading: {
+      hindi: "औषधि विज्ञान समिति",
+      english: "Pharmaceutical Sciences Committee",
+    },
+    headers: {
+      srNo: { hindi: "क्रम सं.", english: "S. No." },
+      name: { hindi: "नाम", english: "Name" },
+      designation: {
+        hindi: "पदनाम और संबद्धता",
+        english: "Designation & Affiliation",
+      },
+      role: { hindi: "दायित्व", english: "Role" },
+    },
+    members: [
+      {
+        srNo: 1,
+        name: { hindi: "डॉ. जी. एन. सिंह", english: "Dr. G. N. Singh" },
+        designation: {
+          hindi: "पूर्व औषधि नियंत्रक, भारत",
+          english: "Former Drug Controller General of India",
+        },
+        role: { hindi: "अध्यक्ष", english: "Chairperson" },
+      },
+      {
+        srNo: 2,
+        name: {
+          hindi: "प्रो. सुशांत कुमार श्रीवास्तव",
+          english: "Prof. Sushant Kumar Srivastava",
+        },
+        designation: {
+          hindi:
+            "प्रोफेसर, फार्मास्युटिकल इंजीनियरिंग व प्रौद्योगिकी विभाग, आईआईटी बीएचयू, वाराणसी",
+          english:
+            "Professor, Dept. of Pharmaceutical Engineering & Technology, IIT-BHU, Varanasi",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 3,
+        name: {
+          hindi: "डॉ. राहुल कुमार मिश्रा",
+          english: "Dr. Rahul Kumar Mishra",
+        },
+        designation: {
+          hindi: "प्राचार्य, ताहिरा इंस्टीट्यूट ऑफ मेडिकल साइंसेज, गोरखपुर",
+          english: "Principal, Tahira Institute of Medical Sciences, Gorakhpur",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 4,
+        name: {
+          hindi: "डॉ. उमेश कुमार सिंह",
+          english: "Dr. Umesh Kumar Singh",
+        },
+        designation: {
+          hindi: "निदेशक, फार्मेसी संस्थान, एचआरआईटी, गाजियाबाद",
+          english: "Director, Institute of Pharmacy, HRIT, Ghaziabad",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 5,
+        name: {
+          hindi: "डॉ. पवन कुमार गौतम",
+          english: "Dr. Pawan Kumar Gautam",
+        },
+        designation: {
+          hindi:
+            "प्राचार्य, राजकीय फार्मेसी कॉलेज, बीआरडी मेडिकल कॉलेज, गोरखपुर",
+          english:
+            "Principal, Govt. Pharmacy College, BRD Medical College, Gorakhpur",
+        },
+        role: { hindi: "सदस्य", english: "Member" },
+      },
+      {
+        srNo: 6,
+        name: { hindi: "डॉ. शशिकांत सिंह", english: "Dr. Shashikant Singh" },
+        designation: {
+          hindi: "प्राचार्य, फार्मास्युटिकल साइंसेज संकाय, गोरखपुर",
+          english: "Principal, Faculty of Pharmaceutical Sciences, Gorakhpur",
+        },
+        role: { hindi: "समन्वयक", english: "Coordinator" },
+      },
+    ],
   },
 };
