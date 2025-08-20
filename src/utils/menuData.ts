@@ -440,6 +440,38 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
+            hindi: "आंतरिक शिकायत समिति",
+            english: "Internal Complaint Comittee",
+          },
+          href: "/Committees/icc",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "अनुसंधान समिति",
+            english: "Research Committee",
+          },
+          href: "/Committees/research-committee",
+        },
+
+        {
+          type: "link",
+          label: {
+            hindi: "समान अवसर प्रकोष्ठ",
+            english: "Equal Opportunity Cell",
+          },
+          href: "/Committees/eoc",
+        },
+        // const InternalComplaintsCommittee = lazy(
+        //   () => import("@/pages/Administration/Committees/internalComplaintComittee")
+        // );
+
+        // const EqualOpportunityCell = lazy(
+        //   () => import("@/pages/Administration/Committees/equalOpportunityCell")
+        // );
+        {
+          type: "link",
+          label: {
             hindi: "आईटी टीम",
             english: "IT Team",
           },
@@ -570,196 +602,6 @@ export const megaMenus: MegaMenus = {
             english: "Mahant Avaidhyanath Paramedical College",
           },
           href: "https://paramedical.mgug.ac.in/",
-        },
-      ],
-    },
-  ],
-  Students: [
-    {
-      type: "header",
-      label: {
-        hindi: "शैक्षणिक संसाधन",
-        english: "Academic Resources",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "पाठ्यक्रम और समय सारणी",
-            english: "Syllabus and Timetable",
-          },
-          href: "https://mgug.ac.in/#",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "शैक्षणिक कैलेंडर",
-            english: "Academic Calendar",
-          },
-          href: "/academic-calendar",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "ई-लर्निंग",
-            english: "E-Learning",
-          },
-          href: "https://mgug.ac.in/#",
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
-        hindi: "परीक्षा",
-        english: "Examinations",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "परीक्षा मैनुअल",
-            english: "Examination Manual",
-          },
-          href: "/examination-manual",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "परिणाम",
-            english: "Result",
-          },
-          href: "/result",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "अनुसूचियां",
-            english: "Schedules",
-          },
-          href: "/schedule",
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
-        hindi: "परिसर जीवन",
-        english: "Campus Life",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "पुस्तकालय",
-            english: "Library",
-          },
-          href: "/library",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "छात्रावास",
-            english: "Hostel",
-          },
-          href: "/hostel",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "खेल",
-            english: "Sports",
-          },
-          href: "/sports",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "आयोजन",
-            english: "Events",
-          },
-          href: "/events",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रवेश सूचना",
-            english: "Admission notice",
-          },
-          href: "/admission-notice",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "रैगिंग विरोधी",
-            english: "Anti Ragging",
-          },
-          href: "/Committee/Anti-Ragging",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "राष्ट्रीय सेवा योजना",
-            english: "NSS",
-          },
-          href: "https://mgug.ac.in/nss/index.php",
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
-        hindi: "अन्य सुविधाएं",
-        english: "Other facilities",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "एम्बुलेंस",
-            english: "Ambulance",
-          },
-          href: "/ambulance",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "कैंटीन",
-            english: "Canteen",
-          },
-          href: "/canteen",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: " अन्यथा सक्षम ",
-            english: "Differently Abled",
-          },
-          href: "/differently-abled",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "अतिथि गृह",
-            english: "Guest House",
-          },
-          href: "/guest-house",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "अस्पताल",
-            english: "Hospital",
-          },
-          href: "/hospital",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रयोगशालाओं",
-            english: "Laboratories",
-          },
-          href: "/laboratories",
         },
       ],
     },
