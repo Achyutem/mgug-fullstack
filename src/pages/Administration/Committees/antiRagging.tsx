@@ -61,31 +61,43 @@ const AntiRagging = () => {
 
         {/* National Helpline */}
         <div className="bg-sky-800/40 p-4 rounded-lg border border-sky-600 mb-6">
-          <h2 className="text-lg font-semibold mb-2 text-sky-500">
+          <h2 className="text-lg font-semibold mb-2 text-sky-600">
             {t.helpline.title}
           </h2>
+          <a
+            href={`tel:${t.helpline.tollFree
+              .slice(t.helpline.tollFree.indexOf(":") + 1)
+              .trim()}`}
+            className="flex items-center"
+          >
+            <FiPhone className="inline w-4 h-4 mr-2 text-sky-600" />
+            <span className="text-black">
+              {t.helpline.tollFree.split(":")[0]}:
+            </span>
+            <span className="ml-1 text-sky-600">
+              {t.helpline.tollFree
+                .slice(t.helpline.tollFree.indexOf(":") + 1)
+                .trim()}
+            </span>
+          </a>
           <p>
-            <FiPhone className="inline w-4 h-4 mr-2 text-sky-500" />{" "}
-            {t.helpline.tollFree}
-          </p>
-          <p>
-            <IoMailOpenOutline className="inline w-4 h-4 mr-2 text-sky-500" />{" "}
+            <IoMailOpenOutline className="inline w-4 h-4 mr-2 text-sky-600" />{" "}
             Email:{" "}
             <a
               href="mailto:helpline@antiragging.in"
-              className="underline text-sky-500"
+              className="underline text-sky-600"
             >
               {t.helpline.email}
             </a>
           </p>
           <p>
-            <IoGlobeOutline className="inline w-4 h-4 mr-2 text-sky-500" />
+            <IoGlobeOutline className="inline w-4 h-4 mr-2 text-sky-600" />
             Website:{" "}
             <a
               href="https://www.antiragging.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-sky-500"
+              className="underline text-sky-600"
             >
               {t.helpline.website}
             </a>
@@ -154,7 +166,7 @@ const TableList = ({
               <td className="p-4">{name[language]}</td>
               <td className="p-4">{designation[language]}</td>
               <td className="p-4 flex items-center gap-2">
-                <FiPhone className="w-4 h-4 text-sky-500" />
+                <FiPhone className="w-4 h-4 text-sky-600" />
                 <span>{phone}</span>
               </td>
             </tr>
