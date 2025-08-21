@@ -193,10 +193,10 @@ export const InfoPopup: FC = () => {
         </div> */}
         <div className="mt-4 pt-4 gap-2 flex justify-end">
           <a
-            href="/student-help"
+            href="/student-zone"
             className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
           >
-            Student Corner
+            Student Zone
           </a>
           <a
             href="/register"
@@ -260,10 +260,10 @@ export const InfoPopup: FC = () => {
         </div>
         <div className="mt-auto pt-6 gap-2 flex justify-end">
           <a
-            href="/student-help"
+            href="/student-zone"
             className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
           >
-            Student Corner
+            Student Zone
           </a>
           <a
             href="/list-of-program"
