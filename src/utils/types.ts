@@ -713,22 +713,10 @@ export interface InspirationAbodeContent {
   paragraphs: Title[];
 }
 
-export interface SevaPathMagazineItem {
+export interface BaseMagazineItem {
+  pdf_url: string;
   notification_name: string;
   notification_datetime_formatted: string;
-  pdf_url: string;
-}
-
-export interface ArogyaPrabhaItem {
-  notification_name: string;
-  notification_datetime_formatted: string;
-  pdf_url: string;
-}
-
-export interface ArogyaPathItem {
-  notification_name: string;
-  notification_datetime_formatted: string;
-  pdf_url: string;
 }
 
 export interface ProspectusItem {
@@ -1031,4 +1019,63 @@ export interface ResearchCommitteeSection {
     role: Title;
   };
   members: ResearchCommitteeMember[];
+}
+
+export type NewCardProps = {
+  icon: React.ReactNode;
+  title: string;
+  href: string;
+};
+
+export interface NccPoint {
+  heading: Title;
+  description: Title;
+}
+
+export interface NccContent {
+  pageTitle: Title;
+  mainHeading: Title;
+  introduction: {
+    heading: Title;
+    paragraphs: Title[];
+  };
+  nccAtMgug: {
+    heading: Title;
+    intro: Title;
+    details: NccPoint[];
+    trainingTypes: {
+      heading: Title;
+      list: Title[];
+    };
+    leadership: {
+      heading: Title;
+      ano: NccPoint;
+    };
+  };
+  achievements: {
+    heading: Title;
+    camp2023: NccPoint;
+    rdcSelections: {
+      heading: Title;
+      list: Title[];
+    };
+    allIndiaCamps: NccPoint;
+    specialHonors: NccPoint;
+  };
+  vision: {
+    heading: Title;
+    paragraphs: Title[];
+  };
+}
+
+export interface BaseMagazineItem {
+  pdf_url: string;
+  notification_name: string;
+  notification_datetime_formatted: string;
+}
+
+export interface MagazineTableProps {
+  items: BaseMagazineItem[];
+  titles: MagazineTitles["headers"];
+  language: "hindi" | "english";
 }
