@@ -10,6 +10,7 @@ import type {
   LaboratoryContent,
   LibraryContent,
   MagazineTitles,
+  NccContent,
   SportsContent,
 } from "./types";
 
@@ -564,6 +565,186 @@ export const libraryData: LibraryContent = {
       },
     },
   ],
+};
+
+export const nccData: NccContent = {
+  pageTitle: {
+    hindi: "राष्ट्रीय कैडेट कोर (NCC)",
+    english: "National Cadet Corps (NCC)",
+  },
+  mainHeading: {
+    hindi: "महायोगी गोरखनाथ विश्वविद्यालय में एनसीसी",
+    english: "NCC at Mahayogi Gorakhnath University (MGUG)",
+  },
+  introduction: {
+    heading: {
+      hindi: "एनसीसी का परिचय",
+      english: "Introduction to NCC",
+    },
+    paragraphs: [
+      {
+        hindi:
+          "राष्ट्रीय कैडेट कोर (एनसीसी) भारत का प्रमुख युवा विकास आंदोलन है, जिसे 1948 के राष्ट्रीय कैडेट कोर अधिनियम के तहत स्थापित किया गया था। इसकी जड़ें 1917 में भारतीय रक्षा अधिनियम के तहत 'यूनिवर्सिटी कोर' के गठन से जुड़ी हैं, जिसे जरूरत के समय देश की रक्षा प्रणाली को मजबूत करने के लिए बनाया गया था।",
+        english:
+          "The National Cadet Corps (NCC) is India's premier youth development movement, established under the National Cadet Corps Act of 1948. Its roots trace back to the formation of the “University Corps” in 1917 under the Indian Defence Act, created to strengthen the nation’s defense system during times of need.",
+      },
+      {
+        hindi:
+          "आज, एनसीसी देश का सबसे बड़ा वर्दीधारी युवा संगठन है, जो तीनों सेनाओं: थल सेना, नौसेना और वायु सेना के तहत काम करता है, जिसका मुख्यालय नई दिल्ली में है। यह एक स्वैच्छिक संगठन है, जो स्कूल, कॉलेज और विश्वविद्यालय के छात्रों के लिए खुला है, जिसका उद्देश्य देशभक्ति, अनुशासन, एकता और निस्वार्थ सेवा की भावना को बढ़ावा देना है।",
+        english:
+          "Today, the NCC stands as the largest uniformed youth organization in the country, operating under the Tri-Services: Army, Navy, and Air Force, with its headquarters in New Delhi. It is a voluntary organization, open to school, college, and university students, with the aim of fostering a spirit of patriotism, discipline, unity, and selfless service.",
+      },
+    ],
+  },
+  nccAtMgug: {
+    heading: {
+      hindi: "महायोगी गोरखनाथ विश्वविद्यालय (एमजीयूजी) में एनसीसी",
+      english: "NCC at Mahayogi Gorakhnath University (MGUG)",
+    },
+    intro: {
+      hindi:
+        "जुलाई 2023 में 102 यूपी बटालियन एनसीसी, गोरखपुर के तहत स्थापित, महायोगी गोरखनाथ विश्वविद्यालय (एमजीयूजी) की एनसीसी इकाई संरचित सैन्य और नेतृत्व प्रशिक्षण के माध्यम से छात्रों को जिम्मेदार, सेवा-उन्मुख नागरिक बनाने के लिए प्रतिबद्ध है।",
+      english:
+        "Established in July 2023 under the 102 UP Battalion NCC, Gorakhpur, the NCC Unit at Mahayogi Gorakhnath University (MGUG) is committed to molding students into responsible, service-oriented citizens through structured military and leadership training.",
+    },
+    details: [
+      {
+        heading: { hindi: "संबद्ध बटालियन:", english: "Affiliated Battalion:" },
+        description: {
+          hindi: "102 यूपी बटालियन एनसीसी, गोरखपुर",
+          english: "102 UP Battalion NCC, Gorakhpur",
+        },
+      },
+      {
+        heading: {
+          hindi: "स्वीकृत कैडेट संख्या:",
+          english: "Sanctioned Cadet Strength:",
+        },
+        description: { hindi: "106 कैडेट", english: "106 Cadets" },
+      },
+      {
+        heading: {
+          hindi: "प्रस्तावित प्रमाण पत्र:",
+          english: "Certificates Offered:",
+        },
+        description: {
+          hindi:
+            "सीनियर डिवीजन/सीनियर विंग (एसडी/एसडब्ल्यू) के लिए 'बी' और 'सी' प्रमाण पत्र",
+          english:
+            "‘B’ and ‘C’ Certificates for Senior Division/Senior Wing (SD/SW)",
+        },
+      },
+    ],
+    trainingTypes: {
+      heading: {
+        hindi: "प्रस्तावित प्रशिक्षण के प्रकार",
+        english: "Types of Training Offered",
+      },
+      list: [
+        {
+          hindi: "परेड ड्रिल और शारीरिक फिटनेस",
+          english: "Parade Drills and Physical Fitness",
+        },
+        {
+          hindi: "शूटिंग और मानचित्र पठन",
+          english: "Shooting and Map Reading",
+        },
+        {
+          hindi: "प्राथमिक चिकित्सा और आपदा प्रबंधन",
+          english: "First Aid and Disaster Management",
+        },
+        {
+          hindi: "पर्वतारोहण, ट्रेकिंग, सेलिंग, स्कूबा डाइविंग, और ग्लाइडिंग",
+          english:
+            "Mountaineering, Trekking, Sailing, Scuba Diving, and Gliding",
+        },
+      ],
+    },
+    leadership: {
+      heading: {
+        hindi: "नेतृत्व और प्रशासन",
+        english: "Leadership and Administration",
+      },
+      ano: {
+        heading: {
+          hindi: "एसोसिएट एनसीसी अधिकारी (एएनओ):",
+          english: "Associate NCC Officer (ANO):",
+        },
+        description: {
+          hindi:
+            "डॉ. संदीप कुमार श्रीवास्तव, रक्षा मंत्रालय द्वारा लेफ्टिनेंट के रूप में कमीशन किए गए।",
+          english:
+            "Dr. Sandeep Kumar Srivastava, commissioned as Lieutenant by the Ministry of Defence.",
+        },
+      },
+    },
+  },
+  achievements: {
+    heading: {
+      hindi: "उपलब्धियां और भागीदारी",
+      english: "Achievements and Participation",
+    },
+    camp2023: {
+      heading: {
+        hindi: "वार्षिक प्रशिक्षण शिविर (2023-24):",
+        english: "Annual Training Camp (2023–24):",
+      },
+      description: {
+        hindi: "एमजीयूजी कैडेटों द्वारा 35 स्वर्ण पदक जीते गए।",
+        english: "35 Gold Medals won by MGUG cadets.",
+      },
+    },
+    rdcSelections: {
+      heading: {
+        hindi: "गणतंत्र दिवस शिविर (आरडीसी) चयन:",
+        english: "Republic Day Camp (RDC) Selections:",
+      },
+      list: [
+        {
+          hindi: "सीनियर अंडर ऑफिसर सागर जायसवाल",
+          english: "Senior Under Officer Sagar Jaiswal",
+        },
+        { hindi: "सार्जेंट खुशी गुप्ता", english: "Sergeant Khushi Gupta" },
+        { hindi: "आशुतोष मणि त्रिपाठी", english: "Ashutosh Mani Tripathi" },
+        { hindi: "कृष्णा त्रिपाठी", english: "Krishna Tripathi" },
+      ],
+    },
+    allIndiaCamps: {
+      heading: {
+        hindi: "अखिल भारतीय शिविर और साहसिक कार्यक्रम:",
+        english: "All India Camps and Adventure Events:",
+      },
+      description: {
+        hindi:
+          "सार्जेंट आदित्य विश्वकर्मा, कॉर्पोरल अभिषेक चौरसिया, और कैडेट अनुभव ने अखिल भारतीय ट्रेकिंग शिविर में भाग लिया।",
+        english:
+          "Sergeant Aditya Vishwakarma, Corporal Abhishek Chaurasia, and Cadet Anubhav participated in the All India Trekking Camp.",
+      },
+    },
+    specialHonors: {
+      heading: { hindi: "विशेष सम्मान:", english: "Special Honors:" },
+      description: {
+        hindi:
+          "2025 में, एमजीयूजी एक डेयरडेविल बाइकर्स टीम बनाने वाला पहला विश्वविद्यालय बन गया, जिसे गणतंत्र दिवस परेड के दौरान असाधारण प्रदर्शन के लिए एनसीसी मुख्यालय से मान्यता मिली।",
+        english:
+          "In 2025, MGUG became the first university to form a Daredevil Bikers Team, receiving recognition from NCC Headquarters for exceptional performance during the Republic Day Parade.",
+      },
+    },
+  },
+  vision: {
+    heading: {
+      hindi: "आगे की दृष्टि",
+      english: "Vision Ahead",
+    },
+    paragraphs: [
+      {
+        hindi:
+          "महायोगी गोरखनाथ विश्वविद्यालय अपनी एनसीसी इकाई के दायरे और प्रभाव का विस्तार करने के लिए प्रतिबद्ध है। तीसरे शैक्षणिक सत्र में 106 कैडेटों की पूरी स्वीकृत संख्या तक पहुंचने की उम्मीद के साथ, विश्वविद्यालय का लक्ष्य है:",
+        english:
+          "Mahayogi Gorakhnath University is committed to expanding the scope and impact of its NCC unit. With the full sanctioned strength of 106 cadets expected to be reached in the third academic session, the university aims to:",
+      },
+    ],
+  },
 };
 
 export const cafeteriaData: CafeteriaContent = {
