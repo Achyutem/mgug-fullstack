@@ -1,5 +1,9 @@
 import { lazy } from "react";
 
+const NccPage = lazy(() => import("@/pages/Students/CampusLife/ncc"));
+const Scholarship = lazy(
+  () => import("@/pages/Students/CampusLife/scholarship")
+);
 const UniversityLandingPage = lazy(() => import("@/pages/home"));
 const Contact = lazy(() => import("@/pages/contact"));
 const ResearchPage = lazy(() => import("@/pages/research"));
@@ -178,6 +182,7 @@ const MediaCoveragePage = lazy(
 );
 
 // More > Magazine
+const Magazine = lazy(() => import("@/pages/More/Magazine/magazine"));
 const ArogyaPathPage = lazy(() => import("@/pages/More/Magazine/arogyaPath"));
 const ArogyaPrabhaPage = lazy(
   () => import("@/pages/More/Magazine/arogyaPrabha")
@@ -287,10 +292,17 @@ export const routeMeta = [
     path: "/laboratories",
     element: <LaboratoriesPage />,
   },
+  {
+    title: "Scholarship",
+    path: "/scholarship",
+    element: <Scholarship />,
+  },
   { title: "Library", path: "/library", element: <LibraryPage /> },
   { title: "Sports", path: "/sports", element: <SportsPage /> },
+  { title: "NCC", path: "/ncc", element: <NccPage /> },
 
   // Magazines
+  { title: "Magazine", path: "/magazine", element: <Magazine /> },
   { title: "Arogya Path", path: "/arogya-path", element: <ArogyaPathPage /> },
   {
     title: "Arogya Prabha",
