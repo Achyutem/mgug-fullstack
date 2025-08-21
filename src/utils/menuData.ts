@@ -462,13 +462,6 @@ export const megaMenus: MegaMenus = {
           },
           href: "/Committees/eoc",
         },
-        // const InternalComplaintsCommittee = lazy(
-        //   () => import("@/pages/Administration/Committees/internalComplaintComittee")
-        // );
-
-        // const EqualOpportunityCell = lazy(
-        //   () => import("@/pages/Administration/Committees/equalOpportunityCell")
-        // );
         {
           type: "link",
           label: {
@@ -637,39 +630,6 @@ export const megaMenus: MegaMenus = {
             english: "Child Welfare",
           },
           href: "https://mgug.ac.in/#",
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
-        hindi: "पत्रिका",
-        english: "Magazine",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "आरोग्य पथ मासिक पत्रिका",
-            english: "Arogya Path Monthly Magazine",
-          },
-          href: "/arogya-path",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "आरोग्य प्रभा त्रैमासिक पत्रिका",
-            english: "Arogya Prabha Quartely Magazine",
-          },
-          href: "/arogya-prabha",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "सेवा पथ मासिक ई-पत्रिका",
-            english: "Seva Path Monthly E-Magazine",
-          },
-          href: "/seva-path",
         },
       ],
     },
