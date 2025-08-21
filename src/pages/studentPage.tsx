@@ -1,10 +1,9 @@
-import MainLayout from "@/layouts/homeLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import MainLayout from "@/layouts/homeLayout";
 import { studentLinksData } from "@/utils/studentHelp";
 import type { LinkItem } from "@/utils/studentHelp";
-import React from "react";
-
 import {
   Select,
   SelectContent,
@@ -12,32 +11,48 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-type ModernCardProps = {
-  icon: React.ReactNode;
-  title: string;
-  href: string;
-};
-
-const ModernCard = ({ icon, title, href }: ModernCardProps) => {
-  return (
-    <a
-      href={href}
-      className="group relative bg-orange-500/10 backdrop-blur-lg border border-orange-600 rounded-2xl p-6 text-center shadow-sm transition-all duration-300 ease-in-out hover:shadow-orange-500/20 hover:border-orange-400 hover:-translate-y-2 flex flex-col items-center justify-center"
-    >
-      <div className="text-4xl text-orange-600 transition-colors duration-300 group-hover:text-orange-500">
-        {icon}
-      </div>
-      <h4 className="mt-4 text-base font-semibold leading-tight text-slate-800 transition-colors duration-300 group-hover:text-orange-600">
-        {title}
-      </h4>
-    </a>
-  );
-};
+import NewCard from "@/components/newCard";
 
 export default function StudentHelpPage() {
   const categories = Object.keys(studentLinksData);
   const [activeTab, setActiveTab] = useState(categories[0]);
+
+  // ✨ EFFECT TO SYNC URL HASH WITH COMPONENT STATE
+  useEffect(() => {
+    // This function reads the hash and updates the state
+    const syncTabWithHash = () => {
+      // Decode URI component to handle spaces (e.g., #Campus%20Life -> "Campus Life")
+      const hash = decodeURIComponent(window.location.hash.substring(1));
+      if (hash && categories.includes(hash)) {
+        setActiveTab(hash);
+      } else {
+        setActiveTab(categories[0]);
+        window.history.replaceState(
+          null,
+          "",
+          `#${encodeURIComponent(categories[0])}`
+        );
+      }
+    };
+
+    // Run once on initial component load
+    syncTabWithHash();
+
+    // Add event listener for hash changes (e.g., browser back/forward buttons)
+    window.addEventListener("hashchange", syncTabWithHash);
+
+    // Cleanup: remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener("hashchange", syncTabWithHash);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleTabChange = (category: string) => {
+    setActiveTab(category);
+    // Use `encodeURIComponent` to handle spaces and special characters
+    window.location.hash = encodeURIComponent(category);
+  };
 
   // Animation variants for the card grid
   const gridVariants = {
@@ -62,7 +77,7 @@ export default function StudentHelpPage() {
 
   return (
     <MainLayout>
-      <div className="min-h-screen py-16 px-4">
+      <div className="min-h-screen bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
             <span className="bg-orange-500 bg-clip-text text-transparent">
@@ -79,7 +94,8 @@ export default function StudentHelpPage() {
         <div className="max-w-7xl mx-auto mb-10 flex justify-center">
           {/* 📱 Mobile Dropdown Menu (Visible on screens smaller than md) */}
           <div className="md:hidden w-full max-w-xs">
-            <Select onValueChange={setActiveTab} value={activeTab}>
+            {/* ✨ Use the new handler */}
+            <Select onValueChange={handleTabChange} value={activeTab}>
               <SelectTrigger className="w-full bg-orange-500/10 border-orange-600 text-slate-800 focus:ring-orange-500">
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
@@ -98,7 +114,8 @@ export default function StudentHelpPage() {
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setActiveTab(category)}
+                // ✨ Use the new handler
+                onClick={() => handleTabChange(category)}
                 className={`relative py-2 px-5 rounded-lg text-sm font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 ${
                   activeTab === category
                     ? "text-white"
@@ -130,15 +147,17 @@ export default function StudentHelpPage() {
               exit="hidden"
               className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"
             >
-              {studentLinksData[activeTab].map((link: LinkItem) => (
-                <motion.div key={link.title} variants={cardVariants}>
-                  <ModernCard
-                    href={link.href}
-                    title={link.title}
-                    icon={link.icon}
-                  />
-                </motion.div>
-              ))}
+              {studentLinksData[activeTab as keyof typeof studentLinksData].map(
+                (link: LinkItem) => (
+                  <motion.div key={link.title} variants={cardVariants}>
+                    <NewCard
+                      href={link.href}
+                      title={link.title}
+                      icon={link.icon}
+                    />
+                  </motion.div>
+                )
+              )}
             </motion.div>
           </AnimatePresence>
         </div>

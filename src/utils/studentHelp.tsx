@@ -1,3 +1,4 @@
+import { BookOpenCheck, CalendarDays, FileText } from "lucide-react";
 import type { ReactElement } from "react";
 import {
   FaBookOpen,
@@ -22,7 +23,7 @@ import {
   FaDatabase,
   FaDownload,
   FaQuestionCircle,
-  FaPhone,
+  FaPhoneAlt,
   FaSitemap,
   FaHandsHelping,
   FaRegBuilding,
@@ -36,6 +37,7 @@ import {
   FaBookOpenReader,
   FaGoogleScholar,
   FaBuildingColumns,
+  FaPersonCircleCheck,
 } from "react-icons/fa6";
 import { IoLibrary } from "react-icons/io5";
 import { MdPermMedia } from "react-icons/md";
@@ -47,7 +49,6 @@ export type LinkItem = {
   href: string;
 };
 
-// Define the main data structure type
 export type StudentLinksData = {
   [key: string]: LinkItem[];
 };
@@ -83,7 +84,11 @@ export const studentLinksData: StudentLinksData = {
     },
   ],
   "Student Support": [
-    { title: "Scholarships", icon: <FaIndianRupeeSign />, href: "#" },
+    {
+      title: "Scholarships",
+      icon: <FaIndianRupeeSign />,
+      href: "/scholarship",
+    },
     { title: "Student Council", icon: <FaUsers />, href: "#" },
     { title: "Placement Cell", icon: <FaBriefcase />, href: "#" },
     {
@@ -92,6 +97,11 @@ export const studentLinksData: StudentLinksData = {
       href: "/Committee/srgc",
     },
     { title: "Internal Complaints", icon: <FaGavel />, href: "#" },
+    {
+      title: "Equal Opportunity Cell",
+      icon: <FaPersonCircleCheck />,
+      href: "/Committee/eoc",
+    },
     {
       title: "Anti-Ragging",
       icon: <FaUserShield />,
@@ -123,7 +133,7 @@ export const studentLinksData: StudentLinksData = {
     {
       title: "University Magazine",
       icon: <FaBookOpenReader />,
-      href: "/arogya-path",
+      href: "/magazine",
     },
     { title: "Alumni", icon: <FaUserGraduate />, href: "#" },
     {
@@ -131,7 +141,12 @@ export const studentLinksData: StudentLinksData = {
       icon: <FaHandsHelping />,
       href: "https://mgug.ac.in/nss/index.php",
     },
-    { title: "Opportunity", icon: <FaGlobe />, href: "#" },
+    {
+      title: "NCC",
+      icon: <FaHandsHelping />,
+      href: "/ncc",
+    },
+    { title: "Opportunities", icon: <FaGlobe />, href: "#" },
   ],
   Compliance: [
     { title: "Mandatory Disclosures", icon: <FaClipboardList />, href: "#" },
@@ -151,27 +166,22 @@ export const studentLinksData: StudentLinksData = {
   "Quick Links": [
     { title: "Downloads", icon: <FaDownload />, href: "/downloads" },
     { title: "FAQs", icon: <FaQuestionCircle />, href: "#" },
-    { title: "Contact Us", icon: <FaPhone />, href: "/contact" },
+    { title: "Contact Us", icon: <FaPhoneAlt />, href: "/contact" },
     { title: "ERP", icon: <FaSitemap />, href: "erp.mgug.ac.in" },
     {
-      title: "E-Samadhan",
+      title: "E-Samadhaan",
       icon: <FaHandsHelping />,
       href: "https://samadhaan.ugc.ac.in/",
     },
     {
-      title: "VidyaLakshmi Scheme",
-      icon: <FaGoogleScholar />,
-      href: "https://pmvidyalaxmi.co.in/StudentLogin.aspx",
+      title: "National Anti-Ragging Helpline",
+      icon: <FaPhoneAlt />,
+      href: "tel:1800-180-5522",
     },
     {
-      title: "UP Scholarship",
-      icon: <FaGoogleScholar />,
-      href: "https://scholarship.up.gov.in/",
-    },
-    {
-      title: "Digi Shakti",
-      icon: <FaGoogleScholar />,
-      href: "https://digishakti.up.gov.in/index.html",
+      title: "National Toll-Free drug de-addiction",
+      icon: <FaPhoneAlt />,
+      href: "tel:1800-110-031",
     },
     {
       title: "UGC Moocs",
@@ -179,9 +189,50 @@ export const studentLinksData: StudentLinksData = {
       href: "https://ugcmoocs.inflibnet.ac.in/",
     },
     {
-      title: "Apaar",
+      title: "APAAR",
       icon: <FaGoogleScholar />,
       href: "https://apaar.education.gov.in/",
     },
   ],
 };
+
+export const MagazineLinksData = [
+  {
+    title: "Arogya Path",
+    href: "/arogya-path",
+    icon: <CalendarDays size={40} />,
+  },
+  {
+    title: "Seva Path",
+    href: "/seva-path",
+    icon: <FileText size={40} />,
+  },
+  {
+    title: "Arogya Prabha",
+    href: "/arogya-prabha",
+    icon: <BookOpenCheck size={40} />,
+  },
+  {
+    title: "Vijñānadīpaḥ",
+    href: "/magazine",
+    icon: <BookOpenCheck size={40} />,
+  },
+];
+
+export const ScholarshipLinksData = [
+  {
+    title: "VidyaLakshmi Scheme",
+    icon: <FaGoogleScholar />,
+    href: "https://pmvidyalaxmi.co.in/StudentLogin.aspx",
+  },
+  {
+    title: "UP Scholarship",
+    icon: <FaGoogleScholar />,
+    href: "https://scholarship.up.gov.in/",
+  },
+  {
+    title: "Digi Shakti",
+    icon: <FaGoogleScholar />,
+    href: "https://digishakti.up.gov.in/index.html",
+  },
+];
