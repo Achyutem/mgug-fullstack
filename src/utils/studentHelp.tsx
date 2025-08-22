@@ -117,7 +117,11 @@ export const studentLinksData: StudentLinksData = {
       icon: <FaUserShield />,
       href: "/Committee/Anti-Ragging",
     },
-    { title: "Counselling and Wellness", icon: <FaBrain />, href: "#" },
+    {
+      title: "Counselling and Wellness",
+      icon: <FaBrain />,
+      href: "/wellness-and-counselling",
+    },
   ],
   "Campus Life": [
     { title: "Hostel", icon: <FaRegBuilding />, href: "/hostel" },
