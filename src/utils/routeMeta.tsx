@@ -1,5 +1,16 @@
 import { lazy } from "react";
 
+// university
+const SponsoringBodyPage = lazy(
+  () => import("@/pages/University/sponsoringBody")
+);
+const Recognition = lazy(() => import("@/pages/University/recognition"));
+const AnnualReportsPage = lazy(() => import("@/pages/University/annualReport"));
+const FinanceReportsPage = lazy(
+  () => import("@/pages/University/financeReport")
+);
+const Accreditation = lazy(() => import("@/pages/University/accreditation"));
+const Wellness = lazy(() => import("@/pages/Students/CampusLife/wellness"));
 const NccPage = lazy(() => import("@/pages/Students/CampusLife/ncc"));
 const Scholarship = lazy(
   () => import("@/pages/Students/CampusLife/scholarship")
@@ -95,7 +106,9 @@ const FinanceCommittee = lazy(
 const ResearchCommittee = lazy(
   () => import("@/pages/Administration/Committees/researchCommitte")
 );
-// ResearchCommittee
+const IQACPage = lazy(
+  () => import("@/pages/Administration/Committees/iqacCell")
+);
 const InternalComplaintsCommittee = lazy(
   () => import("@/pages/Administration/Committees/internalComplaintComittee")
 );
@@ -134,6 +147,12 @@ const AcademicCalendar = lazy(
 );
 const ExaminationManual = lazy(
   () => import("@/pages/Students/Academics/examinationManual")
+);
+const AdmissionGuidelinesPage = lazy(
+  () => import("@/pages/Students/Academics/admissionGuideline")
+);
+const FeeRefundPolicy = lazy(
+  () => import("@/pages/Students/Academics/feeRefundPolicy")
 );
 
 // Students > Examination
@@ -210,6 +229,12 @@ export const routeMeta = [
     title: "Academic Calendar",
     path: "/academic-calendar",
     element: <AcademicCalendar />,
+  },
+
+  {
+    title: "Fee Refund Policy",
+    path: "/academic/fee-refund-policy",
+    element: <FeeRefundPolicy />,
   },
   { title: "Result", path: "/result", element: <ResultsPage /> },
   { title: "Schedule", path: "/schedule", element: <SchedulePage /> },
@@ -300,7 +325,11 @@ export const routeMeta = [
   { title: "Library", path: "/library", element: <LibraryPage /> },
   { title: "Sports", path: "/sports", element: <SportsPage /> },
   { title: "NCC", path: "/ncc", element: <NccPage /> },
-
+  {
+    title: "Wellness and Counselliing",
+    path: "/wellness-and-counselling",
+    element: <Wellness />,
+  },
   // Magazines
   { title: "Magazine", path: "/magazine", element: <Magazine /> },
   { title: "Arogya Path", path: "/arogya-path", element: <ArogyaPathPage /> },
@@ -430,13 +459,18 @@ export const routeMeta = [
     element: <InternalComplaintsCommittee />,
   },
   {
+    title: "IQAC Cell",
+    path: "/committee/iqac",
+    element: <IQACPage />,
+  },
+  {
     title: "Equal Opportunity Cell",
     path: "/committee/eoc",
     element: <EqualOpportunityCell />,
   },
   {
     title: "Research Committee",
-    path: "/committees/research-committee",
+    path: "/committee/research-committee",
     element: <ResearchCommittee />,
   },
   {
@@ -473,6 +507,12 @@ export const routeMeta = [
     element: <UnderGraduate />,
   },
   {
+    title: "Admission Guideline",
+    path: "/admission/admission-guideline",
+    element: <AdmissionGuidelinesPage />,
+  },
+
+  {
     title: "List of Programs",
     path: "/admission/list-of-program",
     element: <ListOfPrograms />,
@@ -495,4 +535,31 @@ export const routeMeta = [
 
   // Research
   { title: "Research", path: "/research", element: <ResearchPage /> },
+
+  // University
+  {
+    title: "Accreditation",
+    path: "/university/accreditation",
+    element: <Accreditation />,
+  },
+  {
+    title: "Recognition",
+    path: "/university/recognition",
+    element: <Recognition />,
+  },
+  {
+    title: "Annual Reports",
+    path: "/university/annual-reports",
+    element: <AnnualReportsPage />,
+  },
+  {
+    title: "Finance Report",
+    path: "/university/finance-report",
+    element: <FinanceReportsPage />,
+  },
+  {
+    title: "Sponsoring Body",
+    path: "/university/sponsoring-body",
+    element: <SponsoringBodyPage />,
+  },
 ];

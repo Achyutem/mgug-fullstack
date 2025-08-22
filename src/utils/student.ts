@@ -4,6 +4,7 @@ import type {
   CafeteriaContent,
   DifferentlyAbledContent,
   ExaminationManualContent,
+  FeePolicyContent,
   GuestHouseContent,
   HospitalContent,
   HostelContent,
@@ -12,6 +13,8 @@ import type {
   MagazineTitles,
   NccContent,
   SportsContent,
+  StudentZone,
+  WellnessPageContent,
 } from "./types";
 
 export const admissionNoticeTitles: MagazineTitles = {
@@ -1053,4 +1056,337 @@ export const sportsData: SportsContent = {
         "In addition to the upcoming stadium, the university is equipped with well-maintained sports facilities for indoor games such as volleyball, kabaddi, athletics, badminton, table tennis, carrom, and chess. MGUG also houses a well-equipped fitness centre and gymnasium, promoting strength training, cardiovascular health, and overall wellness among students and staff. MGUG encourages students to engage in regular practice, intercollegiate competitions, and university-level championships as part of its commitment to nurturing well-rounded individuals.",
     },
   ],
+};
+
+export const wellnessData: WellnessPageContent = {
+  pageTitle: {
+    hindi: "परामर्श और शिकायत सहायता",
+    english: "Counselling & Grievance Support",
+  },
+  pageSubtitle: {
+    hindi: "मानसिक कल्याण के लिए सहायक संसाधन और प्रचार सामग्री तक पहुँचें।",
+    english:
+      "Access helpful resources and promotional materials for mental well-being.",
+  },
+  flyers: [
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/G20_flyer1.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/G20_flyer2.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/G20_flyer3.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/G20_flyer4.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/G20_flyer5.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/G20_flyer6.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/Banner1.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/Banner2.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+    {
+      title: {
+        hindi:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+        english:
+          "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      },
+      link: "https://telemanas.mohfw.gov.in/promotional_material/english/who_can_call.png",
+      description: {
+        hindi:
+          "G20 पहल के हिस्से के रूप में मानसिक स्वास्थ्य जागरूकता के संबंध में आधिकारिक प्रचार सामग्री।",
+        english:
+          "Official promotional material regarding mental health awareness, part of the G20 initiative.",
+      },
+    },
+  ],
+};
+
+export const feePolicyData: FeePolicyContent = {
+  pageTitle: {
+    hindi: "शुल्क भुगतान और वापसी नीति",
+    english: "Fee Payment and Refund Policy",
+  },
+  sections: [
+    {
+      title: {
+        hindi: "1. प्रवेश शुल्क भुगतान",
+        english: "1. Admission Fee Payment",
+      },
+      mainParagraph: {
+        hindi:
+          "छात्रों को प्रवेश शुल्क सेमेस्टर या वार्षिक आधार पर देना अनिवार्य है।",
+        english:
+          "Students must pay the admission fee semester-wise or annually, as applicable.",
+      },
+      subsections: [
+        {
+          title: { hindi: "सेमेस्टर प्रणाली:", english: "Semester System:" },
+          points: [
+            {
+              hindi: "✅ प्रवेश के समय सेमेस्टर शुल्क जमा करना अनिवार्य है।",
+              english: "✅ Semester fee must be paid at admission time.",
+            },
+            {
+              hindi:
+                "✅ आगामी सेमेस्टर का शुल्क विश्वविद्यालय की समय-सीमा अनुसार देना होगा।",
+              english:
+                "✅ Next semester’s fee must be paid as per notified timeline.",
+            },
+            {
+              hindi:
+                "✅ परीक्षा शुल्क ऑनलाइन परीक्षा फॉर्म भरते समय देना होगा।",
+              english: "✅ Exam fee due at exam form submission.",
+            },
+          ],
+        },
+        {
+          title: { hindi: "वार्षिक प्रणाली:", english: "Annual System:" },
+          points: [
+            {
+              hindi: "✅ प्रथम वर्ष का शुल्क प्रवेश के समय देना होगा।",
+              english: "✅ First year fee at admission.",
+            },
+            {
+              hindi:
+                "✅ आगामी वर्षों का शुल्क विश्वविद्यालय की अधिसूचना अनुसार देना होगा।",
+              english: "✅ Future years’ fee as per university timeline.",
+            },
+            {
+              hindi: "✅ परीक्षा शुल्क परीक्षा फॉर्म भरते समय देना होगा।",
+              english: "✅ Exam fee due at exam form submission.",
+            },
+          ],
+        },
+      ],
+      note: {
+        hindi: "🔸 नोट: किस्तों में भुगतान की सुविधा नहीं है।",
+        english: "🔸 Note: No installment facility.",
+      },
+    },
+    {
+      title: {
+        hindi: "2. प्रवेश रद्दीकरण और शुल्क वापसी",
+        english: "2. Admission Cancellation & Fee Refund",
+      },
+      mainParagraph: {
+        hindi:
+          "सामान्यतः प्रवेश रद्द नहीं किया जाता, परंतु विशेष मामलों में कुलपति द्वारा अनुमति दी जा सकती है।",
+        english:
+          "Generally not allowed. Vice-Chancellor may permit in exceptional cases.",
+      },
+      points: [
+        {
+          hindi: "- 7 दिनों के भीतर: ₹5,000/- कटौती के बाद वापसी।",
+          english: "- Within 7 days: ₹5,000/- deduction.",
+        },
+        {
+          hindi: "- 7 दिन के बाद: कोई वापसी नहीं।",
+          english: "- After 7 days: No refund.",
+        },
+        {
+          hindi:
+            "- प्रवेश अंतिम तिथि से 7 दिन पूर्व की गई प्रविष्टियों पर: वापसी लागू नहीं।",
+          english: "- Within 7 days of deadline: No refund.",
+        },
+      ],
+    },
+    {
+      title: {
+        hindi: "3. छात्रावास आवंटन और शुल्क भुगतान",
+        english: "3. Hostel Allotment & Fee Payment",
+      },
+      mainParagraph: {
+        hindi:
+          "छात्रावास का आवंटन प्रवेश/काउंसलिंग के दौरान ऑफलाइन किया जाता है। नवप्रवेशित छात्रों को आवंटन के समय एकमुश्त शुल्क देना होगा।",
+        english:
+          "Offline allotment during admission/counseling. One-time hostel fee at allotment for freshers.",
+      },
+      subsections: [
+        {
+          title: {
+            hindi: "🛏️ छात्रावास शुल्क संरचना:",
+            english: "🛏️ Hostel Fee Structure:",
+          },
+          points: [
+            {
+              hindi: "- छात्राओं के लिए: ₹65,000/- प्रति वर्ष (भोजन सहित)",
+              english: "- Girls’ Hostel: ₹65,000/year (includes food)",
+            },
+            {
+              hindi: "- छात्रों के लिए: ₹75,000/- प्रति वर्ष (भोजन सहित)",
+              english: "- Boys’ Hostel: ₹75,000/year (includes food)",
+            },
+          ],
+        },
+        {
+          title: {
+            hindi: "🏠 अतिरिक्त दिशा-निर्देश:",
+            english: "🏠 Additional Guidelines:",
+          },
+          points: [
+            {
+              hindi:
+                "- पूर्ववत रह रहे छात्रों को हर वर्ष जुलाई में शुल्क देना होगा।",
+              english: "- Existing students must pay hostel fee each July.",
+            },
+            {
+              hindi: "- छात्रावास आवंटन हर वर्ष नवीनीकरण होगा।",
+              english: "- Hostel renewed annually.",
+            },
+            {
+              hindi: "- 10% कक्ष अंतरराष्ट्रीय छात्रों के लिए आरक्षित।",
+              english: "- 10% reserved for international students.",
+            },
+            {
+              hindi: "- मूलभूत सुविधाएं उपलब्ध कराई जाती हैं।",
+              english: "- Basic amenities provided.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: {
+        hindi: "4. छात्रावास रद्दीकरण और शुल्क वापसी",
+        english: "4. Hostel Cancellation & Refund",
+      },
+      mainParagraph: {
+        hindi: "शैक्षणिक वर्ष में रद्दीकरण की अनुमति नहीं है।",
+        english: "Cancellation not allowed during academic year.",
+      },
+      points: [
+        {
+          hindi: "- 7 दिनों के भीतर: ₹5,000/- कटौती के बाद वापसी।",
+          english: "- Within 7 days: Refund after ₹5,000/- deduction.",
+        },
+        {
+          hindi: "- 7 दिन के बाद: कोई वापसी नहीं।",
+          english: "- After 7 days: No refund.",
+        },
+      ],
+      note: {
+        hindi: "📌 नोट: छात्रावास अधिकार नहीं, बल्कि एक विशेष सुविधा है।",
+        english: "📌 Note: Hostel is a privilege, not a right.",
+      },
+    },
+  ],
+};
+
+export const studentZone: StudentZone = {
+  title: {
+    english: "Student Zone",
+    hindi: "छात्र क्षेत्र",
+  },
+  heading: {
+    english:
+      "Your one-stop destination for all academic resources, support services, and campus information.",
+    hindi:
+      "सभी शैक्षणिक संसाधनों, सहायता सेवाओं और परिसर की जानकारी के लिए आपका वन-स्टॉप गंतव्य।",
+  },
 };
