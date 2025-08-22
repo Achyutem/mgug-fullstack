@@ -69,7 +69,7 @@ export default function StudentHelpPage() {
 
   return (
     <MainLayout>
-      <div className="min-h-screen bg-gray-50 py-16 px-4">
+      <div className="min-h-screen bg-transparent py-16 px-4">
         {/* ✨ CORRECTED HEADER SECTION ✨ */}
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
