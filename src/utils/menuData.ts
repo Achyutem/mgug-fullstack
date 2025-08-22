@@ -424,6 +424,14 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
+            hindi: "आईक्यूएसी सेल",
+            english: "IQAC Cell",
+          },
+          href: "/Committee/iqac",
+        },
+        {
+          type: "link",
+          label: {
             hindi: "छात्र शिकायत निवारण समिति",
             english: "Students Grievance Redressal Committee",
           },
@@ -443,7 +451,7 @@ export const megaMenus: MegaMenus = {
             hindi: "आंतरिक शिकायत समिति",
             english: "Internal Complaint Comittee",
           },
-          href: "/Committees/icc",
+          href: "/Committee/icc",
         },
         {
           type: "link",
@@ -451,7 +459,7 @@ export const megaMenus: MegaMenus = {
             hindi: "अनुसंधान समिति",
             english: "Research Committee",
           },
-          href: "/Committees/research-committee",
+          href: "/Committee/research-committee",
         },
 
         {
@@ -460,7 +468,7 @@ export const megaMenus: MegaMenus = {
             hindi: "समान अवसर प्रकोष्ठ",
             english: "Equal Opportunity Cell",
           },
-          href: "/Committees/eoc",
+          href: "/Committee/eoc",
         },
         {
           type: "link",
@@ -504,6 +512,22 @@ export const megaMenus: MegaMenus = {
             english: "Fee Structure",
           },
           href: "/admission/fee-structure",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्रवेश दिशानिर्देश",
+            english: "Admission Guideline",
+          },
+          href: "/admission/admission-guideline",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "शुल्क वापसी नीति",
+            english: "Fee refund Policy",
+          },
+          href: "/academic/fee-refund-policy",
         },
       ],
     },
@@ -751,14 +775,14 @@ export const impLinks = [
       hindi: "रैगिंग शिकायत फॉर्म",
       english: "Ragging Complaint Form",
     },
-    href: "https://mgug.ac.in/academics/anti_rag.php",
+    href: "/Committee/Anti-Ragging",
   },
   {
     label: {
       hindi: "शिकायत निवारण",
       english: "Grievance Redressal",
     },
-    href: "https://erp.mgug.ac.in/committees/",
+    href: "/srgc",
   },
 ];
 
@@ -768,7 +792,7 @@ export const privacy = [
       hindi: "वार्षिक रिपोर्ट",
       english: "Annual Report",
     },
-    href: "https://mgug.ac.in/index.php#",
+    href: "/",
   },
   {
     label: {
