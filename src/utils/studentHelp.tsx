@@ -29,6 +29,7 @@ import {
   FaRegBuilding,
   FaGlobe,
   FaAmbulance,
+  FaRupeeSign,
 } from "react-icons/fa";
 import {
   FaFileLines,
@@ -40,7 +41,7 @@ import {
   FaPersonCircleCheck,
 } from "react-icons/fa6";
 import { IoLibrary } from "react-icons/io5";
-import { MdPermMedia } from "react-icons/md";
+import { MdOutlineSportsBasketball, MdPermMedia } from "react-icons/md";
 
 // Define a type for a single link item
 export type LinkItem = {
@@ -82,6 +83,11 @@ export const studentLinksData: StudentLinksData = {
       icon: <FaPenToSquare />,
       href: "/examination",
     },
+    {
+      title: "Fee Refund Policy",
+      icon: <FaRupeeSign />,
+      href: "/academic/fee-refund-policy",
+    },
   ],
   "Student Support": [
     {
@@ -96,7 +102,11 @@ export const studentLinksData: StudentLinksData = {
       icon: <FaHeadset />,
       href: "/Committee/srgc",
     },
-    { title: "Internal Complaints", icon: <FaGavel />, href: "#" },
+    {
+      title: "Internal Complaints",
+      icon: <FaGavel />,
+      href: "/Committee/icc",
+    },
     {
       title: "Equal Opportunity Cell",
       icon: <FaPersonCircleCheck />,
@@ -116,6 +126,11 @@ export const studentLinksData: StudentLinksData = {
     { title: "Canteen", icon: <FaUtensils />, href: "/canteen" },
     { title: "Library", icon: <IoLibrary />, href: "/library" },
     { title: "Auditorium", icon: <FaBuildingColumns />, href: "#" },
+    {
+      title: "Sports",
+      icon: <MdOutlineSportsBasketball />,
+      href: "/sports",
+    },
     {
       title: "Differently Abled",
       icon: <FaHandsHelping />,
