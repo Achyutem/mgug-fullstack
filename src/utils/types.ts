@@ -99,6 +99,22 @@ export interface InternalCommitteeTitles {
   };
 }
 
+export interface IQACMember {
+  srNo: number;
+  name: Title;
+  designation: Title;
+  role: Title;
+}
+
+export interface IQACTitles {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    nameDesignation: Title;
+    role: Title;
+  };
+}
+
 export interface CommitteeMember {
   srNo: number;
   name: {
@@ -507,6 +523,39 @@ export interface FeeStructureMember {
     hindi: string;
     english: string;
   };
+}
+
+export interface ContentBlock {
+  type: "heading" | "paragraph" | "list" | "note" | "important";
+  content: Title | Title[];
+}
+
+export interface GuidelineSection {
+  title: Title;
+  blocks: ContentBlock[];
+}
+
+export interface AdmissionGuidelinesContent {
+  pageTitle: Title;
+  sections: GuidelineSection[];
+}
+
+export interface PolicySubsection {
+  title: Title;
+  points: Title[];
+}
+
+export interface PolicySection {
+  title: Title;
+  mainParagraph?: Title;
+  subsections?: PolicySubsection[];
+  points?: Title[];
+  note?: Title;
+}
+
+export interface FeePolicyContent {
+  pageTitle: Title;
+  sections: PolicySection[];
 }
 
 export interface Program {
@@ -1078,4 +1127,74 @@ export interface MagazineTableProps {
   items: BaseMagazineItem[];
   titles: MagazineTitles["headers"];
   language: "hindi" | "english";
+}
+
+export interface FlyerContent {
+  title: Title;
+  link: string;
+  description: Title;
+}
+
+export interface WellnessPageContent {
+  pageTitle: Title;
+  pageSubtitle: Title;
+  flyers: FlyerContent[];
+}
+
+// University
+
+export interface AccreditationContent {
+  pageTitle: Title;
+  statusHeading: Title;
+  mainParagraph: Title;
+}
+
+export interface RecognitionLink {
+  url: string;
+  text: Title;
+}
+
+export interface RecognitionItem {
+  name: Title;
+  links: RecognitionLink[];
+}
+
+export interface RecognitionContent {
+  pageTitle: Title;
+  tableHeadings: {
+    body: Title;
+    link: Title;
+  };
+  recognitions: RecognitionItem[];
+}
+
+export interface Report {
+  title: string;
+  url: string;
+}
+
+export interface AnnualReportsContent {
+  pageTitle: Title;
+  linkText: Title;
+  reports: Report[];
+}
+
+export interface AuditReport {
+  financialYear: string;
+  url: string;
+}
+
+export interface AuditReportsContent {
+  pageTitle: Title;
+  sectionHeading: Title;
+  tableHeadings: {
+    year: Title;
+    link: Title;
+  };
+  reports: AuditReport[];
+}
+
+export interface StudentZone {
+  title: Title;
+  heading: Title;
 }
