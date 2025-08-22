@@ -5,6 +5,9 @@ import type {
   UnderGraduateContent,
   ProgramsContent,
   ListProgramsStaticText,
+  AdmissionGuidelinesContent,
+  IQACTitles,
+  IQACMember,
 } from "./types";
 
 export const feeStructureTitles: FeeStructureTitles = {
@@ -2348,3 +2351,440 @@ export const postgraduateProgramsContent: ProgramsContent = {
     },
   ],
 };
+
+export const admissionGuidelinesData: AdmissionGuidelinesContent = {
+  pageTitle: {
+    hindi: "प्रवेश दिशानिर्देश",
+    english: "Admission Guidelines",
+  },
+  sections: [
+    {
+      title: {
+        hindi:
+          "ऑनलाइन आवेदन पत्र भरने के लिए निर्देश/दिशानिर्देश (सीईटी 2025-26)",
+        english:
+          "Instructions/Guidelines for Filling out the Online Application Form (CET 2025–26)",
+      },
+      blocks: [
+        {
+          type: "important",
+          content: {
+            hindi:
+              "महत्वपूर्ण: प्रवेश फॉर्म भरने से पहले विश्वविद्यालय की वेबसाइट से प्रॉस्पेक्टस 2025-26 डाउनलोड करें और सभी निर्देशों को ध्यान से पढ़ें।\nदेखें: http://www.mgug.ac.in > Admissions > Prospectus",
+            english:
+              "Important: Download the Prospectus 2025–26 from the university website and read all instructions carefully before filling out the admission form.\nVisit: http://www.mgug.ac.in > Admissions > Prospectus",
+          },
+        },
+        {
+          type: "heading",
+          content: {
+            hindi: "ऑनलाइन आवेदन पत्र भरने के लिए पूर्वापेक्षाएँ:",
+            english: "Pre-requisites for Filling the Online Application Form:",
+          },
+        },
+        {
+          type: "list",
+          content: [
+            {
+              hindi:
+                "आधार कार्ड: पहचान सत्यापन के लिए एक वैध आधार कार्ड अनिवार्य है।",
+              english:
+                "Aadhaar Card: A valid Aadhaar card is mandatory for identity verification.",
+            },
+            {
+              hindi:
+                "अभ्यर्थी की ईमेल आईडी: एक सक्रिय ईमेल पता (उदा., abcde@gmail.com)।",
+              english:
+                "Email ID of the Candidate: An active email address (e.g., abcde@gmail.com).",
+            },
+            {
+              hindi:
+                "अभ्यर्थी का मोबाइल नंबर: ओटीपी और अपडेट प्राप्त करने के लिए।",
+              english:
+                "Mobile Number of the Candidate: To receive OTPs and updates.",
+            },
+            {
+              hindi:
+                "फोटोग्राफ और हस्ताक्षर की स्कैन की हुई प्रति:\n- प्रारूप: JPEG या PDF\n- फोटोग्राफ का आकार: 50 KB से कम\n- हस्ताक्षर का आकार: 30 KB से कम",
+              english:
+                "Scanned Copy of Photograph and Signature:\n- Format: JPEG or PDF\n- Photograph size: less than 50 KB\n- Signature size: less than 30 KB",
+            },
+            {
+              hindi: "पते का विवरण: पिन कोड सहित स्थायी और पत्राचार का पता।",
+              english:
+                "Address Details: Permanent and Correspondence address including the PIN Code.",
+            },
+          ],
+        },
+        {
+          type: "note",
+          content: {
+            hindi:
+              "नोट: आवेदन पत्र के भुगतान की पुष्टि हो जाने के बाद, निम्नलिखित विवरणों में कोई और परिवर्तन की अनुमति नहीं दी जाएगी: कार्यक्रम, आवेदक का नाम, पिता का नाम, जन्म तिथि, ई-मेल आईडी, मोबाइल नंबर, श्रेणी, फोटो और हस्ताक्षर।",
+            english:
+              "Note: Once the payment of application form is confirmed, no further changes will be permitted in the following details: Programme, Applicant Name, Father’s Name, Date of Birth, E-mail ID, Mobile Number, Category, Photo, and Signature.",
+          },
+        },
+        {
+          type: "paragraph",
+          content: {
+            hindi:
+              "प्रवेश पत्र/काउंसलिंग स्लिप: अभ्यर्थी विश्वविद्यालय की वेबसाइट (https://www.mgug.ac.in) से प्रवेश पत्र डाउनलोड कर सकेंगे।",
+            english:
+              "Admit Card/Counselling Slip: The Admit Card shall be downloaded by the candidate(s) from the university website (https://www.mgug.ac.in).",
+          },
+        },
+      ],
+    },
+    {
+      title: {
+        hindi: "प्रवेश के लिए सामान्य दिशा-निर्देश एवं जानकारी (2025–26)",
+        english: "General Guidelines and Information for Admission (2025–26)",
+      },
+      blocks: [
+        {
+          type: "list",
+          content: [
+            {
+              hindi:
+                "1. पात्रता एवं सीटों की संख्या की जानकारी प्रॉस्पेक्टस 2025–26 के अनुसार होगी। कृपया अधिक जानकारी हेतु विश्वविद्यालय की वेबसाइट देखें।",
+              english:
+                "1. Eligibility and seat details will be as per Prospectus 2025–26. Please visit university website for updates.",
+            },
+            {
+              hindi:
+                "2. ऑनलाइन आवेदन पत्र भरने से पहले प्रॉस्पेक्टस को ध्यानपूर्वक पढ़ें। भरे गए फॉर्म व शुल्क रसीद को सुरक्षित रखें।",
+              english:
+                "2. Read the prospectus carefully before filling the online application form. Save the submitted form and fee receipt.",
+            },
+            {
+              hindi:
+                "3. किसी भी प्रकार की विसंगति मिलने पर फॉर्म निरस्त किया जा सकता है या ईमेल के माध्यम से पुनः प्रस्तुत करने हेतु कहा जा सकता है।",
+              english:
+                "3. Any discrepancy may lead to rejection or request for resubmission via email within a given time.",
+            },
+            {
+              hindi:
+                "4. मेरिट लिस्ट विश्वविद्यालय की वेबसाइट पर उपलब्ध कराई जाएगी।",
+              english:
+                "4. Merit lists will be available on the university website.",
+            },
+            {
+              hindi:
+                "5. मेरिट सूची प्रवेश परीक्षा में प्रदर्शन के आधार पर बनेगी। अभ्यर्थी स्वयं पात्रता सुनिश्चित करें।",
+              english:
+                "5. Merit will be based on entrance test performance. Candidates must ensure eligibility.",
+            },
+            {
+              hindi:
+                "6. चयनित अभ्यर्थियों को काउंसलिंग में आवश्यक दस्तावेजों के साथ उपस्थित होना होगा और उसी समय ऑनलाइन शुल्क जमा करना होगा, अन्यथा प्रवेश रद्द कर दिया जाएगा।",
+              english:
+                "6. Shortlisted candidates must appear for counselling with required documents and deposit the fee online during counselling, else admission will be cancelled.",
+            },
+            {
+              hindi:
+                "7. प्रवेश प्रकोष्ठ अभ्यर्थी की योग्यता/चरित्र संतोषजनक न होने पर प्रवेश अस्वीकार कर सकता है।",
+              english:
+                "7. The admission cell may deny admission if credentials or character are not satisfactory.",
+            },
+            {
+              hindi:
+                "8. अगर कोई जानकारी फर्जी पाई गई तो प्रवेश रद्द कर दिया जाएगा और कोई शुल्क वापस नहीं किया जाएगा।",
+              english:
+                "8. If any information is found forged, admission will be cancelled without refund.",
+            },
+            {
+              hindi:
+                "9. सभी प्रवेश अस्थायी हैं और सक्षम प्राधिकारी द्वारा दस्तावेज़ सत्यापन पर निर्भर हैं।",
+              english:
+                "9. All admissions are provisional and subject to document verification by competent authority.",
+            },
+            {
+              hindi:
+                "10. नियमों की अज्ञानता किसी भी स्थिति में स्वीकार्य नहीं होगी।",
+              english:
+                "10. Ignorance of rules will not be accepted as an excuse.",
+            },
+            {
+              hindi:
+                "11. विश्वविद्यालय द्वारा निर्धारित एंटी-रैगिंग एवं अनुशासन नियम सभी छात्रों पर उनके पाठ्यक्रम की अवधि तक लागू होंगे।",
+              english:
+                "11. University rules on anti-ragging and conduct are binding on all students till completion of the programme.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: {
+        hindi: "संयुक्त प्रवेश परीक्षा (एमजीयूजी 2025-26)",
+        english: "Combined Entrance Test (MGUG 2025–26)",
+      },
+      blocks: [
+        {
+          type: "paragraph",
+          content: {
+            hindi:
+              "प्रवेश परीक्षा में 2 घंटे की अवधि के 100 प्रश्न (प्रत्येक 01 अंक) शामिल होंगे, जब तक कि अन्यथा उल्लेख न किया गया हो, और इसमें बहुविकल्पीय प्रश्न (एक सही उत्तर वाले प्रश्न) होंगे। कोई नकारात्मक अंकन नहीं होगा। प्रश्न पत्र को हल करने के लिए विवरण/निर्देश प्रवेश परीक्षा के समय पुस्तिका/प्रश्न पत्र में दिए जाएंगे।",
+            english:
+              "Entrance Test will comprise of 100 questions (01 mark each) of 2 hours duration, unless otherwise mentioned and will consist of multiple-choice questions (questions with one correct answer). There will be no negative marking. The details/instructions for attempting the question paper will be given in the booklet/question paper at the time of Entrance Test.",
+          },
+        },
+        {
+          type: "paragraph",
+          content: {
+            hindi:
+              "संयुक्त प्रवेश परीक्षा के लिए परीक्षा पैटर्न सभी कार्यक्रमों में सुसंगत होगा:",
+            english:
+              "The entrance examination pattern for the Combined Entrance Test will be consistent across all programmes:",
+          },
+        },
+        {
+          type: "list",
+          content: [
+            {
+              hindi:
+                "60% प्रश्न चुने गए पहले वरीयता वाले कार्यक्रम के पाठ्यक्रम पर आधारित होंगे।",
+              english:
+                "60% of the questions will be based on the syllabus of the first preference opted programme.",
+            },
+            {
+              hindi:
+                "20% प्रश्न सामान्य अध्ययन, करंट अफेयर्स, एप्टीट्यूड और रीजनिंग से कवर किए जाएंगे।",
+              english:
+                "20% of the questions will be covered from General studies, Current Affairs, Aptitude and Reasoning.",
+            },
+            {
+              hindi:
+                "20% प्रश्न भारतीय ज्ञान प्रणाली पर आधारित होंगे, विशेष रूप से रामायण और महाभारत के महाकाव्यों पर ध्यान केंद्रित करते हुए।",
+              english:
+                "20% of the questions will be based on the Indian Knowledge System, especially focusing on the epics of Ramayan and Mahabharat.",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: {
+            hindi:
+              "अभ्यर्थी को संबंधित परीक्षा केंद्र पर संयुक्त प्रवेश परीक्षा शुरू होने से कम से कम आधा घंटा पहले रिपोर्ट करना होगा। प्रवेश परीक्षाएं प्रॉस्पेक्टस/विश्वविद्यालय की वेबसाइट पर उपलब्ध अधिसूचना में दिए गए कार्यक्रम के अनुसार आयोजित की जाएंगी। हालांकि, विश्वविद्यालय को प्रवेश परीक्षा के कार्यक्रम, परिणाम की घोषणा की तारीख बदलने का अधिकार है, ऐसे अपडेट के लिए, उम्मीदवारों से अनुरोध है कि वे अक्सर विश्वविद्यालय की वेबसाइट (https://www.mgug.ac.in) पर जाएं।",
+            english:
+              "The candidate will have to report at the concerned examination centre at least half an hour before the commencement of the Combined Entrance Test. The entrance tests will be held as per schedule given in the prospectus/notification available on the university website. However, the university have right to change the schedule of entrance test, date of declaration of the result, for such updates, candidates are requested to visit university website (https://www.mgug.ac.in) frequently.",
+          },
+        },
+      ],
+    },
+    {
+      title: {
+        hindi: "📢 अनंतिम रूप से प्रवेशित अभ्यर्थियों की रिपोर्टिंग",
+        english: "📢 Reporting of Provisionally Admitted Candidates",
+      },
+      blocks: [
+        {
+          type: "paragraph",
+          content: {
+            hindi:
+              "जिन अभ्यर्थियों का अनंतिम रूप से प्रवेश हुआ है, उन्हें आवश्यक निर्देशों एवं जानकारी हेतु संबंधित संकाय/विभाग में रिपोर्ट करना अनिवार्य है।",
+            english:
+              "Candidates who have been provisionally admitted are required to report to their respective Faculty/Department for further instructions and information.",
+          },
+        },
+      ],
+    },
+    {
+      title: {
+        hindi: "रिक्त सीट पर आंतरिक स्थानांतरण/प्रवेश के लिए नीति",
+        english: "Policy for Internal Transfer/Admission to Vacant Seat",
+      },
+      blocks: [
+        {
+          type: "paragraph",
+          content: {
+            hindi:
+              "यदि प्रवेश की अंतिम तिथि के बाद कोई सीट खाली रहती है, तो उस स्थिति में निम्नलिखित मानदंड/नियम लागू होंगे:",
+            english:
+              "If there is any seat vacant after the last date of admission, in that case the following criteria/rule will be applied:",
+          },
+        },
+        {
+          type: "list",
+          content: [
+            {
+              hindi:
+                "रिक्त सीटों के लिए अधिसूचना विश्वविद्यालय की वेबसाइट पर प्रकाशित की जाएगी।",
+              english:
+                "Notification for the vacant seats will be made and published on the university website.",
+            },
+            {
+              hindi:
+                "एमजीयूजी-संयुक्त प्रवेश परीक्षा में प्राप्त अंकों के आधार पर रिक्त सीटों के लिए एक मेरिट सूची तैयार की जाएगी।",
+              english:
+                "A merit list against vacant seats will be prepared on the basis of marks obtained in MGUG-combined entrance test.",
+            },
+            {
+              hindi:
+                "आंतरिक स्थानांतरण के लिए अधिसूचना जारी की जाएगी और यह अन्य कार्यक्रमों में प्रवेश के लिए आवश्यक पात्रता मानदंडों के अनुसार होगी।",
+              english:
+                "For internal transfer notification will be made and this will be accord with eligibility criteria required for taking admission in other programs.",
+            },
+          ],
+        },
+        {
+          type: "important",
+          content: {
+            hindi:
+              "यदि कोई उम्मीदवार संयुक्त प्रवेश परीक्षा के दौरान किसी भी अनुचित साधन का उपयोग करते हुए पाया जाता है, तो उसकी उम्मीदवारी तत्काल रद्द कर दी जाएगी। संयुक्त प्रवेश परीक्षा 2025-26 की उत्तर पुस्तिका के पुनर्मूल्यांकन/पुनः जांच का कोई प्रावधान नहीं होगा।",
+            english:
+              "If a candidate found involved in using any unfair means during the Combined Entrance Test, his/her candidature shall be cancelled immediately. There shall be no provision for re-evaluation/rechecking of the answer sheet of the Combined Entrance Test 2025–26.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
+export const iqacTitles: IQACTitles = {
+  heading: {
+    hindi: "आंतरिक गुणवत्ता निर्धारण प्रकोष्ठ",
+    english: "Internal Quality Assurance Cell (IQAC)",
+  },
+  headers: {
+    srNo: {
+      hindi: "क्रमांक",
+      english: "Sl. No",
+    },
+    nameDesignation: {
+      hindi: "नाम, पदनाम एवं संस्था",
+      english: "Name, Designation & Institution",
+    },
+    role: {
+      hindi: "दायित्व",
+      english: "Role",
+    },
+  },
+};
+
+export const iqacData: IQACMember[] = [
+  {
+    srNo: 1,
+    name: { hindi: "डॉ. सुरिन्दर सिंह", english: "Dr. Surinder Singh" },
+    designation: { hindi: "कुलपति", english: "Hon’ble Vice Chancellor" },
+    role: { hindi: "अध्यक्ष", english: "Chairperson" },
+  },
+  {
+    srNo: 2,
+    name: { hindi: "डॉ. डी.एस. अजीथा", english: "Dr. D.S Ajeetha" },
+    designation: {
+      hindi: "अधिष्ठाता, नर्सिंग एवं पैरामेडिकल संकाय",
+      english: "Dean, Nursing & Paramedical Faculty",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 3,
+    name: { hindi: "डॉ. अनुराग श्रीवास्तव", english: "Dr. Anurag Srivastava" },
+    designation: {
+      hindi: "प्रधानाचार्य, श्री गोरक्षनाथ मेडिकल कॉलेज",
+      english: "Principal, Shri Gorakhnath Medical College",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 4,
+    name: { hindi: "डॉ. गिरिधर वेदान्तम", english: "Dr. Giridhar Vedantam" },
+    designation: {
+      hindi: "प्रधानाचार्य, जी.जी.आई.एम.एस.",
+      english: "Principal, GGIMS",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 5,
+    name: { hindi: "डॉ. सुमित कुमार", english: "Dr. Sumit Kumar" },
+    designation: {
+      hindi: "सह आचार्य, जी.जी.आई.एम.एस.",
+      english: "Associate Professor, GGIMS",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 6,
+    name: { hindi: "डॉ. विमल कुमार दूबे", english: "Dr. Vimal Kumar Dubey" },
+    designation: {
+      hindi: "विभागाध्यक्ष, कृषि विज्ञान विभाग",
+      english: "Head, Department of Agricultural Science",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 7,
+    name: { hindi: "डॉ. अमित कुमार दूबे", english: "Dr. Amit Kumar Dubey" },
+    designation: {
+      hindi: "सहायक आचार्य, स्वास्थ्य विज्ञान संकाय",
+      english: "Assistant Professor, Allied Health Sciences",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 8,
+    name: { hindi: "श्री प्रमथनाथ मिश्र", english: "Shri Pramathanath Mishra" },
+    designation: {
+      hindi: "सदस्य, महाराणा प्रताप शिक्षा परिषद",
+      english: "Member, Maharana Pratap Education Council",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 9,
+    name: { hindi: "डॉ. प्रदीप कुमार राव", english: "Dr. Pradeep Kumar Rao" },
+    designation: {
+      hindi: "कुलसचिव एवं वित्त अधिकारी",
+      english: "Registrar & Finance Officer",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 10,
+    name: { hindi: "श्री अमित कुमार सिंह", english: "Shri Amit Kumar Singh" },
+    designation: {
+      hindi: "परीक्षा नियंत्रक",
+      english: "Controller of Examinations",
+    },
+    role: { hindi: "सदस्य", english: "Member" },
+  },
+  {
+    srNo: 11,
+    name: { hindi: "डॉ. राज किशोर सिंह", english: "Dr. Raj Kishore Singh" },
+    designation: {
+      hindi: "प्रोफेसर, बी.आर.डी. मेडिकल कॉलेज",
+      english: "Professor, BRD Medical College",
+    },
+    role: { hindi: "बाह्य सदस्य", english: "External Member" },
+  },
+  {
+    srNo: 12,
+    name: { hindi: "ई. जे. पी. मसकरा", english: "J.P. Maskara" },
+    designation: {
+      hindi: "कैम्पस अपोलो हॉस्पिटल",
+      english: "Campus Apollo Hospital",
+    },
+    role: { hindi: "बाह्य सदस्य", english: "External Member" },
+  },
+  {
+    srNo: 13,
+    name: { hindi: "श्री शिवम पाण्डेय", english: "Shri Shivam Pandey" },
+    designation: {
+      hindi: "छात्र प्रतिनिधि",
+      english: "Student Representative",
+    },
+    role: { hindi: "छात्र प्रतिनिधि", english: "Student Representative" },
+  },
+  {
+    srNo: 14,
+    name: { hindi: "डॉ. रघुराम आचार", english: "Dr. Raghu Ram Achar" },
+    designation: {
+      hindi: "अधिष्ठाता, आईक्यूएसी, रैंकिंग एवं एक्रीडिटेशन",
+      english: "Dean, IQAC, Ranking and Accreditation",
+    },
+    role: { hindi: "सचिव", english: "Secretary" },
+  },
+];
