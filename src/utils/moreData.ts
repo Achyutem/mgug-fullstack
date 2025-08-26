@@ -1,5 +1,7 @@
+import type { JSX } from "react";
 import type {
   GalleryContent,
+  MagazinePage,
   MagazineTitles,
   MediaCoverageContent,
   VideoGalleryContent,
@@ -120,3 +122,25 @@ export const mediaCoverageContent: MediaCoverageContent = {
     hindi: "कोई मीडिया कवरेज नहीं मिला।",
   },
 };
+
+export const magazinePage: MagazinePage = {
+  title: {
+    hindi: "विश्वविद्यालय पत्रिका",
+    english: "Magazine for University",
+  },
+  desc: {
+    hindi:
+      "विश्वविद्यालय की पत्रिका देखें, जिसमें नवीनतम लेख, छात्र कथाएँ,रचनात्मक कार्य और परिसर की मुख्य झलकियाँ शामिल हैं।",
+    english:
+      "Explore the university magazine here, featuring the latest articles, student stories, creative works, and campus highlights.",
+  },
+};
+
+export interface MagazineLink {
+  title: {
+    english: string;
+    hindi: string;
+  };
+  href: string;
+  icon: JSX.Element;
+}
