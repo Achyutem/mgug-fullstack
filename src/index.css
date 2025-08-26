@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+body {
+  font-weight: 600;
+}
+
 :root {
   --border: #b4b5b6;
   --ring: #f97316;
