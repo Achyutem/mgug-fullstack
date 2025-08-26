@@ -21,8 +21,8 @@ const UniversityLandingPage: React.FC = () => {
         <WhyMGUG />
         <Academic />
         <Admission />
-        <ImageSpotlight />
         <Notifications />
+        <ImageSpotlight />
         <Contact />
       </MainLayout>
     </div>
