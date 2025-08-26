@@ -115,7 +115,7 @@ export const HomePage: HomeDataType = {
     english: {
       badge: "Excellence in Education Since 2021",
       universityName1: "Mahayogi",
-      universityName2: "Goraknath",
+      universityName2: "Gorakhnath",
       universityName3: "University",
       universityName4: "Gorakhpur",
       animatedText1: "REDEFINING",
