@@ -184,18 +184,18 @@ export default function Navbar() {
                   <PopoverContent
                     align="center"
                     sideOffset={16}
-                    className="w-auto p-0 border border-gray-200/80 bg-white/80 backdrop-blur-xl shadow-2xl shadow-black/10 z-50"
+                    className="w-auto ml-4 border border-orange-500 bg-orange-100 backdrop-blur-xl shadow-2xl shadow-black/10 z-50"
                     onMouseLeave={closeMegaMenu}
                   >
-                    <div className="px-4 sm:px-6 lg:px-8 py-8 max-h-[80vh] overflow-y-auto scrollbar-none">
-                      <div className="flex flex-nowrap gap-6">
+                    <div className="px-4 flex justify-center py-8 max-h-[80vh] overflow-y-auto scrollbar-none">
+                      <div className="flex flex-nowrap gap-4">
                         {megaMenus[item.english as keyof MegaMenus]?.map(
                           (section, index) => (
                             <div
                               key={index}
                               className="w-64 space-y-4 flex-shrink-0"
                             >
-                              <h3 className="text-orange-500 font-semibold text-lg border-b border-orange-400/50 pb-2">
+                              <h3 className="text-orange-500 font-semibold text-lg border-b border-orange-500 pb-2">
                                 {section.label[language]}
                               </h3>
                               {section.subSections && (
