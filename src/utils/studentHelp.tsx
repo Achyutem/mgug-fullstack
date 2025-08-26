@@ -42,6 +42,7 @@ import {
 } from "react-icons/fa6";
 import { IoLibrary } from "react-icons/io5";
 import { MdOutlineSportsBasketball, MdPermMedia } from "react-icons/md";
+import type { MagazineLink } from "./moreData";
 
 // Define a type for a single link item
 export type LinkItem = {
@@ -215,24 +216,36 @@ export const studentLinksData: StudentLinksData = {
   ],
 };
 
-export const MagazineLinksData = [
+export const MagazineLinksData: MagazineLink[] = [
   {
-    title: "Arogya Path",
+    title: {
+      english: "Arogya Path (Monthly)",
+      hindi: "आरोग्य पथ (मासिक)",
+    },
     href: "/arogya-path",
     icon: <CalendarDays size={40} />,
   },
   {
-    title: "Seva Path",
+    title: {
+      english: "Seva Path (Monthly)",
+      hindi: "सेवा पथ (मासिक)",
+    },
     href: "/seva-path",
     icon: <FileText size={40} />,
   },
   {
-    title: "Arogya Prabha",
+    title: {
+      english: "Arogya Prabha (Quarterly)",
+      hindi: "आरोग्य प्रभा (त्रैमासिक)",
+    },
     href: "/arogya-prabha",
     icon: <BookOpenCheck size={40} />,
   },
   {
-    title: "Vijñānadīpaḥ",
+    title: {
+      english: "Vijñānadīpaḥ",
+      hindi: "विज्ञानदीपः",
+    },
     href: "/magazine",
     icon: <BookOpenCheck size={40} />,
   },

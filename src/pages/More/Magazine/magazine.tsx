@@ -1,8 +1,11 @@
 import NewCard from "@/components/newCard";
 import MainLayout from "@/layouts/homeLayout";
 import { MagazineLinksData } from "@/utils/studentHelp";
+import { UseLanguage } from "@/context/languageContext";
+import { magazinePage } from "@/utils/moreData";
 
 export default function Magazine() {
+  const { language } = UseLanguage();
   return (
     <MainLayout>
       <div className="min-h-screen py-16 px-4">
@@ -10,12 +13,11 @@ export default function Magazine() {
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800">
             <span className="bg-orange-500 bg-clip-text text-transparent">
-              Magazine for University
+              {magazinePage.title[language]}
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Explore the university magazine here, featuring the latest articles,
-            student stories, creative works, and campus highlights.
+            {magazinePage.desc[language]}
           </p>
         </div>
 
@@ -24,9 +26,9 @@ export default function Magazine() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {MagazineLinksData.map((link) => (
               <NewCard
-                key={link.title}
+                key={link.title[language]}
                 href={link.href}
-                title={link.title}
+                title={link.title[language]}
                 icon={link.icon}
               />
             ))}

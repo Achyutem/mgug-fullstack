@@ -679,6 +679,7 @@ export interface MagazineTitles {
     link: Title;
   };
 }
+
 export interface EOCPageTitles {
   heading: Title;
   headers: {
@@ -1197,4 +1198,9 @@ export interface AuditReportsContent {
 export interface StudentZone {
   title: Title;
   heading: Title;
+}
+
+export interface MagazinePage {
+  title: Title;
+  desc: Title;
 }
