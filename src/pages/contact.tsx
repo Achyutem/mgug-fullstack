@@ -1,4 +1,9 @@
-import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { FiFacebook, FiTwitter, FiInstagram, FiYoutube } from "react-icons/fi";
 import { IoMailOpenOutline } from "react-icons/io5";
 import AnimatedCard from "@/components/animatedCard";
@@ -57,6 +62,12 @@ const cards = [
     icon: FaWhatsapp,
     title: "WhatsApp",
     description: `+91-9415266014`,
+  },
+  {
+    href: "https://in.linkedin.com/in/mahayogi-gorakhnath-university-gorakhpur-511875358",
+    icon: FaLinkedin,
+    title: "Linkedin",
+    description: "Linkdedin for MGUG",
   },
 ];
 
