@@ -40,9 +40,10 @@ import {
   FaBuildingColumns,
   FaPersonCircleCheck,
 } from "react-icons/fa6";
-import { IoLibrary } from "react-icons/io5";
-import { MdOutlineSportsBasketball, MdPermMedia } from "react-icons/md";
+import { IoLibrary, IoWoman } from "react-icons/io5";
+import { MdEmergency, MdOutlineSportsBasketball, MdPermMedia } from "react-icons/md";
 import type { MagazineLink } from "./moreData";
+import { LuHandHelping } from "react-icons/lu";
 
 // Define a type for a single link item
 export type LinkItem = {
@@ -212,6 +213,21 @@ export const studentLinksData: StudentLinksData = {
       title: "APAAR",
       icon: <FaGoogleScholar />,
       href: "https://apaar.education.gov.in/",
+    },
+    {
+      title: "Women's Helpline Number",
+      icon: <IoWoman />,
+      href: "tel:181",
+    },
+    {
+      title: "Emergency Response",
+      icon: <MdEmergency />,
+      href: "tel:112",
+    },
+    {
+      title: " Prevention of Sexual Harassment",
+      icon: <LuHandHelping />,
+      href: "tel:1800-111-656",
     },
   ],
 };
