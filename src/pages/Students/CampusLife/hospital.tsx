@@ -18,7 +18,7 @@ const HospitalPage = () => {
             {/* Image Section */}
             <div className="w-full h-64 sm:h-80 md:h-96 rounded-xl shadow-lg overflow-hidden mb-10">
               <img
-                src="/hospital.jpg"
+                src="/hospital.webp"
                 alt={content.pageTitle[language]}
                 className="w-full h-full object-cover"
               />

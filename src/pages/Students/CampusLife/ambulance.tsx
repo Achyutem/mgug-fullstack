@@ -18,7 +18,7 @@ const AmbulancePage = () => {
             {/* Image Section */}
             <div className="w-full h-64 sm:h-80 md:h-96 rounded-xl shadow-lg overflow-hidden mb-10">
               <img
-                src="/ambulance.jpg"
+                src="/ambulance.webp"
                 alt="ambulance"
                 className="w-full h-full object-cover"
               />
