@@ -270,6 +270,10 @@ export interface HomeDataType {
       managementCommerceDescription: string;
       alliedHealthTitle: string;
       alliedHealthDescription: string;
+      pharmaScienceTitle: string;
+      pharmaScienceDescription: string;
+      agricultureTitle: string;
+      agricultureDescription: string;
       nursingBiomedicalTitle: string;
       nursingBiomedicalDescription: string;
     };
@@ -282,6 +286,10 @@ export interface HomeDataType {
       managementCommerceDescription: string;
       alliedHealthTitle: string;
       alliedHealthDescription: string;
+      pharmaScienceTitle: string;
+      pharmaScienceDescription: string;
+      agricultureTitle: string;
+      agricultureDescription: string;
       nursingBiomedicalTitle: string;
       nursingBiomedicalDescription: string;
     };

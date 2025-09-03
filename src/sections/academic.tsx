@@ -51,6 +51,18 @@ export default function Academic() {
               icon={<FaAward className="w-6 h-6" />}
               delay={600}
             />
+            <ProgramCard
+              title={t.pharmaScienceTitle}
+              description={t.pharmaScienceDescription}
+              icon={<FaAward className="w-6 h-6" />}
+              delay={600}
+            />
+            <ProgramCard
+              title={t.agricultureTitle}
+              description={t.agricultureDescription}
+              icon={<FaAward className="w-6 h-6" />}
+              delay={600}
+            />
           </div>
         </div>
       </section>
