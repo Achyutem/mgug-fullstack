@@ -28,7 +28,7 @@ const GoverningBody = () => {
             <h1 className="text-4xl font-bold mb-8 text-orange-500 text-center">
               {governingBodyData.title[language]}
             </h1>
-            <div className="p-6 sm:p-8 rounded-xl border border-slate-300">
+            <div className="p-6 sm:p-8 rounded-xl border border-orange-500">
               <ul className="space-y-6 text-lg text-black">
                 <RuleItem label="a">
                   {governingBodyData.composition[language].description}

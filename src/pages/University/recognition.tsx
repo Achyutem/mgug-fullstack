@@ -16,9 +16,9 @@ const RecognitionPage = () => {
           </h1>
 
           {/* Table Section */}
-          <div className="w-full overflow-x-auto bg-white rounded-lg shadow-md">
+          <div className="w-full overflow-x-auto rounded-lg shadow-md border border-orange-500">
             <table className="w-full text-left border-collapse">
-              <thead className="bg-slate-100 border-b-2 border-slate-200">
+              <thead className="bg-orange-500/20 border-b border-orange-500">
                 <tr>
                   <th className="p-4 text-lg font-semibold text-slate-700">
                     {recognitionData.tableHeadings.body[language]}
@@ -32,7 +32,7 @@ const RecognitionPage = () => {
                 {recognitionData.recognitions.map((item, index) => (
                   <tr
                     key={index}
-                    className="border-b border-slate-200 hover:bg-slate-50"
+                    className="border-b border-slate-200 hover:bg-orange-100"
                   >
                     <td className="p-4 align-top">
                       <p className="font-semibold text-slate-800 text-base">
