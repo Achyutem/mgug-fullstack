@@ -304,9 +304,11 @@ export default function Navbar() {
                       if (!hasMegaMenu) {
                         const href =
                           item.english === "Research"
-                            ? "https://mgug.ac.in/research/re_facility.php"
+                            ? "/research"
                             : item.english === "Contact"
                             ? "/contact"
+                            : item.english === "Students"
+                            ? "/student-zone"
                             : `/${item.english.toLowerCase()}`;
 
                         return (
