@@ -22,6 +22,14 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
+            hindi: "मान्यता और अनुमोदन",
+            english: "Recognition & Approval",
+          },
+          href: "/university/recognition",
+        },
+        {
+          type: "link",
+          label: {
             hindi: "हमारे बारे में",
             english: "About Us",
           },
