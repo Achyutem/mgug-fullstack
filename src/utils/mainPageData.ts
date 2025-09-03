@@ -22,41 +22,53 @@ export const HomePage: HomeDataType = {
     },
   },
   academic: {
-    hindi: {
-      heading: "शैक्षिक कार्यक्रम",
-      description:
-        "हमारे व्यापक चिकित्सा, संबद्ध स्वास्थ्य, और प्रबंधन कार्यक्रमों में से चुनें।",
-      medicalSurgeryTitle: "चिकित्सा और शल्य चिकित्सा",
-      medicalSurgeryDescription:
-        "एमबीबीएस और स्नातकोत्तर चिकित्सा डिग्री, नैदानिक उत्कृष्टता और अनुसंधान पर केंद्रित।",
-      managementCommerceTitle: "प्रबंधन और वाणिज्य",
-      managementCommerceDescription:
-        "एमबीए, बीबीए, बी.कॉम, एम.कॉम वित्त, विपणन और उद्यमिता में विशेषज्ञता के साथ।",
-      alliedHealthTitle: "संबद्ध स्वास्थ्य विज्ञान",
-      alliedHealthDescription:
-        "फिजियोथेरेपी, मेडिकल लैब टेक्नोलॉजी, रेडियोलॉजी, और अन्य स्वास्थ्य क्षेत्रों में कार्यक्रम।",
-      nursingBiomedicalTitle: "नर्सिंग और बायोमेडिकल साइंसेज",
-      nursingBiomedicalDescription:
-        "बी.एससी नर्सिंग, एम.एससी नर्सिंग, और अनुसंधान-उन्मुख बायोमेडिकल साइंस कोर्स।",
-    },
-    english: {
-      heading: "Academic Programs",
-      description:
-        "Choose from our comprehensive range of medical, allied health, and management programs.",
-      medicalSurgeryTitle: "Medical & Surgery",
-      medicalSurgeryDescription:
-        "MBBS and postgraduate medical degrees with a focus on clinical excellence and research.",
-      managementCommerceTitle: "Management & Commerce",
-      managementCommerceDescription:
-        "MBA, BBA, B.Com, M.Com with specializations in Finance, Marketing, and Entrepreneurship.",
-      alliedHealthTitle: "Allied Health Sciences",
-      alliedHealthDescription:
-        "Programs in Physiotherapy, Medical Lab Technology, Radiology, and other healthcare fields.",
-      nursingBiomedicalTitle: "Nursing & Biomedical Sciences",
-      nursingBiomedicalDescription:
-        "B.Sc Nursing, M.Sc Nursing, and research-oriented biomedical science courses.",
-    },
+  hindi: {
+    heading: "शैक्षिक कार्यक्रम",
+    description:
+      "हमारे व्यापक चिकित्सा, स्वास्थ्य विज्ञान, प्रबंधन और अन्य पेशेवर कार्यक्रमों में से चुनें।",
+    medicalSurgeryTitle: "चिकित्सा विज्ञान और आयुर्वेद",
+    medicalSurgeryDescription:
+      "एमबीबीएस और बीएएमएस डिग्री, नैदानिक उत्कृष्टता, अनुसंधान और समग्र स्वास्थ्य देखभाल पर केंद्रित।",
+    managementCommerceTitle: "प्रबंधन और वाणिज्य",
+    managementCommerceDescription:
+      "एमबीए, बीबीए, बी.कॉम, एम.कॉम — वित्त, विपणन, मानव संसाधन और उद्यमिता में विशेषज्ञता के साथ।",
+    alliedHealthTitle: "स्वास्थ्य और जीवन विज्ञान",
+    alliedHealthDescription:
+      "फिजियोथेरेपी, मेडिकल लैब टेक्नोलॉजी, रेडियोलॉजी और अन्य स्वास्थ्य सेवा क्षेत्रों में उच्च स्तरीय कार्यक्रम।",
+    pharmaScienceTitle: "फार्मास्युटिकल साइंसेज़",
+    pharmaScienceDescription:
+      "बी.फार्मा और एम.फार्मा पाठ्यक्रम, दवा अनुसंधान, फार्मास्यूटिकल तकनीक और उद्योग कौशल पर जोर।",
+    agricultureTitle: "कृषि विज्ञान",
+    agricultureDescription:
+      "बी.एससी और एम.एससी कृषि कार्यक्रम, आधुनिक खेती, एग्री-बिजनेस और सतत कृषि तकनीकों पर केंद्रित।",
+    nursingBiomedicalTitle: "नर्सिंग और बायोमेडिकल साइंसेज़",
+    nursingBiomedicalDescription:
+      "बी.एससी नर्सिंग, एम.एससी नर्सिंग और अनुसंधान-आधारित बायोमेडिकल विज्ञान पाठ्यक्रम।",
   },
+  english: {
+    heading: "Academic Programs",
+    description:
+      "Explore our diverse range of medical, health sciences, management, and professional programs.",
+    medicalSurgeryTitle: "Medical Science & Ayurveda",
+    medicalSurgeryDescription:
+      "MBBS and BAMS degrees with a strong focus on clinical excellence, research, and holistic healthcare.",
+    managementCommerceTitle: "Management & Commerce",
+    managementCommerceDescription:
+      "MBA, BBA, B.Com, M.Com — with specializations in Finance, Marketing, Human Resources, and Entrepreneurship.",
+    alliedHealthTitle: "Health & Life Sciences",
+    alliedHealthDescription:
+      "Advanced programs in Physiotherapy, Medical Lab Technology, Radiology, and other healthcare domains.",
+    pharmaScienceTitle: "Pharmaceutical Sciences",
+    pharmaScienceDescription:
+      "B.Pharm and M.Pharm programs emphasizing drug research, pharmaceutical technology, and industry readiness.",
+    agricultureTitle: "Agricultural Sciences",
+    agricultureDescription:
+      "B.Sc and M.Sc Agriculture programs focusing on modern farming, agri-business, and sustainable agriculture practices.",
+    nursingBiomedicalTitle: "Nursing & Biomedical Sciences",
+    nursingBiomedicalDescription:
+      "B.Sc Nursing, M.Sc Nursing, and research-driven biomedical science courses.",
+  },
+},
   admission: {
     hindi: {
       heading: "अपनी यात्रा शुरू करने के लिए तैयार हैं?",
