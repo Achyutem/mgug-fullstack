@@ -1212,3 +1212,15 @@ export interface MagazinePage {
   title: Title;
   desc: Title;
 }
+
+export interface Leader {
+  name: Title;
+  title: Title;
+  statement: Title;
+  image: string;
+}
+export interface LeaderPageContent {
+  heading: Title;
+  description: Title;
+  leader: Leader[];
+}

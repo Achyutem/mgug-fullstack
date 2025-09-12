@@ -1,4 +1,4 @@
-import type { HomeDataType } from "./types";
+import type { HomeDataType, LeaderPageContent } from "./types";
 
 export const HomePage: HomeDataType = {
   aboutMain: {
@@ -22,53 +22,53 @@ export const HomePage: HomeDataType = {
     },
   },
   academic: {
-  hindi: {
-    heading: "शैक्षिक कार्यक्रम",
-    description:
-      "हमारे व्यापक चिकित्सा, स्वास्थ्य विज्ञान, प्रबंधन और अन्य पेशेवर कार्यक्रमों में से चुनें।",
-    medicalSurgeryTitle: "चिकित्सा विज्ञान और आयुर्वेद",
-    medicalSurgeryDescription:
-      "एमबीबीएस और बीएएमएस डिग्री, नैदानिक उत्कृष्टता, अनुसंधान और समग्र स्वास्थ्य देखभाल पर केंद्रित।",
-    managementCommerceTitle: "प्रबंधन और वाणिज्य",
-    managementCommerceDescription:
-      "एमबीए, बीबीए, बी.कॉम, एम.कॉम — वित्त, विपणन, मानव संसाधन और उद्यमिता में विशेषज्ञता के साथ।",
-    alliedHealthTitle: "स्वास्थ्य और जीवन विज्ञान",
-    alliedHealthDescription:
-      "फिजियोथेरेपी, मेडिकल लैब टेक्नोलॉजी, रेडियोलॉजी और अन्य स्वास्थ्य सेवा क्षेत्रों में उच्च स्तरीय कार्यक्रम।",
-    pharmaScienceTitle: "फार्मास्युटिकल साइंसेज़",
-    pharmaScienceDescription:
-      "बी.फार्मा और एम.फार्मा पाठ्यक्रम, दवा अनुसंधान, फार्मास्यूटिकल तकनीक और उद्योग कौशल पर जोर।",
-    agricultureTitle: "कृषि विज्ञान",
-    agricultureDescription:
-      "बी.एससी और एम.एससी कृषि कार्यक्रम, आधुनिक खेती, एग्री-बिजनेस और सतत कृषि तकनीकों पर केंद्रित।",
-    nursingBiomedicalTitle: "नर्सिंग और बायोमेडिकल साइंसेज़",
-    nursingBiomedicalDescription:
-      "बी.एससी नर्सिंग, एम.एससी नर्सिंग और अनुसंधान-आधारित बायोमेडिकल विज्ञान पाठ्यक्रम।",
+    hindi: {
+      heading: "शैक्षिक कार्यक्रम",
+      description:
+        "हमारे व्यापक चिकित्सा, स्वास्थ्य विज्ञान, प्रबंधन और अन्य पेशेवर कार्यक्रमों में से चुनें।",
+      medicalSurgeryTitle: "चिकित्सा विज्ञान और आयुर्वेद",
+      medicalSurgeryDescription:
+        "एमबीबीएस और बीएएमएस डिग्री, नैदानिक उत्कृष्टता, अनुसंधान और समग्र स्वास्थ्य देखभाल पर केंद्रित।",
+      managementCommerceTitle: "प्रबंधन और वाणिज्य",
+      managementCommerceDescription:
+        "एमबीए, बीबीए, बी.कॉम, एम.कॉम — वित्त, विपणन, मानव संसाधन और उद्यमिता में विशेषज्ञता के साथ।",
+      alliedHealthTitle: "स्वास्थ्य और जीवन विज्ञान",
+      alliedHealthDescription:
+        "फिजियोथेरेपी, मेडिकल लैब टेक्नोलॉजी, रेडियोलॉजी और अन्य स्वास्थ्य सेवा क्षेत्रों में उच्च स्तरीय कार्यक्रम।",
+      pharmaScienceTitle: "फार्मास्युटिकल साइंसेज़",
+      pharmaScienceDescription:
+        "बी.फार्मा और एम.फार्मा पाठ्यक्रम, दवा अनुसंधान, फार्मास्यूटिकल तकनीक और उद्योग कौशल पर जोर।",
+      agricultureTitle: "कृषि विज्ञान",
+      agricultureDescription:
+        "बी.एससी और एम.एससी कृषि कार्यक्रम, आधुनिक खेती, एग्री-बिजनेस और सतत कृषि तकनीकों पर केंद्रित।",
+      nursingBiomedicalTitle: "नर्सिंग और बायोमेडिकल साइंसेज़",
+      nursingBiomedicalDescription:
+        "बी.एससी नर्सिंग, एम.एससी नर्सिंग और अनुसंधान-आधारित बायोमेडिकल विज्ञान पाठ्यक्रम।",
+    },
+    english: {
+      heading: "Academic Programs",
+      description:
+        "Explore our diverse range of medical, health sciences, management, and professional programs.",
+      medicalSurgeryTitle: "Medical Science & Ayurveda",
+      medicalSurgeryDescription:
+        "MBBS and BAMS degrees with a strong focus on clinical excellence, research, and holistic healthcare.",
+      managementCommerceTitle: "Management & Commerce",
+      managementCommerceDescription:
+        "MBA, BBA, B.Com, M.Com — with specializations in Finance, Marketing, Human Resources, and Entrepreneurship.",
+      alliedHealthTitle: "Health & Life Sciences",
+      alliedHealthDescription:
+        "Advanced programs in Physiotherapy, Medical Lab Technology, Radiology, and other healthcare domains.",
+      pharmaScienceTitle: "Pharmaceutical Sciences",
+      pharmaScienceDescription:
+        "B.Pharm and M.Pharm programs emphasizing drug research, pharmaceutical technology, and industry readiness.",
+      agricultureTitle: "Agricultural Sciences",
+      agricultureDescription:
+        "B.Sc and M.Sc Agriculture programs focusing on modern farming, agri-business, and sustainable agriculture practices.",
+      nursingBiomedicalTitle: "Nursing & Biomedical Sciences",
+      nursingBiomedicalDescription:
+        "B.Sc Nursing, M.Sc Nursing, and research-driven biomedical science courses.",
+    },
   },
-  english: {
-    heading: "Academic Programs",
-    description:
-      "Explore our diverse range of medical, health sciences, management, and professional programs.",
-    medicalSurgeryTitle: "Medical Science & Ayurveda",
-    medicalSurgeryDescription:
-      "MBBS and BAMS degrees with a strong focus on clinical excellence, research, and holistic healthcare.",
-    managementCommerceTitle: "Management & Commerce",
-    managementCommerceDescription:
-      "MBA, BBA, B.Com, M.Com — with specializations in Finance, Marketing, Human Resources, and Entrepreneurship.",
-    alliedHealthTitle: "Health & Life Sciences",
-    alliedHealthDescription:
-      "Advanced programs in Physiotherapy, Medical Lab Technology, Radiology, and other healthcare domains.",
-    pharmaScienceTitle: "Pharmaceutical Sciences",
-    pharmaScienceDescription:
-      "B.Pharm and M.Pharm programs emphasizing drug research, pharmaceutical technology, and industry readiness.",
-    agricultureTitle: "Agricultural Sciences",
-    agricultureDescription:
-      "B.Sc and M.Sc Agriculture programs focusing on modern farming, agri-business, and sustainable agriculture practices.",
-    nursingBiomedicalTitle: "Nursing & Biomedical Sciences",
-    nursingBiomedicalDescription:
-      "B.Sc Nursing, M.Sc Nursing, and research-driven biomedical science courses.",
-  },
-},
   admission: {
     hindi: {
       heading: "अपनी यात्रा शुरू करने के लिए तैयार हैं?",
@@ -231,4 +231,68 @@ export const footerTranslations = {
     address:
       "Arogyadham, Balapar Road, Sonbarsa, Gorakhpur-273007, Uttar Pradesh",
   },
+};
+
+export const inspirationData: LeaderPageContent = {
+  heading: {
+    hindi: "हमारे नेताओं के शब्द",
+    english: "Words from Our Leaders",
+  },
+  description: {
+    hindi: "सम्मानित गणमान्य व्यक्तियों से मार्गदर्शन और प्रेरणा।",
+    english: "Guidance and inspiration from esteemed dignitaries.",
+  },
+  leader: [
+    {
+      name: {
+        hindi: "श्री राम नाथ कोविन्द",
+        english: "Shri Ram Nath Kovind",
+      },
+      title: {
+        hindi: "भारत के पूर्व राष्ट्रपति",
+        english: "Former President of India",
+      },
+      statement: {
+        hindi:
+          "मैंने गोरखपुर को ज्ञान के शहर के रूप में विकसित होते देखने की इच्छा व्यक्त की थी। मुझे यह जानकर खुशी हुई कि महायोगी गोरखनाथ विश्वविद्यालय की स्थापना उसी दिशा में एक कदम है।",
+        english:
+          "I had expressed the desire to see Gorakhpur develop as a city of knowledge. I am happy to note that the setting up of Mahayogi Gorakhnath University is a step in that direction.",
+      },
+      image: "/spotlight/ramnathKovind.jpg",
+    },
+    {
+      name: {
+        hindi: "श्रीमती द्रौपदी मुर्मु",
+        english: "Smt. Droupadi Murmu",
+      },
+      title: {
+        hindi: "माननीया राष्ट्रपति, भारत",
+        english: "Hon'ble President of India",
+      },
+      statement: {
+        hindi:
+          "उच्च शिक्षा को अग्रणी योजना देने के लिए मैं गोरक्षपीठ तथा महाराणा प्रताप शिक्षा परिषद की बहुत-बहुत सराहना करती हूं।",
+        english:
+          "I greatly appreciate Gorakshpeeth and Maharana Pratap Shiksha Parishad for giving a pioneering scheme to higher education.",
+      },
+      image: "/spotlight/president.webp",
+    },
+    {
+      name: {
+        hindi: "श्रीमती आनंदीबेन पटेल",
+        english: "Smt. Anandiben Patel",
+      },
+      title: {
+        hindi: "माननीया राज्यपाल, उत्तर प्रदेश",
+        english: "Hon'ble Governor of Uttar Pradesh",
+      },
+      statement: {
+        hindi:
+          "स्वास्थ्य, शिक्षा व सेवा का त्रिवेणी है महायोगी गोरखनाथ विश्वविद्यालय।",
+        english:
+          "Mahayogi Gorakhnath University is a triveni of health, education, and service.",
+      },
+      image: "/spotlight/governor.webp",
+    },
+  ],
 };
