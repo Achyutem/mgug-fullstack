@@ -17,28 +17,42 @@ type ApiImage = {
 };
 
 export const InfoPopup: FC = () => {
-  const [open, setOpen] = useState<boolean>(true);
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [hovering, setHovering] = useState<boolean>(false);
+  const [open, setOpen] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [hovering, setHovering] = useState(false);
 
   const [images, setImages] = useState<string[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
+
+  // --- TEXT VARIABLES (shared) ---
+  const ADMISSION_LINK =
+    "https://mgug.ac.in/PDF/Instruction_for_MBBS_Admission_2025_26_Shri_Gorakshnath_Medical_College_Hospital_and_Research_Center.pdf";
+  const ADMISSION_TEXT = "MBBS Admission Now Live for session 2025-26";
+  const NOTICE_TEXT =
+    "सूचना: महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर में पीएचडी पाठ्यक्रम में प्रवेश के लिए प्रवेश परीक्षा 19 अगस्त 2025 को आयोजित की जाएगी।";
+
+  // Optional extra info block
+  const InfoContent: FC = () => (
+    <div className="space-y-3 text-sm text-gray-600">
+      <p className="text-base font-semibold text-slate-800">
+        🏫 Tour our facilities and housing
+      </p>
+      <p>📅 August 12, 2025 • 🕘 10:00 AM – 4:00 PM</p>
+      <p>📍 Main Campus, Balapar, Gorakhpur</p>
+      <p className="text-base font-semibold text-slate-800">🌟 Why Visit Us?</p>
+    </div>
+  );
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         setLoading(true);
         const response = await fetch("https://mgug.ac.in/api/popupApi.php");
-        if (!response.ok) {
-          throw new Error(
-            `Network response was not ok: ${response.statusText}`
-          );
-        }
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
         const data: ApiImage[] = await response.json();
-        const imageUrls = data.map((item) => item.popup_image_path);
-        setImages(imageUrls);
-      } catch (error) {
-        console.error("Failed to fetch popup images:", error);
+        setImages(data.map((item) => item.popup_image_path));
+      } catch (err) {
+        console.error("Failed to fetch popup images:", err);
       } finally {
         setLoading(false);
       }
@@ -59,21 +73,9 @@ export const InfoPopup: FC = () => {
 
   const goToSlide = (index: number) => setCurrentSlide(index);
   const nextSlide = () =>
-    images.length > 0 && setCurrentSlide((prev) => (prev + 1) % images.length);
+    setCurrentSlide((prev) => (prev + 1) % images.length);
   const prevSlide = () =>
-    images.length > 0 &&
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
-
-  const InfoContent: FC = () => (
-    <div className="space-y-3 text-sm text-gray-600">
-      <p className="text-base font-semibold text-slate-800">
-        🏫 Tour our facilities and housing
-      </p>
-      <p>📅 August 12, 2025 • 🕘 10:00 AM – 4:00 PM</p>
-      <p>📍 Main Campus, Balapar, Gorakhpur</p>
-      <p className="text-base font-semibold text-slate-800">🌟 Why Visit Us?</p>
-    </div>
-  );
 
   const ImageSlider = ({ isMobile = false }) => (
     <>
@@ -83,21 +85,18 @@ export const InfoPopup: FC = () => {
         onMouseLeave={() => setHovering(false)}
       >
         {images.map((src, index) => (
-          // --- CHANGE START ---
-          // The div is now an anchor (<a>) tag to make the image clickable
           <a
             key={index}
             href={src}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View image ${index + 1} in a new tab`}
-            className={`absolute inset-0 transition-all duration-500 ease-in-out cursor-pointer ${
-              currentSlide === index
-                ? "opacity-100 translate-x-0"
-                : index < currentSlide
+            className={`absolute inset-0 transition-all duration-500 ease-in-out cursor-pointer ${currentSlide === index
+              ? "opacity-100 translate-x-0"
+              : index < currentSlide
                 ? "opacity-0 -translate-x-full"
                 : "opacity-0 translate-x-full"
-            }`}
+              }`}
           >
             <img
               src={src}
@@ -105,20 +104,18 @@ export const InfoPopup: FC = () => {
               className="w-full h-full object-contain"
             />
           </a>
-          // --- CHANGE END ---
         ))}
       </div>
+
+      {/* Prev/Next buttons */}
       <button
         onClick={(e) => {
           e.stopPropagation();
           prevSlide();
         }}
         aria-label="Previous image"
-        className={
-          isMobile
-            ? "absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
-            : "absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
-        }
+        className={`absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 shadow-md hover:bg-orange-100 transition-all duration-200 active:scale-95 ${!isMobile && "left-4 p-3"
+          }`}
       >
         <FaArrowLeft className={isMobile ? "h-4 w-4" : "h-5 w-5"} />
       </button>
@@ -128,20 +125,16 @@ export const InfoPopup: FC = () => {
           nextSlide();
         }}
         aria-label="Next image"
-        className={
-          isMobile
-            ? "absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-white/80 transition-all duration-200 active:scale-95"
-            : "absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-transparent backdrop-blur-sm text-slate-800 border border-white/20 hover:bg-orange-500/10 hover:border-orange-200 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
-        }
+        className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 shadow-md hover:bg-orange-100 transition-all duration-200 active:scale-95 ${!isMobile && "right-4 p-3"
+          }`}
       >
         <FaArrowRight className={isMobile ? "h-4 w-4" : "h-5 w-5"} />
       </button>
+
+      {/* Dots */}
       <div
-        className={
-          isMobile
-            ? "absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
-            : "absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2"
-        }
+        className={`absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 ${!isMobile && "bottom-5"
+          }`}
       >
         {images.map((_, index) => (
           <button
@@ -151,71 +144,57 @@ export const InfoPopup: FC = () => {
               goToSlide(index);
             }}
             aria-label={`Go to slide ${index + 1}`}
-            className={
-              isMobile
-                ? `h-2 w-2 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? "bg-orange-500 w-4"
-                      : "bg-gray-400/70"
-                  }`
-                : `h-3 w-3 rounded-full transition-all duration-300 hover:scale-110 ${
-                    currentSlide === index
-                      ? "bg-orange-500 w-6"
-                      : "bg-gray-400/70 hover:bg-gray-500/80"
-                  }`
-            }
+            className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === index ? "bg-orange-500 w-4" : "bg-gray-400/70"
+              }`}
           />
         ))}
       </div>
     </>
   );
 
+  // --- MOBILE VIEW ---
   const MobileView = () => (
-    <div className="flex flex-col h-full max-h-[90vh] overflow-y-auto scrollbar-hide">
-      <div className="flex flex-col p-4 flex-1">
-        <DialogHeader className="text-left">
-          <DialogTitle className="text-xl font-bold text-orange-500 tracking-tight">
+    <div className="flex flex-col h-full max-h-[90vh] overflow-y-auto">
+      <div className="flex flex-col px-5 pt-5 pb-3">
+        <DialogHeader className="text-left space-y-2">
+          <DialogTitle className="text-xl font-bold text-orange-500">
             <a
-              href="https://mgug.ac.in/PDF/Instruction_for_MBBS_Admission_2025_26_Shri_Gorakshnath_Medical_College_Hospital_and_Research_Center.pdf"
-              className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+              href={ADMISSION_LINK}
+              className="inline-block rounded-lg bg-orange-500 px-5 py-2 text-white hover:bg-orange-600 transition-all duration-200 active:scale-95"
             >
-              MBBS Admission session 2025-26
+              {ADMISSION_TEXT}
             </a>
           </DialogTitle>
-          <DialogDescription className="mt-2 text-sm text-gray-600">
-            <span className="text-black bg-red-500">सूचना:</span> महायोगी
-            गोरखनाथ विश्वविद्यालय गोरखपुर में पीएचडी पाठ्यक्रम में प्रवेश के लिए
-            प्रवेश परीक्षा 19 अगस्त 2025 को आयोजित की जाएगी।
+          <DialogDescription className="text-sm text-gray-700 leading-relaxed">
+            <span className="text-black bg-red-500 px-1 mr-1">सूचना:</span>
+            {NOTICE_TEXT}
           </DialogDescription>
         </DialogHeader>
-        {/* <div className="my-4">
-          <InfoContent />
-        </div> */}
-        <div className="mt-4 pt-4 gap-2 flex justify-end">
+        <div className="mt-4 flex gap-3 justify-end">
           <a
             href="/student-zone"
-            className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+            className="rounded-md bg-orange-500 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-600 transition active:scale-95"
           >
             Student Zone
           </a>
           <a
             href="/register"
-            className="rounded-md flex items-center bg-orange-500 px-4 py-2 text-base font-semibold text-white transition-colors duration-200 hover:bg-orange-600 active:scale-95"
+            className="rounded-md bg-orange-500 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-600 transition active:scale-95"
           >
             Register Now
           </a>
         </div>
       </div>
-      <div className="relative w-full h-[80vw] sm:h-[60vw] max-h-[500px] flex-shrink-0 overflow-hidden bg-slate-100/70 flex items-center justify-center">
+      <div className="relative w-full h-[75vw] max-h-[400px] bg-slate-100 flex items-center justify-center">
         {loading ? (
-          <div className="flex h-full w-full flex-col items-center justify-center space-y-4">
-            <RingLoader color={"#f97316"} size={50} />
-            <p className="text-lg font-semibold text-orange-500">
+          <div className="flex flex-col items-center justify-center space-y-3">
+            <RingLoader color={"#f97316"} size={40} />
+            <p className="text-sm font-medium text-orange-500">
               Loading Images...
             </p>
           </div>
         ) : images.length > 0 ? (
-          <ImageSlider isMobile={true} />
+          <ImageSlider isMobile />
         ) : (
           <p className="text-gray-500">No images available.</p>
         )}
@@ -223,51 +202,53 @@ export const InfoPopup: FC = () => {
     </div>
   );
 
+  // --- DESKTOP VIEW ---
   const DesktopView = () => (
     <div className="grid grid-cols-2 h-full max-h-[80vh] overflow-hidden">
-      <div className="relative flex items-center justify-center overflow-hidden bg-slate-100/70">
+      <div className="relative flex items-center justify-center bg-slate-100">
         {loading ? (
-          <div className="flex h-full w-full flex-col items-center justify-center space-y-4">
-            <RingLoader color={"#f97316"} size={100} />
-            <p className="text-xl font-semibold text-orange-500">
+          <div className="flex flex-col items-center space-y-4">
+            <RingLoader color={"#f97316"} size={80} />
+            <p className="text-lg font-semibold text-orange-500">
               Loading Images...
             </p>
           </div>
         ) : images.length > 0 ? (
-          <ImageSlider isMobile={false} />
+          <ImageSlider />
         ) : (
           <p className="text-gray-500">No images available.</p>
         )}
       </div>
-      <div className="flex flex-col p-6 lg:p-8 overflow-y-auto">
-        <DialogHeader className="text-left">
-          <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-500 tracking-tight">
+      <div className="flex flex-col p-8 overflow-y-auto">
+        <DialogHeader className="text-left space-y-4">
+          <DialogTitle className="text-3xl font-bold text-orange-500">
             <a
-              href="https://mgug.ac.in/PDF/Instruction_for_MBBS_Admission_2025_26_Shri_Gorakshnath_Medical_College_Hospital_and_Research_Center.pdf"
-              className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+              href={ADMISSION_LINK}
+              className="inline-block rounded-lg bg-orange-500 px-6 py-3 text-white hover:bg-orange-600 transition-all duration-200 active:scale-95"
             >
-              MBBS Admission Now Live for session 2025-26
+              {ADMISSION_TEXT}
             </a>
           </DialogTitle>
-          <DialogDescription className="mt-3 text-base lg:text-lg text-gray-600 leading-relaxed">
-            <span className="text-black bg-red-500">सूचना:</span> महायोगी
-            गोरखनाथ विश्वविद्यालय गोरखपुर में पीएचडी पाठ्यक्रम में प्रवेश के लिए
-            प्रवेश परीक्षा 19 अगस्त 2025 को आयोजित की जाएगी।
+          <DialogDescription className="text-base text-gray-700 leading-relaxed">
+            <span className="text-black bg-red-500 px-1 mr-1">सूचना:</span>
+            {NOTICE_TEXT}
           </DialogDescription>
         </DialogHeader>
-        <div className="my-6 lg:my-8">
+
+        <div className="my-6">
           <InfoContent />
         </div>
-        <div className="mt-auto pt-6 gap-2 flex justify-end">
+
+        <div className="mt-auto pt-4 flex gap-3 justify-end">
           <a
             href="/student-zone"
-            className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+            className="rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600 transition active:scale-95"
           >
             Student Zone
           </a>
           <a
             href="/list-of-program"
-            className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
+            className="rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600 transition active:scale-95"
           >
             Register Now
           </a>
@@ -279,19 +260,19 @@ export const InfoPopup: FC = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button className="fixed top-4 right-4 z-50 rounded-lg bg-orange-500 px-3 py-2 text-sm sm:text-base sm:px-4 sm:py-2 text-white shadow-lg hover:bg-orange-600 hover:scale-105 active:scale-95 transition-all duration-200">
+        <button className="fixed top-4 right-4 z-50 rounded-lg bg-orange-500 px-4 py-2 text-sm text-white shadow-lg hover:bg-orange-600 active:scale-95 transition-all">
           Open Info
         </button>
       </DialogTrigger>
-      <DialogContent className="w-[95vw] max-w-[95vw] sm:w-[90vw] sm:max-w-[90vw] md:max-w-4xl lg:max-w-6xl max-h-[95vh] overflow-hidden rounded-xl bg-white/90 backdrop-blur-lg p-0 text-slate-800 shadow-2xl border border-orange-600">
+      <DialogContent className="w-[95vw] sm:w-[90vw] md:max-w-4xl lg:max-w-6xl max-h-[95vh] overflow-hidden rounded-xl bg-white/90 backdrop-blur-lg p-0 border border-orange-600">
         <div className="md:hidden">
           <MobileView />
         </div>
-        <div className="hidden md:block h-full">
+        <div className="hidden md:block">
           <DesktopView />
         </div>
         <button
-          className="absolute right-3 top-3 z-20 rounded-full bg-orange-500/80 p-2 text-white transition-all duration-200 hover:bg-orange-500 hover:scale-110 active:scale-95 shadow-lg"
+          className="absolute right-3 top-3 rounded-full bg-orange-500 z-10 p-2 text-white hover:bg-orange-500 hover:scale-110 transition border-2 border-black"
           onClick={() => setOpen(false)}
           aria-label="Close dialog"
         >

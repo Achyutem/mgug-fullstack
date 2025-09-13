@@ -27,7 +27,7 @@ export default function AboutMain() {
           </AnimatedCard>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <StatsCard
-              number="3,000+"
+              number="4,000+"
               label={t.studentsLabel}
               icon={<FaUsers className="w-6 h-6" />}
               delay={0}

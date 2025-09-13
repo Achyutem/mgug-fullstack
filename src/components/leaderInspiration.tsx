@@ -31,7 +31,7 @@ const InspirationCard: React.FC<InspirationCardProps> = ({
                 <div className="relative mt-2">
                     <FaQuoteLeft className="absolute -top-4 left-1/2 -translate-x-1/2 text-6xl text-gray-200/70 -z-10" />
                     <p className="text-gray-600 text-sm leading-relaxed">
-                        {inspiration.statement[language]}
+                        "{inspiration.statement[language]}"
                     </p>
                 </div>
             </div>

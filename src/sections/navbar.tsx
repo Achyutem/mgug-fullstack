@@ -98,7 +98,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-40 bg-[#ffead1] backdrop-blur-lg border-b border-gray-200/80"
       aria-label="Main navigation"
     >
-      <div className="max-w-full mx-auto px-2">
+      <div className="max-w-full mx-auto px-2 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3 px-2">
@@ -133,10 +133,10 @@ export default function Navbar() {
                   item.english === "Research"
                     ? "/research"
                     : item.english === "Contact"
-                    ? "/contact"
-                    : item.english === "Students"
-                    ? "/student-zone"
-                    : `/${item.english.toLowerCase()}`;
+                      ? "/contact"
+                      : item.english === "Students"
+                        ? "/student-zone"
+                        : `/${item.english.toLowerCase()}`;
                 const commonLinkClasses =
                   "font-medium text-slate-700 hover:text-orange-500 transition-all duration-200 hover:scale-105";
 
@@ -173,9 +173,8 @@ export default function Navbar() {
                       >
                         <span>{item[language]}</span>
                         <FaChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            isMegaMenuOpen ? "rotate-180" : ""
-                          }`}
+                          className={`w-4 h-4 transition-transform duration-200 ${isMegaMenuOpen ? "rotate-180" : ""
+                            }`}
                           aria-hidden="true"
                         />
                       </button>
@@ -221,7 +220,7 @@ export default function Navbar() {
                                                     nestedIndex
                                                   ) =>
                                                     nestedSection.type ===
-                                                      "link" && (
+                                                    "link" && (
                                                       <NestedMenuLink
                                                         key={nestedIndex}
                                                         href={
@@ -229,7 +228,7 @@ export default function Navbar() {
                                                         }
                                                         label={
                                                           nestedSection.label[
-                                                            language
+                                                          language
                                                           ]
                                                         }
                                                       />
@@ -306,10 +305,10 @@ export default function Navbar() {
                           item.english === "Research"
                             ? "/research"
                             : item.english === "Contact"
-                            ? "/contact"
-                            : item.english === "Students"
-                            ? "/student-zone"
-                            : `/${item.english.toLowerCase()}`;
+                              ? "/contact"
+                              : item.english === "Students"
+                                ? "/student-zone"
+                                : `/${item.english.toLowerCase()}`;
 
                         return (
                           <Link
@@ -342,7 +341,7 @@ export default function Navbar() {
                                   section={section}
                                   isOpen={
                                     mobileExpandedSections[
-                                      `${item[language]}-${section.label[language]}`
+                                    `${item[language]}-${section.label[language]}`
                                     ] || false
                                   }
                                   onToggle={() =>

@@ -1,4 +1,4 @@
-"use client"; // This component now uses hooks
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import AnimatedCard from "@/components/animatedCard";
@@ -10,30 +10,41 @@ export default function InspirationSection() {
     const { language } = UseLanguage();
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
-    const autoScrollInterval = useRef<NodeJS.Timeout>(null);
+    const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
+    const resumeTimeout = useRef<NodeJS.Timeout | null>(null);
 
-    // Autoplay logic using an interval
+    // Effect to handle the autoscroll logic
     useEffect(() => {
-        const startAutoScroll = () => {
-            autoScrollInterval.current = setInterval(() => {
-                setActiveIndex(prevIndex => {
-                    const isLastCard = prevIndex === inspirationData.leader.length - 1;
-                    return isLastCard ? 0 : prevIndex + 1;
-                });
-            }, 4000);
-        };
+        // CRITICAL FIX: Don't initialize autoscroll if there aren't enough items.
+        if (inspirationData.leader.length <= 1) {
+            return; // Exit the effect completely.
+        }
 
         const stopAutoScroll = () => {
             if (autoScrollInterval.current) {
                 clearInterval(autoScrollInterval.current);
+                autoScrollInterval.current = null;
+            }
+            if (resumeTimeout.current) {
+                clearTimeout(resumeTimeout.current);
+                resumeTimeout.current = null;
             }
         };
 
-        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        const startAutoScroll = () => {
+            stopAutoScroll();
+            autoScrollInterval.current = setInterval(() => {
+                setActiveIndex(prevIndex => (prevIndex + 1) % inspirationData.leader.length);
+            }, 4000);
+        };
 
-        if (mediaQuery.matches) {
-            startAutoScroll();
-        }
+        const handleUserInteraction = () => {
+            stopAutoScroll();
+            resumeTimeout.current = setTimeout(startAutoScroll, 5000);
+        };
+
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        const container = containerRef.current;
 
         const handleResize = () => {
             if (mediaQuery.matches) {
@@ -43,30 +54,41 @@ export default function InspirationSection() {
             }
         };
 
+        handleResize(); // Initial check
+
         window.addEventListener('resize', handleResize);
+        if (container) {
+            container.addEventListener('touchstart', handleUserInteraction, { passive: true });
+            container.addEventListener('mousedown', handleUserInteraction);
+        }
 
         // Cleanup function
         return () => {
             stopAutoScroll();
             window.removeEventListener('resize', handleResize);
+            if (container) {
+                container.removeEventListener('touchstart', handleUserInteraction);
+                container.removeEventListener('mousedown', handleUserInteraction);
+            }
         };
-
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inspirationData.leader.length]);
-
-    // Effect to perform the actual scroll
+    // Effect to perform the actual scroll when activeIndex changes
     useEffect(() => {
-        if (containerRef.current) {
-            const cardElement = containerRef.current.children[activeIndex] as HTMLElement;
+        const container = containerRef.current;
+        if (container && inspirationData.leader.length > 1) { // Also check here for safety
+            const cardElement = container.children[activeIndex] as HTMLElement;
             if (cardElement) {
-                const scrollLeft = cardElement.offsetLeft - containerRef.current.offsetLeft;
-                containerRef.current.scrollTo({
+                const scrollLeft = cardElement.offsetLeft + cardElement.offsetWidth / 2 - container.offsetWidth / 2;
+
+                container.scrollTo({
                     left: scrollLeft,
                     behavior: 'smooth'
                 });
             }
         }
-    }, [activeIndex]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeIndex, inspirationData.leader.length]);
 
     return (
         <section id="leaders" className="relative z-20 py-16 px-0 sm:px-4 bg-transparent">
@@ -81,8 +103,6 @@ export default function InspirationSection() {
                         {inspirationData.description[language]}
                     </p>
                 </AnimatedCard>
-
-                {/* Horizontally Scrolling Container */}
                 <div
                     ref={containerRef}
                     className="flex overflow-x-auto gap-8 pb-4 snap-x snap-mandatory scroll-smooth px-4 sm:px-0 scrollbar-none"

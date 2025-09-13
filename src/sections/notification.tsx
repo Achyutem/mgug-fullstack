@@ -51,7 +51,7 @@ const NotificationColumn = ({
     <div className="bg-transparent backdrop-blur-md border-2 border-orange-500 rounded-2xl p-8 sm:p-5 flex flex-col h-full transition-all duration-300 hover:border-orange-500">
       {/* The title is now wrapped in a link */}
       <a href={basePath}>
-        <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-orange-500 transition-colors hover:text-orange-600">
+        <h3 className="text-xl font-bold mb-4 flex items-center gap-3 underline text-orange-500 transition-colors hover:text-orange-600">
           {icon}
           {title}
         </h3>
