@@ -228,7 +228,7 @@ export const studentLinksData: StudentLinksData = {
       title: " Prevention of Sexual Harassment",
       icon: <LuHandHelping />,
       href: "tel:1800-111-656",
-    },
+    }
   ],
 };
 

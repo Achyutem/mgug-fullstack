@@ -22,7 +22,6 @@ export type MegaMenuSection = MegaMenuHeader | MegaMenuLink;
 
 export type MegaMenus = {
   About: MegaMenuSection[];
-  // Students: MegaMenuSection[];
   Admissions: MegaMenuSection[];
   Administration: MegaMenuSection[];
   More: MegaMenuSection[];
