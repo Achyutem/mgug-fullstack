@@ -10,6 +10,7 @@ import {
   FiGlobe,
   FiYoutube,
 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
   { href: "https://x.com/MGUGOfficial", label: "Twitter", icon: FiTwitter },
@@ -112,13 +113,30 @@ export default function Footer() {
               {footerTranslations[language].policyAndReports}
             </h3>
             <ul className="space-y-2 text-sm text-gray-700">
-              {privacy.map((item, index) => (
-                <li key={index}>
-                  <a href={item.href} className="hover:text-orange-500 underline">
-                    {item.label[language]}
-                  </a>
-                </li>
-              ))}
+              {privacy.map((item, index) => {
+                const isExternal = item.href.startsWith("http");
+
+                return (
+                  <li key={index}>
+                    {isExternal ? (
+                      // External links: open normally
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-orange-500 underline"
+                      >
+                        {item.label[language]}
+                      </a>
+                    ) : (
+                      // Internal routes: handled by React Router
+                      <Link to={item.href} className="hover:text-orange-500 underline">
+                        {item.label[language]}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

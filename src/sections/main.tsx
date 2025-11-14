@@ -4,6 +4,7 @@ import { FaRegStar, FaChevronDown } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { UseLanguage } from "@/context/languageContext";
 import { HomePage } from "@/utils/mainPageData";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const { language } = UseLanguage();
@@ -130,11 +131,11 @@ export default function Main() {
               </p>
 
               <div className="flex flex-row flex-wrap sm:flex-nowrap gap-2 sm:gap-3 justify-center lg:justify-start overflow-x-auto pl-1">
-                <a href="admission/list-of-program" className="shrink-0">
+                <Link to="/admission/list-of-program">
                   <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 text-white hover:scale-105 transition-all duration-300">
                     {t.exploreButton}
                   </button>
-                </a>
+                </Link>
                 <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-transparent text-gray-700 border-2 border-orange-500 hover:bg-orange-500/10 transition-all duration-300 shrink-0">
                   {t.virtualTourButton}
                 </button>
