@@ -1,6 +1,7 @@
 import type { Title, MegaMenus } from "./types";
 
 export const menuItems: Title[] = [
+  { hindi: "होम", english: "Home" },
   { hindi: "हमारे बारे में", english: "About" },
   { hindi: "प्रशासन", english: "Administration" },
   { hindi: "प्रवेश", english: "Admissions" },
@@ -307,6 +308,79 @@ export const megaMenus: MegaMenus = {
         },
       ],
     },
+    {
+      type: "header",
+      label: {
+        hindi: "प्राचार्य एवं डीन",
+        english: "Principals and Deans",
+      },
+      subSections: [
+        {
+          type: "link",
+          label: {
+            hindi: "प्राचार्य (मेडिकल)",
+            english: "Principal of Medical",
+          },
+          href: "/administration/Principal-Medical",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "डीन (नर्सिंग)",
+            english: "Dean of Nursing",
+          },
+          href: "/administration/Dean-Nursing",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्राचार्य (आयुर्वेद)",
+            english: "Principal of Ayurveda",
+          },
+          href: "/administration/Principal-Ayurveda",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्राचार्य (पैरामेडिकल)",
+            english: "Principal of Paramedical",
+          },
+          href: "/administration/Principal-Paramedical",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "डीन (सहायक स्वास्थ्य विज्ञान)",
+            english: "Dean of Allied Health Sciences",
+          },
+          href: "/administration/Dean-Allied-Health",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "डीन (कृषि)",
+            english: "Dean of Agriculture",
+          },
+          href: "/administration/Dean-Agriculture",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "प्राचार्य (फार्मेसी)",
+            english: "Principal of Pharmacy",
+          },
+          href: "/administration/Principal-Pharmacy",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "विभागाध्यक्ष (वाणिज्य)",
+            english: "Head of Commerce",
+          },
+          href: "/administration/Head-Commerce",
+        },
+      ],
+    },
     //
     {
       type: "header",
@@ -360,47 +434,6 @@ export const megaMenus: MegaMenus = {
     {
       type: "header",
       label: {
-        hindi: "संकाय",
-        english: "Faculties",
-      },
-      subSections: [
-        {
-          type: "link",
-          label: {
-            hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
-            english: "Faculty of Allied Health Science",
-          },
-          href: "https://allied.mgug.ac.in/",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "कृषि संकाय",
-            english: "Faculty of Agriculture",
-          },
-          href: "https://agriculture.mgug.ac.in/",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "फार्मास्युटिकल साइंसेज संकाय",
-            english: "Faculty of Pharmaceutical Sciences",
-          },
-          href: "https://pharmacy.mgug.ac.in/",
-        },
-        {
-          type: "link",
-          label: {
-            hindi: "वाणिज्य संकाय",
-            english: "Faculty of Commerce",
-          },
-          href: "https://commerce.mgug.ac.in/",
-        },
-      ],
-    },
-    {
-      type: "header",
-      label: {
         hindi: "समितियां",
         english: "Committees",
       },
@@ -411,7 +444,7 @@ export const megaMenus: MegaMenus = {
             hindi: "प्रबंधन समिति",
             english: "Managing Committee",
           },
-          href: "https://mgug.ac.in/",
+          href: "/",
         },
         {
           type: "link",
@@ -628,6 +661,38 @@ export const megaMenus: MegaMenus = {
           },
           href: "https://paramedical.mgug.ac.in/",
         },
+        {
+          type: "link",
+          label: {
+            hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
+            english: "Faculty of Allied Health Science",
+          },
+          href: "https://allied.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "कृषि संकाय",
+            english: "Faculty of Agriculture",
+          },
+          href: "https://agriculture.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "फार्मास्युटिकल साइंसेज संकाय",
+            english: "Faculty of Pharmaceutical Sciences",
+          },
+          href: "https://pharmacy.mgug.ac.in/",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "वाणिज्य संकाय",
+            english: "Faculty of Commerce",
+          },
+          href: "https://commerce.mgug.ac.in/",
+        },
       ],
     },
   ],
@@ -645,7 +710,7 @@ export const megaMenus: MegaMenus = {
             hindi: "सामाजिक कार्य",
             english: "Social Work",
           },
-          href: "https://mgug.ac.in/#",
+          href: "/",
         },
         {
           type: "link",
@@ -653,7 +718,7 @@ export const megaMenus: MegaMenus = {
             hindi: "स्वास्थ्य शिविर",
             english: "Health Camps",
           },
-          href: "https://mgug.ac.in/#",
+          href: "/",
         },
         {
           type: "link",
@@ -661,7 +726,7 @@ export const megaMenus: MegaMenus = {
             hindi: "बाल कल्याण",
             english: "Child Welfare",
           },
-          href: "https://mgug.ac.in/#",
+          href: "/",
         },
       ],
     },
@@ -807,13 +872,13 @@ export const privacy = [
       hindi: "नियम और शर्तें",
       english: "Terms & Conditions",
     },
-    href: "https://mgug.ac.in/the_university/terms.php",
+    href: "/terms_and_conditions",
   },
   {
     label: {
       hindi: "नीति",
       english: "Policy",
     },
-    href: "https://mgug.ac.in/the_university/policy.php",
+    href: "/policy",
   },
 ];

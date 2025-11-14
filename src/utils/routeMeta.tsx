@@ -1,5 +1,21 @@
 import { lazy } from "react";
 
+const Medical = lazy(() => import("@/pages/Administration/Officers/medical"));
+const Nursing = lazy(() => import("@/pages/Administration/Officers/nursing"));
+const Ayurveda = lazy(() => import("@/pages/Administration/Officers/ayurveda"));
+const Paramedical = lazy(
+  () => import("@/pages/Administration/Officers/paramedical")
+);
+const Allied = lazy(() => import("@/pages/Administration/Officers/allied"));
+const Agriculture = lazy(
+  () => import("@/pages/Administration/Officers/agriculture")
+);
+const Pharmacy = lazy(
+  () => import("@/pages/Administration/Officers/pharmacy")
+);
+const Commerce = lazy(() => import("@/pages/Administration/Officers/commerce"));
+const PolicyPage = lazy(() => import("@/pages/More/policy"));
+
 // university
 const SponsoringBodyPage = lazy(
   () => import("@/pages/University/sponsoringBody")
@@ -199,6 +215,7 @@ const VideoGalleryPage = lazy(
 const MediaCoveragePage = lazy(
   () => import("@/pages/More/Resources/mediaCoverage")
 );
+const TermsAndConditionsPage = lazy(() => import("@/pages/More/terms&Condition"))
 
 // More > Magazine
 const Magazine = lazy(() => import("@/pages/More/Magazine/magazine"));
@@ -355,6 +372,8 @@ export const routeMeta = [
   },
   { title: "Jobs", path: "/jobs", element: <JobsSection /> },
   { title: "News", path: "/news", element: <NewsSection /> },
+  { title: "Terms and Condition", path: "/terms_and_conditions", element: <TermsAndConditionsPage /> },
+  { title: "Policy", path: "/policy", element: <PolicyPage /> },
 
   // Administration > Leadership
   {
@@ -418,6 +437,49 @@ export const routeMeta = [
     title: "Dean IFTSP",
     path: "/administration/dean-iftsp",
     element: <DeanIFTSP />,
+  },
+
+  // Administration > principles and deans
+  // 📚 Administration – Principals and Deans Routes
+  {
+    title: "Principal Medical",
+    path: "/administration/principal-medical",
+    element: <Medical />,
+  },
+  {
+    title: "Dean Nursing",
+    path: "/administration/dean-nursing",
+    element: <Nursing />,
+  },
+  {
+    title: "Principal Ayurveda",
+    path: "/administration/principal-ayurveda",
+    element: <Ayurveda />,
+  },
+  {
+    title: "Principal Paramedical",
+    path: "/administration/principal-paramedical",
+    element: <Paramedical />,
+  },
+  {
+    title: "Dean Allied Health Sciences",
+    path: "/administration/dean-allied-health",
+    element: <Allied />,
+  },
+  {
+    title: "Dean Agriculture",
+    path: "/administration/dean-agriculture",
+    element: <Agriculture />,
+  },
+  {
+    title: "Principal Pharmacy",
+    path: "/administration/principal-pharmacy",
+    element: <Pharmacy />,
+  },
+  {
+    title: "Head of Commerce",
+    path: "/administration/head-commerce",
+    element: <Commerce />,
   },
 
   // Administration > Statutory Bodies
