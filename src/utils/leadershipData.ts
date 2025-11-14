@@ -185,3 +185,135 @@ export const administrationData: Administration = {
     email: "singhvijaikrishna9@gmail.com",
   },
 };
+
+
+export const DeansAndPrinciples = {
+  Medical: {
+      hindi: {
+        name: "डॉ. अनुराग श्रीवास्तव",
+        designation: "प्राचार्य",
+        university: "एस.जी.एम.सी.",
+      },
+      english: {
+        name: "Dr. Anurag Srivastava",
+        designation: "Principal",
+        university: "SGMCHRC",
+      },
+      image: "/admin/it-team/medical.jpg",
+      email: "principal.sgmc@mgug.ac.in",
+      profilePdf: "",
+    },
+
+    Nursing: {
+      hindi: {
+        name: "डॉ. डी. एस. अजथा",
+        designation: "प्राचार्य",
+        university: "गुरु श्री गोरखनाथ कॉलेज ऑफ नर्सिंग",
+      },
+      english: {
+        name: "Dr. D.S Ajetha",
+        designation: "Principal",
+        university: "Guru Shri Gorakhnath College of Nursing",
+      },
+      image: "/admin/it-team/nursing.jpg",
+      email: "principalnursing@mgug.ac.in",
+      profilePdf: "",
+    },
+
+    Ayurveda: {
+      hindi: {
+        name: "डॉ. गिरीधर वेदांतम",
+        designation: "प्राचार्य एवं चिकित्सीय अधीक्षक",
+        university: "गुरु गोरखनाथ इंस्टीट्यूट ऑफ मेडिकल साइंसेज",
+      },
+      english: {
+        name: "Dr. Giridhar Vedantam",
+        designation: "Principal and Medical Superintendent",
+        university: "Guru Gorakshnath Institute of Medical Sciences",
+      },
+      image: "/admin/it-team/ayurveda.jpg",
+      email: "principal.ayurveda@mgug.ac.in",
+      profilePdf: "",
+    },
+
+    Paramedical: {
+      hindi: {
+        name: "श्री रोहित कुमार श्रीवास्तव",
+        designation: "प्राचार्य",
+        university: "महंत अवेद्यनाथ पैरामेडिकल कॉलेज",
+      },
+      english: {
+        name: "Mr. Rohit Kumar Srivastav",
+        designation: "Principal",
+        university: "Mahant Avedyanath Paramedical College",
+      },
+      image: "/admin/it-team/paramedical.jpg",
+      email: "principal.paramedical@mgug.ac.in",
+      profilePdf: "",
+    },
+
+    Allied: {
+      hindi: {
+        name: "प्रो. (डॉ.) सुनील कुमार",
+        designation: "डीन",
+        university: "सहायक स्वास्थ्य विज्ञान संकाय",
+      },
+      english: {
+        name: "Prof. (Dr.) Sunil Kumar",
+        designation: "Dean",
+        university: "Faculty of Allied Health Sciences",
+      },
+      image: "/admin/it-team/allied.jpg",
+      email: "dean.ahs@mgug.ac.in",
+      profilePdf: "",
+    },
+
+    Agriculture: {
+      hindi: {
+        name: "डॉ. विमल कुमार दुबे",
+        designation: "डीन",
+        university: "कृषि संकाय",
+      },
+      english: {
+        name: "Dr. Vimal Kumar Dubey",
+        designation: "Dean",
+        university: "Faculty of Agriculture",
+      },
+      image: "/admin/proctor.webp",
+      email: "dean.ags@mgug.ac.in",
+      profilePdf: "",
+    },
+
+    Pharmacy: {
+      hindi: {
+        name: "प्रो. (डॉ.) शशिकांत सिंह",
+        designation: "प्राचार्य",
+        university: "फार्मास्यूटिकल साइंसेज संकाय",
+      },
+      english: {
+        name: "Prof. (Dr.) Shashikant Singh",
+        designation: "Principal",
+        university: "Faculty of Pharmaceutical Sciences",
+      },
+      image: "/admin/Dr_Shashi_Kant_Singh.jpg",
+      email: "dean.pharmacy@mgug.ac.in",
+      contact: "9897309530",
+      profilePdf: "",
+    },
+
+    Commerce: {
+      hindi: {
+        name: "डॉ. तरुण श्याम",
+        designation: "विभागाध्यक्ष",
+        university: "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर",
+      },
+      english: {
+        name: "Dr. Tarun Shyam",
+        designation: "Head of Department of Commerce",
+        university: "Mahayogi Gorakhnath University Gorakhpur",
+      },
+      image: "/admin/it-team/commerce.jpg",
+      email: "tarun.shyam@mgug.ac.in",
+      profilePdf: "",
+    },
+}
