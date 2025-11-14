@@ -29,17 +29,20 @@ export const InfoPopup: FC = () => {
     "https://mgug.ac.in/PDF/Instruction_for_MBBS_Admission_2025_26_Shri_Gorakshnath_Medical_College_Hospital_and_Research_Center.pdf";
   const ADMISSION_TEXT = "MBBS Admission Now Live for session 2025-26";
   const NOTICE_TEXT =
-    "सूचना: महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर में पीएचडी पाठ्यक्रम में प्रवेश के लिए प्रवेश परीक्षा 19 अगस्त 2025 को आयोजित की जाएगी।";
+    "महायोगी गोरखनाथ विश्वविद्यालय गोरखपुर में सत्र 2025-26 हेतु प्रवेश तथा प्रवेश निरस्तीकरण के उपरांत शुल्क वापसी की प्रक्रिया दिनांक 08 नवंबर 2025 को बंद की जा रही है।";
 
   // Optional extra info block
   const InfoContent: FC = () => (
     <div className="space-y-3 text-sm text-gray-600">
       <p className="text-base font-semibold text-slate-800">
-        🏫 Tour our facilities and housing
+        Note: Admission to GNM course is conducted through UPSMF counselling only. For Apply Please: 
       </p>
-      <p>📅 August 12, 2025 • 🕘 10:00 AM – 4:00 PM</p>
-      <p>📍 Main Campus, Balapar, Gorakhpur</p>
-      <p className="text-base font-semibold text-slate-800">🌟 Why Visit Us?</p>
+      <a
+        href="https://abvmucet25.co.in/gnm/registration?form=6"
+        className="rounded-md bg-orange-500 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-600 transition active:scale-95"
+      >
+        Register Now
+      </a>
     </div>
   );
 
@@ -250,7 +253,7 @@ export const InfoPopup: FC = () => {
             href="/list-of-program"
             className="rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600 transition active:scale-95"
           >
-            Register Now
+            Admission
           </a>
         </div>
       </div>
