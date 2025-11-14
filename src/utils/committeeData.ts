@@ -478,8 +478,8 @@ export const ItCommitteeMembers: ItCommitteeMember[] = [
     },
   },
   {
-    image: "/admin/it-team/anandMishra.jpg",
-    name: { hindi: "आनंद मिश्रा", english: "Anand Mishra" },
+    image: "/sample.webp",
+    name: { hindi: "कीर्ति आनंद", english: "Krity Anand" },
     designation: { hindi: "सिस्टम व्यवस्थापक", english: "System Admin" },
   },
   {
@@ -489,7 +489,7 @@ export const ItCommitteeMembers: ItCommitteeMember[] = [
   },
   {
     image: "/sample.webp",
-    name: { hindi: "सनी कुमार", english: "Sunny Kumar" },
+    name: { hindi: "सनी कुमार", english: "Shanni Kumar" },
     designation: { hindi: "नेटवर्क व्यवस्थापक", english: "Network Admin" },
   },
   {
@@ -501,11 +501,6 @@ export const ItCommitteeMembers: ItCommitteeMember[] = [
     image: "/sample.webp",
     name: { hindi: "रवि यादव", english: "Ravi Yadav" },
     designation: { hindi: "सामग्री निर्माता", english: "Content Creator" },
-  },
-  {
-    image: "/sample.webp",
-    name: { hindi: "अंकित कुमार सिंह", english: "Ankit Kumar Singh" },
-    designation: { hindi: "जूनियर डेवलपर", english: "Junior Developer" },
   },
   {
     image: "/sample.webp",
