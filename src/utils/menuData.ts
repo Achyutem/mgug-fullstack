@@ -208,14 +208,14 @@ export const megaMenus: MegaMenus = {
           },
           href: "/administration/chancellor",
         },
-        {
-          type: "link",
-          label: {
-            hindi: "प्रो-कुलपति",
-            english: "Pro-Chancellor",
-          },
-          href: "/administration/pro-chancellor",
-        },
+        // {
+        //   type: "link",
+        //   label: {
+        //     hindi: "प्रो-कुलपति",
+        //     english: "Pro-Chancellor",
+        //   },
+        //   href: "/administration/pro-chancellor",
+        // },
         {
           type: "link",
           label: {
@@ -257,6 +257,14 @@ export const megaMenus: MegaMenus = {
             english: "Dean Academics",
           },
           href: "/administration/Dean-Academics",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "चिकित्सा अधीक्षक",
+            english: "Medical Supretendent",
+          },
+          href: "/administration/medical-supretendent",
         },
         {
           type: "link",
@@ -326,6 +334,14 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
+            hindi: "डीन (मेडिकल)",
+            english: "Dean of Medical",
+          },
+          href: "/administration/Dean-Medical",
+        },
+        {
+          type: "link",
+          label: {
             hindi: "डीन (नर्सिंग)",
             english: "Dean of Nursing",
           },
@@ -362,6 +378,14 @@ export const megaMenus: MegaMenus = {
             english: "Dean of Agriculture",
           },
           href: "/administration/Dean-Agriculture",
+        },
+        {
+          type: "link",
+          label: {
+            hindi: "डीन (फार्मेसी)",
+            english: "Dean of Pharmacy",
+          },
+          href: "/administration/Dean-Pharmacy",
         },
         {
           type: "link",

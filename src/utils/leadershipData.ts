@@ -93,7 +93,7 @@ export const administrationData: Administration = {
       designation: "Controller Of Examination",
       university: "Mahayogi Gorakhnath University Gorakhpur",
     },
-    image: "/admin/coe_amit_singh.webp",
+    image: "/admin/coe.jpg",
     email: "coe@mgug.ac.in",
     profilePdf: "https://mgug.ac.in/administration/coe.php#",
   },
@@ -108,7 +108,7 @@ export const administrationData: Administration = {
       designation: "Chief Proctor",
       university: "Mahayogi Gorakhnath University Gorakhpur",
     },
-    image: "/admin/proctor.webp",
+    image: "/admin/proctor.jpg",
     email: "chief.proctor@mgug.ac.in",
   },
   deanAcademics: {
@@ -188,21 +188,53 @@ export const administrationData: Administration = {
 
 
 export const DeansAndPrinciples = {
-  Medical: {
-      hindi: {
-        name: "डॉ. अनुराग श्रीवास्तव",
-        designation: "प्राचार्य",
-        university: "एस.जी.एम.सी.",
+    Medical: {
+        hindi: {
+          name: "डॉ. अनुराग श्रीवास्तव",
+          designation: "प्राचार्य",
+          university: "एस.जी.एम.सी.",
+        },
+        english: {
+          name: "Dr. Anurag Srivastava",
+          designation: "Principal",
+          university: "SGMCHRC",
+        },
+        image: "/admin/anuragSri.jpg",
+        email: "principal.sgmc@mgug.ac.in",
+        profilePdf: "",
       },
-      english: {
-        name: "Dr. Anurag Srivastava",
-        designation: "Principal",
-        university: "SGMCHRC",
-      },
-      image: "/admin/it-team/medical.jpg",
-      email: "principal.sgmc@mgug.ac.in",
-      profilePdf: "",
+
+  MedicalSup: {
+    hindi: {
+      name: "डॉ. रोहित अलानी",
+      designation: "चिकित्सा अधीक्षक",
+      university: "एम.जी.सी.",
     },
+    english: {
+      name: "Dr. Rohit Ailani",
+      designation: "Medical Supretendent",
+      university: "MGC",
+    },
+    image: "/admin/rohitAilani.jpg",
+    email: "rohit.ailani@mgug.ac.in",
+    profilePdf: "",
+  },
+
+  MedicalDean: {
+    hindi: {
+      name: "डॉ. चंद्रशेखर मूर्ति",
+      designation: "डीन",
+      university: "एस.जी.एम.सी.",
+    },
+    english: {
+      name: "Dr. Chandrashekhar Murthy",
+      designation: "Dean",
+      university: "SGMCHRC",
+    },
+    image: "/admin/CMurthy.jpg",
+    email: "dean.sgmc@mgug.ac.in",
+    profilePdf: "",
+  },
 
     Nursing: {
       hindi: {
@@ -247,7 +279,7 @@ export const DeansAndPrinciples = {
         designation: "Principal",
         university: "Mahant Avedyanath Paramedical College",
       },
-      image: "/admin/it-team/paramedical.jpg",
+      image: "/admin/it-team/rohitSri.jpg",
       email: "principal.paramedical@mgug.ac.in",
       profilePdf: "",
     },
@@ -279,7 +311,7 @@ export const DeansAndPrinciples = {
         designation: "Dean",
         university: "Faculty of Agriculture",
       },
-      image: "/admin/proctor.webp",
+      image: "/admin/proctor.jpg",
       email: "dean.ags@mgug.ac.in",
       profilePdf: "",
     },
@@ -296,8 +328,24 @@ export const DeansAndPrinciples = {
         university: "Faculty of Pharmaceutical Sciences",
       },
       image: "/admin/Dr_Shashi_Kant_Singh.jpg",
-      email: "dean.pharmacy@mgug.ac.in",
+      email: "principle.pharmacy@mgug.ac.in",
       contact: "9897309530",
+      profilePdf: "",
+    },
+
+    PharamcyDean: {
+      hindi: {
+        name: "डॉ. मधुसूदन पुरोहित",
+        designation: "डीन",
+        university: "फार्मास्यूटिकल साइंसेज संकाय",
+      },
+      english: {
+        name: "Dr. Madhusudan Purohit",
+        designation: "Dean Pharmacy",
+        university: "Faculty of Pharmaceutical Sciences",
+      },
+      image: "/admin/MNPurohit.jpg",
+      email: "dean.pharmacy@mgug.ac.in",
       profilePdf: "",
     },
 

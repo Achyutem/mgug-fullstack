@@ -1,5 +1,7 @@
 import { lazy } from "react";
-
+const PharamcyDean = lazy(() => import("@/pages/Administration/Officers/pharmacyDean"));
+const MedicalDean = lazy(() => import("@/pages/Administration/Officers/medicalDean"));
+const MedicalSup = lazy(() => import("@/pages/Administration/Officers/medicalSup"));
 const Medical = lazy(() => import("@/pages/Administration/Officers/medical"));
 const Nursing = lazy(() => import("@/pages/Administration/Officers/nursing"));
 const Ayurveda = lazy(() => import("@/pages/Administration/Officers/ayurveda"));
@@ -67,9 +69,9 @@ const Chancellor = lazy(
 const ViceChancellor = lazy(
   () => import("@/pages/Administration/Leadership/viceChancellor")
 );
-const ProChancellor = lazy(
-  () => import("@/pages/Administration/Leadership/proChancellor")
-);
+// const ProChancellor = lazy(
+//   () => import("@/pages/Administration/Leadership/proChancellor")
+// );
 const Registrar = lazy(
   () => import("@/pages/Administration/Leadership/registrar")
 );
@@ -381,11 +383,11 @@ export const routeMeta = [
     path: "/administration/chancellor",
     element: <Chancellor />,
   },
-  {
-    title: "Pro-Chancellor",
-    path: "/administration/pro-chancellor",
-    element: <ProChancellor />,
-  },
+  // {
+  //   title: "Pro-Chancellor",
+  //   path: "/administration/pro-chancellor",
+  //   element: <ProChancellor />,
+  // },
   {
     title: "Vice-Chancellor",
     path: "/administration/vice-chancellor",
@@ -440,11 +442,20 @@ export const routeMeta = [
   },
 
   // Administration > principles and deans
-  // 📚 Administration – Principals and Deans Routes
   {
     title: "Principal Medical",
     path: "/administration/principal-medical",
     element: <Medical />,
+  },
+  {
+    title: "Dean Medical",
+    path: "/administration/dean-medical",
+    element: <MedicalDean />,
+  },
+  {
+    title: "Medical Supretendent",
+    path: "/administration/medical-supretendent",
+    element: <MedicalSup />,
   },
   {
     title: "Dean Nursing",
@@ -470,6 +481,11 @@ export const routeMeta = [
     title: "Dean Agriculture",
     path: "/administration/dean-agriculture",
     element: <Agriculture />,
+  },
+  {
+    title: "Dean Pharmacy",
+    path: "/administration/dean-pharmacy",
+    element: <PharamcyDean />,
   },
   {
     title: "Principal Pharmacy",

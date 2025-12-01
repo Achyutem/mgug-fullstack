@@ -16,7 +16,6 @@ import { studentZone } from "@/utils/student";
 
 export default function StudentHelpPage() {
   const { language } = UseLanguage();
-  // const t = studentZone[language]; // ❌ REMOVE THIS LINE
 
   const categories = Object.keys(studentLinksData);
   const [activeTab, setActiveTab] = useState(categories[0]);

@@ -37,17 +37,15 @@ const PersonCard = ({
   return (
     <div className="flex flex-col md:flex-row items-center gap-10 py-10">
       {/* Profile Image */}
-      <div className="flex-shrink-0 w-44 h-44 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-lg border-4 border-orange-500">
+      <div className="flex-shrink-0 w-44 h-44 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-lg border-2 border-orange-500">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
       {/* Profile Info */}
-      {/* CHANGED: Main text color for readability */}
       <div className="flex-1 text-center md:text-left text-slate-800">
         <h1 className="text-3xl md:text-4xl font-bold text-orange-500 mb-2">
           {name}
         </h1>
-        {/* CHANGED: Designation text color */}
         <h2 className="text-lg sm:text-xl md:text-2xl text-slate-700 mb-4">
           {designation}
           <br />
@@ -55,7 +53,6 @@ const PersonCard = ({
         </h2>
 
         {/* Contact Info */}
-        {/* CHANGED: Contact info text color */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-600 text-sm mb-4 justify-center md:justify-start">
           {email && (
             <div className="flex items-center gap-2 justify-center">
@@ -96,7 +93,6 @@ const PersonCard = ({
 
         {/* Socials */}
         {socials && (
-          // CHANGED: Default social icon color
           <div className="flex gap-4 justify-center md:justify-start mt-4 text-gray-600">
             {socials.instagram && (
               <a
