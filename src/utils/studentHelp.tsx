@@ -102,22 +102,22 @@ export const studentLinksData: StudentLinksData = {
     {
       title: "Grievance Redressal",
       icon: <FaHeadset />,
-      href: "/Committee/srgc",
+      href: "/committee/srgc",
     },
     {
       title: "Internal Complaints",
       icon: <FaGavel />,
-      href: "/Committee/icc",
+      href: "/committee/icc",
     },
     {
       title: "Equal Opportunity Cell",
       icon: <FaPersonCircleCheck />,
-      href: "/Committee/eoc",
+      href: "/committee/eoc",
     },
     {
       title: "Anti-Ragging",
       icon: <FaUserShield />,
-      href: "/Committee/Anti-Ragging",
+      href: "/committee/anti-ragging",
     },
     {
       title: "Counselling and Wellness",
