@@ -188,7 +188,7 @@ export const studentLinksData: StudentLinksData = {
     { title: "Downloads", icon: <FaDownload />, href: "/downloads" },
     { title: "FAQs", icon: <FaQuestionCircle />, href: "#" },
     { title: "Contact Us", icon: <FaPhoneAlt />, href: "/contact" },
-    { title: "ERP", icon: <FaSitemap />, href: "erp.mgug.ac.in" },
+    { title: "ERP", icon: <FaSitemap />, href: "https://erp.mgug.ac.in" },
     {
       title: "E-Samadhaan",
       icon: <FaHandsHelping />,
