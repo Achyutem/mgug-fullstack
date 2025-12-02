@@ -288,12 +288,12 @@ export const DeansAndPrinciples = {
       hindi: {
         name: "प्रो. (डॉ.) सुनील कुमार",
         designation: "डीन",
-        university: "सहायक स्वास्थ्य विज्ञान संकाय",
+        university: "स्वास्थ्य एवं जीवन विज्ञान संकाय",
       },
       english: {
         name: "Prof. (Dr.) Sunil Kumar",
         designation: "Dean",
-        university: "Faculty of Allied Health Sciences",
+        university: "Faculty of Health & Life Sciences",
       },
       image: "/admin/it-team/allied.jpg",
       email: "dean.ahs@mgug.ac.in",

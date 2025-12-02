@@ -1031,8 +1031,8 @@ export const ResearchCommitteeData = {
   },
   alliedHealth: {
     heading: {
-      hindi: "सम्बद्ध स्वास्थ्य विज्ञान संकाय समिति",
-      english: "Faculty of Allied Health Sciences Committee",
+      hindi: "स्वास्थ्य एवं जीवन विज्ञान संकाय समिति",
+      english: "Faculty of Health & Life Sciences Committee",
     },
     headers: {
       srNo: { hindi: "क्रम सं.", english: "S. No." },

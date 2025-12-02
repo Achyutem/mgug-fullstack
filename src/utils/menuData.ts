@@ -222,7 +222,7 @@ export const megaMenus: MegaMenus = {
             hindi: "उप-कुलपति",
             english: "Vice-Chancellor",
           },
-          href: "/administration/Vice-Chancellor",
+          href: "/administration/vice-chancellor",
         },
         {
           type: "link",
@@ -238,7 +238,7 @@ export const megaMenus: MegaMenus = {
             hindi: "वित्त अधिकारी",
             english: "Finance Officer",
           },
-          href: "/administration/Finance-officer",
+          href: "/administration/finance-officer",
         },
       ],
     },
@@ -256,7 +256,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन एकेडमिक्स",
             english: "Dean Academics",
           },
-          href: "/administration/Dean-Academics",
+          href: "/administration/dean-academics",
         },
         {
           type: "link",
@@ -272,7 +272,7 @@ export const megaMenus: MegaMenus = {
             hindi: "परीक्षा नियंत्रक",
             english: "Controller of Examination",
           },
-          href: "/administration/Controller-of-examination",
+          href: "/administration/controller-of-examination",
         },
         {
           type: "link",
@@ -280,7 +280,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन आईक्यूएसी",
             english: "Dean IQAC",
           },
-          href: "/administration/Dean-IQAC",
+          href: "/administration/dean-iqac",
         },
         {
           type: "link",
@@ -288,7 +288,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन आईएफटीएसपी",
             english: "Dean IFTSP",
           },
-          href: "/administration/Dean-IFTSP",
+          href: "/administration/dean-iftsp",
         },
         {
           type: "link",
@@ -304,7 +304,7 @@ export const megaMenus: MegaMenus = {
             hindi: "मुख्य सतर्कता अधिकारी",
             english: "Chief Vigilance Officer",
           },
-          href: "/administration/Chief-vigilance-officer",
+          href: "/administration/chief-vigilance-officer",
         },
         {
           type: "link",
@@ -312,7 +312,7 @@ export const megaMenus: MegaMenus = {
             hindi: "लोकपाल",
             english: "Ombuds Person",
           },
-          href: "/administration/Ombuds-Person",
+          href: "/administration/ombuds-person",
         },
       ],
     },
@@ -329,7 +329,7 @@ export const megaMenus: MegaMenus = {
             hindi: "प्राचार्य (मेडिकल)",
             english: "Principal of Medical",
           },
-          href: "/administration/Principal-Medical",
+          href: "/administration/principal-medical",
         },
         {
           type: "link",
@@ -337,7 +337,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन (मेडिकल)",
             english: "Dean of Medical",
           },
-          href: "/administration/Dean-Medical",
+          href: "/administration/dean-medical",
         },
         {
           type: "link",
@@ -345,7 +345,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन (नर्सिंग)",
             english: "Dean of Nursing",
           },
-          href: "/administration/Dean-Nursing",
+          href: "/administration/dean-nursing",
         },
         {
           type: "link",
@@ -353,7 +353,7 @@ export const megaMenus: MegaMenus = {
             hindi: "प्राचार्य (आयुर्वेद)",
             english: "Principal of Ayurveda",
           },
-          href: "/administration/Principal-Ayurveda",
+          href: "/administration/principal-ayurveda",
         },
         {
           type: "link",
@@ -361,15 +361,15 @@ export const megaMenus: MegaMenus = {
             hindi: "प्राचार्य (पैरामेडिकल)",
             english: "Principal of Paramedical",
           },
-          href: "/administration/Principal-Paramedical",
+          href: "/administration/principal-paramedical",
         },
         {
           type: "link",
           label: {
-            hindi: "डीन (सहायक स्वास्थ्य विज्ञान)",
-            english: "Dean of Allied Health Sciences",
+            hindi: "डीन (स्वास्थ्य एवं जीवन विज्ञान संकाय)",
+            english: "Dean of Health & Life Sciences",
           },
-          href: "/administration/Dean-Allied-Health",
+          href: "/administration/dean-allied-health",
         },
         {
           type: "link",
@@ -377,7 +377,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन (कृषि)",
             english: "Dean of Agriculture",
           },
-          href: "/administration/Dean-Agriculture",
+          href: "/administration/dean-agriculture",
         },
         {
           type: "link",
@@ -385,7 +385,7 @@ export const megaMenus: MegaMenus = {
             hindi: "डीन (फार्मेसी)",
             english: "Dean of Pharmacy",
           },
-          href: "/administration/Dean-Pharmacy",
+          href: "/administration/dean-pharmacy",
         },
         {
           type: "link",
@@ -393,7 +393,7 @@ export const megaMenus: MegaMenus = {
             hindi: "प्राचार्य (फार्मेसी)",
             english: "Principal of Pharmacy",
           },
-          href: "/administration/Principal-Pharmacy",
+          href: "/administration/principal-pharmacy",
         },
         {
           type: "link",
@@ -401,11 +401,10 @@ export const megaMenus: MegaMenus = {
             hindi: "विभागाध्यक्ष (वाणिज्य)",
             english: "Head of Commerce",
           },
-          href: "/administration/Head-Commerce",
+          href: "/administration/head-commerce",
         },
       ],
     },
-    //
     {
       type: "header",
       label: {
@@ -427,7 +426,7 @@ export const megaMenus: MegaMenus = {
             hindi: "सशक्त निकाय",
             english: "Empowered Body",
           },
-          href: "/Statutory-Body/Empowered-Body",
+          href: "/Statutory-Body/empowered-body",
         },
         {
           type: "link",
@@ -451,7 +450,7 @@ export const megaMenus: MegaMenus = {
             hindi: "अध्ययन बोर्ड",
             english: "Board of Studies",
           },
-          href: "/Statutory-Body/Board-of-Studies",
+          href: "/Statutory-Body/board-of-studies",
         },
       ],
     },
@@ -476,7 +475,7 @@ export const megaMenus: MegaMenus = {
             hindi: "वित्त समिति",
             english: "Finance Committee",
           },
-          href: "/Committee/Finance-Committee",
+          href: "/committee/finance-committee",
         },
         {
           type: "link",
@@ -484,7 +483,7 @@ export const megaMenus: MegaMenus = {
             hindi: "परीक्षा समिति",
             english: "Examination Committee",
           },
-          href: "/Committee/Examination-Committee",
+          href: "/committee/examination-committee",
         },
         {
           type: "link",
@@ -492,7 +491,7 @@ export const megaMenus: MegaMenus = {
             hindi: "आईक्यूएसी सेल",
             english: "IQAC Cell",
           },
-          href: "/Committee/iqac",
+          href: "/committee/iqac",
         },
         {
           type: "link",
@@ -500,7 +499,7 @@ export const megaMenus: MegaMenus = {
             hindi: "छात्र शिकायत निवारण समिति",
             english: "Students Grievance Redressal Committee",
           },
-          href: "/Committee/srgc",
+          href: "/committee/srgc",
         },
         {
           type: "link",
@@ -508,7 +507,7 @@ export const megaMenus: MegaMenus = {
             hindi: "रैगिंग विरोधी समिति",
             english: "Anti-Ragging Committee",
           },
-          href: "/Committee/Anti-Ragging",
+          href: "/committee/anti-ragging",
         },
         {
           type: "link",
@@ -516,7 +515,7 @@ export const megaMenus: MegaMenus = {
             hindi: "आंतरिक शिकायत समिति",
             english: "Internal Complaint Comittee",
           },
-          href: "/Committee/icc",
+          href: "/committee/icc",
         },
         {
           type: "link",
@@ -524,7 +523,7 @@ export const megaMenus: MegaMenus = {
             hindi: "अनुसंधान समिति",
             english: "Research Committee",
           },
-          href: "/Committee/research-committee",
+          href: "/committee/research-committee",
         },
 
         {
@@ -533,7 +532,7 @@ export const megaMenus: MegaMenus = {
             hindi: "समान अवसर प्रकोष्ठ",
             english: "Equal Opportunity Cell",
           },
-          href: "/Committee/eoc",
+          href: "/committee/eoc",
         },
         {
           type: "link",
@@ -541,7 +540,7 @@ export const megaMenus: MegaMenus = {
             hindi: "आईटी टीम",
             english: "IT Team",
           },
-          href: "/Committee/it-team",
+          href: "/committee/it-team",
         },
       ],
     },
@@ -688,8 +687,8 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
-            hindi: "संबद्ध स्वास्थ्य विज्ञान संकाय",
-            english: "Faculty of Allied Health Science",
+            hindi: "स्वास्थ्य एवं जीवन विज्ञान संकाय",
+            english: "Faculty of Health & Life Sciences",
           },
           href: "https://allied.mgug.ac.in/",
         },
@@ -872,7 +871,7 @@ export const impLinks = [
       hindi: "रैगिंग शिकायत फॉर्म",
       english: "Ragging Complaint Form",
     },
-    href: "/Committee/Anti-Ragging",
+    href: "/committee/anti-ragging",
   },
   {
     label: {

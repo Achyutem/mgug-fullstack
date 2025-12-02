@@ -32,7 +32,7 @@ export const HomePage: HomeDataType = {
       managementCommerceTitle: "प्रबंधन और वाणिज्य",
       managementCommerceDescription:
         "एमबीए, बीबीए, बी.कॉम, एम.कॉम — वित्त, विपणन, मानव संसाधन और उद्यमिता में विशेषज्ञता के साथ।",
-      alliedHealthTitle: "स्वास्थ्य और जीवन विज्ञान",
+      alliedHealthTitle: "स्वास्थ्य एवं जीवन विज्ञान संकाय",
       alliedHealthDescription:
         "फिजियोथेरेपी, मेडिकल लैब टेक्नोलॉजी, रेडियोलॉजी और अन्य स्वास्थ्य सेवा क्षेत्रों में उच्च स्तरीय कार्यक्रम।",
       pharmaScienceTitle: "फार्मास्युटिकल साइंसेज़",
