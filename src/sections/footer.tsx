@@ -119,7 +119,6 @@ export default function Footer() {
                 return (
                   <li key={index}>
                     {isExternal ? (
-                      // External links: open normally
                       <a
                         href={item.href}
                         target="_blank"
@@ -129,7 +128,6 @@ export default function Footer() {
                         {item.label[language]}
                       </a>
                     ) : (
-                      // Internal routes: handled by React Router
                       <Link to={item.href} className="hover:text-orange-500 underline">
                         {item.label[language]}
                       </Link>
