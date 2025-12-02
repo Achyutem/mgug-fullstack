@@ -1,20 +1,63 @@
+# OLD
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteBase /
+
+#   # If a request is for an existing file or directory, serve it as-is
+#   RewriteCond %{REQUEST_FILENAME} -f [OR]
+#   RewriteCond %{REQUEST_FILENAME} -d
+#   RewriteRule ^ - [L]
+
+#   # Otherwise, always serve index.html (SPA Fallback)
+#   RewriteRule ^ index.html [L]
+# </IfModule>
+
+# <IfModule mod_headers.c>
+#   <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$">
+#     Header set Cache-Control "max-age=31536000, public"
+#   </FilesMatch>
+# </IfModule>
+
+# NEW
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteBase /
+
+#   # Don't rewrite existing files or directories
+#   RewriteCond %{REQUEST_FILENAME} -f [OR]
+#   RewriteCond %{REQUEST_FILENAME} -d
+#   RewriteRule ^ - [L]
+
+#   # --- MODIFIED ---
+#   # Rewrite everything else to index.html, UNLESS it's a static file extension.
+#   RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$
+#   RewriteRule ^ index.html [L]
+# </IfModule>
+
+# <IfModule mod_headers.c>
+#   <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$">
+#     Header set Cache-Control "max-age=31536000, public"
+#   </FilesMatch>
+# </IfModule>
+
+#LATEST
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Don't rewrite existing files or directories
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # --- MODIFIED ---
-  # Rewrite everything else to index.html, UNLESS it's a static file extension.
-  RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$
   RewriteRule ^ index.html [L]
 </IfModule>
+
+# Fallback even if rewrite fails
+ErrorDocument 404 /index.html
 
 <IfModule mod_headers.c>
   <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|webp|json)$">
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
 </IfModule>
+
